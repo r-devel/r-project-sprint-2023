@@ -140,7 +140,8 @@ updating.
 
 Some examples of R code and desired output for luminance masks
 are included in the technical report
-["Luminance Masks in R Graphics"](https://stattech.wordpress.fos.auckland.ac.nz/2021/12/01/2021-04-luminance-masks-in-r-graphics/).
+["Luminance Masks in R Graphics"](https://stattech.wordpress.fos.auckland.ac.nz/2021/12/01/2021-04-luminance-masks-in-r-graphics/)
+([faster link](https://protect-au.mimecast.com/s/SkAFCq71EMFpz5z7fZ37by?domain=stat.auckland.ac.nz)).
 
 The ['gdiff' package](https://cran.rstudio.com/web/packages/gdiff/)
 can be useful for checking that test output matches control output.
