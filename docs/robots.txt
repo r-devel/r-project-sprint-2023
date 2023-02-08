@@ -1,0 +1,1 @@
+Sitemap: https://contributor.r-project.org/r-project-sprint-2023/sitemap.xml

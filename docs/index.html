@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R Project Sprint 2023</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta name="twitter:title" content="R Project Sprint 2023">
+<meta name="twitter:description" content="A 3-day meeting of R developers to work collaboratively on R core development, hosted at the University of Warwick, August 30 – September 1">
+<meta name="twitter:image" content="https://contributor.r-project.org/r-project-sprint-2023/warwick-university-faculty-of-arts-building-768x381-compact.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">R Project Sprint 2023</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./code-of-conduct.html">
+ <span class="menu-text">Code of Conduct</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/r-project-sprint-2023"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-the-sprint" id="toc-about-the-sprint" class="nav-link active" data-scroll-target="#about-the-sprint">About the sprint</a></li>
+  <li><a href="#who-can-take-part" id="toc-who-can-take-part" class="nav-link" data-scroll-target="#who-can-take-part">Who can take part?</a></li>
+  <li><a href="#apply-for-a-place" id="toc-apply-for-a-place" class="nav-link" data-scroll-target="#apply-for-a-place">Apply for a place</a></li>
+  <li><a href="#practicalities" id="toc-practicalities" class="nav-link" data-scroll-target="#practicalities">Practicalities</a></li>
+  <li><a href="#whats-on-nearby" id="toc-whats-on-nearby" class="nav-link" data-scroll-target="#whats-on-nearby">What’s on nearby</a></li>
+  <li><a href="#local-organizing-team" id="toc-local-organizing-team" class="nav-link" data-scroll-target="#local-organizing-team">Local organizing team</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#sponsors" id="toc-sponsors" class="nav-link" data-scroll-target="#sponsors">Sponsors</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">R Project Sprint 2023</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><strong>August 30 - September 1, 2023<br>
+University of Warwick, UK</strong></p>
+<p><em>Collaborate on contributions to base R!</em></p>
+<p>We are pleased to announce an R Project Sprint, to be hosted at the University of Warwick, UK, from Wednesday August 30 to Friday September 1. Novice and experienced contributors are encouraged to apply for a place at the residential event, with funding available for travel. Read on for more!</p>
+<center>
+<img src="warwick-university-faculty-of-arts-building-768x381-compact.jpg" class="img-fluid" style="height:400px" alt="A group of 11 people around a long table with a large screen at one end and a big window behind. People are general busy working on laptops, writing on notepads, etc."><br> <small>Breakout space in the Faculty of Arts Building, University of Warwick ©Hufton+Crow<br><br></small>
+</center>
+<section id="about-the-sprint" class="level2">
+<h2 class="anchored" data-anchor-id="about-the-sprint">About the sprint</h2>
+<p>R is a popular and widely used software for data science. Like any large open source software project, it takes a lot of work to maintain and develop. Much of the work is done by a small number of volunteers and there is a need to grow the contributor community.</p>
+<p>This sprint will bring together novice and experienced contributors, to work alongside members of the R Core Team. Participants will work collaboratively on contributions to base R. The tasks will be prepared in the run-up to the event, but may include:</p>
+<ul>
+<li><p>Reviewing, analysing and fixing bugs reported on R’s <a href="https://bugs.r-project.org/">Bugzilla</a>.</p></li>
+<li><p>Contributing to message translations via <a href="https://translate.rx.studio/projects/r-project/">Weblate</a>.</p></li>
+<li><p>Work on new developments such as this short project proposed by core developer Paul Murrell: <a href="short-projects/quartz-alpha-mask">Adding Alpha Masks to the Quartz Graphics Device</a>.</p></li>
+</ul>
+</section>
+<section id="who-can-take-part" class="level2">
+<h2 class="anchored" data-anchor-id="who-can-take-part">Who can take part?</h2>
+<p>The sprint will involve a mixture of invited and self-nominated participants, so that we have contributors at all experience levels.</p>
+<p>The main criteria for participation is a good knowledge of R programming and a keen interest in contributing, as we hope participants continue to contribute after the event. The table below shows the type of knowledge/skills we expect participants to have</p>
+<table class="table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Skills most will have</th>
+<th style="text-align: center;">Skills some will have</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Writing R functions</td>
+<td style="text-align: center;">Programming in C</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Debugging R functions</td>
+<td style="text-align: center;">Knowledge of S3/S4 classes and methods</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Writing R help files</td>
+<td style="text-align: center;">Expertise in statistical methods in <strong>stats</strong>, <strong>splines</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Using git/Subversion</td>
+<td style="text-align: center;">Able to build R from source</td>
+</tr>
+</tbody>
+</table>
+<p>Other specialist skills e.g.&nbsp;expertise in building Windows/MacOS GUIs or fluency in language with a low percentage of translated messages on <a href="https://translate.rx.studio/projects/r-project/">Weblate</a>, would of course be welcome!</p>
+<p>It will help if you have some experience in contributing to base R, but novice contributors will be mentored in the run-up to the event, so they are prepared.</p>
+<p>We are also keen to foster a diverse community of contributors. If you are a member of the <a href="https://rladies.org/">R-Ladies</a>, <a href="https://mircommunity.com/">MiR</a>, <a href="https://github.com/ARab-R">ArabR</a>, <a href="https://africa-r.org/">AfricaR</a>, <a href="https://bit.ly/join_asiaR_slack">AsiaR</a>, or <a href="https://latin-r.com/">LatinR</a> communities, or otherwise identify as part of an underrepresented group among R contributors, then we especially encourage you to self-nominate! To ensure a welcoming environment, we have a code of conduct in place.</p>
+</section>
+<section id="apply-for-a-place" class="level2">
+<h2 class="anchored" data-anchor-id="apply-for-a-place">Apply for a place</h2>
+<p>Anyone one interested to attend the sprint is encouraged to self-nominate via the application form [link + deadline TBA]. You will be asked about your experience, skills and background to help us balance participation overall.</p>
+<p>Thanks to our sponsors, all workshop participants will be accommodated free of charge during the sprint, in <a href="https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/arthur-vick">on-campus housing at the University of Warwick</a>, with meals provided. Funding is also available for travel, however if participants are able to get travel funding from other sources this will allow more people to attend - companies or other funding bodies providing such support to participants will be acknowledged as sponsors.</p>
+</section>
+<section id="practicalities" class="level2">
+<h2 class="anchored" data-anchor-id="practicalities">Practicalities</h2>
+<p>The sprint will be held in the recently completed <a href="https://educationsnapshots.com/projects/21632/warwick-university-faculty-of-arts-building/">Faculty of Arts Building</a> at the University of Warwick, which alongside regular seminar rooms has many breakout spaces, some of which we have reserved for our use. We think this will be a great environment for collaborative work.</p>
+<p>The University of Warwick is in Coventry, in the middle of England. It is reachable by train from nearby European countries, or otherwise by plane to Birmingham or other UK airports. See the <a href="https://warwick.ac.uk/about/visiting/directions/international/">travel information</a> and <a href="https://www.gov.uk/check-uk-visa">visa</a> information for international visitors.</p>
+</section>
+<section id="whats-on-nearby" class="level2">
+<h2 class="anchored" data-anchor-id="whats-on-nearby">What’s on nearby</h2>
+<p>Participants may be interested to know of these events happening close to the sprint:</p>
+<ul>
+<li><p>22-25 August, <a href="http://www.compstat2023.org/">COMPSTAT 2023</a>, London</p></li>
+<li><p>4-8 September, <a href="https://society-rse.org/rse-conference-2023/">RSECon23</a>, Swansea</p></li>
+<li><p>4-7 September, <a href="https://rss.org.uk/training-events/conference-2023/">RSS International Conference</a>, Harrogate</p></li>
+</ul>
+<p>28 August is a bank holiday in the UK, there are typically many festivals, fairs and other events over the long weekend at the end of the school summer holidays.</p>
+</section>
+<section id="local-organizing-team" class="level2">
+<h2 class="anchored" data-anchor-id="local-organizing-team">Local organizing team</h2>
+<p>This event is being organized by members of the Statistics department at the University of Warwick.</p>
+<div class="people-gallery">
+<div id="person1">
+<p><img src="media/heather_turner.jpg" alt="Heather Turner outside in the sun, smiling. She is a white woman in her 40s with dark straight hair tied back and wears glasses." style="width:55%"> <br><b> Heather Turner </b> <br> RSE Fellow<br>Associate Professor <br> <a href="https://warwick.ac.uk/heatherturner" target="_blank"> <img src="media/reshot-icon-link-TPKSVGQNXF.svg" height="30" style="margin:2px; vertical-align:middle;" border="0"> </a></p>
+</div>
+<div id="person2">
+<p><img src="media/ella_profile.jpeg" alt="Headshot of Ella outside in the sun, smiling, looking slightly off-camera. She is a white woman in her 40s with short dark hair." style="width:55%"> <br><b> Ella Kaye </b> <br> Research Software Engineer <br> <a href="https://ellakaye.co.uk" target="_blank"> <img src="media/reshot-icon-link-TPKSVGQNXF.svg" height="30" style="margin:2px; vertical-align:middle;" border="0"> </a></p>
+</div>
+<div id="person3">
+<p><img src="media/martyn_plummer.jpg" alt="Headshot of Martyn Plummer." style="width:55%"> <br><b> Martyn Plummer </b> <br> Professor<br>R Core Developer <br> <a href="https://ellakaye.co.uk" target="_blank"> <img src="media/reshot-icon-link-TPKSVGQNXF.svg" height="30" style="margin:2px; vertical-align:middle;" border="0"> </a></p>
+</div>
+</div>
+<p><br></p>
+<p>We are also coordinating with the <a href="https://contributor.r-project.org/working-group">R Contribution Working Group</a> and the R Core Team.</p>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>For queries about this event, please contact <a href="mailto:r-project-sprint-2023@gaggle.email">r-project-sprint-2023@gaggle.email</a>.</p>
+</section>
+<section id="sponsors" class="level2">
+<h2 class="anchored" data-anchor-id="sponsors">Sponsors</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.ukri.org/councils/epsrc/"><img src="media/EPSRC_logo.png" class="img-fluid figure-img" alt="Engineering and Physical Sciences Council logo" width="300"></a></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
