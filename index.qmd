@@ -52,13 +52,15 @@ We are also keen to foster a diverse community of contributors. If you are a mem
 
 Anyone one interested to attend the sprint is encouraged to self-nominate via the application form \[link + deadline TBA\]. You will be asked about your experience, skills and background to help us balance participation overall.
 
-Thanks to our sponsors, all workshop participants will be accommodated free of charge during the sprint, in [on-campus housing at the University of Warwick](https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/arthur-vick), with meals provided. Funding is also available for travel, however if participants are able to get travel funding from other sources this will allow more people to attend - companies or other funding bodies providing such support to participants will be acknowledged as sponsors.
+Thanks to our sponsors, all workshop participants will be **accommodated free of charge** during the sprint, in [on-campus housing at the University of Warwick](https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/arthur-vick), **with meals provided**.
+
+Funding is also available for **travel expenses**, however if participants are able to get travel funding from other sources this will allow more people to attend - companies or other funding bodies providing such support to participants will be acknowledged as sponsors.
 
 ## Practicalities
 
 The sprint will be held in the recently completed [Faculty of Arts Building](https://educationsnapshots.com/projects/21632/warwick-university-faculty-of-arts-building/) at the University of Warwick, which alongside regular seminar rooms has many breakout spaces, some of which we have reserved for our use. We think this will be a great environment for collaborative work.
 
-The University of Warwick is in Coventry, in the middle of England. It is reachable by train from nearby European countries, or otherwise by plane to Birmingham or other UK airports. See the [travel information](https://warwick.ac.uk/about/visiting/directions/international/) and [visa](https://www.gov.uk/check-uk-visa) information for international visitors.
+The University of Warwick is in Coventry, in the middle of England. It is reachable by train from nearby European countries, or by plane to Birmingham or other UK airports. See the [travel information](https://warwick.ac.uk/about/visiting/directions/international/) and [visa](https://www.gov.uk/check-uk-visa) information for international visitors.
 
 ## What's on nearby
 
@@ -108,9 +110,9 @@ person_info(name = "Martyn Plummer",
 :::
 :::
 
-<br>
+<br><br>
 
-We are also coordinating with the [R Contribution Working Group](https://contributor.r-project.org/working-group) and the R Core Team.
+We are coordinating with the [R Contribution Working Group](https://contributor.r-project.org/working-group) and the R Core Team.
 
 ## Contact
 
