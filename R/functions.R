@@ -11,7 +11,7 @@ person_info <- function(name = "A Person",
   if (!is.null(website)){
     link <- a(img(src = "media/reshot-icon-link-TPKSVGQNXF.svg", height = "30",
                   style = "margin:2px; vertical-align:middle;", border = "0"),
-              href = website, target = "_blank")
+              href = website, target = "_blank", style = "text-decoration:none")
     res <- c(res, list(link))
     
   }

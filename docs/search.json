@@ -151,7 +151,7 @@
     "href": "index.html#local-organizing-team",
     "title": "R Project Sprint 2023",
     "section": "Local organizing team",
-    "text": "Local organizing team\nThis event is being organized by members of the Statistics department at the University of Warwick.\n\n\n  Heather Turner   RSE FellowAssociate Professor    \n\n\n  Ella Kaye   Research Software Engineer    \n\n\n  Martyn Plummer   ProfessorR Core Developer    \n\n\n\nWe are coordinating with the R Contribution Working Group and the R Core Team."
+    "text": "Local organizing team\nThis event is being organized by members of the Statistics department at the University of Warwick.\n\n\n  Heather Turner   RSE FellowAssociate Professor       \n\n\n  Ella Kaye   Research Software Engineer       \n\n\n  Martyn Plummer   ProfessorR Core Developer       \n\n\nWe are coordinating with the R Contribution Working Group and the R Core Team."
   },
   {
     "objectID": "index.html#contact",
@@ -166,5 +166,54 @@
     "title": "R Project Sprint 2023",
     "section": "Sponsors",
     "text": "Sponsors"
+  },
+  {
+    "objectID": "code-of-conduct.html",
+    "href": "code-of-conduct.html",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "The organizers of R Project Sprint 2023 are dedicated to providing a harassment-free conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof).\nAll participants at R Project Sprint 2023 are required to agree to the following code of conduct.\nThe code of conduct applies to all sprint activities including\nsocial events. It extends to event-specific exchanges on social media, for instance posts tagged with the identifier of the sprint (#RSprint2023) and replies to such posts.\nOrganizers will enforce this code throughout and expect cooperation in ensuring a safe environment for all."
+  },
+  {
+    "objectID": "code-of-conduct.html#expected-behaviour",
+    "href": "code-of-conduct.html#expected-behaviour",
+    "title": "Code of Conduct",
+    "section": "Expected Behaviour",
+    "text": "Expected Behaviour\nAll conference participants agree to:\n\nBe considerate in language and actions, and respect the boundaries of fellow participants.\nRefrain from demeaning, discriminatory, or harassing behaviour and language. Please refer to Unacceptable Behaviour for more details.\nAlert a member of the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential. Please refer to the section titled What To Do If You Witness or Are Subject To Unacceptable Behaviour for more details."
+  },
+  {
+    "objectID": "code-of-conduct.html#unacceptable-behaviour",
+    "href": "code-of-conduct.html#unacceptable-behaviour",
+    "title": "Code of Conduct",
+    "section": "Unacceptable Behaviour",
+    "text": "Unacceptable Behaviour\nBehaviour that is unacceptable includes, but is not limited to:\n\nStalking\nDeliberate intimidation\nUnwanted photography or recording\nSustained or willful disruption of talks or other events\nUse of sexual or discriminatory imagery, comments, or jokes\nOffensive comments related to age, gender, sexual orientation, disability, race or religion\nInappropriate physical contact, which can include grabbing, or massaging or hugging without consent.\nUnwelcome sexual attention, which can include inappropriate questions of a sexual nature, asking for sexual favours or repeatedly asking for dates or contact information.\n\nIf you are asked to stop harassing behaviour you should stop immediately, even if your behaviour was meant to be friendly or a joke, it was clearly not taken that way and for the comfort of all conference attendees you should stop.\nAttendees who behave in a manner deemed inappropriate are subject to actions listed under Procedure for Code of Conduct Violations."
+  },
+  {
+    "objectID": "code-of-conduct.html#additional-requirements-for-sprint-material",
+    "href": "code-of-conduct.html#additional-requirements-for-sprint-material",
+    "title": "Code of Conduct",
+    "section": "Additional Requirements for Sprint Material",
+    "text": "Additional Requirements for Sprint Material\nPresentation slides and documents created for, or during, the sprint should not contain offensive or sexualised material."
+  },
+  {
+    "objectID": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
+    "href": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
+    "title": "Code of Conduct",
+    "section": "Procedure for Code of Conduct Violations",
+    "text": "Procedure for Code of Conduct Violations\nThe organizing team reserves the right to determine the appropriate response for all code of conduct violations. Potential responses include:\n\na formal warning to stop harassing behaviour\ncancellation or early termination of presentations or other contributions to the programme\nexpulsion from the sprint\nremoval/rejection of sprint contributions\nremoval of sponsorship acknowledgement, without return of sponsorship contribution"
+  },
+  {
+    "objectID": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
+    "href": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
+    "title": "Code of Conduct",
+    "section": "What To Do If You Witness or Are Subject To Unacceptable Behaviour",
+    "text": "What To Do If You Witness or Are Subject To Unacceptable Behaviour\nAlert the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential.\nReports should be addressed to r-project-sprint-2023@gaggle.email. If the report concerns someone on the local organizing team, please contact other members of the team directly. If you still have concerns about a conflict of interest, you are welcome to contact the University of Warwick Report + Support service.\nWe will take all reports by R Project Sprint 2023 participants seriously. This includes incidents outside our spaces and at any point in time. The organizing team reserve the right to exclude people from the sprint based on their past behaviour, including behaviour outside R Project Sprint 2023 spaces and behaviour towards people who are not part of the sprint.\nWe will respect confidentiality requests for the purpose of protecting targets of harassing behaviour. We will not name victims without their affirmative consent. Correspondence is handled confidentially and deleted after the case is resolved. All data is stored securely, access will be limited to the members of the organizing team who receive the report.\nThe organizing team will also provide support to victims, which may include:\n\nproviding an escort,\ncontacting the on-campus Community Safety Team or off campus Emergency Services,\n\nor otherwise assisting those experiencing harassment to ensure that they feel safe for the duration of the conference. Assistance will only be provided with affirmative consent of the victim."
+  },
+  {
+    "objectID": "code-of-conduct.html#acknowledgements",
+    "href": "code-of-conduct.html#acknowledgements",
+    "title": "Code of Conduct",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
   }
 ]

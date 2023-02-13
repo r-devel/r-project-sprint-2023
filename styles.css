@@ -7,7 +7,7 @@
   /* fit as many fixed-width cols as possible */
   grid-template-columns: repeat( auto-fit, 225px );
   /* fix row height as 200 px */
-  grid-auto-rows: 200px;
+  grid-auto-rows: 275px;
   text-align: center;
 }
 

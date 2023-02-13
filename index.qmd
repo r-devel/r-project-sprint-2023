@@ -36,7 +36,7 @@ The sprint will involve a mixture of invited and self-nominated participants, so
 The main criteria for participation is a good knowledge of R programming and a keen interest in contributing, as we hope participants continue to contribute after the event. The table below shows the type of knowledge/skills we expect participants to have
 
 | Skills most will have |                   Skills some will have                    |
-|:---------------------:|:----------------------------------------------------------:|
+|:-------------------:|:-------------------------------------------------:|
 |  Writing R functions  |                      Programming in C                      |
 | Debugging R functions |           Knowledge of S3/S4 classes and methods           |
 | Writing R help files  | Expertise in statistical methods in **stats**, **splines** |
@@ -85,7 +85,8 @@ person_info(name = "Heather Turner",
             affiliation = "RSE Fellow<br>Associate Professor",
             pic = "media/heather_turner.jpg",
             alt = "Heather Turner outside in the sun, smiling. She is a white woman in her 40s with dark straight hair tied back and wears glasses.",
-            website = "https://warwick.ac.uk/heatherturner")
+            website = "https://warwick.ac.uk/heatherturner",
+            email = "h.turner.1@warwick.ac.uk")
 ```
 :::
 
@@ -95,7 +96,8 @@ person_info(name = "Ella Kaye",
             affiliation = "Research Software Engineer",
             pic = "media/ella_profile.jpeg",
             alt = "Headshot of Ella outside in the sun, smiling, looking slightly off-camera. She is a white woman in her 40s with short dark hair.",
-            website = "https://ellakaye.co.uk")
+            website = "https://ellakaye.co.uk",
+            email = "Ella.M.Kaye@warwick.ac.uk")
 ```
 :::
 
@@ -105,12 +107,11 @@ person_info(name = "Martyn Plummer",
             affiliation = "Professor<br>R Core Developer",
             pic = "media/martyn_plummer.jpg",
             alt = "Headshot of Martyn Plummer.",
-            website = "https://ellakaye.co.uk")
+            website = "https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/plummer/",
+            email = "Martyn.Plummer@warwick.ac.uk")
 ```
 :::
 :::
-
-<br><br>
 
 We are coordinating with the [R Contribution Working Group](https://contributor.r-project.org/working-group) and the R Core Team.
 
