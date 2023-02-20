@@ -36,7 +36,7 @@ The sprint will involve a mixture of invited and self-nominated participants, so
 The main criteria for participation is a good knowledge of R programming and a keen interest in contributing, as we hope participants continue to contribute after the event. The table below shows the type of knowledge/skills we expect participants to have
 
 | Skills most will have |                   Skills some will have                    |
-|:-------------------:|:-------------------------------------------------:|
+|:--------------------:|:------------------------------------------------:|
 |  Writing R functions  |                      Programming in C                      |
 | Debugging R functions |           Knowledge of S3/S4 classes and methods           |
 | Writing R help files  | Expertise in statistical methods in **stats**, **splines** |
@@ -46,11 +46,11 @@ Other specialist skills e.g. expertise in building Windows/MacOS GUIs or fluency
 
 It will help if you have some experience in contributing to base R, but novice contributors will be mentored in the run-up to the event, so they are prepared.
 
-We are also keen to foster a diverse community of contributors. If you are a member of the [R-Ladies](https://rladies.org/), [MiR](https://mircommunity.com/), [ArabR](https://github.com/ARab-R), [AfricaR](https://africa-r.org/), [AsiaR](https://bit.ly/join_asiaR_slack), or [LatinR](https://latin-r.com/) communities, or otherwise identify as part of an underrepresented group among R contributors, then we especially encourage you to self-nominate! To ensure a welcoming environment, we have a code of conduct in place.
+We are also keen to foster a diverse community of contributors. If you are a member of the [R-Ladies](https://rladies.org/), [MiR](https://mircommunity.com/), [RainbowR](https://rainbowr.netlify.app/), [AfricaR](https://africa-r.org/), [ArabR](https://github.com/ARab-R), [AsiaR](https://bit.ly/join_asiaR_slack), or [LatinR](https://latin-r.com/) communities, or otherwise identify as part of an underrepresented group among R contributors, then we especially encourage you to self-nominate! To ensure a welcoming environment, we have a code of conduct in place.
 
 ## Apply for a place
 
-Anyone one interested to attend the sprint is encouraged to self-nominate via the application form \[link + deadline TBA\]. You will be asked about your experience, skills and background to help us balance participation overall.
+Anyone one interested to attend the sprint is encouraged to self-nominate via the [application form](https://warwick.ac.uk/fac/sci/statistics/news/r-project-sprint-2023) by **Friday 10 March**. You will be asked about your experience, skills and background to help us balance participation overall.
 
 Thanks to our sponsors, all workshop participants will be **accommodated free of charge** during the sprint, in [on-campus housing at the University of Warwick](https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/arthur-vick), **with meals provided**.
 
