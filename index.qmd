@@ -13,7 +13,7 @@ source(file.path("R", "functions.R"))
 
 *Collaborate on contributions to base R!*
 
-We are pleased to announce an R Project Sprint, to be hosted at the University of Warwick, UK, from Wednesday August 30 to Friday September 1. Novice and experienced contributors are encouraged to apply for a place at the residential event, with funding available for travel. Read on for more!
+We are pleased to announce an R Project Sprint, to be hosted at the University of Warwick, UK, from Wednesday August 30 to Friday September 1. Novice and experienced contributors are encouraged to apply for a place at the residential event, with funding available for travel (deadline **Friday 10 March**). Read on for more!
 
 <center>![A group of 11 people around a long table with a large screen at one end and a big window behind. People are general busy working on laptops, writing on notepads, etc.](warwick-university-faculty-of-arts-building-768x381-compact.jpg){alt="A group of 11 people around a long table with a large screen at one end and a big window behind. People are general busy working on laptops, writing on notepads, etc." style="height:400px"}<br> <small>Breakout space in the Faculty of Arts Building, University of Warwick ©Hufton+Crow<br><br></small></center>
 
@@ -36,7 +36,7 @@ The sprint will involve a mixture of invited and self-nominated participants, so
 The main criteria for participation is a good knowledge of R programming and a keen interest in contributing, as we hope participants continue to contribute after the event. The table below shows the type of knowledge/skills we expect participants to have
 
 | Skills most will have |                   Skills some will have                    |
-|:--------------------:|:------------------------------------------------:|
+|:---------------------:|:-----------------------------------------------:|
 |  Writing R functions  |                      Programming in C                      |
 | Debugging R functions |           Knowledge of S3/S4 classes and methods           |
 | Writing R help files  | Expertise in statistical methods in **stats**, **splines** |
