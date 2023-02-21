@@ -52,7 +52,7 @@ We are also keen to foster a diverse community of contributors. If you are a mem
 
 Anyone one interested to attend the sprint is encouraged to self-nominate via the [application form](https://warwick.ac.uk/fac/sci/statistics/news/r-project-sprint-2023) by **Friday 10 March**. You will be asked about your experience, skills and background to help us balance participation overall.
 
-Thanks to our sponsors, all workshop participants will be **accommodated free of charge** during the sprint, in [on-campus housing at the University of Warwick](https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/arthur-vick), **with meals provided**.
+Thanks to our [sponsors], all workshop participants will be **accommodated free of charge** during the sprint, in [on-campus housing at the University of Warwick](https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/arthur-vick), **with meals provided**.
 
 Funding is also available for **travel expenses**, however if participants are able to get travel funding from other sources this will allow more people to attend - companies or other funding bodies providing such support to participants will be acknowledged as sponsors.
 
@@ -122,3 +122,5 @@ For queries about this event, please contact [r-project-sprint-2023\@gaggle.emai
 ## Sponsors
 
 [![](media/EPSRC_logo.png){fig-alt="Engineering and Physical Sciences Council logo" width="300"}](https://www.ukri.org/councils/epsrc/)
+
+Further sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors [Twitter](https://twitter.com/R_Contributors) and [Mastodon](https://hachyderm.io/@R_Contributors) accounts, and in reports of the sprint. Please contact [r-project-sprint-2023\@gaggle.email](mailto:r-project-sprint-2023@gaggle.email) to discuss!
