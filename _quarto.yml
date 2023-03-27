@@ -8,6 +8,8 @@ website:
     left: 
       - href: code-of-conduct.qmd
         text: Code of Conduct
+      - href: participants.qmd
+        text: Participants
     right:
       - icon: mastodon
         href: https://mastodon.cloud/tags/RSprint2023

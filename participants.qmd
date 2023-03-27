@@ -1,0 +1,137 @@
+---
+title: "Participants"
+---
+
+This page is under development - confirmed participants will be added here.
+
+Participants with an asterisk are participating remotely.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source(file.path("R", "functions.R"))
+```
+
+## R Core Team
+
+::: participant-gallery
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Robert Gentleman",
+                 alt = "Headshot of Robert Gentleman.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Tomas Kalibera",
+                 alt = "Headshot of Tomas Kalibera.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Michael Lawrence",
+                 alt = "Headshot of Michael Lawrence.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Thomas Lumley",
+                 alt = "Headshot of Thomas Lumley.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Martin Mächler",
+                 alt = "Headshot of Martin Mächler.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Sebastian Meyer",
+                 alt = "Headshot of Sebastian Meyer.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Paul Murrell*",
+                 alt = "Headshot of Paul Murrell.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Deepayan Sarkar",
+                 alt = "Headshot of Deepayan Sarkar.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Luke Tierney",
+                 alt = "Headshot of Luke Tierney.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Simon Urbanek",
+                 alt = "Headshot of Simon Urbanek.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+:::

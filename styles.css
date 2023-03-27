@@ -17,6 +17,16 @@
 }
  */
  
+.participant-gallery {
+  display: grid; 
+  gap: 10px; /* gap between boxes */
+  /* fit as many fixed-width cols as possible */
+  grid-template-columns: repeat( auto-fit, 175px );
+  /* fix row height as 200 px */
+  grid-auto-rows: 225px;
+  text-align: center;
+}
+ 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
