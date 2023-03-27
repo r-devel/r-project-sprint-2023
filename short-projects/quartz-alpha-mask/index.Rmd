@@ -6,55 +6,41 @@ output: html_document
 
 ## Background
 
-R version 4.1 added the concept of alpha masks to R graphics,
-with an interface in the 'grid' graphics system.
+R version 4.1 added the concept of alpha masks to R graphics, with an interface in the 'grid' graphics system.
 
-```{r}
+```{r packages}
 library(grid)
 ```
 
-Any shape(s) can be used to create an alpha mask, but the only thing that
-matters is the opacity of the final result.  The mask below is based
-on a circle,
-the important part being that it has a semitransparent fill 
-(a line segment is drawn to show that the circle is semitransparent;
-the line is visible through the circle).
-Outside the circle, where we have drawn nothing, the mask is fully transparent.
+Any shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.
 
-```{r}
+```{r circle-mask}
 ac <- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))
 amask <- as.mask(ac)
 ```
 
-```{r, echo=FALSE, fig.width=2, fig.height=2}
+```{r draw-circle-mask, echo=FALSE, fig.width=2, fig.height=2}
 grid.rect()
 grid.segments(gp=gpar(lwd=10, col="grey"))
 grid.draw(ac)
 ```
 
-We can apply a mask to affect what happens when we draw other shapes.
-For example, we will work with the following rectangles, one tall and thin
-and red and one short and wide and green.
+We can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.
 
-```{r}
+```{r rect}
 r1 <- rectGrob(width=.2, gp=gpar(fill=2))
 r2 <- rectGrob(height=.2, gp=gpar(fill=3))
 ```
 
-```{r, echo=FALSE, fig.width=2, fig.height=2}
+```{r draw-rect, echo=FALSE, fig.width=2, fig.height=2}
 grid.rect()
 grid.draw(r1)
 grid.draw(r2)
 ```
 
-The following code draws the red rectangle, then pushes a viewport
-that enforces the mask (based on the circle), and then draws the 
-green rectangle.  The red rectangle is drawn normally, but the mask
-means that only part of the green rectangle is drawn (where the 
-rectangle and the circlular mask overlap) and that part
-is only drawn semitransparent (because the mask is semitransparent).
+The following code draws the red rectangle, then pushes a viewport that enforces the mask (based on the circle), and then draws the green rectangle. The red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).
 
-```{r, fig.width=2, fig.height=2}
+```{r rect-circle-mask, fig.width=2, fig.height=2}
 grid.rect()
 grid.draw(r1)
 pushViewport(viewport(mask=amask))
@@ -62,38 +48,26 @@ grid.draw(r2)
 popViewport()
 ```
 
-R version 4.2 added the concept of *luminance* masks.  As with alpha masks,
-we can create a luminance masks with any shape, but what matters is 
-not the opacity of the final result, but the luminance of the final result;
-whether the mask is black (which corresponds to full transparency),
-or white (full opacity), or grey (semitransparency).
+R version 4.2 added the concept of *luminance* masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).
 
-We will again work with a mask based on a circle, but this time the 
-circle just has an opaque grey fill (we cannot see the line
-segment through the circle).
+We will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).
 
-```{r}
+```{r lumi-mask}
 lc <- circleGrob(r=.3, gp=gpar(col=NA, fill="grey50"))
 lmask <- as.mask(lc, type="luminance")
 ```
 
-```{r, echo=FALSE, fig.width=2, fig.height=2}
+```{r draw-lumi-mask, echo=FALSE, fig.width=2, fig.height=2}
 grid.rect()
 grid.segments(gp=gpar(lwd=10, col="grey"))
 grid.draw(lc)
 ```
 
-The following code draws the red rectangle, then pushes a viewport
-with the luminance mask, then draws the green rectangle.
-The result is the same as for the alpha mask, but this time the result is due
-to the grey values in the luminance mask, where before the result
-was due to the opacity value in the alpha mask.
+The following code draws the red rectangle, then pushes a viewport with the luminance mask, then draws the green rectangle. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask.
 
-We have to use the `pdf()` device to demonstrate a luminance mask
-because the Cairo graphics device that was used for previous images
-only supports alpha masks.
+We have to use the `pdf()` device to demonstrate a luminance mask because the Cairo graphics device that was used for previous images only supports alpha masks.
 
-```{r, fig.keep="none", results="hide"}
+```{r lumi-mask-pdf, fig.keep="none", results="hide"}
 pdf("lumi-mask.pdf", width=2, height=2)
 grid.rect()
 grid.draw(r1)
@@ -103,7 +77,7 @@ popViewport()
 dev.off()
 ```
 
-```{r, echo=FALSE}
+```{r lumi-mask-png, echo=FALSE}
 system("convert -density 96 lumi-mask.pdf lumi-mask.png")
 ```
 
@@ -111,63 +85,45 @@ system("convert -density 96 lumi-mask.pdf lumi-mask.png")
 
 ## Problem statement
 
-For R version 4.3, 
-support for luminance masks is being added to the Quartz graphics device in R
-(`quartz()` on MacOS).
-Unfortunately, in a reverse of the Cairo graphics device problem,
-Quartz graphics only supports luminance masks so we have not implemented
-alpha masks on the `quartz()` device.
+For R version 4.3, support for luminance masks is being added to the Quartz graphics device in R (`quartz()` on MacOS). Unfortunately, in a reverse of the Cairo graphics device problem, Quartz graphics only supports luminance masks so we have not implemented alpha masks on the `quartz()` device.
 
 ## Proposed solution
 
-The implementation of luminance masks for the `quartz()` device
-involves creating a greyscale bitmap image and drawing the mask shapes onto
-that.  This happens in the C function `QuartzCreateMask()`
-(in `R/src/library/grDevices/src/devQuartz.c`).
-The Quartz function `CGContextClipToMask()` uses that greyscale
-image to clip output.
+The implementation of luminance masks for the `quartz()` device involves creating a greyscale bitmap image and drawing the mask shapes onto that. This happens in the C function `QuartzCreateMask()` (in `R/src/library/grDevices/src/devQuartz.c`). The Quartz function `CGContextClipToMask()` uses that greyscale image to clip output.
 
-The proposal is that an alpha mask could be implemented by
-creating an RGBA bitmap image (instead of a greyscale image) for drawing the
-mask shapes onto and then converting that image to a greyscale one
-based on the alpha channel of the RGBA image.  Once we have a greyscale
-image from the alpha mask, we can proceed as before.
+The proposal is that an alpha mask could be implemented by creating an RGBA bitmap image (instead of a greyscale image) for drawing the mask shapes onto and then converting that image to a greyscale one based on the alpha channel of the RGBA image. Once we have a greyscale image from the alpha mask, we can proceed as before.
 
-The `dev->capabilities()` of the `quartz()` device would also need
-updating.
+The `dev->capabilities()` of the `quartz()` device would also need updating.
 
 ## Testing
 
-Some examples of R code and desired output for luminance masks
-are included in the technical report
-["Luminance Masks in R Graphics"](https://stattech.wordpress.fos.auckland.ac.nz/2021/12/01/2021-04-luminance-masks-in-r-graphics/)
-([faster link](https://protect-au.mimecast.com/s/SkAFCq71EMFpz5z7fZ37by?domain=stat.auckland.ac.nz)).
+Some examples of R code and desired output for luminance masks are included in the technical report ["Luminance Masks in R Graphics"](https://stattech.wordpress.fos.auckland.ac.nz/2021/12/01/2021-04-luminance-masks-in-r-graphics/) ([faster link](https://protect-au.mimecast.com/s/SkAFCq71EMFpz5z7fZ37by?domain=stat.auckland.ac.nz)).
 
-The ['gdiff' package](https://cran.rstudio.com/web/packages/gdiff/)
-can be useful for checking that test output matches control output.
+The ['gdiff' package](https://cran.rstudio.com/web/packages/gdiff/) can be useful for checking that test output matches control output.
 
 ## Project requirements
 
-Familiarity with C.  Though there is a strong template of existing code
-to work from.
+Familiarity with C. Though there is a strong template of existing code to work from.
 
 Capability to build R from source (on MacOS).
 
-Ability to find, read, and comprehend Apple Core Graphics documentation,
-e.g., documentation for 
-[`CGContextClipToMask()`](https://developer.apple.com/documentation/coregraphics/1456497-cgcontextcliptomask)
+Ability to find, read, and comprehend Apple Core Graphics documentation, e.g., documentation for [`CGContextClipToMask()`](https://developer.apple.com/documentation/coregraphics/1456497-cgcontextcliptomask)
 
 ## Project resources
 
-* ["New Features in the R Graphics Engine"](https://developer.r-project.org/Blog/public/2020/07/15/new-features-in-the-r-graphics-engine/)
-* ["Luminance Masks in R Graphics"](https://stattech.wordpress.fos.auckland.ac.nz/2021/12/01/2021-04-luminance-masks-in-r-graphics/).
-* ["Groups and Paths and Masks in R Graphics"](https://developer.r-project.org/Blog/public/2021/12/06/groups-and-paths-and-masks-in-r-graphics/index.html)
-* ["Catching up with R Graphics"](https://stattech.wordpress.fos.auckland.ac.nz/2020/07/14/2020-04-catching-up-with-r-graphics/)
+-   ["New Features in the R Graphics Engine"](https://developer.r-project.org/Blog/public/2020/07/15/new-features-in-the-r-graphics-engine/)
 
-* ["Writing R Extensions"](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html)
-* ["R internals"](https://cran.r-project.org/doc/manuals/r-devel/R-ints.html)
+-   ["Luminance Masks in R Graphics"](https://stattech.wordpress.fos.auckland.ac.nz/2021/12/01/2021-04-luminance-masks-in-r-graphics/).
 
-* Questions can be emailed to [Paul Murrell](mailto:paul@stat.auckland.ac.nz)
+-   ["Groups and Paths and Masks in R Graphics"](https://developer.r-project.org/Blog/public/2021/12/06/groups-and-paths-and-masks-in-r-graphics/index.html)
+
+-   ["Catching up with R Graphics"](https://stattech.wordpress.fos.auckland.ac.nz/2020/07/14/2020-04-catching-up-with-r-graphics/)
+
+-   ["Writing R Extensions"](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html)
+
+-   ["R internals"](https://cran.r-project.org/doc/manuals/r-devel/R-ints.html)
+
+-   Questions can be emailed to [Paul Murrell](mailto:paul@stat.auckland.ac.nz)
 
 ## Project outcomes
 
@@ -175,10 +131,6 @@ Contribution to the core R code base (would need to be GPL).
 
 Experience with building R from source.
 
-Exposure to the design of R graphics devices and the R graphics device
-API.
+Exposure to the design of R graphics devices and the R graphics device API.
 
-Exposure to R graphics C code, especially that involving graphics devices
-(`R/src/include/R_Ext/GraphicsDevice.h`),
-especially the `quartz()` device (`R/src/library/grDevices/src/devQuartz.c`).
-
+Exposure to R graphics C code, especially that involving graphics devices (`R/src/include/R_Ext/GraphicsDevice.h`), especially the `quartz()` device (`R/src/library/grDevices/src/devQuartz.c`).

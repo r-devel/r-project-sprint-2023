@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,6 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../media/favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -145,7 +146,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../code-of-conduct.html">
+ <span class="menu-text">Code of Conduct</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../participants.html">
+ <span class="menu-text">Participants</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.cloud/tags/RSprint2023"><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hashtag/RSprint2023?src=hashtag_click"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/r-project-sprint-2023"><i class="bi bi-github" role="img">
 </i> 
@@ -215,7 +236,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="192"></p>
+<p><img src="index_files/figure-html/draw-circle-mask-1.png" class="img-fluid" width="192"></p>
 </div>
 </div>
 <p>We can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.</p>
@@ -225,7 +246,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="192"></p>
+<p><img src="index_files/figure-html/draw-rect-1.png" class="img-fluid" width="192"></p>
 </div>
 </div>
 <p>The following code draws the red rectangle, then pushes a viewport that enforces the mask (based on the circle), and then draws the green rectangle. The red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).</p>
@@ -236,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.draw</span>(r2)</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">popViewport</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="192"></p>
+<p><img src="index_files/figure-html/rect-circle-mask-1.png" class="img-fluid" width="192"></p>
 </div>
 </div>
 <p>R version 4.2 added the concept of <em>luminance</em> masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).</p>
@@ -247,7 +268,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="192"></p>
+<p><img src="index_files/figure-html/draw-lumi-mask-1.png" class="img-fluid" width="192"></p>
 </div>
 </div>
 <p>The following code draws the red rectangle, then pushes a viewport with the luminance mask, then draws the green rectangle. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask.</p>
