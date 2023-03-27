@@ -27,6 +27,7 @@ person_info <- function(name = "A Person",
 }
 
 # Used for participant list
+# https://github.com/shafayetShafee/bsicons
 participant_info <- function(name = "A Person",
                              affiliation = NULL,
                              pic = "/media/reshot-icon-human-person-6P2MCTEQ95.svg",

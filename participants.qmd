@@ -101,6 +101,18 @@ participant_info(name = "Paul Murrell*",
 
 ::: {#person}
 ```{r, results = "asis"}
+participant_info(name = "Martyn Plummer",
+                 alt = "Headshot of Martyn Plummer.",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
 participant_info(name = "Deepayan Sarkar",
                  alt = "Headshot of Deepayan Sarkar.",
                  link = NULL, # main website
