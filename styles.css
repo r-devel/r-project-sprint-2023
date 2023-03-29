@@ -1,4 +1,5 @@
 /* css styles */
+/* blue colour is #008cba */
 
 /* Use grid https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout */
 .people-gallery {
@@ -19,12 +20,13 @@
  
 .participant-gallery {
   display: grid; 
-  gap: 10px; /* gap between boxes */
+  gap: 8px; /* gap between boxes */
   /* fit as many fixed-width cols as possible */
   grid-template-columns: repeat( auto-fit, 175px );
   /* fix row height as 200 px */
   grid-auto-rows: 225px;
   text-align: center;
+  font-size: 0.85em;
 }
  
 .flex-container {

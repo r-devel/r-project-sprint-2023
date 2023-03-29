@@ -1,0 +1,515 @@
+---
+title: "Participants"
+---
+
+This page is under development - confirmed participants will be added here.
+
+Participants with an asterisk are participating remotely.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source(file.path("..", "R", "functions.R"))
+```
+
+## R Core Team
+
+::: participant-gallery
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Robert Gentleman",
+                 alt = "Headshot of Robert Gentleman",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Tomas Kalibera",
+                 alt = "Headshot of Tomas Kalibera",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Michael Lawrence",
+                 alt = "Headshot of Michael Lawrence",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Thomas Lumley",
+                 affiliation = "University of Auckland",
+                 pic = "headshot-thomas_lumley.jpg",
+                 alt = "Headshot of Thomas Lumley",
+                 web = "https://github.com/tslumley", # main website
+                 link = NULL, # personal website
+                 newspaper = "https://notstatschat.rbind.io",
+                 github = "https://github.com/tslumley",
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Martin Mächler",
+                 alt = "Headshot of Martin Mächler",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Sebastian Meyer",
+                 affiliation = "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+                 pic = "headshot-sebastian_meyer.jpg",
+                 alt = "Headshot of Sebastian Meyer",
+                 web = "https://www.imbe.med.fau.de/person/sebastian-meyer/",
+                 link = "https://www.imbe.med.fau.de/person/sebastian-meyer/",
+                 github = "https://github.com/bastistician",
+                 mastodon = "https://fosstodon.org/@bastistician",
+                 twitter = NULL,
+                 linkedin = NULL,
+                 orcid = "https://orcid.org/0000-0002-1791-9449")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Paul Murrell*",
+                 affiliation = "The University of Auckland",
+                 alt = "Headshot of Paul Murrell",
+                 web = "https://www.stat.auckland.ac.nz/~paul/index.html",
+                 link = "https://www.stat.auckland.ac.nz/~paul/index.html",
+                 github = "https://github.com/pmur002",
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Martyn Plummer", 
+                 pic = "/media/martyn_plummer.jpg",
+                 alt = "Headshot of Martyn Plummer",
+                 web = "https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/plummer/",
+                 link = "https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/plummer/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Deepayan Sarkar",
+                 alt = "Headshot of Deepayan Sarkar")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Luke Tierney",
+                 alt = "Headshot of Luke Tierney")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Simon Urbanek",
+                 alt = "Headshot of Simon Urbanek")
+```
+:::
+:::
+
+## R Contributors
+
+::: participant-gallery
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Malcolm Barrett",
+                 affiliation = "Posit",
+                 pic = "headshot-malcolm_barrett.jpg",
+                 alt = "Headshot of Malcolm Barrett",
+                 web = "https://malco.io/", # main website
+                 link = "https://malco.io/", # personal website
+                 github = "https://github.com/malcolmbarrett",
+                 mastodon = "https://mstdn.jp/@malcolmbarrett")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Elio Campitelli",
+                 affiliation = "University of Buenos Aires",
+                 pic = "headshot-elio_campitelli.jpg",
+                 alt = "Headshot of Elio Campitelli",
+                 web = "https://eliocamp.github.io/", # main website
+                 link = "https://eliocamp.github.io/",
+                 mastodon = "https://mastodon.social/@eliocamp")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Michael Chirico",
+                 affiliation = "Google",
+                 web = "https://github.com/michaelchirico/",
+                 github = "https://github.com/michaelchirico/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Gergely Daroczi",
+                 affiliation = "Rx Studio",
+                 pic = "headshot-gergely_daroczi.jpg",
+                 alt = "Headshot of Gergely Daroczi",
+                 web = "https://daroczig.github.io", # main website
+                 link = "https://daroczig.github.io",
+                 mastodon = "https://fosstodon.org/@daroczig",
+                 github = "https://github.com/daroczig/",
+                 twitter = "https://twitter.com/daroczig/",
+                 linkedin = "https://www.linkedin.com/in/daroczig/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Neeraj Dhanraj Bokde",
+                 affiliation = "Aarhus University, Denmark",
+                 web = "neerajbokde.in", # main website
+                 link = "neerajbokde.in")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Hannah Frick",
+                 affiliation = "Posit",
+                 pic = "headshot-hannah_frick.jpg",
+                 alt = "Headshot of Hannah Frick",
+                 web = "https://www.frick.ws/",
+                 link = "https://www.frick.ws/",
+                 mastodon = "https://mastodon.social/@hfrick",
+                 github = "https://github.com/hfrick")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Geraldine Gomez",
+                 affiliation = "Pontificia Universidad Javeriana",
+                 pic = "headshot-geraldine_gomez.jpg",
+                 alt = "Headshot of Geraldine Gomez",
+                 web = "https://github.com/GeraldineGomez",
+                 github = "https://github.com/GeraldineGomez")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Paola Corrales",
+                 affiliation = "UBA-CIMA-CONICET",
+                 pic = "headshot-paola_corrales.jpg",
+                 alt = "Headshot of Paola Corrales",
+                 web = "https://paocorrales.github.io/ ", # main website
+                 link = "https://paocorrales.github.io/ ",
+                 mastodon = "https://fosstodon.org/@paocorrales")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Siyao (Jane) He",
+                 affiliation = "University of California, Irvine",
+                 pic = "headshot-siyao_he.jpg",
+                 alt = "Headshot of Siyao (Jane) He",
+                 web = "https://github.com/SiyaoIsHiding",
+                 github = "https://github.com/SiyaoIsHiding")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Lionel Henry",
+                 affiliation = "Posit",
+                 pic = "headshot-lionel_henry.jpg",
+                 alt = "Headshot of Lionel Henry",
+                 web = "https://github.com/lionel-/",
+                 github = "https://github.com/lionel-/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Erin Hodgess",
+                 affiliation = "Western Governors University",
+                 pic = "headshot-erin_hodgess.jpg",
+                 alt = "Headshot of Erin Hodgess",
+                 web = "https://github.com/ErinMH/CurrentrmpiFort0620",
+                 github = "https://github.com/ErinMH/CurrentrmpiFort0620")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Binod Jung Bogati",
+                 affiliation = "R User Group Nepal",
+                 pic = "headshot-binod_bogati.jpg",
+                 alt = "Headshot of Binod Jung Bogati",
+                 web = "https://bjungbogati.com.np", # main website
+                 link = "https://bjungbogati.com.np", # personal website
+                 github = "https://github.com/bjungbogati",
+                 twitter = "https://twitter.com/bjungbogati",
+                 linkedin = "https://www.linkedin.com/in/bjungbogati")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Asma Kacem",
+                 affiliation = "Software Engineer Intern",
+                 pic = "headshot-asma_kacem.jpg",
+                 alt = "Headshot of Asma Kacem",
+                 web = "https://twitter.com/Asmakacem19",
+                 github = "https://github.com/AsmaKacem1",
+                 twitter = "https://twitter.com/Asmakacem19",
+                 linkedin = "https://www.linkedin.com/in/asmakacem/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Saranjeet Kaur Bhogal",
+                 affiliation = "Research Software Alliance, Software Sustainability Institute",
+                 pic = "headshot-saranjeet_kaur_bhogal.jpg",
+                 alt = "Headshot of Saranjeet Kaur Bhogal",
+                 web = "https://saranjeetkaur.github.io/About-Me/", # main website
+                 link = "https://saranjeetkaur.github.io/About-Me/", # personal website
+                 github = "https://github.com/SaranjeetKaur",
+                 mastodon = "https://fosstodon.org/@saranjeet",
+                 twitter = "https://twitter.com/qwertyquesting",
+                 linkedin = "https://www.linkedin.com/in/saranjeet-k-48ab769b/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Ella Kaye",
+            affiliation = "University of Warwick",
+            pic = "/media/ella_profile.jpg",
+            alt = "Headshot of Ella Kaye",
+            web = "https://ellakaye.co.uk",
+            link = "https://ellakaye.co.uk",
+            mastodon = "https://fosstodon.org/@ellakaye",
+            linkedin = "https://www.linkedin.com/in/EllaKaye/",
+            github = "https://github.com/EllaKaye")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Ivan Krylov*",
+                 affiliation = "Lomonosov Moscow State University")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Trang Le",
+                 affiliation = "Bristol Myers Squibb",
+                 pic = "headshot-trang_le.jpg",
+                 alt = "Headshot of Trang Le",
+                 web = "https://github.com/trangdata",
+                 link = "https://trang.page/",
+                 github = "https://github.com/villegar",
+                 mastodon = "https://mapstodon.space/@trang",
+                 twitter = "https://twitter.com/trangdata",
+                 linkedin = "https://www.linkedin.com/in/trangthaole/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Caio Lente",
+                 affiliation = "Curso-R",
+                 pic = "headshot-caio_truzzi_lente.jpg",
+                 alt = "Headshot of Caio Lente",
+                 web = "https://twitter.com/ctlente",
+                 link = "https://lente.dev/",
+                 twitter = "https://twitter.com/ctlente",
+                 mastodon = "https://fosstodon.org/@clente",
+                 github = "https://github.com/clente",
+                 linkedin = "https://linkedin.com/in/clente")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Balasubramanian Narasimhan",
+                 affiliation = "Stanford University",
+                 pic = "headshot-balasubramanian_narasimhan.jpg",
+                 alt = "Headshot of Balasubramanian Narasimhan",
+                 web = "https://naras.su.domains",
+                 link = "https://naras.su.domains",
+                 twitter = "https://twitter.com/b_naras",
+                 mastodon = "https://mathstodon.xyz/@naras")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Hanne Oberman",
+                 affiliation = "Utrecht University",
+                 pic = "headshot-hanne_oberman.jpg",
+                 alt = "Headshot of Hanne Oberman",
+                 web = "https://hanneoberman.github.io/",
+                 link = "https://www.uu.nl/staff/HIOberman",
+                 github = "https://github.com/hanneoberman",
+                 twitter = "https://twitter.com/hioberman",
+                 mastodon = "https://mastodon.social/@oberman",
+                 linkedin = "https://www.linkedin.com/in/hanneoberman/",
+                 orcid = "https://orcid.org/0000-0003-3276-2141")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Ezekiel Adebayo Ogundepo",
+                 affiliation = "54gene Limited",
+                 pic = "headshot-ezekiel_ogundepo.png",
+                 alt = "Headshot of Ezekiel Adebayo Ogundepo",
+                 web = "https://bit.ly/gbganalyst",
+                 link = "https://bit.ly/gbganalyst",
+                 github = "https://github.com/gbganalyst",
+                 twitter = "https://twitter.com/gbganalyst",
+                 linkedin = "https://linkedin.com/in/gbganalyst")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Reiko Okamoto",
+                 affiliation = "National Research Council Canada",
+                 pic = "headshot-reiko_okamoto.jpg",
+                 alt = "Headshot of Reiko Okamoto",
+                 web = "https://reikookamoto.github.io/", # main website
+                 link = "https://reikookamoto.github.io/", # personal website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Debartha Paul*",
+                 pic = "headshot-debartha_paul.jpg",
+                 alt = "Headshot of Debartha Paul",
+                 web = "https://www.linkedin.com/in/debartha-paul-90a296a9/",
+                 github = "https://github.com/itsdebartha",
+                 twitter = "https://twitter.com/Dpaul_102",
+                 mastodon = "https://mastodon.social/@DeBARtha",
+                 linkedin = "https://www.linkedin.com/in/debartha-paul-90a296a9/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Shannon Pileggi",
+                 affiliation = "The Prostate Cancer Clinical Trials Consortium",
+                 pic = "headshot-shannon_pileggi.jpg",
+                 alt = "Headshot of Shannon Pileggi",
+                 web = "https://www.pipinghotdata.com/",
+                 link = "https://www.pipinghotdata.com/",
+                 github = "https://github.com/shannonpileggi/",
+                 twitter = "https://twitter.com/PipingHotData",
+                 mastodon = "https://fosstodon.org/@PipingHotData",
+                 linkedin = "https://www.linkedin.com/in/shannon-m-pileggi/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "George Stagg",
+                 affiliation = "Posit",
+                 pic = "headshot-george_stagg.jpg",
+                 alt = "Headshot of George Stagg",
+                 web = "https://github.com/georgestagg/",
+                 link = "https://www.gwstagg.co.uk",
+                 mastodon = "https://home.social/@gws",
+                 twitter = "https://twitter.com/gwstagg",
+                 github = "https://github.com/georgestagg/",
+                 linkedin = "https://www.linkedin.com/in/george-w-stagg/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "gwynn sturdevant",
+                 pic = "headshot-gwynn_sturdevant.jpg",
+                 alt = "Headshot of gwynn sturdevant",
+                 web = "www.nzgwynn.com", 
+                 link = "www.nzgwynn.com")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Heather Turner",
+                 affiliation = "University of Warwick",
+                 pic = "/media/heather_turner.jpg",
+                 alt = "Headshot of Heather Turner",
+                 web = "https://warwick.ac.uk/heatherturner",
+                 link = "https://warwick.ac.uk/heatherturner",
+                 mastodon = "https://fosstodon.org/@HeathrTurnr",
+                 github = "https://github.com/hturner",
+                 linkedin = "https://www.linkedin.com/in/heathrturnr/",
+                 orcid = "https://orcid.org/0000-0002-1256-3375")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Ben Ubah",
+                 affiliation = "cynkra",
+                 web = "https://github.com/benubah", 
+                 github = "https://github.com/benubah")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Roberto Villegas-Diaz",
+                 affiliation = "University of Liverpool",
+                 pic = "headshot-roberto_villegasdiaz.jpg",
+                 alt = "Headshot of Roberto Villegas-Diaz",
+                 web = "https://www.linkedin.com/in/roberto-villegas-diaz/",
+                 github = "https://github.com/villegar",
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = "https://www.linkedin.com/in/roberto-villegas-diaz/")
+```
+:::
+:::
