@@ -143,7 +143,6 @@ participant_info(name = "Simon Urbanek",
 ## R Contributors
 
 ::: participant-gallery
-
 ::: {#person}
 ```{r, results = "asis"}
 participant_info(name = "Malcolm Barrett",
@@ -217,6 +216,15 @@ participant_info(name = "Hannah Frick",
 
 ::: {#person}
 ```{r, results = "asis"}
+participant_info(name = "Jonathan Godfrey",
+                 affiliation = "Massey University",
+                 web = "https://github.com/ajrgodfrey", # main website
+                 github = "https://github.com/ajrgodfrey")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
 participant_info(name = "Geraldine Gomez",
                  affiliation = "Pontificia Universidad Javeriana",
                  pic = "headshot-geraldine_gomez.jpg",
@@ -240,6 +248,17 @@ participant_info(name = "Paola Corrales",
 
 ::: {#person}
 ```{r, results = "asis"}
+participant_info(name = "André Gillibert",
+                 affiliation = "CHU Rouen",
+                 pic = "headshot-andre_gillibert.jpg",
+                 alt = "Headshot of André Gillibert",
+                 web = "https://mail.gillibert.fr/blog", # main website
+                 newspaper = "https://mail.gillibert.fr/blog")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
 participant_info(name = "Siyao (Jane) He",
                  affiliation = "University of California, Irvine",
                  pic = "headshot-siyao_he.jpg",
@@ -257,6 +276,20 @@ participant_info(name = "Lionel Henry",
                  alt = "Headshot of Lionel Henry",
                  web = "https://github.com/lionel-/",
                  github = "https://github.com/lionel-/")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "Renata Hirota",
+                 affiliation = "Brazilian Jurimetrics Association",
+                 pic = "headshot-renata_massami_hirota.jpg",
+                 alt = "Headshot of Renata Hirota",
+                 web = "https://github.com/rmhirota",
+                 github = "https://github.com/rmhirota",
+                 mastodon = "https://fosstodon.org/@rmhirota",
+                 twitter = "https://twitter.com/renata_mh",
+                 linkedin = "https://www.linkedin.com/in/renatahirota/")
 ```
 :::
 
@@ -374,6 +407,19 @@ participant_info(name = "Balasubramanian Narasimhan",
                  link = "https://naras.su.domains",
                  twitter = "https://twitter.com/b_naras",
                  mastodon = "https://mathstodon.xyz/@naras")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
+participant_info(name = "María Cristina Nanton",
+                 affiliation = "University of Buenos Aires",
+                 pic = "headshot-maria_cristina_nanton.jpg",
+                 alt = "Headshot of María Cristina Nanton",
+                 web = "https://www.linkedin.com/in/mar%C3%ADa-cristina-n-920170126/", # main website
+                 linkedin = "https://www.linkedin.com/in/mar%C3%ADa-cristina-n-920170126/",
+                 twitter = "https://twitter.com/bynans1",
+                 github = "https://github.com/mcnanton")
 ```
 :::
 

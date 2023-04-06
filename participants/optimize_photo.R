@@ -3,9 +3,11 @@ library(magick)
 library(tools)
 
 ## e.g. get all photos in dir
-image_dir <- file.path("media")
+image_dir <- file.path("participants")
 
 files <- dir(image_dir, pattern = "jpeg|jpg|png")
+grep("renata", files)
+files <- files[21]
 
 ## create in optimized sub-directory to start with - don't over-write originals
 out_dir <- file.path(image_dir, "optimized")
