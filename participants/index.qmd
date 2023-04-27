@@ -52,6 +52,18 @@ participant_info(name = "Michael Lawrence",
 
 ::: {#person}
 ```{r, results = "asis"}
+participant_info(name = "Uwe Ligges",
+                 alt = "Headshot of Uwe Ligges",
+                 link = NULL, # main website
+                 github = NULL,
+                 mastodon = NULL,
+                 twitter = NULL,
+                 linkedin = NULL)
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
 participant_info(name = "Thomas Lumley",
                  affiliation = "University of Auckland",
                  pic = "headshot-thomas_lumley.jpg",
@@ -195,9 +207,11 @@ participant_info(name = "Gergely Daroczi",
 ::: {#person}
 ```{r, results = "asis"}
 participant_info(name = "Neeraj Dhanraj Bokde",
-                 affiliation = "Aarhus University, Denmark",
-                 web = "neerajbokde.in", # main website
-                 link = "neerajbokde.in")
+                 affiliation = "Aarhus University",
+                 pic = "headshot-neeraj_bokde.jpg",
+                 alt = "Headshot of Neeraj Dhanraj Bokde",
+                 web = "https://neerajbokde.in", # main website
+                 link = "https://neerajbokde.in")
 ```
 :::
 
@@ -259,7 +273,7 @@ participant_info(name = "André Gillibert",
 
 ::: {#person}
 ```{r, results = "asis"}
-participant_info(name = "Siyao (Jane) He",
+participant_info(name = "Siyao (Jane) He*",
                  affiliation = "University of California, Irvine",
                  pic = "headshot-siyao_he.jpg",
                  alt = "Headshot of Siyao (Jane) He",
@@ -516,8 +530,8 @@ participant_info(name = "George Stagg",
 participant_info(name = "gwynn sturdevant",
                  pic = "headshot-gwynn_sturdevant.jpg",
                  alt = "Headshot of gwynn sturdevant",
-                 web = "www.nzgwynn.com", 
-                 link = "www.nzgwynn.com")
+                 web = "https://www.nzgwynn.com", 
+                 link = "https://www.nzgwynn.com")
 ```
 :::
 

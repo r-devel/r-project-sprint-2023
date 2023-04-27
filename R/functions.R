@@ -42,6 +42,7 @@ participant_info <- function(name = "A Person",
                              orcid = NULL){
   res <- list(img(src = pic, alt = alt, style = "width:55%"))
   if (!is.null(web)){
+    check_url(web)
     res <- c(res, 
              list(paste('<br>', a(name, href = web, target = "_blank", 
                                    style = "text-decoration:none"), '</b><br>')))
@@ -54,6 +55,7 @@ participant_info <- function(name = "A Person",
   links <- c("link", "newspaper", "linkedin", "mastodon", "twitter", "github")
   for (x in links) {
     if (!is.null(get(x))){
+      check_url(get(x))
       hyperlink <- a(paste('{{< bi', x, ' size=1.3em color=#000000 >}}'),
                      href = get(x), target = "_blank", 
                      style = "text-decoration:none")
@@ -68,4 +70,8 @@ participant_info <- function(name = "A Person",
     res <- c(res, list(hyperlink))
   }
   cat(vapply(res, as.character, character(1)), sep = "\n")
+}
+
+check_url <- function(url) {
+  if (!grepl("^https://", url)) stop(url, " does not begin with 'https://'")
 }
