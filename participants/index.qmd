@@ -53,12 +53,10 @@ participant_info(name = "Michael Lawrence",
 ::: {#person}
 ```{r, results = "asis"}
 participant_info(name = "Uwe Ligges",
+                 affiliation = "Dortmund University",
                  alt = "Headshot of Uwe Ligges",
-                 link = NULL, # main website
-                 github = NULL,
-                 mastodon = NULL,
-                 twitter = NULL,
-                 linkedin = NULL)
+                 web = "https://www.statistik.tu-dortmund.de/~ligges/",
+                 link = "https://www.statistik.tu-dortmund.de/~ligges/")
 ```
 :::
 
