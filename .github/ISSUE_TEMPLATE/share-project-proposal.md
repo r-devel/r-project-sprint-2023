@@ -1,6 +1,7 @@
 ---
-name: New project proposal
-about: Share a new project proposed for the sprint
+name: Share project proposal
+about: Share a project proposal you have added to the sprint website (or that has
+  been added on your behalf).
 title: ''
 labels: ''
 assignees: ''
