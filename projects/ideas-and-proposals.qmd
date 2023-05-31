@@ -1,0 +1,53 @@
+---
+title: "Ideas and Proposals"
+---
+
+Anyone in the R community is welcome to propose a [project](/projects) for R Project Sprint 2023. 
+However, priority will be given to projects supported by the R Core Team and 
+projects will require interest from at 
+least two sprint participants to be taken on as a sprint project.
+
+## Proposals vs Ideas
+
+A **project proposal** should outline a specific package of work related to code 
+or documentation maintained by the R Core Team, where good progress 
+could be made by 2-6 people in ½ to 3 days. 
+
+For example:
+
+ - Addressing a set of related bugs reported on [R's Bugzilla](https://bugs.r-project.org/).
+ - Implementing a given solution to address "TODO" or "FIXME" comments in the R sources.
+ - Making specific improvements to contributor infrastructure, such the [Weblate server](https://translate.rx.studio/).
+
+If you want to discuss early stage-ideas or propose small tasks that could be 
+bundled in a larger project, open a thread in the [ideas](https://github.com/r-devel/r-project-sprint-2023/discussions/categories/ideas) 
+category of Discussions in the [r-project-sprint-2023](https://github.com/r-devel/r-project-sprint-2023) repository.
+
+## Add a Project Proposal
+
+Collaborators on the [r-project-sprint-2023](https://github.com/r-devel/r-project-sprint-2023) repository ([everyone](https://github.com/orgs/r-devel/teams/everyone) who is a member of the R-devel GitHub organization) can add 
+a project proposal as follows:
+
+1. Clone the [r-project-sprint-2023](https://github.com/r-devel/r-project-sprint-2023) 
+repository.
+2. Within `/projects`, copy the `template` directory and name the copy in kebab case with a 
+suitable short name (e.g. `short-project-name`).
+3. In the new directory, edit the `index.qmd` or `index.Rmd` as you prefer, deleting the unused template 
+file. Preview locally by rendering the Quarto website or knitting the R markdown file.
+4. Commit the `.[qR]md`. The website is updated automatically by GitHub actions.
+5. When your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the [proposals](https://github.com/r-devel/r-project-sprint-2023/discussions/categories/proposals) 
+category of `r-project-sprint-2023` Discussions.
+6. [Optional] Add labels to the discussion thread with the categories you added 
+to your proposal.
+
+If you have a GitHub account but are not a collaborator on the `r-project-sprint-2023` repository, you can use the 
+[standard workflow to make a pull request](https://github.com/forwards/first-contributions). 
+You will not be able to add labels to the discussion thread.
+
+If you do not have a GitHub account, copy the [R markdown template file](https://github.com/r-devel/r-project-sprint-2023/projects/template/index.Rmd), 
+edit to create your proposal and submit to [r-project-sprint-2023\@gaggle.email](mailto:r-project-sprint-2023@gaggle.email) 
+for it to be added to the website and for a corresponding discussion thread to be created.
+Please note it may be several days before the website is updated and any updates 
+to your proposal must be processed the same way.
+
+

@@ -10,6 +10,10 @@ website:
         text: Code of Conduct
       - href: participants/index.qmd
         text: Participants
+      #- menu:
+      #    - projects/index.qmd
+      #    - projects/ideas-and-proposals.qmd
+      #  text: Projects
     right:
       - icon: mastodon
         href: https://mastodon.cloud/tags/RSprint2023

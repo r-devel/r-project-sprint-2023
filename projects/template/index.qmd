@@ -1,0 +1,44 @@
+---
+title: Project Title in Title Case
+author: Your Name # and co-authors if applicable
+output: html_document
+execute:
+  freeze: auto
+categories: [C, MacOS, Graphics] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
+comments:
+  giscus: 
+    repo: quarto-dev/quarto-docs
+---
+
+<!-- 
+This template is based on https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/.
+The sections are provided as a guide and may not be appropriate to your proposal, 
+feel free to skip or change section headers.
+
+Please label any R code chunks, especially those producing images.
+-->
+
+```{r setup}
+
+```
+
+## Background
+
+
+## Problem statement
+
+
+## Proposed solution
+
+
+## Testing
+
+
+## Project requirements
+
+<!-- Include here prerequisite knowledge and operating system requirements -->
+
+## Project resources
+
+
+## Project outcomes

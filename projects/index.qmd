@@ -1,0 +1,19 @@
+---
+title: "Projects"
+listing:
+  id: project-listing
+  contents: "*/*.[qR]md"
+  exclude:
+    title: Project Title in Title Case
+  type: table
+  fields: [author, title, categories]
+  categories: true
+---
+
+This page lists potential projects for the sprint. 
+
+See [Ideas and Proposals](ideas-and-proposals.qmd) for how to discuss 
+ideas for projects or add a project proposal.
+
+::: {#project-listing}
+:::

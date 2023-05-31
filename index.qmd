@@ -27,7 +27,7 @@ This sprint will bring together novice and experienced contributors, to work alo
 
 -   Contributing to message translations via [Weblate](https://translate.rx.studio/projects/r-project/).
 
--   Work on new developments such as this short project proposed by core developer Paul Murrell: [Adding Alpha Masks to the Quartz Graphics Device](short-projects/quartz-alpha-mask).
+-   Work on new developments such as this short project proposed by core developer Paul Murrell: [Adding Alpha Masks to the Quartz Graphics Device](projects/quartz-alpha-mask).
 
 ## Who can take part?
 

@@ -2,6 +2,12 @@
 title: Adding Alpha Masks to the Quartz Graphics Device
 author: Paul Murrell
 output: html_document
+execute:
+  freeze: auto
+categories: [C, MacOS, Graphics]
+comments:
+  giscus: 
+    repo: quarto-dev/quarto-docs
 ---
 
 ## Background
