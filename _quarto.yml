@@ -22,7 +22,7 @@ website:
       - icon: twitter
         href: https://twitter.com/hashtag/RSprint2023?src=hashtag_click
       - icon: github
-        href: https://github.com/r-project-sprint-2023
+        href: https://github.com/r-devel/r-project-sprint-2023
   page-navigation: true
   favicon: media/favicon.png
   twitter-card:
