@@ -128,8 +128,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#proposals-vs-ideas" id="toc-proposals-vs-ideas" class="nav-link active" data-scroll-target="#proposals-vs-ideas">Proposals vs Ideas</a></li>
-  <li><a href="#add-a-project-proposal" id="toc-add-a-project-proposal" class="nav-link" data-scroll-target="#add-a-project-proposal">Add a Project Proposal</a></li>
+  <li><a href="#ideas" id="toc-ideas" class="nav-link active" data-scroll-target="#ideas">Ideas</a></li>
+  <li><a href="#proposals" id="toc-proposals" class="nav-link" data-scroll-target="#proposals">Proposals</a></li>
   </ul>
 </nav>
     </div>
@@ -153,21 +153,33 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Anyone in the R community is welcome to propose a <a href="../projects">project</a> for R Project Sprint 2023. However, priority will be given to projects supported by the R Core Team and projects will require interest from at least two sprint participants to be taken on as a sprint project.</p>
-<section id="proposals-vs-ideas" class="level2">
-<h2 class="anchored" data-anchor-id="proposals-vs-ideas">Proposals vs Ideas</h2>
-<p>A <strong>project proposal</strong> should outline a specific package of work related to code or documentation maintained by the R Core Team, where good progress could be made by 2-6 people in ½ to 3 days.</p>
+<p>We are currently soliciting ideas and proposals for R Project Sprint 2023 projects.</p>
+<p>Projects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations).</p>
+<section id="ideas" class="level2">
+<h2 class="anchored" data-anchor-id="ideas">Ideas</h2>
+<p>Project <strong>ideas</strong> may be suggested by anyone with an interest in R development.</p>
+<p>An <strong>idea</strong> may be</p>
+<ul>
+<li>A concept that could be turned into a <strong>project proposal</strong>.</li>
+<li>A small task that could be
+<ul>
+<li>combined with other ideas to form a <strong>project proposal</strong>, or</li>
+<li>picked up by a sprint participant if they have spare time alongside a larger project.</li>
+</ul></li>
+</ul>
+<p>Suggest an <strong>idea</strong> by opening a thread in the <a href="https://github.com/r-devel/r-project-sprint-2023/discussions/categories/ideas">ideas</a> category of Discussions in the <a href="https://github.com/r-devel/r-project-sprint-2023">r-project-sprint-2023</a> GitHub repository.</p>
+</section>
+<section id="proposals" class="level2">
+<h2 class="anchored" data-anchor-id="proposals">Proposals</h2>
+<p>Project <strong>proposals</strong> must be created by a <a href="../participants">sprint participant</a>, potentially in collaboration with external contributors.</p>
+<p>A project <strong>proposal</strong> should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.</p>
 <p>For example:</p>
 <ul>
 <li>Addressing a set of related bugs reported on <a href="https://bugs.r-project.org/">R’s Bugzilla</a>.</li>
 <li>Implementing a given solution to address “TODO” or “FIXME” comments in the R sources.</li>
 <li>Making specific improvements to contributor infrastructure, such the <a href="https://translate.rx.studio/">Weblate server</a>.</li>
 </ul>
-<p>If you want to discuss early stage-ideas or propose small tasks that could be bundled in a larger project, open a thread in the <a href="https://github.com/r-devel/r-project-sprint-2023/discussions/categories/ideas">ideas</a> category of Discussions in the <a href="https://github.com/r-devel/r-project-sprint-2023">r-project-sprint-2023</a> repository.</p>
-</section>
-<section id="add-a-project-proposal" class="level2">
-<h2 class="anchored" data-anchor-id="add-a-project-proposal">Add a Project Proposal</h2>
-<p>Collaborators on the <a href="https://github.com/r-devel/r-project-sprint-2023">r-project-sprint-2023</a> repository (<a href="https://github.com/orgs/r-devel/teams/everyone">everyone</a> who is a member of the R-devel GitHub organization) can add a project proposal as follows:</p>
+<p>Sprint participants can add a project proposal as follows:</p>
 <ol type="1">
 <li>Clone the <a href="https://github.com/r-devel/r-project-sprint-2023">r-project-sprint-2023</a> repository.</li>
 <li>Within <code>/projects</code>, copy the <code>template</code> directory and name the copy in kebab case with a suitable short name (e.g.&nbsp;<code>short-project-name</code>).</li>
@@ -176,8 +188,7 @@ ul.task-list li input[type="checkbox"] {
 <li>When your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the <a href="https://github.com/r-devel/r-project-sprint-2023/discussions/categories/proposals">proposals</a> category of <code>r-project-sprint-2023</code> Discussions.</li>
 <li>[Optional] Add labels to the discussion thread with the categories you added to your proposal.</li>
 </ol>
-<p>If you have a GitHub account but are not a collaborator on the <code>r-project-sprint-2023</code> repository, you can use the <a href="https://github.com/forwards/first-contributions">standard workflow to make a pull request</a>. You will not be able to add labels to the discussion thread.</p>
-<p>If you do not have a GitHub account, copy the <a href="https://github.com/r-devel/r-project-sprint-2023/projects/template/index.Rmd">R markdown template file</a>, edit to create your proposal and submit to <a href="mailto:r-project-sprint-2023@gaggle.email">r-project-sprint-2023@gaggle.email</a> for it to be added to the website and for a corresponding discussion thread to be created. Please note it may be several days before the website is updated and any updates to your proposal must be processed the same way.</p>
+<p>Note this assumes you accepted your invitation to the R-devel GitHub organization - please contact <a href="mailto:r-project-sprint-2023@gaggle.email">r-project-sprint-2023@gaggle.email</a> if you have any issues.</p>
 
 
 </section>

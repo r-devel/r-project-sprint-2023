@@ -2,15 +2,32 @@
 title: "Ideas and Proposals"
 ---
 
-Anyone in the R community is welcome to propose a [project](/projects) for R Project Sprint 2023. 
-However, priority will be given to projects supported by the R Core Team and 
-projects will require interest from at 
-least two sprint participants to be taken on as a sprint project.
+We are currently soliciting ideas and proposals for R Project Sprint 2023 projects.
 
-## Proposals vs Ideas
+Projects should be related to code or documentation maintained by the R Core Team.
+Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations).
 
-A **project proposal** should outline a specific package of work related to code 
-or documentation maintained by the R Core Team, where good progress 
+## Ideas
+
+Project **ideas** may be suggested by anyone with an interest in R development.
+
+An **idea** may be 
+
+  - A concept that could be turned into a **project proposal**.
+  - A small task that could be
+      - combined with other ideas to form a **project proposal**, or
+      - picked up by a sprint participant if they have spare time 
+      alongside a larger project.
+
+Suggest an **idea** by opening a thread in the [ideas](https://github.com/r-devel/r-project-sprint-2023/discussions/categories/ideas) 
+category of Discussions in the [r-project-sprint-2023](https://github.com/r-devel/r-project-sprint-2023) GitHub repository. 
+
+## Proposals
+
+Project **proposals** must be created by a [sprint participant](/participants), 
+potentially in collaboration with external contributors.
+
+A project **proposal** should outline a specific package of work where good progress 
 could be made by 2-6 people in ½ to 3 days. 
 
 For example:
@@ -19,14 +36,7 @@ For example:
  - Implementing a given solution to address "TODO" or "FIXME" comments in the R sources.
  - Making specific improvements to contributor infrastructure, such the [Weblate server](https://translate.rx.studio/).
 
-If you want to discuss early stage-ideas or propose small tasks that could be 
-bundled in a larger project, open a thread in the [ideas](https://github.com/r-devel/r-project-sprint-2023/discussions/categories/ideas) 
-category of Discussions in the [r-project-sprint-2023](https://github.com/r-devel/r-project-sprint-2023) repository.
-
-## Add a Project Proposal
-
-Collaborators on the [r-project-sprint-2023](https://github.com/r-devel/r-project-sprint-2023) repository ([everyone](https://github.com/orgs/r-devel/teams/everyone) who is a member of the R-devel GitHub organization) can add 
-a project proposal as follows:
+Sprint participants can add a project proposal as follows:
 
 1. Clone the [r-project-sprint-2023](https://github.com/r-devel/r-project-sprint-2023) 
 repository.
@@ -39,14 +49,5 @@ category of `r-project-sprint-2023` Discussions.
 6. [Optional] Add labels to the discussion thread with the categories you added 
 to your proposal.
 
-If you have a GitHub account but are not a collaborator on the `r-project-sprint-2023` repository, you can use the 
-[standard workflow to make a pull request](https://github.com/forwards/first-contributions). 
-You will not be able to add labels to the discussion thread.
-
-If you do not have a GitHub account, copy the [R markdown template file](https://github.com/r-devel/r-project-sprint-2023/projects/template/index.Rmd), 
-edit to create your proposal and submit to [r-project-sprint-2023\@gaggle.email](mailto:r-project-sprint-2023@gaggle.email) 
-for it to be added to the website and for a corresponding discussion thread to be created.
-Please note it may be several days before the website is updated and any updates 
-to your proposal must be processed the same way.
-
-
+Note this assumes you accepted your invitation to the R-devel GitHub organization 
+- please contact [r-project-sprint-2023\@gaggle.email](mailto:r-project-sprint-2023@gaggle.email) if you have any issues.

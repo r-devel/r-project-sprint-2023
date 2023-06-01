@@ -144,7 +144,7 @@
     "href": "projects/ideas-and-proposals.html",
     "title": "Ideas and Proposals",
     "section": "",
-    "text": "Anyone in the R community is welcome to propose a project for R Project Sprint 2023. However, priority will be given to projects supported by the R Core Team and projects will require interest from at least two sprint participants to be taken on as a sprint project."
+    "text": "We are currently soliciting ideas and proposals for R Project Sprint 2023 projects.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
   },
   {
     "objectID": "projects/ideas-and-proposals.html#proposals-vs-ideas",
@@ -271,5 +271,19 @@
     "title": "Code of Conduct",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#ideas",
+    "href": "projects/ideas-and-proposals.html#ideas",
+    "title": "Ideas and Proposals",
+    "section": "Ideas",
+    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#proposals",
+    "href": "projects/ideas-and-proposals.html#proposals",
+    "title": "Ideas and Proposals",
+    "section": "Proposals",
+    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint-2023@gaggle.email if you have any issues."
   }
 ]
