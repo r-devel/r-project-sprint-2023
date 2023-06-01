@@ -12,8 +12,9 @@ comments:
     repo-id: "R_kgDOIhAibA"
     category: "Proposals"
     category-id: "DIC_kwDOIhAibM4CW3GY"
-    mapping: "og:title"
+    mapping: "title"
     reactions-enabled: true
+    loading: lazy
 ---
 
 ## Background
@@ -146,3 +147,12 @@ Experience with building R from source.
 Exposure to the design of R graphics devices and the R graphics device API.
 
 Exposure to R graphics C code, especially that involving graphics devices (`R/src/include/R_Ext/GraphicsDevice.h`), especially the `quartz()` device (`R/src/library/grDevices/src/devQuartz.c`).
+
+## Reactions and comments
+
+```{=html}
+<!-- 
+Please leave the Reactions and comments section
+- a Giscus comment box will be automatically added here 
+-->
+```

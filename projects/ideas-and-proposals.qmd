@@ -32,9 +32,8 @@ a project proposal as follows:
 repository.
 2. Within `/projects`, copy the `template` directory and name the copy in kebab case with a 
 suitable short name (e.g. `short-project-name`).
-3. In the new directory, edit the `index.qmd` or `index.Rmd` as you prefer, deleting the unused template 
-file. Preview locally by rendering the Quarto website or knitting the R markdown file.
-4. Commit the `.[qR]md`. The website is updated automatically by GitHub actions.
+3. In the new directory, edit the `index.Rmd` file. Preview locally by rendering the Quarto website or knitting the R markdown file.
+4. Commit the `.Rmd`. The website is updated automatically by GitHub actions.
 5. When your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the [proposals](https://github.com/r-devel/r-project-sprint-2023/discussions/categories/proposals) 
 category of `r-project-sprint-2023` Discussions.
 6. [Optional] Add labels to the discussion thread with the categories you added 

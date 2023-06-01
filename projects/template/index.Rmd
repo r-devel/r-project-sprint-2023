@@ -12,8 +12,9 @@ comments:
     repo-id: "R_kgDOIhAibA"
     category: "Proposals"
     category-id: "DIC_kwDOIhAibM4CW3GY"
-    mapping: "og:title"
+    mapping: "title"
     reactions-enabled: true
+    loading: lazy
 ---
 
 ```{=html}
@@ -44,9 +45,11 @@ Please label any R code chunks, especially those producing images.
 
 ## Project outcomes
 
-## Comments
+## Reactions and comments
 
+```{=html}
 <!-- 
-Please leave the Comments section
+Please leave the Reactions and comments section
 - a Giscus comment box will be automatically added here 
 -->
+```

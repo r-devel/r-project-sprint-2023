@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  preview: 
+    watch-inputs: false # may help with Giscus comments re-loading
 
 website:
   title: "R Project Sprint 2023"

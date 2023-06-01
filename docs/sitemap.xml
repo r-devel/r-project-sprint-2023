@@ -2,34 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/participants/index.html</loc>
-    <lastmod>2023-05-31T16:34:54.864Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/index.html</loc>
-    <lastmod>2023-05-31T16:34:51.579Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/short-projects/quartz-alpha-mask/index.html</loc>
-    <lastmod>2023-03-29T15:20:44.334Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/code-of-conduct.html</loc>
-    <lastmod>2023-05-31T16:34:52.768Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/index.html</loc>
-    <lastmod>2023-06-01T06:54:10.771Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/index.html</loc>
-    <lastmod>2023-06-01T06:54:10.390Z</lastmod>
+    <lastmod>2023-06-01T07:54:55.006Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/template/index.html</loc>
-    <lastmod>2023-06-01T06:54:13.266Z</lastmod>
+    <lastmod>2023-06-01T07:55:17.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/index.html</loc>
+    <lastmod>2023-06-01T07:56:33.014Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/index.html</loc>
+    <lastmod>2023-06-01T07:55:28.126Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/ideas-and-proposals.html</loc>
-    <lastmod>2023-05-31T16:35:23.930Z</lastmod>
+    <lastmod>2023-06-01T07:54:58.325Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/index.html</loc>
+    <lastmod>2023-06-01T07:56:32.070Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/code-of-conduct.html</loc>
+    <lastmod>2023-06-01T07:55:00.034Z</lastmod>
   </url>
 </urlset>
