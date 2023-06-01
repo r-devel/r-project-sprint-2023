@@ -1,5 +1,6 @@
 ---
-title: Adding Alpha Masks to the Quartz Graphics Device
+title: Adding Alpha Masks to the Quartz Graphics Device # Warning: changing the title may create a new Discussions thread!
+description: "" # Optional short description for post on Discussions thread
 author: Paul Murrell
 output: html_document
 execute:
@@ -7,7 +8,12 @@ execute:
 categories: [C, MacOS, Graphics]
 comments:
   giscus: 
-    repo: quarto-dev/quarto-docs
+    repo: "r-devel/r-project-sprint-2023"
+    repo-id: "R_kgDOIhAibA"
+    category: "Proposals"
+    category-id: "DIC_kwDOIhAibM4CW3GY"
+    mapping: "og:title"
+    reactions-enabled: true
 ---
 
 ## Background

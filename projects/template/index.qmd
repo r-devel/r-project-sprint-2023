@@ -1,5 +1,6 @@
 ---
-title: Project Title in Title Case
+title: Project Title in Title Case # Warning: changing the title may create a new Discussions thread!
+description: "" # Optional short description for post on Discussions thread
 author: Your Name # and co-authors if applicable
 output: html_document
 execute:
@@ -7,7 +8,12 @@ execute:
 categories: [C, MacOS, Graphics] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
 comments:
   giscus: 
-    repo: quarto-dev/quarto-docs
+    repo: "r-devel/r-project-sprint-2023"
+    repo-id: "R_kgDOIhAibA"
+    category: "Proposals"
+    category-id: "DIC_kwDOIhAibM4CW3GY"
+    mapping: "og:title"
+    reactions-enabled: true
 ---
 
 <!-- 
@@ -36,9 +42,15 @@ Please label any R code chunks, especially those producing images.
 
 ## Project requirements
 
-<!-- Include here prerequisite knowledge and operating system requirements -->
+<!-- Include here prerequisite knowledge and any operating system requirements -->
 
 ## Project resources
 
-
 ## Project outcomes
+
+## Comments
+
+<!-- 
+Please leave the Comments section
+- a Giscus comment box will be automatically added here 
+-->
