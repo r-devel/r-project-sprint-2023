@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/participants/index.html</loc>
-    <lastmod>2023-06-26T13:31:25.158Z</lastmod>
-  </url>
-  <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/nlme-bugs/index.html</loc>
-    <lastmod>2023-06-26T13:31:25.891Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/template/index.html</loc>
-    <lastmod>2023-06-26T13:31:26.281Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/index.html</loc>
-    <lastmod>2023-06-26T13:31:27.043Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/index.html</loc>
-    <lastmod>2023-06-26T13:31:27.450Z</lastmod>
+    <lastmod>2023-06-26T13:51:21.877Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/ideas-and-proposals.html</loc>
-    <lastmod>2023-06-26T13:31:27.884Z</lastmod>
+    <lastmod>2023-06-26T13:51:20.505Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/index.html</loc>
+    <lastmod>2023-06-26T13:51:19.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/participants/index.html</loc>
+    <lastmod>2023-06-26T13:51:18.885Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/index.html</loc>
-    <lastmod>2023-06-26T13:31:29.121Z</lastmod>
+    <lastmod>2023-06-26T13:51:17.561Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/code-of-conduct.html</loc>
-    <lastmod>2023-06-26T13:31:29.611Z</lastmod>
+    <lastmod>2023-06-26T13:51:19.353Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/template/index.html</loc>
+    <lastmod>2023-06-26T13:51:20.117Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/index.html</loc>
+    <lastmod>2023-06-26T13:51:21.197Z</lastmod>
   </url>
 </urlset>

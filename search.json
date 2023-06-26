@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "participants/index.html",
-    "href": "participants/index.html",
-    "title": "Participants",
-    "section": "",
-    "text": "This page is under development - confirmed participants will be added here.\nParticipants with an asterisk are participating remotely."
-  },
-  {
-    "objectID": "participants/index.html#r-core-team",
-    "href": "participants/index.html#r-core-team",
-    "title": "Participants",
-    "section": "R Core Team",
-    "text": "R Core Team\n\n\n  Robert Gentleman \n\n\n  Tomas Kalibera \n\n\n  Michael Lawrence \n\n\n  Uwe Ligges  Dortmund University  \n\n\n  Thomas Lumley  University of Auckland   \n\n\n  Martin Mächler \n\n\n  Sebastian Meyer  Friedrich-Alexander-Universität Erlangen-Nürnberg       \n\n\n  Paul Murrell*  The University of Auckland   \n\n\n  Martyn Plummer  \n\n\n  Deepayan Sarkar \n\n\n  Luke Tierney \n\n\n  Simon Urbanek"
-  },
-  {
-    "objectID": "participants/index.html#r-contributors",
-    "href": "participants/index.html#r-contributors",
-    "title": "Participants",
-    "section": "R Contributors",
-    "text": "R Contributors\n\n\n  Malcolm Barrett  Posit    \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Aarhus University  \n\n\n  Hannah Frick  Posit    \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  André Gillibert  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Erin Hodgess  Western Governors University  \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn sturdevant  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool"
-  },
-  {
     "objectID": "projects/nlme-bugs/index.html",
     "href": "projects/nlme-bugs/index.html",
     "title": "Addressing Bugs in nlme",
@@ -84,125 +63,6 @@
     "text": "Reactions and comments"
   },
   {
-    "objectID": "projects/template/index.html#problem-statement",
-    "href": "projects/template/index.html#problem-statement",
-    "title": "Project Title in Title Case",
-    "section": "Problem statement",
-    "text": "Problem statement"
-  },
-  {
-    "objectID": "projects/template/index.html#proposed-solution",
-    "href": "projects/template/index.html#proposed-solution",
-    "title": "Project Title in Title Case",
-    "section": "Proposed solution",
-    "text": "Proposed solution"
-  },
-  {
-    "objectID": "projects/template/index.html#testing",
-    "href": "projects/template/index.html#testing",
-    "title": "Project Title in Title Case",
-    "section": "Testing",
-    "text": "Testing"
-  },
-  {
-    "objectID": "projects/template/index.html#project-requirements",
-    "href": "projects/template/index.html#project-requirements",
-    "title": "Project Title in Title Case",
-    "section": "Project requirements",
-    "text": "Project requirements"
-  },
-  {
-    "objectID": "projects/template/index.html#project-resources",
-    "href": "projects/template/index.html#project-resources",
-    "title": "Project Title in Title Case",
-    "section": "Project resources",
-    "text": "Project resources"
-  },
-  {
-    "objectID": "projects/template/index.html#project-outcomes",
-    "href": "projects/template/index.html#project-outcomes",
-    "title": "Project Title in Title Case",
-    "section": "Project outcomes",
-    "text": "Project outcomes"
-  },
-  {
-    "objectID": "projects/template/index.html#reactions-and-comments",
-    "href": "projects/template/index.html#reactions-and-comments",
-    "title": "Project Title in Title Case",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html",
-    "href": "projects/quartz-alpha-mask/index.html",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "",
-    "text": "R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.\n\nlibrary(grid)\n\nAny shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.\n\nac &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))\namask &lt;- as.mask(ac)\n\n\n\n\n\n\nWe can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.\n\nr1 &lt;- rectGrob(width=.2, gp=gpar(fill=2))\nr2 &lt;- rectGrob(height=.2, gp=gpar(fill=3))\n\n\n\n\n\n\nThe following code draws the red rectangle, then pushes a viewport that enforces the mask (based on the circle), and then draws the green rectangle. The red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).\n\ngrid.rect()\ngrid.draw(r1)\npushViewport(viewport(mask=amask))\ngrid.draw(r2)\npopViewport()\n\n\n\n\nR version 4.2 added the concept of luminance masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).\nWe will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).\n\nlc &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=\"grey50\"))\nlmask &lt;- as.mask(lc, type=\"luminance\")\n\n\n\n\n\n\nThe following code draws the red rectangle, then pushes a viewport with the luminance mask, then draws the green rectangle. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask.\nWe have to use the pdf() device to demonstrate a luminance mask because the Cairo graphics device that was used for previous images only supports alpha masks.\n\npdf(\"lumi-mask.pdf\", width=2, height=2)\ngrid.rect()\ngrid.draw(r1)\npushViewport(viewport(mask=lmask))\ngrid.draw(r2)\npopViewport()\ndev.off()\n\n\n\nWarning in system(\"convert -density 96 lumi-mask.pdf lumi-mask.png\"): error in\nrunning command"
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html#background",
-    "href": "projects/quartz-alpha-mask/index.html#background",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "",
-    "text": "R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.\n\nlibrary(grid)\n\nAny shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.\n\nac &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))\namask &lt;- as.mask(ac)\n\n\n\n\n\n\nWe can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.\n\nr1 &lt;- rectGrob(width=.2, gp=gpar(fill=2))\nr2 &lt;- rectGrob(height=.2, gp=gpar(fill=3))\n\n\n\n\n\n\nThe following code draws the red rectangle, then pushes a viewport that enforces the mask (based on the circle), and then draws the green rectangle. The red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).\n\ngrid.rect()\ngrid.draw(r1)\npushViewport(viewport(mask=amask))\ngrid.draw(r2)\npopViewport()\n\n\n\n\nR version 4.2 added the concept of luminance masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).\nWe will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).\n\nlc &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=\"grey50\"))\nlmask &lt;- as.mask(lc, type=\"luminance\")\n\n\n\n\n\n\nThe following code draws the red rectangle, then pushes a viewport with the luminance mask, then draws the green rectangle. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask.\nWe have to use the pdf() device to demonstrate a luminance mask because the Cairo graphics device that was used for previous images only supports alpha masks.\n\npdf(\"lumi-mask.pdf\", width=2, height=2)\ngrid.rect()\ngrid.draw(r1)\npushViewport(viewport(mask=lmask))\ngrid.draw(r2)\npopViewport()\ndev.off()\n\n\n\nWarning in system(\"convert -density 96 lumi-mask.pdf lumi-mask.png\"): error in\nrunning command"
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html#problem-statement",
-    "href": "projects/quartz-alpha-mask/index.html#problem-statement",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "Problem statement",
-    "text": "Problem statement\nFor R version 4.3, support for luminance masks is being added to the Quartz graphics device in R (quartz() on MacOS). Unfortunately, in a reverse of the Cairo graphics device problem, Quartz graphics only supports luminance masks so we have not implemented alpha masks on the quartz() device."
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html#proposed-solution",
-    "href": "projects/quartz-alpha-mask/index.html#proposed-solution",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "Proposed solution",
-    "text": "Proposed solution\nThe implementation of luminance masks for the quartz() device involves creating a greyscale bitmap image and drawing the mask shapes onto that. This happens in the C function QuartzCreateMask() (in R/src/library/grDevices/src/devQuartz.c). The Quartz function CGContextClipToMask() uses that greyscale image to clip output.\nThe proposal is that an alpha mask could be implemented by creating an RGBA bitmap image (instead of a greyscale image) for drawing the mask shapes onto and then converting that image to a greyscale one based on the alpha channel of the RGBA image. Once we have a greyscale image from the alpha mask, we can proceed as before.\nThe dev-&gt;capabilities() of the quartz() device would also need updating."
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html#testing",
-    "href": "projects/quartz-alpha-mask/index.html#testing",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "Testing",
-    "text": "Testing\nSome examples of R code and desired output for luminance masks are included in the technical report “Luminance Masks in R Graphics” (faster link).\nThe ‘gdiff’ package can be useful for checking that test output matches control output."
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html#project-requirements",
-    "href": "projects/quartz-alpha-mask/index.html#project-requirements",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "Project requirements",
-    "text": "Project requirements\nFamiliarity with C. Though there is a strong template of existing code to work from.\nCapability to build R from source (on MacOS).\nAbility to find, read, and comprehend Apple Core Graphics documentation, e.g., documentation for CGContextClipToMask()"
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html#project-resources",
-    "href": "projects/quartz-alpha-mask/index.html#project-resources",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "Project resources",
-    "text": "Project resources\n\n“New Features in the R Graphics Engine”\n“Luminance Masks in R Graphics”.\n“Groups and Paths and Masks in R Graphics”\n“Catching up with R Graphics”\n“Writing R Extensions”\n“R internals”\nQuestions can be emailed to Paul Murrell"
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html#project-outcomes",
-    "href": "projects/quartz-alpha-mask/index.html#project-outcomes",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "Project outcomes",
-    "text": "Project outcomes\nContribution to the core R code base (would need to be GPL).\nExperience with building R from source.\nExposure to the design of R graphics devices and the R graphics device API.\nExposure to R graphics C code, especially that involving graphics devices (R/src/include/R_Ext/GraphicsDevice.h), especially the quartz() device (R/src/library/grDevices/src/devQuartz.c)."
-  },
-  {
-    "objectID": "projects/quartz-alpha-mask/index.html#reactions-and-comments",
-    "href": "projects/quartz-alpha-mask/index.html#reactions-and-comments",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "projects/ideas-and-proposals.html",
     "href": "projects/ideas-and-proposals.html",
     "title": "Ideas and Proposals",
@@ -222,6 +82,34 @@
     "title": "Ideas and Proposals",
     "section": "Proposals",
     "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint-2023@gaggle.email if you have any issues."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "participants/index.html",
+    "href": "participants/index.html",
+    "title": "Participants",
+    "section": "",
+    "text": "This page is under development - confirmed participants will be added here.\nParticipants with an asterisk are participating remotely."
+  },
+  {
+    "objectID": "participants/index.html#r-core-team",
+    "href": "participants/index.html#r-core-team",
+    "title": "Participants",
+    "section": "R Core Team",
+    "text": "R Core Team\n\n\n  Robert Gentleman \n\n\n  Tomas Kalibera \n\n\n  Michael Lawrence \n\n\n  Uwe Ligges  Dortmund University  \n\n\n  Thomas Lumley  University of Auckland   \n\n\n  Martin Mächler \n\n\n  Sebastian Meyer  Friedrich-Alexander-Universität Erlangen-Nürnberg       \n\n\n  Paul Murrell*  The University of Auckland   \n\n\n  Martyn Plummer  \n\n\n  Deepayan Sarkar \n\n\n  Luke Tierney \n\n\n  Simon Urbanek"
+  },
+  {
+    "objectID": "participants/index.html#r-contributors",
+    "href": "participants/index.html#r-contributors",
+    "title": "Participants",
+    "section": "R Contributors",
+    "text": "R Contributors\n\n\n  Malcolm Barrett  Posit    \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Aarhus University  \n\n\n  Hannah Frick  Posit    \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  André Gillibert  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Erin Hodgess  Western Governors University  \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn sturdevant  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool"
   },
   {
     "objectID": "index.html",
@@ -334,5 +222,117 @@
     "title": "Code of Conduct",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
+  },
+  {
+    "objectID": "projects/template/index.html#problem-statement",
+    "href": "projects/template/index.html#problem-statement",
+    "title": "Project Title in Title Case",
+    "section": "Problem statement",
+    "text": "Problem statement"
+  },
+  {
+    "objectID": "projects/template/index.html#proposed-solution",
+    "href": "projects/template/index.html#proposed-solution",
+    "title": "Project Title in Title Case",
+    "section": "Proposed solution",
+    "text": "Proposed solution"
+  },
+  {
+    "objectID": "projects/template/index.html#testing",
+    "href": "projects/template/index.html#testing",
+    "title": "Project Title in Title Case",
+    "section": "Testing",
+    "text": "Testing"
+  },
+  {
+    "objectID": "projects/template/index.html#project-requirements",
+    "href": "projects/template/index.html#project-requirements",
+    "title": "Project Title in Title Case",
+    "section": "Project requirements",
+    "text": "Project requirements"
+  },
+  {
+    "objectID": "projects/template/index.html#project-resources",
+    "href": "projects/template/index.html#project-resources",
+    "title": "Project Title in Title Case",
+    "section": "Project resources",
+    "text": "Project resources"
+  },
+  {
+    "objectID": "projects/template/index.html#project-outcomes",
+    "href": "projects/template/index.html#project-outcomes",
+    "title": "Project Title in Title Case",
+    "section": "Project outcomes",
+    "text": "Project outcomes"
+  },
+  {
+    "objectID": "projects/template/index.html#reactions-and-comments",
+    "href": "projects/template/index.html#reactions-and-comments",
+    "title": "Project Title in Title Case",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html",
+    "href": "projects/quartz-alpha-mask/index.html",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "",
+    "text": "R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.\n\nlibrary(grid)\n\nAny shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.\n\nac &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))\namask &lt;- as.mask(ac)\n\n\n\n\n\n\nWe can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.\n\nr1 &lt;- rectGrob(width=.2, gp=gpar(fill=2))\nr2 &lt;- rectGrob(height=.2, gp=gpar(fill=3))\n\n\n\n\n\n\nThe following code draws the red rectangle, then pushes a viewport that enforces the mask (based on the circle), and then draws the green rectangle. The red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).\n\ngrid.rect()\ngrid.draw(r1)\npushViewport(viewport(mask=amask))\n\nWarning in .setMask(mask$f, mask$ref): Ignored alpha mask (not supported on\nthis device)\n\ngrid.draw(r2)\npopViewport()\n\n\n\n\nR version 4.2 added the concept of luminance masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).\nWe will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).\n\nlc &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=\"grey50\"))\nlmask &lt;- as.mask(lc, type=\"luminance\")\n\n\n\n\n\n\nThe following code draws the red rectangle, then pushes a viewport with the luminance mask, then draws the green rectangle. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask.\nWe have to use the pdf() device to demonstrate a luminance mask because the Cairo graphics device that was used for previous images only supports alpha masks.\n\npdf(\"lumi-mask.pdf\", width=2, height=2)\ngrid.rect()\ngrid.draw(r1)\npushViewport(viewport(mask=lmask))\ngrid.draw(r2)\npopViewport()\ndev.off()\n\n\n\nWarning in system(\"convert -density 96 lumi-mask.pdf lumi-mask.png\"): error in\nrunning command"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#background",
+    "href": "projects/quartz-alpha-mask/index.html#background",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "",
+    "text": "R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.\n\nlibrary(grid)\n\nAny shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.\n\nac &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))\namask &lt;- as.mask(ac)\n\n\n\n\n\n\nWe can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.\n\nr1 &lt;- rectGrob(width=.2, gp=gpar(fill=2))\nr2 &lt;- rectGrob(height=.2, gp=gpar(fill=3))\n\n\n\n\n\n\nThe following code draws the red rectangle, then pushes a viewport that enforces the mask (based on the circle), and then draws the green rectangle. The red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).\n\ngrid.rect()\ngrid.draw(r1)\npushViewport(viewport(mask=amask))\n\nWarning in .setMask(mask$f, mask$ref): Ignored alpha mask (not supported on\nthis device)\n\ngrid.draw(r2)\npopViewport()\n\n\n\n\nR version 4.2 added the concept of luminance masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).\nWe will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).\n\nlc &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=\"grey50\"))\nlmask &lt;- as.mask(lc, type=\"luminance\")\n\n\n\n\n\n\nThe following code draws the red rectangle, then pushes a viewport with the luminance mask, then draws the green rectangle. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask.\nWe have to use the pdf() device to demonstrate a luminance mask because the Cairo graphics device that was used for previous images only supports alpha masks.\n\npdf(\"lumi-mask.pdf\", width=2, height=2)\ngrid.rect()\ngrid.draw(r1)\npushViewport(viewport(mask=lmask))\ngrid.draw(r2)\npopViewport()\ndev.off()\n\n\n\nWarning in system(\"convert -density 96 lumi-mask.pdf lumi-mask.png\"): error in\nrunning command"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#problem-statement",
+    "href": "projects/quartz-alpha-mask/index.html#problem-statement",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Problem statement",
+    "text": "Problem statement\nFor R version 4.3, support for luminance masks is being added to the Quartz graphics device in R (quartz() on MacOS). Unfortunately, in a reverse of the Cairo graphics device problem, Quartz graphics only supports luminance masks so we have not implemented alpha masks on the quartz() device."
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#proposed-solution",
+    "href": "projects/quartz-alpha-mask/index.html#proposed-solution",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nThe implementation of luminance masks for the quartz() device involves creating a greyscale bitmap image and drawing the mask shapes onto that. This happens in the C function QuartzCreateMask() (in R/src/library/grDevices/src/devQuartz.c). The Quartz function CGContextClipToMask() uses that greyscale image to clip output.\nThe proposal is that an alpha mask could be implemented by creating an RGBA bitmap image (instead of a greyscale image) for drawing the mask shapes onto and then converting that image to a greyscale one based on the alpha channel of the RGBA image. Once we have a greyscale image from the alpha mask, we can proceed as before.\nThe dev-&gt;capabilities() of the quartz() device would also need updating."
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#testing",
+    "href": "projects/quartz-alpha-mask/index.html#testing",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Testing",
+    "text": "Testing\nSome examples of R code and desired output for luminance masks are included in the technical report “Luminance Masks in R Graphics” (faster link).\nThe ‘gdiff’ package can be useful for checking that test output matches control output."
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#project-requirements",
+    "href": "projects/quartz-alpha-mask/index.html#project-requirements",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Project requirements",
+    "text": "Project requirements\nFamiliarity with C. Though there is a strong template of existing code to work from.\nCapability to build R from source (on MacOS).\nAbility to find, read, and comprehend Apple Core Graphics documentation, e.g., documentation for CGContextClipToMask()"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#project-resources",
+    "href": "projects/quartz-alpha-mask/index.html#project-resources",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Project resources",
+    "text": "Project resources\n\n“New Features in the R Graphics Engine”\n“Luminance Masks in R Graphics”.\n“Groups and Paths and Masks in R Graphics”\n“Catching up with R Graphics”\n“Writing R Extensions”\n“R internals”\nQuestions can be emailed to Paul Murrell"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#project-outcomes",
+    "href": "projects/quartz-alpha-mask/index.html#project-outcomes",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Project outcomes",
+    "text": "Project outcomes\nContribution to the core R code base (would need to be GPL).\nExperience with building R from source.\nExposure to the design of R graphics devices and the R graphics device API.\nExposure to R graphics C code, especially that involving graphics devices (R/src/include/R_Ext/GraphicsDevice.h), especially the quartz() device (R/src/library/grDevices/src/devQuartz.c)."
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#reactions-and-comments",
+    "href": "projects/quartz-alpha-mask/index.html#reactions-and-comments",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
   }
 ]
