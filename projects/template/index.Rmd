@@ -3,8 +3,6 @@ title: Project Title in Title Case # Warning: changing the title may create a ne
 description: "" # Optional short description for post on Discussions
 author: Your Name # and co-authors if applicable
 output: html_document
-execute:
-  freeze: auto
 categories: [C, MacOS, Graphics] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
 comments:
   giscus: 

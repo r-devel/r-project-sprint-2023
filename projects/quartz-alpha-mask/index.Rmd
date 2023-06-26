@@ -3,8 +3,6 @@ title: Adding Alpha Masks to the Quartz Graphics Device # Warning: changing the 
 description: "" # Optional short description for post on Discussions thread
 author: Paul Murrell
 output: html_document
-execute:
-  freeze: auto
 categories: [C, MacOS, Graphics]
 comments:
   giscus: 

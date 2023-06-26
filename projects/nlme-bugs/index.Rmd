@@ -3,8 +3,6 @@ title: Addressing Bugs in nlme # Warning: changing the title may create a new Di
 description: "Addressing open bugs on the recommended package nlme for (non)linear mixed effect models." # Optional short description for post on Discussions
 author: Heather Turner and Ben Bolker # and co-authors if applicable
 output: html_document
-execute:
-  freeze: auto
 categories: [R, C, Models] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels; include R if can contribute knowing R only
 comments:
   giscus: 
