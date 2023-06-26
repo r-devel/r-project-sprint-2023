@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Paul Murrell">
+<meta name="author" content="Heather Turner and Ben Bolker">
+<meta name="description" content="Addressing open bugs on the recommended package nlme for (non)linear mixed effect models.">
 
-<title>R Project Sprint 2023 - Adding Alpha Masks to the Quartz Graphics Device</title>
+<title>R Project Sprint 2023 - Addressing Bugs in nlme</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -97,18 +64,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="R Project Sprint 2023 - Adding Alpha Masks to the Quartz Graphics Device">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/index_files/figure-html/draw-circle-mask-1.png">
+<meta property="og:title" content="R Project Sprint 2023 - Addressing Bugs in nlme">
+<meta property="og:description" content="Addressing open bugs on the recommended package nlme for (non)linear mixed effect models.">
 <meta property="og:site-name" content="R Project Sprint 2023">
-<meta property="og:image:height" content="384">
-<meta property="og:image:width" content="384">
-<meta name="twitter:title" content="R Project Sprint 2023 - Adding Alpha Masks to the Quartz Graphics Device">
+<meta name="twitter:title" content="R Project Sprint 2023 - Addressing Bugs in nlme">
 <meta name="twitter:description" content="A 3-day meeting of R developers to work collaboratively on R core development, hosted at the University of Warwick, August 30 – September 1">
-<meta name="twitter:image" content="https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/index_files/figure-html/draw-circle-mask-1.png">
-<meta name="twitter:image-height" content="384">
-<meta name="twitter:image-width" content="384">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -200,14 +161,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Adding Alpha Masks to the Quartz Graphics Device</h1>
+<h1 class="title">Addressing Bugs in nlme</h1>
   <div class="quarto-categories">
+    <div class="quarto-category">R</div>
     <div class="quarto-category">C</div>
-    <div class="quarto-category">MacOS</div>
-    <div class="quarto-category">Graphics</div>
+    <div class="quarto-category">Models</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Addressing open bugs on the recommended package nlme for (non)linear mixed effect models.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -215,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Paul Murrell </p>
+             <p>Heather Turner and Ben Bolker </p>
           </div>
   </div>
     
@@ -226,112 +192,240 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<!-- 
+This template is based on https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/.
+The sections are provided as a guide and may not be appropriate to your proposal, feel free to skip or change sections.
+
+Please label any R code chunks, especially those producing images.
+-->
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(grid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Any shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ac <span class="ot">&lt;-</span> <span class="fu">circleGrob</span>(<span class="at">r=</span>.<span class="dv">3</span>, <span class="at">gp=</span><span class="fu">gpar</span>(<span class="at">col=</span><span class="cn">NA</span>, <span class="at">fill=</span><span class="fu">rgb</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,.<span class="dv">5</span>)))</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>amask <span class="ot">&lt;-</span> <span class="fu">as.mask</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/draw-circle-mask-1.png" class="img-fluid" width="192"></p>
-</div>
-</div>
-<p>We can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>r1 <span class="ot">&lt;-</span> <span class="fu">rectGrob</span>(<span class="at">width=</span>.<span class="dv">2</span>, <span class="at">gp=</span><span class="fu">gpar</span>(<span class="at">fill=</span><span class="dv">2</span>))</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>r2 <span class="ot">&lt;-</span> <span class="fu">rectGrob</span>(<span class="at">height=</span>.<span class="dv">2</span>, <span class="at">gp=</span><span class="fu">gpar</span>(<span class="at">fill=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/draw-rect-1.png" class="img-fluid" width="192"></p>
-</div>
-</div>
-<p>The following code draws the red rectangle, then pushes a viewport that enforces the mask (based on the circle), and then draws the green rectangle. The red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.rect</span>()</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.draw</span>(r1)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pushViewport</span>(<span class="fu">viewport</span>(<span class="at">mask=</span>amask))</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.draw</span>(r2)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">popViewport</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/rect-circle-mask-1.png" class="img-fluid" width="192"></p>
-</div>
-</div>
-<p>R version 4.2 added the concept of <em>luminance</em> masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).</p>
-<p>We will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>lc <span class="ot">&lt;-</span> <span class="fu">circleGrob</span>(<span class="at">r=</span>.<span class="dv">3</span>, <span class="at">gp=</span><span class="fu">gpar</span>(<span class="at">col=</span><span class="cn">NA</span>, <span class="at">fill=</span><span class="st">"grey50"</span>))</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>lmask <span class="ot">&lt;-</span> <span class="fu">as.mask</span>(lc, <span class="at">type=</span><span class="st">"luminance"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/draw-lumi-mask-1.png" class="img-fluid" width="192"></p>
-</div>
-</div>
-<p>The following code draws the red rectangle, then pushes a viewport with the luminance mask, then draws the green rectangle. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask.</p>
-<p>We have to use the <code>pdf()</code> device to demonstrate a luminance mask because the Cairo graphics device that was used for previous images only supports alpha masks.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">"lumi-mask.pdf"</span>, <span class="at">width=</span><span class="dv">2</span>, <span class="at">height=</span><span class="dv">2</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.rect</span>()</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.draw</span>(r1)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">pushViewport</span>(<span class="fu">viewport</span>(<span class="at">mask=</span>lmask))</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.draw</span>(r2)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">popViewport</span>()</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in system("convert -density 96 lumi-mask.pdf lumi-mask.png"): error in
-running command</code></pre>
-</div>
-</div>
-<p><img src="lumi-mask.png" class="img-fluid"></p>
+<p>The <strong>nlme</strong> package (maintained by R-core) has a medium-sized list of bugs reported, reaching back over 5 years. In some cases there is already a patch or a proposed solution. Other cases require some discussion or further debugging to determine an appropriate solution. Often only the R code is affected and the problem is more about determining the correct behaviour rather than debugging low-level code, though that will be required in the hardest cases.</p>
+<p>This project would suit a group of people working in twos or threes, with each small group aiming to close one or two bugs during the sprint.</p>
+<p>The <strong>nlme</strong> package is version controlled in a Subversion repository, available at <a href="https://svn.r-project.org/R-packages/trunk/nlme/" class="uri">https://svn.r-project.org/R-packages/trunk/nlme/</a>.</p>
 </section>
 <section id="problem-statement" class="level2">
 <h2 class="anchored" data-anchor-id="problem-statement">Problem statement</h2>
-<p>For R version 4.3, support for luminance masks is being added to the Quartz graphics device in R (<code>quartz()</code> on MacOS). Unfortunately, in a reverse of the Cairo graphics device problem, Quartz graphics only supports luminance masks so we have not implemented alpha masks on the <code>quartz()</code> device.</p>
+<p>The list of <strong>nlme</strong> bugs on <a href="https://bugs.r-project.org/">R’s Bugzilla</a> as of 23 June 2023 is summarised below:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Bug&nbsp;ID</th>
+<th>Level</th>
+<th>Status</th>
+<th>Topic</th>
+<th>Action(s)</th>
+<th>Programming skills</th>
+<th>Statistical knowledge</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18505">18505</a></td>
+<td>Novice</td>
+<td>patch available</td>
+<td>behaviour changing with order of group variable</td>
+<td>check patch</td>
+<td>R</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17884">17884</a></td>
+<td>Novice</td>
+<td>patch available</td>
+<td>new confint.lme method for fixed effects only</td>
+<td>check patch</td>
+<td>R</td>
+<td>confidence intervals</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17988">17988</a></td>
+<td>Novice</td>
+<td>suggested solution</td>
+<td>what to return for corARMA with p = q = 0</td>
+<td>check patch, update doc</td>
+<td>R</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18472">18472</a></td>
+<td>Intermediate</td>
+<td>needs reprex</td>
+<td>correct behaviour of gls</td>
+<td>create reprex, discuss</td>
+<td>R</td>
+<td>gls</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17712">17712</a></td>
+<td>Intermediate</td>
+<td>suggested solution</td>
+<td>conditions when algorithm should use decomposition</td>
+<td>create patch, check patch</td>
+<td>R</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18285">18285</a></td>
+<td>Intermediate</td>
+<td>suggested solution</td>
+<td>how to handle rank deficiency</td>
+<td>discuss, create reprex, create patch</td>
+<td>R</td>
+<td>rank deficiency</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17961">17961</a></td>
+<td>Intermediate</td>
+<td>unclear if bug or not</td>
+<td>appropriate df to use in tests</td>
+<td>discuss</td>
+<td>R</td>
+<td>anova tests</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17866">17866</a></td>
+<td>Intermediate</td>
+<td>reprex available</td>
+<td>Initializing corStruct outside gls call gives different results</td>
+<td>debug</td>
+<td>R</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16890">16890</a></td>
+<td>Intermediate</td>
+<td>patch welcome</td>
+<td>intervals.lmList does not work for with pool = FALSE</td>
+<td>create patch</td>
+<td>R</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18192">18192</a></td>
+<td>Intermediate</td>
+<td>needs analysis</td>
+<td>crash in nlme equivalent to lme model</td>
+<td>debug R/C</td>
+<td>C</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17227">17227</a></td>
+<td>Intermediate</td>
+<td>partial analysis available</td>
+<td>crash in nlme</td>
+<td>debug R/C</td>
+<td>C</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16864">16864</a></td>
+<td>Advanced</td>
+<td>needs analysis</td>
+<td>lme fails to warn when data are near-redundant</td>
+<td>debug R/C/Fortran</td>
+<td>R, C, Fortran</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16975">16975</a></td>
+<td>Advanced</td>
+<td>needs analysis</td>
+<td>REML estimation incorrect with fixed sigma</td>
+<td>debug</td>
+<td>R, C</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17236">17236</a></td>
+<td>Advanced</td>
+<td>needs support from R Core</td>
+<td>Correct df for intercept in lme</td>
+<td>discuss, create patch, check patch</td>
+<td>R</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18433">18433</a></td>
+<td>Advanced</td>
+<td>needs reprex</td>
+<td>infinite loop dependent on random seed</td>
+<td>create reprex, debug</td>
+<td>C, Docker</td>
+<td>nlme algorithms</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16806">16806</a></td>
+<td>Advanced</td>
+<td>patch welcome</td>
+<td>method fails for individuals with single observations</td>
+<td>create patch</td>
+<td>C</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="proposed-solution" class="level2">
 <h2 class="anchored" data-anchor-id="proposed-solution">Proposed solution</h2>
-<p>The implementation of luminance masks for the <code>quartz()</code> device involves creating a greyscale bitmap image and drawing the mask shapes onto that. This happens in the C function <code>QuartzCreateMask()</code> (in <code>R/src/library/grDevices/src/devQuartz.c</code>). The Quartz function <code>CGContextClipToMask()</code> uses that greyscale image to clip output.</p>
-<p>The proposal is that an alpha mask could be implemented by creating an RGBA bitmap image (instead of a greyscale image) for drawing the mask shapes onto and then converting that image to a greyscale one based on the alpha channel of the RGBA image. Once we have a greyscale image from the alpha mask, we can proceed as before.</p>
-<p>The <code>dev-&gt;capabilities()</code> of the <code>quartz()</code> device would also need updating.</p>
+<p>The table in the last section summarises the next action(s) required to address the different bugs. In more detail:</p>
+<ul>
+<li><p><strong>check patch</strong></p>
+<ul>
+<li><p>Check the bug is still present in the development version of <strong>nlme</strong>.</p></li>
+<li><p>Apply the patch to the <strong>nlme</strong> sources, build and install the package, and test a reprex to confirm the patch fixes the issue.</p></li>
+<li><p>Run R CMD check on the built package to check nothing is broken by the change.</p></li>
+</ul></li>
+<li><p><strong>update doc</strong></p>
+<ul>
+<li><p>Modify the source of the documentation file in the <strong>nlme</strong> sources.</p></li>
+<li><p>Review your changes (e.g.&nbsp;Preview in RStudio or build and install to view).</p></li>
+<li><p>Create a patch to include both code and documentation changes.</p></li>
+</ul></li>
+<li><p><strong>create reprex</strong></p>
+<ul>
+<li>Create a minimal, reproducible example, using only base R packages plus <strong>nlme</strong>, that demonstrates the issue. In complex cases, this may require creating a Docker image so that the whole environment is reproducible.</li>
+</ul></li>
+<li><p><strong>discuss</strong></p>
+<ul>
+<li>Discuss what the appropriate behaviour of the code should be, or discuss a proposal to clarify the way forward. Summarize conclusions on Bugzilla or agree a way forward with a member of R Core.</li>
+</ul></li>
+<li><p><strong>debug</strong></p>
+<ul>
+<li>Identify the parts of the code that are the root cause of the issue. This may not always be code that triggers an error, but code that does not produce the correct result in particular circumstances.</li>
+</ul></li>
+<li><p><strong>create patch</strong></p>
+<ul>
+<li>Modify the R and/or C source code to implement a proposed change. This can involve substantial work to determine the appropriate changes to make and may be an iterative process with feedback from others.</li>
+</ul></li>
+</ul>
 </section>
 <section id="testing" class="level2">
 <h2 class="anchored" data-anchor-id="testing">Testing</h2>
-<p>Some examples of R code and desired output for luminance masks are included in the technical report <a href="https://stattech.wordpress.fos.auckland.ac.nz/2021/12/01/2021-04-luminance-masks-in-r-graphics/">“Luminance Masks in R Graphics”</a> (<a href="https://protect-au.mimecast.com/s/SkAFCq71EMFpz5z7fZ37by?domain=stat.auckland.ac.nz">faster link</a>).</p>
-<p>The <a href="https://cran.rstudio.com/web/packages/gdiff/">‘gdiff’ package</a> can be useful for checking that test output matches control output.</p>
+<p>In general, we will rely on the tests included in the <strong>nlme</strong> package. It may be appropriate to propose additions to this test suite to cover the code added/modified when addressing a bug report.</p>
+<p>We may also run reverse dependency checks to check changes do not break packages that depend on <strong>nlme</strong>.</p>
 </section>
 <section id="project-requirements" class="level2">
 <h2 class="anchored" data-anchor-id="project-requirements">Project requirements</h2>
-<p>Familiarity with C. Though there is a strong template of existing code to work from.</p>
-<p>Capability to build R from source (on MacOS).</p>
-<p>Ability to find, read, and comprehend Apple Core Graphics documentation, e.g., documentation for <a href="https://developer.apple.com/documentation/coregraphics/1456497-cgcontextcliptomask"><code>CGContextClipToMask()</code></a></p>
+<p>Familiarity with Subversion will be helpful, however note that you can create a RStudio package project from the repository URL: <a href="https://svn.r-project.org/R-packages/trunk/nlme/" class="uri">https://svn.r-project.org/R-packages/trunk/nlme/</a>.</p>
+<p>Familiarity with R package development will be helpful, though again RStudio makes it simple to run R CMD check on the package or to build and install from source. Note that documentation in <strong>nlme</strong> is written directly in <code>.Rd</code> format.</p>
+<p>On MacOS you should have the <a href="https://mac.r-project.org/tools/">mandatory development tools</a>, Xcode and GNU Fortran installed.</p>
+<p>On Windows you should have <a href="https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html">RTools</a> installed.</p>
 </section>
 <section id="project-resources" class="level2">
 <h2 class="anchored" data-anchor-id="project-resources">Project resources</h2>
 <ul>
-<li><p><a href="https://developer.r-project.org/Blog/public/2020/07/15/new-features-in-the-r-graphics-engine/">“New Features in the R Graphics Engine”</a></p></li>
-<li><p><a href="https://stattech.wordpress.fos.auckland.ac.nz/2021/12/01/2021-04-luminance-masks-in-r-graphics/">“Luminance Masks in R Graphics”</a>.</p></li>
-<li><p><a href="https://developer.r-project.org/Blog/public/2021/12/06/groups-and-paths-and-masks-in-r-graphics/index.html">“Groups and Paths and Masks in R Graphics”</a></p></li>
-<li><p><a href="https://stattech.wordpress.fos.auckland.ac.nz/2020/07/14/2020-04-catching-up-with-r-graphics/">“Catching up with R Graphics”</a></p></li>
-<li><p><a href="https://cran.r-project.org/doc/manuals/r-devel/R-exts.html">“Writing R Extensions”</a></p></li>
-<li><p><a href="https://cran.r-project.org/doc/manuals/r-devel/R-ints.html">“R internals”</a></p></li>
-<li><p>Questions can be emailed to <a href="mailto:paul@stat.auckland.ac.nz">Paul Murrell</a></p></li>
+<li><p><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R documentation files</a></p></li>
+<li><p><a href="https://link.springer.com/book/10.1007/b98882">Mixed-Effects Models in S and S-PLUS</a>, José C. Pinheiro and Douglas M. Bates - we will have at least one copy of this book available at the sprint.</p></li>
 </ul>
 </section>
 <section id="project-outcomes" class="level2">
 <h2 class="anchored" data-anchor-id="project-outcomes">Project outcomes</h2>
-<p>Contribution to the core R code base (would need to be GPL).</p>
-<p>Experience with building R from source.</p>
-<p>Exposure to the design of R graphics devices and the R graphics device API.</p>
-<p>Exposure to R graphics C code, especially that involving graphics devices (<code>R/src/include/R_Ext/GraphicsDevice.h</code>), especially the <code>quartz()</code> device (<code>R/src/library/grDevices/src/devQuartz.c</code>).</p>
+<p>Contribution to a recommended package (potentially acknowledged in the ChangeLog).</p>
+<p>Experience with the package development process.</p>
+<p>Experience with creating/applying patches with Subversion.</p>
+<p>Experiences working with bug reports on Bugzilla.</p>
 </section>
 <section id="reactions-and-comments" class="level2">
 <h2 class="anchored" data-anchor-id="reactions-and-comments">Reactions and comments</h2>
