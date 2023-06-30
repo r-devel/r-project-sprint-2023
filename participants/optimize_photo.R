@@ -6,8 +6,8 @@ library(tools)
 image_dir <- file.path("participants")
 
 files <- dir(image_dir, pattern = "jpeg|jpg|png")
-grep("renata", files)
-files <- files[21]
+id <- grep("^aheadshot", files)
+files <- files[id]
 
 ## create in optimized sub-directory to start with - don't over-write originals
 out_dir <- file.path(image_dir, "optimized")

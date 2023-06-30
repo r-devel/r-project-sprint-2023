@@ -39,6 +39,7 @@ participant_info <- function(name = "A Person",
                              mastodon = NULL,
                              twitter = NULL,
                              linkedin = NULL,
+                             facebook = NULL,
                              orcid = NULL){
   res <- list(img(src = pic, alt = alt, style = "width:55%"))
   if (!is.null(web)){
@@ -52,7 +53,8 @@ participant_info <- function(name = "A Person",
   if (!is.null(affiliation)) {
     res <- c(res, list(paste(affiliation, '<br>')))
   }
-  links <- c("link", "newspaper", "linkedin", "mastodon", "twitter", "github")
+  links <- c("link", "newspaper", "linkedin", "facebook",
+             "mastodon", "twitter", "github")
   for (x in links) {
     if (!is.null(get(x))){
       check_url(get(x))
