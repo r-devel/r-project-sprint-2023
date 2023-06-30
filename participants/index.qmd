@@ -649,9 +649,9 @@ participant_info(name = "George Stagg",
 
 ::: {#person}
 ```{r, results = "asis"}
-participant_info(name = "gwynn sturdevant",
-                 pic = "headshot-gwynn_sturdevant.jpg",
-                 alt = "Headshot of gwynn sturdevant",
+participant_info(name = "gwynn gebeyehu",
+                 pic = "headshot-gwynn_gebeyehu.jpg",
+                 alt = "Headshot of gwynn gebeyehu",
                  web = "https://www.nzgwynn.com", 
                  link = "https://www.nzgwynn.com")
 ```
