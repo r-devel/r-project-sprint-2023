@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "projects/template/index.html#problem-statement",
+    "href": "projects/template/index.html#problem-statement",
+    "title": "Project Title in Title Case",
+    "section": "Problem statement",
+    "text": "Problem statement"
+  },
+  {
+    "objectID": "projects/template/index.html#proposed-solution",
+    "href": "projects/template/index.html#proposed-solution",
+    "title": "Project Title in Title Case",
+    "section": "Proposed solution",
+    "text": "Proposed solution"
+  },
+  {
+    "objectID": "projects/template/index.html#testing",
+    "href": "projects/template/index.html#testing",
+    "title": "Project Title in Title Case",
+    "section": "Testing",
+    "text": "Testing"
+  },
+  {
+    "objectID": "projects/template/index.html#project-requirements",
+    "href": "projects/template/index.html#project-requirements",
+    "title": "Project Title in Title Case",
+    "section": "Project requirements",
+    "text": "Project requirements"
+  },
+  {
+    "objectID": "projects/template/index.html#project-resources",
+    "href": "projects/template/index.html#project-resources",
+    "title": "Project Title in Title Case",
+    "section": "Project resources",
+    "text": "Project resources"
+  },
+  {
+    "objectID": "projects/template/index.html#project-outcomes",
+    "href": "projects/template/index.html#project-outcomes",
+    "title": "Project Title in Title Case",
+    "section": "Project outcomes",
+    "text": "Project outcomes"
+  },
+  {
+    "objectID": "projects/template/index.html#reactions-and-comments",
+    "href": "projects/template/index.html#reactions-and-comments",
+    "title": "Project Title in Title Case",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "projects/nlme-bugs/index.html",
     "href": "projects/nlme-bugs/index.html",
     "title": "Addressing Bugs in nlme",
@@ -63,32 +119,53 @@
     "text": "Reactions and comments"
   },
   {
-    "objectID": "projects/ideas-and-proposals.html",
-    "href": "projects/ideas-and-proposals.html",
-    "title": "Ideas and Proposals",
+    "objectID": "code-of-conduct.html",
+    "href": "code-of-conduct.html",
+    "title": "Code of Conduct",
     "section": "",
-    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
+    "text": "The organizers of R Project Sprint 2023 are dedicated to providing a harassment-free conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof).\nAll participants at R Project Sprint 2023 are required to agree to the following code of conduct.\nThe code of conduct applies to all sprint activities including\nsocial events. It extends to event-specific exchanges on social media, for instance posts tagged with the identifier of the sprint (#RSprint2023) and replies to such posts.\nOrganizers will enforce this code throughout and expect cooperation in ensuring a safe environment for all."
   },
   {
-    "objectID": "projects/ideas-and-proposals.html#ideas",
-    "href": "projects/ideas-and-proposals.html#ideas",
-    "title": "Ideas and Proposals",
-    "section": "Ideas",
-    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
+    "objectID": "code-of-conduct.html#expected-behaviour",
+    "href": "code-of-conduct.html#expected-behaviour",
+    "title": "Code of Conduct",
+    "section": "Expected Behaviour",
+    "text": "Expected Behaviour\nAll conference participants agree to:\n\nBe considerate in language and actions, and respect the boundaries of fellow participants.\nRefrain from demeaning, discriminatory, or harassing behaviour and language. Please refer to Unacceptable Behaviour for more details.\nAlert a member of the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential. Please refer to the section titled What To Do If You Witness or Are Subject To Unacceptable Behaviour for more details."
   },
   {
-    "objectID": "projects/ideas-and-proposals.html#proposals",
-    "href": "projects/ideas-and-proposals.html#proposals",
-    "title": "Ideas and Proposals",
-    "section": "Proposals",
-    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint-2023@gaggle.email if you have any issues."
+    "objectID": "code-of-conduct.html#unacceptable-behaviour",
+    "href": "code-of-conduct.html#unacceptable-behaviour",
+    "title": "Code of Conduct",
+    "section": "Unacceptable Behaviour",
+    "text": "Unacceptable Behaviour\nBehaviour that is unacceptable includes, but is not limited to:\n\nStalking\nDeliberate intimidation\nUnwanted photography or recording\nSustained or willful disruption of talks or other events\nUse of sexual or discriminatory imagery, comments, or jokes\nOffensive comments related to age, gender, sexual orientation, disability, race or religion\nInappropriate physical contact, which can include grabbing, or massaging or hugging without consent.\nUnwelcome sexual attention, which can include inappropriate questions of a sexual nature, asking for sexual favours or repeatedly asking for dates or contact information.\n\nIf you are asked to stop harassing behaviour you should stop immediately, even if your behaviour was meant to be friendly or a joke, it was clearly not taken that way and for the comfort of all conference attendees you should stop.\nAttendees who behave in a manner deemed inappropriate are subject to actions listed under Procedure for Code of Conduct Violations."
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\n\n\nNo matching items"
+    "objectID": "code-of-conduct.html#additional-requirements-for-sprint-material",
+    "href": "code-of-conduct.html#additional-requirements-for-sprint-material",
+    "title": "Code of Conduct",
+    "section": "Additional Requirements for Sprint Material",
+    "text": "Additional Requirements for Sprint Material\nPresentation slides and documents created for, or during, the sprint should not contain offensive or sexualised material."
+  },
+  {
+    "objectID": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
+    "href": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
+    "title": "Code of Conduct",
+    "section": "Procedure for Code of Conduct Violations",
+    "text": "Procedure for Code of Conduct Violations\nThe organizing team reserves the right to determine the appropriate response for all code of conduct violations. Potential responses include:\n\na formal warning to stop harassing behaviour\ncancellation or early termination of presentations or other contributions to the programme\nexpulsion from the sprint\nremoval/rejection of sprint contributions\nremoval of sponsorship acknowledgement, without return of sponsorship contribution"
+  },
+  {
+    "objectID": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
+    "href": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
+    "title": "Code of Conduct",
+    "section": "What To Do If You Witness or Are Subject To Unacceptable Behaviour",
+    "text": "What To Do If You Witness or Are Subject To Unacceptable Behaviour\nAlert the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential.\nReports should be addressed to r-project-sprint-2023@gaggle.email. If the report concerns someone on the local organizing team, please contact other members of the team directly. If you still have concerns about a conflict of interest, you are welcome to contact the University of Warwick Report + Support service.\nWe will take all reports by R Project Sprint 2023 participants seriously. This includes incidents outside our spaces and at any point in time. The organizing team reserve the right to exclude people from the sprint based on their past behaviour, including behaviour outside R Project Sprint 2023 spaces and behaviour towards people who are not part of the sprint.\nWe will respect confidentiality requests for the purpose of protecting targets of harassing behaviour. We will not name victims without their affirmative consent. Correspondence is handled confidentially and deleted after the case is resolved. All data is stored securely, access will be limited to the members of the organizing team who receive the report.\nThe organizing team will also provide support to victims, which may include:\n\nproviding an escort,\ncontacting the on-campus Community Safety Team or off campus Emergency Services,\n\nor otherwise assisting those experiencing harassment to ensure that they feel safe for the duration of the conference. Assistance will only be provided with affirmative consent of the victim."
+  },
+  {
+    "objectID": "code-of-conduct.html#acknowledgements",
+    "href": "code-of-conduct.html#acknowledgements",
+    "title": "Code of Conduct",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
   },
   {
     "objectID": "participants/index.html",
@@ -102,14 +179,14 @@
     "href": "participants/index.html#r-core-team",
     "title": "Participants",
     "section": "R Core Team",
-    "text": "R Core Team\n\n\n  Robert Gentleman \n\n\n  Tomas Kalibera \n\n\n  Michael Lawrence \n\n\n  Uwe Ligges  Dortmund University  \n\n\n  Thomas Lumley  University of Auckland   \n\n\n  Martin Mächler \n\n\n  Sebastian Meyer  Friedrich-Alexander-Universität Erlangen-Nürnberg       \n\n\n  Paul Murrell*  The University of Auckland   \n\n\n  Martyn Plummer  \n\n\n  Deepayan Sarkar \n\n\n  Luke Tierney \n\n\n  Simon Urbanek"
+    "text": "R Core Team\n\n\n  Robert Gentleman \n\n\n  Tomas Kalibera \n\n\n  Michael Lawrence \n\n\n  Uwe Ligges  Dortmund University  \n\n\n  Thomas Lumley  University of Auckland   \n\n\n  Martin Mächler  ETH Zurich     \n\n\n  Sebastian Meyer  Friedrich-Alexander-Universität Erlangen-Nürnberg       \n\n\n  Paul Murrell*  The University of Auckland   \n\n\n  Martyn Plummer  \n\n\n  Deepayan Sarkar \n\n\n  Luke Tierney \n\n\n  Simon Urbanek"
   },
   {
     "objectID": "participants/index.html#r-contributors",
     "href": "participants/index.html#r-contributors",
     "title": "Participants",
     "section": "R Contributors",
-    "text": "R Contributors\n\n\n  Malcolm Barrett  Posit    \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Aarhus University  \n\n\n  Hannah Frick  Posit    \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  André Gillibert  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Erin Hodgess  Western Governors University  \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn sturdevant  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool"
+    "text": "R Contributors\n\n\n  Abdulrahman Alswaji  King Abdullah International Medical Research Center  \n\n\n  Iman Al-Hasani  Sultan Qaboos University    \n\n\n  Malcolm Barrett  Posit    \n\n\n  Gabe Becker  Independent Consultant   \n\n\n  Meet Bhatnagar*  Amazon  \n\n\n  Philippa Broadbent  University of Southampton   \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Technology Innovation Institute, Abu Dhabi  \n\n\n  Ahmadou Dicko  UNHCR      \n\n\n  Hannah Frick  Posit    \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  Andrea Gilardi  University of Milano - Bicocca    \n\n\n  André Gillibert  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Beryl Kanali  \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Aidan Lakshman  University of Pittsburgh     \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Jeroen Ooms  rOpenSci   \n\n\n  Ayush Patel  Oxford Poverty and Human Development Initiative    \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn sturdevant  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool"
   },
   {
     "objectID": "index.html",
@@ -175,104 +252,6 @@
     "text": "Sponsors\n\nCore funding\n\n\n\n\n\n\n\nPlatinum sponsors\n\nThe R Foundation\n\n\n\nGold sponsors\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSilver sponsors\n\n\n\n\n\n\n\n\n\n\n\n\nFurther sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors Twitter and Mastodon accounts, and in reports of the sprint. Please contact r-project-sprint-2023@gaggle.email to discuss!"
   },
   {
-    "objectID": "code-of-conduct.html",
-    "href": "code-of-conduct.html",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "The organizers of R Project Sprint 2023 are dedicated to providing a harassment-free conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof).\nAll participants at R Project Sprint 2023 are required to agree to the following code of conduct.\nThe code of conduct applies to all sprint activities including\nsocial events. It extends to event-specific exchanges on social media, for instance posts tagged with the identifier of the sprint (#RSprint2023) and replies to such posts.\nOrganizers will enforce this code throughout and expect cooperation in ensuring a safe environment for all."
-  },
-  {
-    "objectID": "code-of-conduct.html#expected-behaviour",
-    "href": "code-of-conduct.html#expected-behaviour",
-    "title": "Code of Conduct",
-    "section": "Expected Behaviour",
-    "text": "Expected Behaviour\nAll conference participants agree to:\n\nBe considerate in language and actions, and respect the boundaries of fellow participants.\nRefrain from demeaning, discriminatory, or harassing behaviour and language. Please refer to Unacceptable Behaviour for more details.\nAlert a member of the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential. Please refer to the section titled What To Do If You Witness or Are Subject To Unacceptable Behaviour for more details."
-  },
-  {
-    "objectID": "code-of-conduct.html#unacceptable-behaviour",
-    "href": "code-of-conduct.html#unacceptable-behaviour",
-    "title": "Code of Conduct",
-    "section": "Unacceptable Behaviour",
-    "text": "Unacceptable Behaviour\nBehaviour that is unacceptable includes, but is not limited to:\n\nStalking\nDeliberate intimidation\nUnwanted photography or recording\nSustained or willful disruption of talks or other events\nUse of sexual or discriminatory imagery, comments, or jokes\nOffensive comments related to age, gender, sexual orientation, disability, race or religion\nInappropriate physical contact, which can include grabbing, or massaging or hugging without consent.\nUnwelcome sexual attention, which can include inappropriate questions of a sexual nature, asking for sexual favours or repeatedly asking for dates or contact information.\n\nIf you are asked to stop harassing behaviour you should stop immediately, even if your behaviour was meant to be friendly or a joke, it was clearly not taken that way and for the comfort of all conference attendees you should stop.\nAttendees who behave in a manner deemed inappropriate are subject to actions listed under Procedure for Code of Conduct Violations."
-  },
-  {
-    "objectID": "code-of-conduct.html#additional-requirements-for-sprint-material",
-    "href": "code-of-conduct.html#additional-requirements-for-sprint-material",
-    "title": "Code of Conduct",
-    "section": "Additional Requirements for Sprint Material",
-    "text": "Additional Requirements for Sprint Material\nPresentation slides and documents created for, or during, the sprint should not contain offensive or sexualised material."
-  },
-  {
-    "objectID": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
-    "href": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
-    "title": "Code of Conduct",
-    "section": "Procedure for Code of Conduct Violations",
-    "text": "Procedure for Code of Conduct Violations\nThe organizing team reserves the right to determine the appropriate response for all code of conduct violations. Potential responses include:\n\na formal warning to stop harassing behaviour\ncancellation or early termination of presentations or other contributions to the programme\nexpulsion from the sprint\nremoval/rejection of sprint contributions\nremoval of sponsorship acknowledgement, without return of sponsorship contribution"
-  },
-  {
-    "objectID": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
-    "href": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
-    "title": "Code of Conduct",
-    "section": "What To Do If You Witness or Are Subject To Unacceptable Behaviour",
-    "text": "What To Do If You Witness or Are Subject To Unacceptable Behaviour\nAlert the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential.\nReports should be addressed to r-project-sprint-2023@gaggle.email. If the report concerns someone on the local organizing team, please contact other members of the team directly. If you still have concerns about a conflict of interest, you are welcome to contact the University of Warwick Report + Support service.\nWe will take all reports by R Project Sprint 2023 participants seriously. This includes incidents outside our spaces and at any point in time. The organizing team reserve the right to exclude people from the sprint based on their past behaviour, including behaviour outside R Project Sprint 2023 spaces and behaviour towards people who are not part of the sprint.\nWe will respect confidentiality requests for the purpose of protecting targets of harassing behaviour. We will not name victims without their affirmative consent. Correspondence is handled confidentially and deleted after the case is resolved. All data is stored securely, access will be limited to the members of the organizing team who receive the report.\nThe organizing team will also provide support to victims, which may include:\n\nproviding an escort,\ncontacting the on-campus Community Safety Team or off campus Emergency Services,\n\nor otherwise assisting those experiencing harassment to ensure that they feel safe for the duration of the conference. Assistance will only be provided with affirmative consent of the victim."
-  },
-  {
-    "objectID": "code-of-conduct.html#acknowledgements",
-    "href": "code-of-conduct.html#acknowledgements",
-    "title": "Code of Conduct",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
-  },
-  {
-    "objectID": "projects/template/index.html#problem-statement",
-    "href": "projects/template/index.html#problem-statement",
-    "title": "Project Title in Title Case",
-    "section": "Problem statement",
-    "text": "Problem statement"
-  },
-  {
-    "objectID": "projects/template/index.html#proposed-solution",
-    "href": "projects/template/index.html#proposed-solution",
-    "title": "Project Title in Title Case",
-    "section": "Proposed solution",
-    "text": "Proposed solution"
-  },
-  {
-    "objectID": "projects/template/index.html#testing",
-    "href": "projects/template/index.html#testing",
-    "title": "Project Title in Title Case",
-    "section": "Testing",
-    "text": "Testing"
-  },
-  {
-    "objectID": "projects/template/index.html#project-requirements",
-    "href": "projects/template/index.html#project-requirements",
-    "title": "Project Title in Title Case",
-    "section": "Project requirements",
-    "text": "Project requirements"
-  },
-  {
-    "objectID": "projects/template/index.html#project-resources",
-    "href": "projects/template/index.html#project-resources",
-    "title": "Project Title in Title Case",
-    "section": "Project resources",
-    "text": "Project resources"
-  },
-  {
-    "objectID": "projects/template/index.html#project-outcomes",
-    "href": "projects/template/index.html#project-outcomes",
-    "title": "Project Title in Title Case",
-    "section": "Project outcomes",
-    "text": "Project outcomes"
-  },
-  {
-    "objectID": "projects/template/index.html#reactions-and-comments",
-    "href": "projects/template/index.html#reactions-and-comments",
-    "title": "Project Title in Title Case",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
     "objectID": "projects/quartz-alpha-mask/index.html",
     "href": "projects/quartz-alpha-mask/index.html",
     "title": "Adding Alpha Masks to the Quartz Graphics Device",
@@ -334,5 +313,26 @@
     "title": "Adding Alpha Masks to the Quartz Graphics Device",
     "section": "Reactions and comments",
     "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html",
+    "href": "projects/ideas-and-proposals.html",
+    "title": "Ideas and Proposals",
+    "section": "",
+    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#ideas",
+    "href": "projects/ideas-and-proposals.html#ideas",
+    "title": "Ideas and Proposals",
+    "section": "Ideas",
+    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#proposals",
+    "href": "projects/ideas-and-proposals.html#proposals",
+    "title": "Ideas and Proposals",
+    "section": "Proposals",
+    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint-2023@gaggle.email if you have any issues."
   }
 ]
