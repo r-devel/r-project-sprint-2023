@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Aidan Lakshman">
+
+<title>R Project Sprint 2023 - Dendrapply Refactor</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../media/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="R Project Sprint 2023 - Dendrapply Refactor">
+<meta property="og:description" content="">
+<meta property="og:site-name" content="R Project Sprint 2023">
+<meta name="twitter:title" content="R Project Sprint 2023 - Dendrapply Refactor">
+<meta name="twitter:description" content="A 3-day meeting of R developers to work collaboratively on R core development, hosted at the University of Warwick, August 30 – September 1">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R Project Sprint 2023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../code-of-conduct.html" rel="" target="">
+ <span class="menu-text">Code of Conduct</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../participants/index.html" rel="" target="">
+ <span class="menu-text">Participants</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../../projects/index.html" rel="" target="">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/ideas-and-proposals.html" rel="" target="">
+ <span class="dropdown-text">Ideas and Proposals</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.cloud/tags/RSprint2023" rel="" target=""><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hashtag/RSprint2023?src=hashtag_click" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/r-devel/r-project-sprint-2023" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">Problem statement</a></li>
+  <li><a href="#proposed-solution" id="toc-proposed-solution" class="nav-link" data-scroll-target="#proposed-solution">Proposed solution</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
+  <li><a href="#project-requirements" id="toc-project-requirements" class="nav-link" data-scroll-target="#project-requirements">Project requirements</a></li>
+  <li><a href="#project-resources" id="toc-project-resources" class="nav-link" data-scroll-target="#project-resources">Project resources</a></li>
+  <li><a href="#project-outcomes" id="toc-project-outcomes" class="nav-link" data-scroll-target="#project-outcomes">Project outcomes</a></li>
+  <li><a href="#reactions-and-comments" id="toc-reactions-and-comments" class="nav-link" data-scroll-target="#reactions-and-comments">Reactions and comments</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Dendrapply Refactor</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">C</div>
+    <div class="quarto-category">Wishlist</div>
+    <div class="quarto-category">Low-level</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Aidan Lakshman </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- 
+This template is based on https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/.
+The sections are provided as a guide and may not be appropriate to your proposal, feel free to skip or change sections.
+
+Please label any R code chunks, especially those producing images.
+-->
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p><code>dendrogram</code> objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given <code>dendrogram</code> object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).</p>
+<p>The structure of this object in R is a nested list, with each element of class <code>dendrogram</code> and containing at least the <code>members</code> and <code>height</code> attribute. <code>members</code> defines the number of leaf nodes below that particular node, and <code>height</code> defines the height of the node for plotting. Leaf nodes contain an additional attribute <code>leaf</code>, which is set to <code>TRUE</code>.</p>
+<p>Working with <code>dendrogram</code> objects is difficult due to their deep nested structure. To this end, the <code>dendrapply</code> function was created in 2004 by Dr.&nbsp;Maechler to apply a function to all nodes of a dendrogram. <code>dendrapply</code> is used frequently in many packages and analyses, notably <code>dendextend</code>, and its implementation is defined in <code>src/library/stats/R/dendrogram.R</code>.</p>
+</section>
+<section id="problem-statement" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statement">Problem statement</h2>
+<p>The current implementation of <code>dendrapply</code> is included at the bottom of this section. This implementation has two main issues.</p>
+<p>The most notable of these is the recursive application of functions to the dendrogram nodes. This leads to poor performance on deeply nested dendrograms, as well as the potential for stack overflow errors on machines with limited resources. This is detailed in <code>?dendrapply</code> and in the warning in <code>?dendrogram</code>.</p>
+<p>Additionally, tree traversal can be achieved in a number of ways. The current implementation uses a pre-order traversal, which is not always the most intuitive application of functions to a tree structure. This means that, for each triple <code>2 &lt;- 1 -&gt; 3</code>, the function is applied first to node <code>1</code>, then to <code>2</code>, then to <code>3</code>. Ideally, users would be able to choose between a post-order or a pre-order traversal. Post-order traversals guarantee that the function is applied to all children of a node before applying to the parent, allowing for certain analyses that rely on propagating results up a tree. There is currently no easy way to achieve this in R.</p>
+<p>In summary, the priorities to rectify are (in order of importance):</p>
+<ol type="1">
+<li>Remove recursion in <code>dendrapply</code></li>
+<li>Add an optional argument to allow for different tree traversals in function application</li>
+</ol>
+<p>These must be achieved while preserving all the current functionality of <code>dendrapply</code>, and without decreasing the current performance.</p>
+<p>Current implementation:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>dendrapply <span class="ot">&lt;-</span> <span class="cf">function</span>(X, FUN, ...)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Purpose: "dendrogram" recursive apply {to each node}</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="do">## ----------------------------------------------------------------------</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Author: Martin Maechler, Date: 26 Jun 2004, 22:43</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    FUN <span class="ot">&lt;-</span> <span class="fu">match.fun</span>(FUN)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>( <span class="sc">!</span><span class="fu">inherits</span>(X, <span class="st">"dendrogram"</span>) ) <span class="fu">stop</span>(<span class="st">"'X' is not a dendrogram"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Node apply recursively:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    Napply <span class="ot">&lt;-</span> <span class="cf">function</span>(d) {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    r <span class="ot">&lt;-</span> <span class="fu">FUN</span>(d, ...)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.leaf</span>(d)) {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.list</span>(r)) r <span class="ot">&lt;-</span> <span class="fu">as.list</span>(r) <span class="co"># fixing unsafe FUN()s</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="fu">length</span>(r) <span class="sc">&lt;</span> (n <span class="ot">&lt;-</span> <span class="fu">length</span>(d))) r[<span class="fu">seq_len</span>(n)] <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">"list"</span>, n)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="do">## and overwrite recursively, possibly keeping "attr"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        r[] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(d, Napply)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    r</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Napply</span>(X)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="proposed-solution" class="level2">
+<h2 class="anchored" data-anchor-id="proposed-solution">Proposed solution</h2>
+<p>A full description follows, but people that are interested can read my <a href="https://www.ahl27.com/posts/2023/02/dendrapply/">initial writeup</a> for more details on the problem, attempted solutions, and current status. Feel free to skip that link and just read the following section instead.</p>
+<p>A prototype solution has been implemented and <a href="https://bugs.r-project.org/show_bug.cgi?id=18480">submitted to Bugzilla</a>. This solution moves the R implementation into C. The short description of the proposed method is to create a linked list in C holding the <code>SEXP</code> pointers for each node of the tree. Then, we apply the function given to each node of the linked list, and then merge the <code>SEXP</code> objects back into the original topology. This can be further optimized by merging nodes on the fly to limit linked list space and reduce <code>PROTECT</code> stack usage. This also allows for different tree traversal strategies with minimal effort, as different tree traversals can be achieved by varying how nodes are added to the linked list.</p>
+<p>The current solution has one key issue resulting in a two problems. This implementation uses <code>VECTOR_ELT</code> rather than the more general <code>[[</code> and <code>[[&lt;-</code> operations to get/set values. This allows for low <code>PROTECT</code> stack usage and high performance, but it also means that nodes discard their <code>class</code> values when passed to the function. This can be solved naively by just reclassing nodes as <code>dendrogram</code>, but unfortunately this causes issues in the case where nodes have multiple classes (ex. a node where <code>class(node ) == c('dendrogram', 'myOtherClass')</code>). This also runs into problems in the case where a non-standard <code>[[</code> method is implemented. In the interest of backwards compatibility, these problems should be rectified.</p>
+<p>There are a few options for fixing this issue. The first is to work entirely in R, removing the C implementation. This would work in theory by using a list structure to hold nodes, but the linked-list structure in C gives a substantial boost in performance over R by using pointers instead of copying each object. This may not be a big deal; I haven’t tested it yet.</p>
+<p>Another possible option is to use the alternative vector-based <code>dendrogram</code> indexing ( <code>dend[[c(1,1)]]</code> is equivalent to <code>dend[[1]][[1]]</code> ) to build a list of targets first, then apply the function to each. This may solve the potential R-implementation memory issues, but could also require initializing a huge vector. Dealing with the topology of the dendrogram would also be challenging.</p>
+<p>Another potential fix is to use the <code>[[</code> method by building an R expression in C and then calling it, similar to how <code>lapply</code> is implemented (see <code>do_lapply()</code> in <code>src/main/apply.c</code> for reference). This implementation was tested and worked successfully, but the result was significantly slower than the R version (roughly half speed, likely due to <code>PROTECT</code> stack issues mentioned below). Maybe a code refactor could solve the slowdowns and produce a better result.</p>
+<p>The last potential fix I’ve identified is to use precious multi-sets for protection rather than <code>PROTECT</code>. One of the big problems of applying functions in C is that the result of the function application at each node needs to be protected. This isn’t an issue for post-order traversals, since we can always just add the result as a child of the parent node (which auto-protects it if the parent is already protected). However, for the current implementation, a potentially large source of slow-downs is the work-arounds implemented to solve <code>PROTECT</code> stack issues. Using MSets could simplify this and improve runtime, but there isn’t a lot of documentations on how to use them (and their use for this kind of problem is explicitly discouraged in some places).</p>
+</section>
+<section id="testing" class="level2">
+<h2 class="anchored" data-anchor-id="testing">Testing</h2>
+<p>Benchmarking the function against <code>stats::dendrapply</code> can be done using the following:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dend <span class="ot">&lt;-</span> <span class="fu">as.dendrogram</span>(<span class="fu">hclust</span>(<span class="fu">dist</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) x</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>microbenchmark<span class="sc">::</span><span class="fu">microbenchmark</span>(stats<span class="sc">::</span><span class="fu">dendrapply</span>(dend, f),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                               <span class="fu">new_dendrapply</span>(dend, f))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Different dendrogram objects should be tested to look at performance on balanced vs.&nbsp;deep trees, but usage of <code>\(x) x</code> is important for accurate testing. This function minimizes the amount of operations within the applied function, meaning that the vast majority of the differences in time will be due to the implementation of <code>dendrapply</code>, not the runtime of <code>f</code>.</p>
+<p>Additional testing should be done to verify that the following work as expected:</p>
+<ul>
+<li>Ensure speed of new application is at least as fast as <code>stats::dendrapply</code></li>
+<li>Ensure all examples in <code>?dendrapply</code> work as expected</li>
+<li>Ensure all tests in <code>dendextend</code> work correctly to test a large set of currently used applications of <code>dendrapply</code></li>
+<li>Ensure that nodes with multiple classes retain their <code>class</code> attribute after running <code>dendrapply</code></li>
+<li>Ensure that special uses of <code>[[</code> work as expected</li>
+<li>Ensure that recursive <code>dendrapply</code> calls work as expected (ex. <code>dendrapply(dend, \(x) dendrapply(x, someOtherFunction))</code>)</li>
+<li>Ensure all examples in the R build testing work as expected, paying special attention to the following weird case:</li>
+</ul>
+<pre><code>&gt; D &lt;- as.dendrogram(hclust(dist(cbind(setNames(c(0,1,4), LETTERS[1:3])))))
+&gt; dendrapply(D, labels)
+[[1]]
+[1] "C"
+
+[[2]]
+[[2]][[1]]
+[1] "A"
+
+[[2]][[2]]
+[1] "B"
+
+[[3]]
+[1] "C"</code></pre>
+<p>Implementation should also be made to ensure that the default parameters are fully backwards compatible. In the case of post-order traversal, this is currently being achieved by defining the function as <code>dendrapply(X, FUN, ..., how=c('pre.order', 'post.order'))</code> so that the default is always equivalent to <code>stats::dendrapply</code>.</p>
+<p>Finally, testing should be added to the R source tests. The current testing suite for <code>dendrapply</code> is very sparse; edge cases like multi-classed <code>dendrogram</code> objects should be added to ensure code works as expected in the future.</p>
+</section>
+<section id="project-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="project-requirements">Project requirements</h2>
+<!-- Include here prerequisite knowledge and any operating system requirements -->
+<p>I suspect that the optimal solution will involve working in C, so knowledge of C to develop this will be helpful, even if just to be able to compare performance against an R implementation. Much of the implementation in C depends on knowledge of the <code>PROTECT</code> stack, so familiarity with that is important for C solutions.</p>
+<p>Basic knowledge of tree structures and/or <code>dendrogram</code> objects is helpful but not necessary.</p>
+</section>
+<section id="project-resources" class="level2">
+<h2 class="anchored" data-anchor-id="project-resources">Project resources</h2>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/">Tree traversal methods</a></li>
+<li><a href="https://www.ahl27.com/posts/2023/02/dendrapply/">My full description of problem and implementation</a></li>
+<li><a href="https://bugs.r-project.org/show_bug.cgi?id=18480">Current bugzilla ticket</a> (contains most up-to-date code; my blog post may be out of date.)</li>
+</ul>
+</section>
+<section id="project-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="project-outcomes">Project outcomes</h2>
+<p>If successful, we’d be able to submit a new version of <code>dendrapply</code> with better performance. Removing the recursion in this function would make these analyses also possible on edge computing and limited resource machines (or at least more feasible). Implementation of multiple traversal methods for function application would be a massive resource to the phylogenetics community.</p>
+</section>
+<section id="reactions-and-comments" class="level2">
+<h2 class="anchored" data-anchor-id="reactions-and-comments">Reactions and comments</h2>
+<!-- 
+Please leave the Reactions and comments section
+- a Giscus comment box will be automatically added here 
+-->
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="r-devel/r-project-sprint-2023" data-repo-id="R_kgDOIhAibA" data-category="Proposals" data-category-id="DIC_kwDOIhAibM4CW3GY" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
