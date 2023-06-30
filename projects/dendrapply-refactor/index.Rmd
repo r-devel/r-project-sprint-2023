@@ -1,0 +1,161 @@
+---
+title: Dendrapply Refactor # Warning: changing the title may create a new Discussions thread!
+description: "" # Optional short description for post on Discussions
+author: Aidan Lakshman # and co-authors if applicable
+output: html_document
+categories: [C, Wishlist, Low-level] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
+comments:
+  giscus: 
+    repo: "r-devel/r-project-sprint-2023"
+    repo-id: "R_kgDOIhAibA"
+    category: "Proposals"
+    category-id: "DIC_kwDOIhAibM4CW3GY"
+    mapping: "title"
+    reactions-enabled: true
+    loading: lazy
+---
+
+```{=html}
+<!-- 
+This template is based on https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/.
+The sections are provided as a guide and may not be appropriate to your proposal, feel free to skip or change sections.
+
+Please label any R code chunks, especially those producing images.
+-->
+```
+```{r setup}
+
+```
+
+## Background
+`dendrogram` objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given `dendrogram` object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children). 
+
+The structure of this object in R is a nested list, with each element of class `dendrogram` and containing at least the `members` and `height` attribute. `members` defines the number of leaf nodes below that particular node, and `height` defines the height of the node for plotting. Leaf nodes contain an additional attribute `leaf`, which is set to `TRUE`. 
+
+Working with `dendrogram` objects is difficult due to their deep nested structure. To this end, the `dendrapply` function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. `dendrapply` is used frequently in many packages and analyses, notably `dendextend`, and its implementation is defined in `src/library/stats/R/dendrogram.R`. 
+
+## Problem statement
+
+The current implementation of `dendrapply` is included at the bottom of this section. This implementation has two main issues.
+
+The most notable of these is the recursive application of functions to the dendrogram nodes. This leads to poor performance on deeply nested dendrograms, as well as the potential for stack overflow errors on machines with limited resources. This is detailed in `?dendrapply` and in the warning in `?dendrogram`.
+
+Additionally, tree traversal can be achieved in a number of ways. The current implementation uses a pre-order traversal, which is not always the most intuitive application of functions to a tree structure. This means that, for each triple `2 <- 1 -> 3`, the function is applied first to node `1`, then to `2`, then to `3`. Ideally, users would be able to choose between a post-order or a pre-order traversal. Post-order traversals guarantee that the function is applied to all children of a node before applying to the parent, allowing for certain analyses that rely on propagating results up a tree. There is currently no easy way to achieve this in R.
+
+In summary, the priorities to rectify are (in order of importance):
+
+1. Remove recursion in `dendrapply`
+2. Add an optional argument to allow for different tree traversals in function application
+
+These must be achieved while preserving all the current functionality of `dendrapply`, and without decreasing the current performance.
+
+Current implementation:
+```{r eval=FALSE, echo=TRUE}
+dendrapply <- function(X, FUN, ...)
+{
+    ## Purpose: "dendrogram" recursive apply {to each node}
+    ## ----------------------------------------------------------------------
+    ## Author: Martin Maechler, Date: 26 Jun 2004, 22:43
+    FUN <- match.fun(FUN)
+    if( !inherits(X, "dendrogram") ) stop("'X' is not a dendrogram")
+
+    ## Node apply recursively:
+    Napply <- function(d) {
+	r <- FUN(d, ...)
+	if(!is.leaf(d)) {
+	    if(!is.list(r)) r <- as.list(r) # fixing unsafe FUN()s
+	    if(length(r) < (n <- length(d))) r[seq_len(n)] <- vector("list", n)
+	    ## and overwrite recursively, possibly keeping "attr"
+	    r[] <- lapply(d, Napply)
+        }
+	r
+    }
+    Napply(X)
+}
+```
+
+## Proposed solution
+
+A full description follows, but people that are interested can read my  [initial writeup](https://www.ahl27.com/posts/2023/02/dendrapply/) for more details on the problem, attempted solutions, and current status. Feel free to skip that link and just read the following section instead.
+
+A prototype solution has been implemented and [submitted to Bugzilla](https://bugs.r-project.org/show_bug.cgi?id=18480). This solution moves the R implementation into C. The short description of the proposed method is to create a linked list in C holding the `SEXP` pointers for each node of the tree. Then, we apply the function given to each node of the linked list, and then merge the `SEXP` objects back into the original topology. This can be further optimized by merging nodes on the fly to limit linked list space and reduce `PROTECT` stack usage. This also allows for different tree traversal strategies with minimal effort, as different tree traversals can be achieved by varying how nodes are added to the linked list.
+
+The current solution has one key issue resulting in a two problems. This implementation uses `VECTOR_ELT` rather than the more general `[[` and `[[<-` operations to get/set values. This allows for low `PROTECT` stack usage and high performance, but it also means that nodes discard their `class` values when passed to the function. This can be solved naively by just reclassing nodes as `dendrogram`, but unfortunately this causes issues in the case where nodes have multiple classes (ex. a node where `class(node ) == c('dendrogram', 'myOtherClass')`). This also runs into problems in the case where a non-standard `[[` method is implemented. In the interest of backwards compatibility, these problems should be rectified.
+
+There are a few options for fixing this issue. The first is to work entirely in R, removing the C implementation. This would work in theory by using a list structure to hold nodes, but the linked-list structure in C gives a substantial boost in performance over R by using pointers instead of copying each object. This may not be a big deal; I haven't tested it yet. 
+
+Another possible option is to use the alternative vector-based `dendrogram` indexing ( `dend[[c(1,1)]]` is equivalent to `dend[[1]][[1]]` ) to build a list of targets first, then apply the function to each. This may solve the potential R-implementation memory issues, but could also require initializing a huge vector. Dealing with the topology of the dendrogram would also be challenging.
+
+Another potential fix is to use the `[[` method by building an R expression in C and then calling it, similar to how `lapply` is implemented (see `do_lapply()` in `src/main/apply.c` for reference). This implementation was tested and worked successfully, but the result was significantly slower than the R version (roughly half speed, likely due to `PROTECT` stack issues mentioned below). Maybe a code refactor could solve the slowdowns and produce a better result.
+
+The last potential fix I've identified is to use precious multi-sets for protection rather than `PROTECT`. One of the big problems of applying functions in C is that the result of the function application at each node needs to be protected. This isn't an issue for post-order traversals, since we can always just add the result as a child of the parent node (which auto-protects it if the parent is already protected). However, for the current implementation, a potentially large source of slow-downs is the work-arounds implemented to solve `PROTECT` stack issues. Using MSets could simplify this and improve runtime, but there isn't a lot of documentations on how to use them (and their use for this kind of problem is explicitly discouraged in some places).
+
+## Testing
+
+Benchmarking the function against `stats::dendrapply` can be done using the following:
+
+```{r eval=FALSE, echo=TRUE}
+dend <- as.dendrogram(hclust(dist(1:100)))
+f <- function(x) x
+
+microbenchmark::microbenchmark(stats::dendrapply(dend, f),
+                               new_dendrapply(dend, f))
+```
+
+Different dendrogram objects should be tested to look at performance on balanced vs. deep trees, but usage of `\(x) x` is important for accurate testing. This function minimizes the amount of operations within the applied function, meaning that the vast majority of the differences in time will be due to the implementation of `dendrapply`, not the runtime of `f`.
+
+Additional testing should be done to verify that the following work as expected:
+
+- Ensure speed of new application is at least as fast as `stats::dendrapply`
+- Ensure all examples in `?dendrapply` work as expected
+- Ensure all tests in `dendextend` work correctly to test a large set of currently used applications of `dendrapply`
+- Ensure that nodes with multiple classes retain their `class` attribute after running `dendrapply`
+- Ensure that special uses of `[[` work as expected
+- Ensure that recursive `dendrapply` calls work as expected (ex. `dendrapply(dend, \(x) dendrapply(x, someOtherFunction))`)
+- Ensure all examples in the R build testing work as expected, paying special attention to the following weird case:
+```
+> D <- as.dendrogram(hclust(dist(cbind(setNames(c(0,1,4), LETTERS[1:3])))))
+> dendrapply(D, labels)
+[[1]]
+[1] "C"
+
+[[2]]
+[[2]][[1]]
+[1] "A"
+
+[[2]][[2]]
+[1] "B"
+
+[[3]]
+[1] "C"
+```
+
+Implementation should also be made to ensure that the default parameters are fully backwards compatible. In the case of post-order traversal, this is currently being achieved by defining the function as `dendrapply(X, FUN, ..., how=c('pre.order', 'post.order'))` so that the default is always equivalent to `stats::dendrapply`.
+
+Finally, testing should be added to the R source tests. The current testing suite for `dendrapply` is very sparse; edge cases like multi-classed `dendrogram` objects should be added to ensure code works as expected in the future.
+
+## Project requirements
+
+<!-- Include here prerequisite knowledge and any operating system requirements -->
+I suspect that the optimal solution will involve working in C, so knowledge of C to develop this will be helpful, even if just to be able to compare performance against an R implementation. Much of the implementation in C depends on knowledge of the `PROTECT` stack, so familiarity with that is important for C solutions. 
+
+Basic knowledge of tree structures and/or `dendrogram` objects is helpful but not necessary.
+
+## Project resources
+
+- [Tree traversal methods](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+- [My full description of problem and implementation](https://www.ahl27.com/posts/2023/02/dendrapply/)
+- [Current bugzilla ticket](https://bugs.r-project.org/show_bug.cgi?id=18480) (contains most up-to-date code; my blog post may be out of date.)
+
+## Project outcomes
+
+If successful, we'd be able to submit a new version of `dendrapply` with better performance. Removing the recursion in this function would make these analyses also possible on edge computing and limited resource machines (or at least more feasible). Implementation of multiple traversal methods for function application would be a massive resource to the phylogenetics community.
+
+## Reactions and comments
+
+```{=html}
+<!-- 
+Please leave the Reactions and comments section
+- a Giscus comment box will be automatically added here 
+-->
+```
