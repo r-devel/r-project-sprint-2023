@@ -54,7 +54,7 @@ The organizing team reserves the right to determine the appropriate response for
 
 Alert the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential.
 
-Reports should be addressed to [r-project-sprint-2023\@gaggle.email](mailto:r-project-sprint-2023@gaggle.email). If the report concerns someone on the [local organizing team](/index#Local-organizing-team), please contact other members of the team directly. If you still have concerns about a conflict of interest, you are welcome to contact the [University of Warwick Report + Support](https://reportandsupport.warwick.ac.uk/) service.
+Reports should be addressed to [r-project-sprint\@livewarwickac.onmicrosoft.com](mailto:r-project-sprint@livewarwickac.onmicrosoft.com). If the report concerns someone on the [local organizing team](/index#Local-organizing-team), please contact other members of the team directly. If you still have concerns about a conflict of interest, you are welcome to contact the [University of Warwick Report + Support](https://reportandsupport.warwick.ac.uk/) service.
 
 We will take all reports by R Project Sprint 2023 participants seriously. This includes incidents outside our spaces and at any point in time. The organizing team reserve the right to exclude people from the sprint based on their past behaviour, including behaviour outside R Project Sprint 2023 spaces and behaviour towards people who are not part of the sprint.
 

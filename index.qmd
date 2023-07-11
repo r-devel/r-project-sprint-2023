@@ -117,7 +117,7 @@ We are coordinating with the [R Contribution Working Group](https://contributor.
 
 ## Contact
 
-For queries about this event, please contact [r-project-sprint-2023\@gaggle.email](mailto:r-project-sprint-2023@gaggle.email).
+For queries about this event, please contact [r-project-sprint\@livewarwickac.onmicrosoft.com](mailto:r-project-sprint@livewarwickac.onmicrosoft.com).
 
 ## Sponsors
 
@@ -154,4 +154,4 @@ For queries about this event, please contact [r-project-sprint-2023\@gaggle.emai
 [![](media/pcctc_logo.jpg){fig-alt="PCCTC logo" fig-align="center" height="150"}](https://pcctc.org)
 :::
 
-Further sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors [Twitter](https://twitter.com/R_Contributors) and [Mastodon](https://hachyderm.io/@R_Contributors) accounts, and in reports of the sprint. Please contact [r-project-sprint-2023\@gaggle.email](mailto:r-project-sprint-2023@gaggle.email) to discuss!
+Further sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors [Twitter](https://twitter.com/R_Contributors) and [Mastodon](https://hachyderm.io/@R_Contributors) accounts, and in reports of the sprint. Please contact [r-project-sprint\@livewarwickac.onmicrosoft.com](mailto:r-project-sprint@livewarwickac.onmicrosoft.com) to discuss!
