@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/ideas-and-proposals.html</loc>
+    <lastmod>2023-07-11T07:41:11.998Z</lastmod>
+  </url>
+  <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/template/index.html</loc>
-    <lastmod>2023-06-30T15:59:48.940Z</lastmod>
+    <lastmod>2023-07-11T07:41:10.850Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/index.html</loc>
-    <lastmod>2023-06-30T15:59:48.212Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/dendrapply-refactor/index.html</loc>
-    <lastmod>2023-06-30T15:59:47.164Z</lastmod>
-  </url>
-  <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/index.html</loc>
-    <lastmod>2023-06-30T15:59:45.708Z</lastmod>
+    <lastmod>2023-07-11T07:41:09.898Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/participants/index.html</loc>
-    <lastmod>2023-06-30T15:59:44.355Z</lastmod>
+    <lastmod>2023-07-11T07:41:08.862Z</lastmod>
+  </url>
+  <url>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/index.html</loc>
+    <lastmod>2023-07-11T07:41:06.962Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/code-of-conduct.html</loc>
-    <lastmod>2023-06-30T15:59:45.148Z</lastmod>
+    <lastmod>2023-07-11T07:41:07.758Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/nlme-bugs/index.html</loc>
-    <lastmod>2023-06-30T15:59:46.372Z</lastmod>
+    <lastmod>2023-07-11T07:41:09.514Z</lastmod>
   </url>
   <url>
     <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/index.html</loc>
-    <lastmod>2023-06-30T15:59:47.840Z</lastmod>
+    <lastmod>2023-07-11T07:41:10.550Z</lastmod>
   </url>
   <url>
-    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/ideas-and-proposals.html</loc>
-    <lastmod>2023-06-30T15:59:48.588Z</lastmod>
+    <loc>https://contributor.r-project.org/r-project-sprint-2023/projects/dendrapply-refactor/index.html</loc>
+    <lastmod>2023-07-11T07:41:11.638Z</lastmod>
   </url>
 </urlset>
