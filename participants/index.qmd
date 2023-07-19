@@ -459,6 +459,16 @@ participant_info(name = "Ella Kaye",
 
 ::: {#person}
 ```{r, results = "asis"}
+participant_info(name = "Atuhurira Kirabo Kakopo",
+            pic = "headshot-atuhurira_kirabo_kakopo.jpg",
+            alt = "Headshot of Atuhurira Kirabo Kakopo",
+            web = "https://github.com/kakopo",
+            github = "https://github.com/kakopo")
+```
+:::
+
+::: {#person}
+```{r, results = "asis"}
 participant_info(name = "Ivan Krylov*",
                  affiliation = "Lomonosov Moscow State University")
 ```
