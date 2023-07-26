@@ -16,6 +16,8 @@ website:
           - projects/index.qmd
           - projects/ideas-and-proposals.qmd
         text: Projects
+      - href: schedule.qmd
+        text: Schedule
     right:
       - icon: mastodon
         href: https://mastodon.cloud/tags/RSprint2023
