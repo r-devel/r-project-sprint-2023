@@ -6,61 +6,61 @@ title: "Schedule"
 
 Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.
 
-Unless informed otherwise, participants have been booked into [Bluebell](https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/bluebell) central campus accommodation, with breakfast provided at [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae) . Check-in for Bluebell is at Central Campus Venues reception, Senate House.
+Unless informed otherwise, participants have been booked into [Bluebell](https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/bluebell) central campus accommodation, with breakfast provided at [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae). Check-in for Bluebell is at Central Campus Venues reception, [Senate House](https://campus.warwick.ac.uk//search/623c885f421e6f5928c0c7e3).
 
 [Delegate Joining Instructions - Central Campus Venues Summer 2023 (Word)](/downloads/Delegate%20Joining%20Instructions%20-%20Central%20Campus%20Venues%20Summer%202023.docx)\
 [Frequently Asked Questions - Central Campus Venues Summer 2023 (Word)](/downloads/Frequently%20Asked%20Questions%20-%20Central%20Campus%20Venues%20Summer%202023.docx)
 
 ## Registration
 
-The registration desk will be open from 15:00 - 19:30 in the atrium of the Faculty of Arts Building (FAB). The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.
+The registration desk will be open from 15:00 - 19:30 Tuesdy 29 August in the [Faculty of Arts Building (FAB) atrium](https://campus.warwick.ac.uk//search/623c8960421e6f5928c0fb65). The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.
 
 If you are staying in university accommodation it is not necessary to register before dinner as you can show your room key to gain entry to the restaurant. Instead you can pick up your name badge on the way to the welcome session.
 
 If you arrive late, you will be able to pick up your name badge at any session in [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd).
 
-## Schedule
+## Programme
 
-All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd) will be hybrid, with links open to remote participants only.
+All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd) will be hybrid, with invites sent directly to remote participants.
 
 ::: panel-tabset
 ### Tue 29 Aug
 
 | Time (BST)    | Event                     | Venue                                                                              |
-|-------------------|-------------------------------|-----------------------|
+|-------------------|------------------------------|-----------------------|
 | 18:00 - 19:00 | Self-service dinner       | [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae) |
 | 19:30 - 20:00 | Welcome session           | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)          |
 | 20:00 - 22:00 | Social (drinks + nibbles) | [FAB Atrium](https://campus.warwick.ac.uk//search/623c8960421e6f5928c0fb65)        |
 
 ### Wed 30 Aug
 
-| Time (BST)    | Event                | Venue                                                                                        |
-|------------------|------------------------|------------------------------|
-| 09:00 - 10:30 | Kick-off day 1       | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
-| 10:30 - 11:00 | Coffee               | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)            |
-| 11:00 - 12:30 | Small groups         | Various, FAB                                                                                 |
-| 12:30 - 13:30 | Lunch                | [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae)           |
-| 13:30 - 15:00 | Small groups         | Various, FAB                                                                                 |
-| 15:00 - 15:30 | Coffee               | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)            |
-| 15:30 - 17:00 | Small groups         | Various, FAB                                                                                 |
-| 17:00 - 17:30 | Report back (part 1) | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
-| 19:00 - 21:00 | Sit-down dinner      | [Radcliffe Conference Centre](https://campus.warwick.ac.uk//search/623c88a9421e6f5928c0d61e) |
+| Time (BST)    | Event                                                          | Venue                                                                                        |
+|-------------------|------------------------|------------------------------|
+| 09:00 - 10:30 | Kick-off day 1                                                 | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
+| 10:30 - 11:00 | Coffee                                                         | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)            |
+| 11:00 - 12:30 | Small groups                                                   | Various, FAB                                                                                 |
+| 12:30 - 13:30 | Lunch                                                          | [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae)           |
+| 13:30 - 15:00 | Small groups                                                   | Various, FAB                                                                                 |
+| 15:00 - 15:30 | Coffee                                                         | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)            |
+| 15:30 - 17:00 | Small groups                                                   | Various, FAB                                                                                 |
+| 17:00 - 17:30 | Report back (part 1)                                           | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
+| 19:00 - 21:00 | Sit-down dinner <br> *sponsored by [Posit](https://posit.co/)* | [Radcliffe Conference Centre](https://campus.warwick.ac.uk//search/623c88a9421e6f5928c0d61e) |
 
 ### Thu 31 Aug
 
-| Time (BST)    | Event                     | Venue                                                                                      |
-|------------------|---------------------------|---------------------------|
-| 09:00 - 09:30 | Report back (part 2)      | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                  |
-| 09:30 - 10:00 | Kick-off day 2            | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                  |
-| 10:00 - 10:30 | Coffee                    | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)          |
-| 10:30 - 12:30 | Small groups              | Various, FAB                                                                               |
-| 12:30 - 13:30 | Lunch                     | [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae)         |
-| 13:30 - 15:00 | Small groups              | Various, FAB                                                                               |
-| 15:00 - 15:30 | Coffee                    | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)          |
-| 15:30 - 16:30 | Small groups              | Various, FAB                                                                               |
-| 17:00 - 18:00 | Warwick RUG (report back) | [MS.01](https://campus.warwick.ac.uk//search/623c88f9421e6f5928c0e669), Zeeman Building              |
-| 18:00 - 19:00 | Refreshments              | [The Street](https://campus.warwick.ac.uk//search/623c88f9421e6f5928c0e647), Zeeman Building         |
-| 19:00 - 21:00 | Buffet dinner             | [Chancellor's Suite](https://campus.warwick.ac.uk//search/623c88ca421e6f5928c0dce4), Rootes Building |
+| Time (BST)    | Event                                                                                      | Venue                                                                                                |
+|-------------------|---------------------------|---------------------------|
+| 09:00 - 09:30 | Report back (part 2)                                                                       | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                            |
+| 09:30 - 10:00 | Kick-off day 2                                                                             | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                            |
+| 10:00 - 10:30 | Coffee                                                                                     | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
+| 10:30 - 12:30 | Small groups                                                                               | Various, FAB                                                                                         |
+| 12:30 - 13:30 | Lunch                                                                                      | [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae)                   |
+| 13:30 - 15:00 | Small groups                                                                               | Various, FAB                                                                                         |
+| 15:00 - 15:30 | Coffee                                                                                     | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
+| 15:30 - 16:30 | Small groups                                                                               | Various, FAB                                                                                         |
+| 17:00 - 18:00 | Warwick RUG (report back)                                                                  | [MS.01](https://campus.warwick.ac.uk//search/623c88f9421e6f5928c0e669), Zeeman Building              |
+| 18:00 - 19:00 | Refreshments                                                                               | Outside [MS.01](https://campus.warwick.ac.uk//search/623c88f9421e6f5928c0e669), Zeeman Building      |
+| 19:00 - 21:00 | Buffet dinner <br> *sponsored by [CRiSM](https://warwick.ac.uk/fac/sci/statistics/crism/)* | [Chancellor's Suite](https://campus.warwick.ac.uk//search/623c88ca421e6f5928c0dce4), Rootes Building |
 
 ### Fri 1 Sep
 
