@@ -140,6 +140,10 @@ Providing sponsorship for R Core travel.
 Providing sponsorship for evening events and specific participants.
 
 ::: flex-container
+::: {style="line-height:80px"}
+[![](media/rconsortium_logo.png){fig-alt="R Consortium logo" fig-align="left" width="252"}](https://www.r-consortium.org/)
+:::
+
 [![](media/crism_logo.svg){fig-alt="Centre for Research in Statistical Methodology logo" fig-align="left" width="252"}](https://warwick.ac.uk/fac/sci/statistics/crism/)
 
 [![](media/posit_logo.png){fig-alt="Posit logo" fig-align="left" width="252"}](https://posit.co/)
