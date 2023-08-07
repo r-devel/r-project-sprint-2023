@@ -14,10 +14,9 @@ source(file.path("..", "R", "functions.R"))
 ## R Core Team
 
 ::: participant-gallery
-
 ::: {#person}
 ```{r, results = "asis"}
-participant_info(name = "Robert Gentleman",
+participant_info(name = "Robert Gentleman*",
                  alt = "Headshot of Robert Gentleman",
                  link = NULL, # main website
                  github = NULL,
@@ -27,7 +26,8 @@ participant_info(name = "Robert Gentleman",
 ```
 :::
 
-::: {#person}
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Tomas Kalibera",
                  alt = "Headshot of Tomas Kalibera",
@@ -37,9 +37,11 @@ participant_info(name = "Tomas Kalibera",
                  twitter = NULL,
                  linkedin = NULL)
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Michael Lawrence",
                  pic = "headshot-michael_lawrence.jpg",
@@ -50,9 +52,11 @@ participant_info(name = "Michael Lawrence",
                  twitter = NULL,
                  linkedin = NULL)
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Uwe Ligges",
                  affiliation = "Dortmund University",
@@ -60,9 +64,11 @@ participant_info(name = "Uwe Ligges",
                  web = "https://www.statistik.tu-dortmund.de/~ligges/",
                  link = "https://www.statistik.tu-dortmund.de/~ligges/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Thomas Lumley",
                  affiliation = "University of Auckland",
@@ -72,9 +78,11 @@ participant_info(name = "Thomas Lumley",
                  newspaper = "https://notstatschat.rbind.io",
                  github = "https://github.com/tslumley")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Martin Mächler",
                  affiliation = "ETH Zurich",
@@ -86,9 +94,11 @@ participant_info(name = "Martin Mächler",
                  twitter = "https://twitter.com/MMaechler",
                  facebook = "https://www.facebook.com/martin.machler")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Sebastian Meyer",
                  affiliation = "Friedrich-Alexander-Universität Erlangen-Nürnberg",
@@ -102,9 +112,11 @@ participant_info(name = "Sebastian Meyer",
                  linkedin = NULL,
                  orcid = "https://orcid.org/0000-0002-1791-9449")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Paul Murrell*",
                  affiliation = "The University of Auckland",
@@ -116,9 +128,11 @@ participant_info(name = "Paul Murrell*",
                  twitter = NULL,
                  linkedin = NULL)
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Martyn Plummer", 
                  pic = "/media/martyn_plummer.jpg",
@@ -126,35 +140,42 @@ participant_info(name = "Martyn Plummer",
                  web = "https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/plummer/",
                  link = "https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/plummer/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Deepayan Sarkar",
                  alt = "Headshot of Deepayan Sarkar")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Luke Tierney",
                  alt = "Headshot of Luke Tierney")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Simon Urbanek",
                  alt = "Headshot of Simon Urbanek")
 ```
-:::
+
+</div>
 :::
 
 ## R Contributors
 
 ::: participant-gallery
+<div>
 
-::: {#person}
 ```{r, results = "asis"}
 participant_info(name = "Abdulrahman Alswaji",
                  affiliation = "King Abdullah International Medical Research Center",
@@ -162,9 +183,11 @@ participant_info(name = "Abdulrahman Alswaji",
                  web = "https://twitter.com/alswajiab", # main website
                  twitter = "https://twitter.com/alswajiab")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Iman Al-Hasani",
                  affiliation = "Sultan Qaboos University",
@@ -175,9 +198,11 @@ participant_info(name = "Iman Al-Hasani",
                  twitter = "https://twitter.com/ImanAlhasani/",
                  linkedin = "https://www.linkedin.com/in/iman-al-hasani-23a5b4a8/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Malcolm Barrett",
                  affiliation = "Posit",
@@ -188,9 +213,11 @@ participant_info(name = "Malcolm Barrett",
                  github = "https://github.com/malcolmbarrett",
                  mastodon = "https://mstdn.jp/@malcolmbarrett")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Gabe Becker",
                  affiliation = "Independent Consultant",
@@ -200,9 +227,11 @@ participant_info(name = "Gabe Becker",
                  github = "https://github.com/gmbecker",
                  twitter = "https://twitter.com/groundwalkergmb")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Meet Bhatnagar*",
                  affiliation = "Amazon",
@@ -211,9 +240,11 @@ participant_info(name = "Meet Bhatnagar*",
                  web = "https://www.linkedin.com/in/meet-bhatnagar", # main website
                  linkedin = "https://www.linkedin.com/in/meet-bhatnagar")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Philippa Broadbent",
                  affiliation = "University of Southampton",
@@ -223,9 +254,11 @@ participant_info(name = "Philippa Broadbent",
                  linkedin = "https://www.linkedin.com/in/philippa-broadbent-a36284200/",
                  github = "https://github.com/phillybroadbent")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Elio Campitelli",
                  affiliation = "University of Buenos Aires",
@@ -235,18 +268,22 @@ participant_info(name = "Elio Campitelli",
                  link = "https://eliocamp.github.io/",
                  mastodon = "https://mastodon.social/@eliocamp")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Michael Chirico",
                  affiliation = "Google",
                  web = "https://github.com/michaelchirico/",
                  github = "https://github.com/michaelchirico/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Gergely Daroczi",
                  affiliation = "Rx Studio",
@@ -259,9 +296,11 @@ participant_info(name = "Gergely Daroczi",
                  twitter = "https://twitter.com/daroczig/",
                  linkedin = "https://www.linkedin.com/in/daroczig/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Neeraj Dhanraj Bokde",
                  affiliation = "Technology Innovation Institute, Abu Dhabi",
@@ -270,9 +309,11 @@ participant_info(name = "Neeraj Dhanraj Bokde",
                  web = "https://neerajbokde.in", # main website
                  link = "https://neerajbokde.in")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Ahmadou Dicko",
                  affiliation = "UNHCR",
@@ -285,9 +326,11 @@ participant_info(name = "Ahmadou Dicko",
                  twitter = "https://twitter.com/dickoah",
                  linkedin = "https://www.linkedin.com/in/ahmadoudicko/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Hannah Frick",
                  affiliation = "Posit",
@@ -298,18 +341,22 @@ participant_info(name = "Hannah Frick",
                  mastodon = "https://mastodon.social/@hfrick",
                  github = "https://github.com/hfrick")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Jonathan Godfrey",
                  affiliation = "Massey University",
                  web = "https://github.com/ajrgodfrey", # main website
                  github = "https://github.com/ajrgodfrey")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Geraldine Gomez",
                  affiliation = "Pontificia Universidad Javeriana",
@@ -318,9 +365,11 @@ participant_info(name = "Geraldine Gomez",
                  web = "https://github.com/GeraldineGomez",
                  github = "https://github.com/GeraldineGomez")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Paola Corrales",
                  affiliation = "UBA-CIMA-CONICET",
@@ -330,9 +379,11 @@ participant_info(name = "Paola Corrales",
                  link = "https://paocorrales.github.io/ ",
                  mastodon = "https://fosstodon.org/@paocorrales")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Andrea Gilardi",
                  affiliation = "University of Milano - Bicocca",
@@ -342,9 +393,11 @@ participant_info(name = "Andrea Gilardi",
                  github = "https://github.com/agila5",
                  twitter = "https://twitter.com/a_gilardi5")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "André Gillibert",
                  affiliation = "CHU Rouen",
@@ -353,9 +406,11 @@ participant_info(name = "André Gillibert",
                  web = "https://mail.gillibert.fr/blog", # main website
                  newspaper = "https://mail.gillibert.fr/blog")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Siyao (Jane) He*",
                  affiliation = "University of California, Irvine",
@@ -364,9 +419,11 @@ participant_info(name = "Siyao (Jane) He*",
                  web = "https://github.com/SiyaoIsHiding",
                  github = "https://github.com/SiyaoIsHiding")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Lionel Henry",
                  affiliation = "Posit",
@@ -375,9 +432,11 @@ participant_info(name = "Lionel Henry",
                  web = "https://github.com/lionel-/",
                  github = "https://github.com/lionel-/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Renata Hirota",
                  affiliation = "Brazilian Jurimetrics Association",
@@ -389,9 +448,11 @@ participant_info(name = "Renata Hirota",
                  twitter = "https://twitter.com/renata_mh",
                  linkedin = "https://www.linkedin.com/in/renatahirota/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Binod Jung Bogati",
                  affiliation = "R User Group Nepal",
@@ -403,9 +464,11 @@ participant_info(name = "Binod Jung Bogati",
                  twitter = "https://twitter.com/bjungbogati",
                  linkedin = "https://www.linkedin.com/in/bjungbogati")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Asma Kacem",
                  affiliation = "Software Engineer Intern",
@@ -416,9 +479,11 @@ participant_info(name = "Asma Kacem",
                  twitter = "https://twitter.com/Asmakacem19",
                  linkedin = "https://www.linkedin.com/in/asmakacem/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Saranjeet Kaur Bhogal",
                  affiliation = "Research Software Alliance, Software Sustainability Institute",
@@ -431,9 +496,11 @@ participant_info(name = "Saranjeet Kaur Bhogal",
                  twitter = "https://twitter.com/qwertyquesting",
                  linkedin = "https://www.linkedin.com/in/saranjeet-k-48ab769b/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Beryl Kanali",
                  pic = "headshot-beryl_kanali.jpg",
@@ -441,9 +508,11 @@ participant_info(name = "Beryl Kanali",
                  web = "https://github.com/BerylKanali", # main website
                  github = "https://github.com/BerylKanali")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Ella Kaye",
             affiliation = "University of Warwick",
@@ -455,9 +524,11 @@ participant_info(name = "Ella Kaye",
             linkedin = "https://www.linkedin.com/in/EllaKaye/",
             github = "https://github.com/EllaKaye")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Atuhurira Kirabo Kakopo",
             pic = "headshot-atuhurira_kirabo_kakopo.jpg",
@@ -465,16 +536,20 @@ participant_info(name = "Atuhurira Kirabo Kakopo",
             web = "https://github.com/kakopo",
             github = "https://github.com/kakopo")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Ivan Krylov*",
                  affiliation = "Lomonosov Moscow State University")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Aidan Lakshman",
                  affiliation = "University of Pittsburgh",
@@ -486,9 +561,11 @@ participant_info(name = "Aidan Lakshman",
                  mastodon = "https://genomic.social/@ahl27",
                  linkedin = "https://www.linkedin.com/in/aidan-lakshman-894804b8")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Trang Le",
                  affiliation = "Bristol Myers Squibb",
@@ -501,9 +578,11 @@ participant_info(name = "Trang Le",
                  twitter = "https://twitter.com/trangdata",
                  linkedin = "https://www.linkedin.com/in/trangthaole/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Caio Lente",
                  affiliation = "Curso-R",
@@ -516,9 +595,11 @@ participant_info(name = "Caio Lente",
                  github = "https://github.com/clente",
                  linkedin = "https://linkedin.com/in/clente")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Balasubramanian Narasimhan",
                  affiliation = "Stanford University",
@@ -529,9 +610,11 @@ participant_info(name = "Balasubramanian Narasimhan",
                  twitter = "https://twitter.com/b_naras",
                  mastodon = "https://mathstodon.xyz/@naras")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "María Cristina Nanton",
                  affiliation = "University of Buenos Aires",
@@ -542,9 +625,11 @@ participant_info(name = "María Cristina Nanton",
                  twitter = "https://twitter.com/bynans1",
                  github = "https://github.com/mcnanton")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Hanne Oberman",
                  affiliation = "Utrecht University",
@@ -558,9 +643,11 @@ participant_info(name = "Hanne Oberman",
                  linkedin = "https://www.linkedin.com/in/hanneoberman/",
                  orcid = "https://orcid.org/0000-0003-3276-2141")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Ezekiel Adebayo Ogundepo",
                  affiliation = "54gene Limited",
@@ -572,9 +659,11 @@ participant_info(name = "Ezekiel Adebayo Ogundepo",
                  twitter = "https://twitter.com/gbganalyst",
                  linkedin = "https://linkedin.com/in/gbganalyst")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Reiko Okamoto",
                  affiliation = "National Research Council Canada",
@@ -587,9 +676,11 @@ participant_info(name = "Reiko Okamoto",
                  twitter = NULL,
                  linkedin = NULL)
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Jeroen Ooms",
                  affiliation = "rOpenSci",
@@ -599,9 +690,11 @@ participant_info(name = "Jeroen Ooms",
                  github = "https://github.com/jeroen",
                  mastodon = "https://fosstodon.org/@jeroenooms")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Ayush Patel",
                  affiliation = "Oxford Poverty and Human Development Initiative",
@@ -612,9 +705,11 @@ participant_info(name = "Ayush Patel",
                  twitter = "https://twitter.com/ayushbipinpatel",
                  linkedin = "https://www.linkedin.com/in/ayushbipinpatel/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Debartha Paul*",
                  pic = "headshot-debartha_paul.jpg",
@@ -625,9 +720,11 @@ participant_info(name = "Debartha Paul*",
                  mastodon = "https://mastodon.social/@DeBARtha",
                  linkedin = "https://www.linkedin.com/in/debartha-paul-90a296a9/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Shannon Pileggi",
                  affiliation = "The Prostate Cancer Clinical Trials Consortium",
@@ -640,9 +737,11 @@ participant_info(name = "Shannon Pileggi",
                  mastodon = "https://fosstodon.org/@PipingHotData",
                  linkedin = "https://www.linkedin.com/in/shannon-m-pileggi/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "George Stagg",
                  affiliation = "Posit",
@@ -655,9 +754,11 @@ participant_info(name = "George Stagg",
                  github = "https://github.com/georgestagg/",
                  linkedin = "https://www.linkedin.com/in/george-w-stagg/")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "gwynn gebeyehu",
                  pic = "headshot-gwynn_gebeyehu.jpg",
@@ -665,9 +766,11 @@ participant_info(name = "gwynn gebeyehu",
                  web = "https://www.nzgwynn.com", 
                  link = "https://www.nzgwynn.com")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Heather Turner",
                  affiliation = "University of Warwick",
@@ -680,18 +783,22 @@ participant_info(name = "Heather Turner",
                  linkedin = "https://www.linkedin.com/in/heathrturnr/",
                  orcid = "https://orcid.org/0000-0002-1256-3375")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Ben Ubah",
                  affiliation = "cynkra",
                  web = "https://github.com/benubah", 
                  github = "https://github.com/benubah")
 ```
-:::
 
-::: {#person}
+</div>
+
+<div>
+
 ```{r, results = "asis"}
 participant_info(name = "Roberto Villegas-Diaz",
                  affiliation = "University of Liverpool",
@@ -703,5 +810,6 @@ participant_info(name = "Roberto Villegas-Diaz",
                  twitter = NULL,
                  linkedin = "https://www.linkedin.com/in/roberto-villegas-diaz/")
 ```
-:::
+
+</div>
 :::
