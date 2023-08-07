@@ -1,108 +1,24 @@
 [
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
+    "objectID": "participants/index.html",
+    "href": "participants/index.html",
+    "title": "Participants",
     "section": "",
-    "text": "Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.\nUnless informed otherwise, participants have been booked into Bluebell central campus accommodation, with breakfast provided at Rootes restaurant. Check-in for Bluebell is at Central Campus Venues reception, Senate House.\nDelegate Joining Instructions - Central Campus Venues Summer 2023 (Word)\nFrequently Asked Questions - Central Campus Venues Summer 2023 (Word)"
+    "text": "This page is under development - confirmed participants will be added here.\nParticipants with an asterisk are participating remotely."
   },
   {
-    "objectID": "schedule.html#checking-in",
-    "href": "schedule.html#checking-in",
-    "title": "Schedule",
-    "section": "",
-    "text": "Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.\nUnless informed otherwise, participants have been booked into Bluebell central campus accommodation, with breakfast provided at Rootes restaurant. Check-in for Bluebell is at Central Campus Venues reception, Senate House.\nDelegate Joining Instructions - Central Campus Venues Summer 2023 (Word)\nFrequently Asked Questions - Central Campus Venues Summer 2023 (Word)"
+    "objectID": "participants/index.html#r-core-team",
+    "href": "participants/index.html#r-core-team",
+    "title": "Participants",
+    "section": "R Core Team",
+    "text": "R Core Team\n\n\n  Robert Gentleman* \n\n\n  Tomas Kalibera \n\n\n  Michael Lawrence \n\n\n  Uwe Ligges  Dortmund University  \n\n\n  Thomas Lumley  University of Auckland   \n\n\n  Martin Mächler  ETH Zurich     \n\n\n  Sebastian Meyer  Friedrich-Alexander-Universität Erlangen-Nürnberg       \n\n\n  Paul Murrell*  The University of Auckland   \n\n\n  Martyn Plummer  \n\n\n  Deepayan Sarkar \n\n\n  Luke Tierney \n\n\n  Simon Urbanek"
   },
   {
-    "objectID": "schedule.html#registration",
-    "href": "schedule.html#registration",
-    "title": "Schedule",
-    "section": "Registration",
-    "text": "Registration\nThe registration desk will be open from 15:00 - 19:30 Tuesdy 29 August in the Faculty of Arts Building (FAB) atrium. The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.\nIf you are staying in university accommodation it is not necessary to register before dinner as you can show your room key to gain entry to the restaurant. Instead you can pick up your name badge on the way to the welcome session.\nIf you arrive late, you will be able to pick up your name badge at any session in FAB 5.01."
-  },
-  {
-    "objectID": "schedule.html#programme",
-    "href": "schedule.html#programme",
-    "title": "Schedule",
-    "section": "Programme",
-    "text": "Programme\nAll whole group sessions in FAB 5.01 will be hybrid, with invites sent directly to remote participants.\n\nTue 29 AugWed 30 AugThu 31 AugFri 1 Sep\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n18:00 - 19:00\nSelf-service dinner\nRootes restaurant\n\n\n19:30 - 20:00\nWelcome session\nFAB 5.01\n\n\n20:00 - 22:00\nSocial (drinks + nibbles)  sponsored by Posit\nFAB Atrium\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 10:30\nKick-off day 1\nFAB 5.01\n\n\n10:30 - 11:00\nCoffee\nOutside FAB 5.01\n\n\n11:00 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nSmall groups\nVarious, FAB\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01\n\n\n15:30 - 17:00\nSmall groups\nVarious, FAB\n\n\n17:00 - 17:30\nReport back (part 1)\nFAB 5.01\n\n\n19:00 - 21:00\nSit-down dinner  sponsored by The R Consortium\nRadcliffe Conference Centre\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 09:30\nReport back (part 2)\nFAB 5.01\n\n\n09:30 - 10:00\nKick-off day 2\nFAB 5.01\n\n\n10:00 - 10:30\nCoffee\nOutside FAB 5.01\n\n\n10:30 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nSmall groups\nVarious, FAB\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01\n\n\n15:30 - 16:30\nSmall groups\nVarious, FAB\n\n\n17:00 - 18:00\nWarwick RUG (report back)\nMS.01, Zeeman Building\n\n\n18:00 - 19:00\nRefreshments\nOutside MS.01, Zeeman Building\n\n\n19:00 - 21:00\nBuffet dinner  sponsored by CRiSM\nChancellor’s Suite, Rootes Building\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 09:30\nReport back (ctd)\nFAB 5.01\n\n\n09:30 - 10:00\nKick-off day 3\nFAB 5.01\n\n\n10:00 - 10:30\nCoffee\nOutside FAB 5.01\n\n\n10:30 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nWrap-up\nFAB 5.01\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01"
-  },
-  {
-    "objectID": "schedule.html#venues",
-    "href": "schedule.html#venues",
-    "title": "Schedule",
-    "section": "Venues",
-    "text": "Venues\nKey venues of the sprint:\n\nSenate House - Central Campus Venues Reception\nBluebell residences - main accommodation\nFaculty of Arts Building (FAB) - main sprint venue\nRootes Building - main venue for meals\nRadcliffe conference centre - venue for sit-down dinner\nZeeman Building - venue for Warwick R User Group meeting\n\nLinks above go to the interactive campus map. The main venues are also highlighted on this PDF campus map."
-  },
-  {
-    "objectID": "schedule.html#breakout-space",
-    "href": "schedule.html#breakout-space",
-    "title": "Schedule",
-    "section": "Breakout space",
-    "text": "Breakout space\nWe have use of the following breakout spaces in FAB during the sprint, in addition to the main room (FAB 5.01). The first number is the floor the space is on.\n\n\n\nRoom\nCapacity\nType\nLayout\nFacilities\n\n\n\n\n2.25\n38\nOpen\nCabaret\n\n\n\n2.43\n50\nClosed\nCabaret\n2 x webcam\n\n\n2.47\n13\nOpen\nBoardroom\n\n\n\n2.48\n13\nClosed\nBoardroom\nwebcam\n\n\n2.61\n16\nOpen\nBoardroom\n\n\n\n3.26\n20\nSemi-open\nCabaret\n\n\n\n4.52\n20\nSemi-open\nCabaret\n\n\n\n4.74\n20\nSemi-open\nCabaret\n\n\n\n6.03\n13\nClosed\nBoardroom\nquiet space"
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html",
-    "href": "projects/dendrapply-refactor/index.html",
-    "title": "Dendrapply Refactor",
-    "section": "",
-    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#background",
-    "href": "projects/dendrapply-refactor/index.html#background",
-    "title": "Dendrapply Refactor",
-    "section": "",
-    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#problem-statement",
-    "href": "projects/dendrapply-refactor/index.html#problem-statement",
-    "title": "Dendrapply Refactor",
-    "section": "Problem statement",
-    "text": "Problem statement\nThe current implementation of dendrapply is included at the bottom of this section. This implementation has two main issues.\nThe most notable of these is the recursive application of functions to the dendrogram nodes. This leads to poor performance on deeply nested dendrograms, as well as the potential for stack overflow errors on machines with limited resources. This is detailed in ?dendrapply and in the warning in ?dendrogram.\nAdditionally, tree traversal can be achieved in a number of ways. The current implementation uses a pre-order traversal, which is not always the most intuitive application of functions to a tree structure. This means that, for each triple 2 &lt;- 1 -&gt; 3, the function is applied first to node 1, then to 2, then to 3. Ideally, users would be able to choose between a post-order or a pre-order traversal. Post-order traversals guarantee that the function is applied to all children of a node before applying to the parent, allowing for certain analyses that rely on propagating results up a tree. There is currently no easy way to achieve this in R.\nIn summary, the priorities to rectify are (in order of importance):\n\nRemove recursion in dendrapply\nAdd an optional argument to allow for different tree traversals in function application\n\nThese must be achieved while preserving all the current functionality of dendrapply, and without decreasing the current performance.\nCurrent implementation:\n\ndendrapply &lt;- function(X, FUN, ...)\n{\n    ## Purpose: \"dendrogram\" recursive apply {to each node}\n    ## ----------------------------------------------------------------------\n    ## Author: Martin Maechler, Date: 26 Jun 2004, 22:43\n    FUN &lt;- match.fun(FUN)\n    if( !inherits(X, \"dendrogram\") ) stop(\"'X' is not a dendrogram\")\n\n    ## Node apply recursively:\n    Napply &lt;- function(d) {\n    r &lt;- FUN(d, ...)\n    if(!is.leaf(d)) {\n        if(!is.list(r)) r &lt;- as.list(r) # fixing unsafe FUN()s\n        if(length(r) &lt; (n &lt;- length(d))) r[seq_len(n)] &lt;- vector(\"list\", n)\n        ## and overwrite recursively, possibly keeping \"attr\"\n        r[] &lt;- lapply(d, Napply)\n        }\n    r\n    }\n    Napply(X)\n}"
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#proposed-solution",
-    "href": "projects/dendrapply-refactor/index.html#proposed-solution",
-    "title": "Dendrapply Refactor",
-    "section": "Proposed solution",
-    "text": "Proposed solution\nA full description follows, but people that are interested can read my initial writeup for more details on the problem, attempted solutions, and current status. Feel free to skip that link and just read the following section instead.\nA prototype solution has been implemented and submitted to Bugzilla. This solution moves the R implementation into C. The short description of the proposed method is to create a linked list in C holding the SEXP pointers for each node of the tree. Then, we apply the function given to each node of the linked list, and then merge the SEXP objects back into the original topology. This can be further optimized by merging nodes on the fly to limit linked list space and reduce PROTECT stack usage. This also allows for different tree traversal strategies with minimal effort, as different tree traversals can be achieved by varying how nodes are added to the linked list.\nThe current solution has one key issue resulting in a two problems. This implementation uses VECTOR_ELT rather than the more general [[ and [[&lt;- operations to get/set values. This allows for low PROTECT stack usage and high performance, but it also means that nodes discard their class values when passed to the function. This can be solved naively by just reclassing nodes as dendrogram, but unfortunately this causes issues in the case where nodes have multiple classes (ex. a node where class(node ) == c('dendrogram', 'myOtherClass')). This also runs into problems in the case where a non-standard [[ method is implemented. In the interest of backwards compatibility, these problems should be rectified.\nThere are a few options for fixing this issue. The first is to work entirely in R, removing the C implementation. This would work in theory by using a list structure to hold nodes, but the linked-list structure in C gives a substantial boost in performance over R by using pointers instead of copying each object. This may not be a big deal; I haven’t tested it yet.\nAnother possible option is to use the alternative vector-based dendrogram indexing ( dend[[c(1,1)]] is equivalent to dend[[1]][[1]] ) to build a list of targets first, then apply the function to each. This may solve the potential R-implementation memory issues, but could also require initializing a huge vector. Dealing with the topology of the dendrogram would also be challenging.\nAnother potential fix is to use the [[ method by building an R expression in C and then calling it, similar to how lapply is implemented (see do_lapply() in src/main/apply.c for reference). This implementation was tested and worked successfully, but the result was significantly slower than the R version (roughly half speed, likely due to PROTECT stack issues mentioned below). Maybe a code refactor could solve the slowdowns and produce a better result.\nThe last potential fix I’ve identified is to use precious multi-sets for protection rather than PROTECT. One of the big problems of applying functions in C is that the result of the function application at each node needs to be protected. This isn’t an issue for post-order traversals, since we can always just add the result as a child of the parent node (which auto-protects it if the parent is already protected). However, for the current implementation, a potentially large source of slow-downs is the work-arounds implemented to solve PROTECT stack issues. Using MSets could simplify this and improve runtime, but there isn’t a lot of documentations on how to use them (and their use for this kind of problem is explicitly discouraged in some places)."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#testing",
-    "href": "projects/dendrapply-refactor/index.html#testing",
-    "title": "Dendrapply Refactor",
-    "section": "Testing",
-    "text": "Testing\nBenchmarking the function against stats::dendrapply can be done using the following:\n\ndend &lt;- as.dendrogram(hclust(dist(1:100)))\nf &lt;- function(x) x\n\nmicrobenchmark::microbenchmark(stats::dendrapply(dend, f),\n                               new_dendrapply(dend, f))\n\nDifferent dendrogram objects should be tested to look at performance on balanced vs. deep trees, but usage of \\(x) x is important for accurate testing. This function minimizes the amount of operations within the applied function, meaning that the vast majority of the differences in time will be due to the implementation of dendrapply, not the runtime of f.\nAdditional testing should be done to verify that the following work as expected:\n\nEnsure speed of new application is at least as fast as stats::dendrapply\nEnsure all examples in ?dendrapply work as expected\nEnsure all tests in dendextend work correctly to test a large set of currently used applications of dendrapply\nEnsure that nodes with multiple classes retain their class attribute after running dendrapply\nEnsure that special uses of [[ work as expected\nEnsure that recursive dendrapply calls work as expected (ex. dendrapply(dend, \\(x) dendrapply(x, someOtherFunction)))\nEnsure all examples in the R build testing work as expected, paying special attention to the following weird case:\n\n&gt; D &lt;- as.dendrogram(hclust(dist(cbind(setNames(c(0,1,4), LETTERS[1:3])))))\n&gt; dendrapply(D, labels)\n[[1]]\n[1] \"C\"\n\n[[2]]\n[[2]][[1]]\n[1] \"A\"\n\n[[2]][[2]]\n[1] \"B\"\n\n[[3]]\n[1] \"C\"\nImplementation should also be made to ensure that the default parameters are fully backwards compatible. In the case of post-order traversal, this is currently being achieved by defining the function as dendrapply(X, FUN, ..., how=c('pre.order', 'post.order')) so that the default is always equivalent to stats::dendrapply.\nFinally, testing should be added to the R source tests. The current testing suite for dendrapply is very sparse; edge cases like multi-classed dendrogram objects should be added to ensure code works as expected in the future."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#project-requirements",
-    "href": "projects/dendrapply-refactor/index.html#project-requirements",
-    "title": "Dendrapply Refactor",
-    "section": "Project requirements",
-    "text": "Project requirements\n\nI suspect that the optimal solution will involve working in C, so knowledge of C to develop this will be helpful, even if just to be able to compare performance against an R implementation. Much of the implementation in C depends on knowledge of the PROTECT stack, so familiarity with that is important for C solutions.\nBasic knowledge of tree structures and/or dendrogram objects is helpful but not necessary."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#project-resources",
-    "href": "projects/dendrapply-refactor/index.html#project-resources",
-    "title": "Dendrapply Refactor",
-    "section": "Project resources",
-    "text": "Project resources\n\nTree traversal methods\nMy full description of problem and implementation\nCurrent bugzilla ticket (contains most up-to-date code; my blog post may be out of date.)"
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#project-outcomes",
-    "href": "projects/dendrapply-refactor/index.html#project-outcomes",
-    "title": "Dendrapply Refactor",
-    "section": "Project outcomes",
-    "text": "Project outcomes\nIf successful, we’d be able to submit a new version of dendrapply with better performance. Removing the recursion in this function would make these analyses also possible on edge computing and limited resource machines (or at least more feasible). Implementation of multiple traversal methods for function application would be a massive resource to the phylogenetics community."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#reactions-and-comments",
-    "href": "projects/dendrapply-refactor/index.html#reactions-and-comments",
-    "title": "Dendrapply Refactor",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
+    "objectID": "participants/index.html#r-contributors",
+    "href": "participants/index.html#r-contributors",
+    "title": "Participants",
+    "section": "R Contributors",
+    "text": "R Contributors\n\n\n  Abdulrahman Alswaji  King Abdullah International Medical Research Center  \n\n\n  Iman Al-Hasani  Sultan Qaboos University    \n\n\n  Malcolm Barrett  Posit    \n\n\n  Gabe Becker  Independent Consultant   \n\n\n  Meet Bhatnagar*  Amazon  \n\n\n  Philippa Broadbent  University of Southampton   \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Technology Innovation Institute, Abu Dhabi  \n\n\n  Ahmadou Dicko  UNHCR      \n\n\n  Hannah Frick  Posit    \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  Andrea Gilardi  University of Milano - Bicocca    \n\n\n  André Gillibert  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Beryl Kanali  \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Atuhurira Kirabo Kakopo  \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Aidan Lakshman  University of Pittsburgh     \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Jeroen Ooms  rOpenSci   \n\n\n  Ayush Patel  Oxford Poverty and Human Development Initiative    \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn gebeyehu  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool"
   },
   {
     "objectID": "projects/quartz-alpha-mask/index.html",
@@ -231,6 +147,55 @@
     "text": "Reactions and comments"
   },
   {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.\nUnless informed otherwise, participants have been booked into Bluebell central campus accommodation, with breakfast provided at Rootes restaurant. Check-in for Bluebell is at Central Campus Venues reception, Senate House.\nDelegate Joining Instructions - Central Campus Venues Summer 2023 (Word)\nFrequently Asked Questions - Central Campus Venues Summer 2023 (Word)"
+  },
+  {
+    "objectID": "schedule.html#checking-in",
+    "href": "schedule.html#checking-in",
+    "title": "Schedule",
+    "section": "",
+    "text": "Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.\nUnless informed otherwise, participants have been booked into Bluebell central campus accommodation, with breakfast provided at Rootes restaurant. Check-in for Bluebell is at Central Campus Venues reception, Senate House.\nDelegate Joining Instructions - Central Campus Venues Summer 2023 (Word)\nFrequently Asked Questions - Central Campus Venues Summer 2023 (Word)"
+  },
+  {
+    "objectID": "schedule.html#registration",
+    "href": "schedule.html#registration",
+    "title": "Schedule",
+    "section": "Registration",
+    "text": "Registration\nThe registration desk will be open from 15:00 - 19:30 Tuesdy 29 August in the Faculty of Arts Building (FAB) atrium. The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.\nIf you are staying in university accommodation it is not necessary to register before dinner as you can show your room key to gain entry to the restaurant. Instead you can pick up your name badge on the way to the welcome session.\nIf you arrive late, you will be able to pick up your name badge at any session in FAB 5.01."
+  },
+  {
+    "objectID": "schedule.html#programme",
+    "href": "schedule.html#programme",
+    "title": "Schedule",
+    "section": "Programme",
+    "text": "Programme\nAll whole group sessions in FAB 5.01 will be hybrid, with invites sent directly to remote participants.\n\nTue 29 AugWed 30 AugThu 31 AugFri 1 Sep\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n18:00 - 19:00\nSelf-service dinner\nRootes restaurant\n\n\n19:30 - 20:00\nWelcome session\nFAB 5.01\n\n\n20:00 - 22:00\nSocial (drinks + nibbles)  sponsored by Posit\nFAB Atrium\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 10:30\nKick-off day 1\nFAB 5.01\n\n\n10:30 - 11:00\nCoffee\nOutside FAB 5.01\n\n\n11:00 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nSmall groups\nVarious, FAB\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01\n\n\n15:30 - 17:00\nSmall groups\nVarious, FAB\n\n\n17:00 - 17:30\nReport back (part 1)\nFAB 5.01\n\n\n19:00 - 21:00\nSit-down dinner  sponsored by The R Consortium\nRadcliffe Conference Centre\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 09:30\nReport back (part 2)\nFAB 5.01\n\n\n09:30 - 10:00\nKick-off day 2\nFAB 5.01\n\n\n10:00 - 10:30\nCoffee\nOutside FAB 5.01\n\n\n10:30 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nSmall groups\nVarious, FAB\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01\n\n\n15:30 - 16:30\nSmall groups\nVarious, FAB\n\n\n17:00 - 18:00\nWarwick RUG (report back)\nMS.01, Zeeman Building\n\n\n18:00 - 19:00\nRefreshments\nOutside MS.01, Zeeman Building\n\n\n19:00 - 21:00\nBuffet dinner  sponsored by CRiSM\nChancellor’s Suite, Rootes Building\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 09:30\nReport back (ctd)\nFAB 5.01\n\n\n09:30 - 10:00\nKick-off day 3\nFAB 5.01\n\n\n10:00 - 10:30\nCoffee\nOutside FAB 5.01\n\n\n10:30 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nWrap-up\nFAB 5.01\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01"
+  },
+  {
+    "objectID": "schedule.html#venues",
+    "href": "schedule.html#venues",
+    "title": "Schedule",
+    "section": "Venues",
+    "text": "Venues\nKey venues of the sprint:\n\nSenate House - Central Campus Venues Reception\nBluebell residences - main accommodation\nFaculty of Arts Building (FAB) - main sprint venue\nRootes Building - main venue for meals\nRadcliffe conference centre - venue for sit-down dinner\nZeeman Building - venue for Warwick R User Group meeting\n\nLinks above go to the interactive campus map. The main venues are also highlighted on this PDF campus map."
+  },
+  {
+    "objectID": "schedule.html#breakout-space",
+    "href": "schedule.html#breakout-space",
+    "title": "Schedule",
+    "section": "Breakout space",
+    "text": "Breakout space\nWe have use of the following breakout spaces in FAB during the sprint, in addition to the main room (FAB 5.01). The first number is the floor the space is on.\n\n\n\nRoom\nCapacity\nType\nLayout\nFacilities\n\n\n\n\n2.25\n38\nOpen\nCabaret\n\n\n\n2.43\n50\nClosed\nCabaret\n2 x webcam\n\n\n2.47\n13\nOpen\nBoardroom\n\n\n\n2.48\n13\nClosed\nBoardroom\nwebcam\n\n\n2.61\n16\nOpen\nBoardroom\n\n\n\n3.26\n20\nSemi-open\nCabaret\n\n\n\n4.52\n20\nSemi-open\nCabaret\n\n\n\n4.74\n20\nSemi-open\nCabaret\n\n\n\n6.03\n13\nClosed\nBoardroom\nquiet space"
+  },
+  {
     "objectID": "code-of-conduct.html",
     "href": "code-of-conduct.html",
     "title": "Code of Conduct",
@@ -278,6 +243,139 @@
     "title": "Code of Conduct",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html",
+    "href": "projects/ideas-and-proposals.html",
+    "title": "Ideas and Proposals",
+    "section": "",
+    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#ideas",
+    "href": "projects/ideas-and-proposals.html#ideas",
+    "title": "Ideas and Proposals",
+    "section": "Ideas",
+    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#proposals",
+    "href": "projects/ideas-and-proposals.html#proposals",
+    "title": "Ideas and Proposals",
+    "section": "Proposals",
+    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
+  },
+  {
+    "objectID": "projects/template/index.html#problem-statement",
+    "href": "projects/template/index.html#problem-statement",
+    "title": "Project Title in Title Case",
+    "section": "Problem statement",
+    "text": "Problem statement"
+  },
+  {
+    "objectID": "projects/template/index.html#proposed-solution",
+    "href": "projects/template/index.html#proposed-solution",
+    "title": "Project Title in Title Case",
+    "section": "Proposed solution",
+    "text": "Proposed solution"
+  },
+  {
+    "objectID": "projects/template/index.html#testing",
+    "href": "projects/template/index.html#testing",
+    "title": "Project Title in Title Case",
+    "section": "Testing",
+    "text": "Testing"
+  },
+  {
+    "objectID": "projects/template/index.html#project-requirements",
+    "href": "projects/template/index.html#project-requirements",
+    "title": "Project Title in Title Case",
+    "section": "Project requirements",
+    "text": "Project requirements"
+  },
+  {
+    "objectID": "projects/template/index.html#project-resources",
+    "href": "projects/template/index.html#project-resources",
+    "title": "Project Title in Title Case",
+    "section": "Project resources",
+    "text": "Project resources"
+  },
+  {
+    "objectID": "projects/template/index.html#project-outcomes",
+    "href": "projects/template/index.html#project-outcomes",
+    "title": "Project Title in Title Case",
+    "section": "Project outcomes",
+    "text": "Project outcomes"
+  },
+  {
+    "objectID": "projects/template/index.html#reactions-and-comments",
+    "href": "projects/template/index.html#reactions-and-comments",
+    "title": "Project Title in Title Case",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html",
+    "href": "projects/dendrapply-refactor/index.html",
+    "title": "Dendrapply Refactor",
+    "section": "",
+    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#background",
+    "href": "projects/dendrapply-refactor/index.html#background",
+    "title": "Dendrapply Refactor",
+    "section": "",
+    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#problem-statement",
+    "href": "projects/dendrapply-refactor/index.html#problem-statement",
+    "title": "Dendrapply Refactor",
+    "section": "Problem statement",
+    "text": "Problem statement\nThe current implementation of dendrapply is included at the bottom of this section. This implementation has two main issues.\nThe most notable of these is the recursive application of functions to the dendrogram nodes. This leads to poor performance on deeply nested dendrograms, as well as the potential for stack overflow errors on machines with limited resources. This is detailed in ?dendrapply and in the warning in ?dendrogram.\nAdditionally, tree traversal can be achieved in a number of ways. The current implementation uses a pre-order traversal, which is not always the most intuitive application of functions to a tree structure. This means that, for each triple 2 &lt;- 1 -&gt; 3, the function is applied first to node 1, then to 2, then to 3. Ideally, users would be able to choose between a post-order or a pre-order traversal. Post-order traversals guarantee that the function is applied to all children of a node before applying to the parent, allowing for certain analyses that rely on propagating results up a tree. There is currently no easy way to achieve this in R.\nIn summary, the priorities to rectify are (in order of importance):\n\nRemove recursion in dendrapply\nAdd an optional argument to allow for different tree traversals in function application\n\nThese must be achieved while preserving all the current functionality of dendrapply, and without decreasing the current performance.\nCurrent implementation:\n\ndendrapply &lt;- function(X, FUN, ...)\n{\n    ## Purpose: \"dendrogram\" recursive apply {to each node}\n    ## ----------------------------------------------------------------------\n    ## Author: Martin Maechler, Date: 26 Jun 2004, 22:43\n    FUN &lt;- match.fun(FUN)\n    if( !inherits(X, \"dendrogram\") ) stop(\"'X' is not a dendrogram\")\n\n    ## Node apply recursively:\n    Napply &lt;- function(d) {\n    r &lt;- FUN(d, ...)\n    if(!is.leaf(d)) {\n        if(!is.list(r)) r &lt;- as.list(r) # fixing unsafe FUN()s\n        if(length(r) &lt; (n &lt;- length(d))) r[seq_len(n)] &lt;- vector(\"list\", n)\n        ## and overwrite recursively, possibly keeping \"attr\"\n        r[] &lt;- lapply(d, Napply)\n        }\n    r\n    }\n    Napply(X)\n}"
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#proposed-solution",
+    "href": "projects/dendrapply-refactor/index.html#proposed-solution",
+    "title": "Dendrapply Refactor",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nA full description follows, but people that are interested can read my initial writeup for more details on the problem, attempted solutions, and current status. Feel free to skip that link and just read the following section instead.\nA prototype solution has been implemented and submitted to Bugzilla. This solution moves the R implementation into C. The short description of the proposed method is to create a linked list in C holding the SEXP pointers for each node of the tree. Then, we apply the function given to each node of the linked list, and then merge the SEXP objects back into the original topology. This can be further optimized by merging nodes on the fly to limit linked list space and reduce PROTECT stack usage. This also allows for different tree traversal strategies with minimal effort, as different tree traversals can be achieved by varying how nodes are added to the linked list.\nThe current solution has one key issue resulting in a two problems. This implementation uses VECTOR_ELT rather than the more general [[ and [[&lt;- operations to get/set values. This allows for low PROTECT stack usage and high performance, but it also means that nodes discard their class values when passed to the function. This can be solved naively by just reclassing nodes as dendrogram, but unfortunately this causes issues in the case where nodes have multiple classes (ex. a node where class(node ) == c('dendrogram', 'myOtherClass')). This also runs into problems in the case where a non-standard [[ method is implemented. In the interest of backwards compatibility, these problems should be rectified.\nThere are a few options for fixing this issue. The first is to work entirely in R, removing the C implementation. This would work in theory by using a list structure to hold nodes, but the linked-list structure in C gives a substantial boost in performance over R by using pointers instead of copying each object. This may not be a big deal; I haven’t tested it yet.\nAnother possible option is to use the alternative vector-based dendrogram indexing ( dend[[c(1,1)]] is equivalent to dend[[1]][[1]] ) to build a list of targets first, then apply the function to each. This may solve the potential R-implementation memory issues, but could also require initializing a huge vector. Dealing with the topology of the dendrogram would also be challenging.\nAnother potential fix is to use the [[ method by building an R expression in C and then calling it, similar to how lapply is implemented (see do_lapply() in src/main/apply.c for reference). This implementation was tested and worked successfully, but the result was significantly slower than the R version (roughly half speed, likely due to PROTECT stack issues mentioned below). Maybe a code refactor could solve the slowdowns and produce a better result.\nThe last potential fix I’ve identified is to use precious multi-sets for protection rather than PROTECT. One of the big problems of applying functions in C is that the result of the function application at each node needs to be protected. This isn’t an issue for post-order traversals, since we can always just add the result as a child of the parent node (which auto-protects it if the parent is already protected). However, for the current implementation, a potentially large source of slow-downs is the work-arounds implemented to solve PROTECT stack issues. Using MSets could simplify this and improve runtime, but there isn’t a lot of documentations on how to use them (and their use for this kind of problem is explicitly discouraged in some places)."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#testing",
+    "href": "projects/dendrapply-refactor/index.html#testing",
+    "title": "Dendrapply Refactor",
+    "section": "Testing",
+    "text": "Testing\nBenchmarking the function against stats::dendrapply can be done using the following:\n\ndend &lt;- as.dendrogram(hclust(dist(1:100)))\nf &lt;- function(x) x\n\nmicrobenchmark::microbenchmark(stats::dendrapply(dend, f),\n                               new_dendrapply(dend, f))\n\nDifferent dendrogram objects should be tested to look at performance on balanced vs. deep trees, but usage of \\(x) x is important for accurate testing. This function minimizes the amount of operations within the applied function, meaning that the vast majority of the differences in time will be due to the implementation of dendrapply, not the runtime of f.\nAdditional testing should be done to verify that the following work as expected:\n\nEnsure speed of new application is at least as fast as stats::dendrapply\nEnsure all examples in ?dendrapply work as expected\nEnsure all tests in dendextend work correctly to test a large set of currently used applications of dendrapply\nEnsure that nodes with multiple classes retain their class attribute after running dendrapply\nEnsure that special uses of [[ work as expected\nEnsure that recursive dendrapply calls work as expected (ex. dendrapply(dend, \\(x) dendrapply(x, someOtherFunction)))\nEnsure all examples in the R build testing work as expected, paying special attention to the following weird case:\n\n&gt; D &lt;- as.dendrogram(hclust(dist(cbind(setNames(c(0,1,4), LETTERS[1:3])))))\n&gt; dendrapply(D, labels)\n[[1]]\n[1] \"C\"\n\n[[2]]\n[[2]][[1]]\n[1] \"A\"\n\n[[2]][[2]]\n[1] \"B\"\n\n[[3]]\n[1] \"C\"\nImplementation should also be made to ensure that the default parameters are fully backwards compatible. In the case of post-order traversal, this is currently being achieved by defining the function as dendrapply(X, FUN, ..., how=c('pre.order', 'post.order')) so that the default is always equivalent to stats::dendrapply.\nFinally, testing should be added to the R source tests. The current testing suite for dendrapply is very sparse; edge cases like multi-classed dendrogram objects should be added to ensure code works as expected in the future."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#project-requirements",
+    "href": "projects/dendrapply-refactor/index.html#project-requirements",
+    "title": "Dendrapply Refactor",
+    "section": "Project requirements",
+    "text": "Project requirements\n\nI suspect that the optimal solution will involve working in C, so knowledge of C to develop this will be helpful, even if just to be able to compare performance against an R implementation. Much of the implementation in C depends on knowledge of the PROTECT stack, so familiarity with that is important for C solutions.\nBasic knowledge of tree structures and/or dendrogram objects is helpful but not necessary."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#project-resources",
+    "href": "projects/dendrapply-refactor/index.html#project-resources",
+    "title": "Dendrapply Refactor",
+    "section": "Project resources",
+    "text": "Project resources\n\nTree traversal methods\nMy full description of problem and implementation\nCurrent bugzilla ticket (contains most up-to-date code; my blog post may be out of date.)"
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#project-outcomes",
+    "href": "projects/dendrapply-refactor/index.html#project-outcomes",
+    "title": "Dendrapply Refactor",
+    "section": "Project outcomes",
+    "text": "Project outcomes\nIf successful, we’d be able to submit a new version of dendrapply with better performance. Removing the recursion in this function would make these analyses also possible on edge computing and limited resource machines (or at least more feasible). Implementation of multiple traversal methods for function application would be a massive resource to the phylogenetics community."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#reactions-and-comments",
+    "href": "projects/dendrapply-refactor/index.html#reactions-and-comments",
+    "title": "Dendrapply Refactor",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
   },
   {
     "objectID": "index.html",
@@ -341,103 +439,5 @@
     "title": "R Project Sprint 2023",
     "section": "Sponsors",
     "text": "Sponsors\n\nCore funding\nProviding sponsorship for general participant travel, accommodation and subsistence, plus general running costs.\n\n\n\n\n\n\n\nPlatinum sponsors\nProviding sponsorship for R Core travel.\n\nThe R Foundation\n\n\n\nGold sponsors\nProviding sponsorship for evening events and specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSilver sponsors\nProviding sponsorship for specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFurther sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors Twitter and Mastodon accounts, and in reports of the sprint. Please contact r-project-sprint@livewarwickac.onmicrosoft.com to discuss!"
-  },
-  {
-    "objectID": "participants/index.html",
-    "href": "participants/index.html",
-    "title": "Participants",
-    "section": "",
-    "text": "This page is under development - confirmed participants will be added here.\nParticipants with an asterisk are participating remotely."
-  },
-  {
-    "objectID": "participants/index.html#r-core-team",
-    "href": "participants/index.html#r-core-team",
-    "title": "Participants",
-    "section": "R Core Team",
-    "text": "R Core Team\n\n\n  Robert Gentleman \n\n\n  Tomas Kalibera \n\n\n  Michael Lawrence \n\n\n  Uwe Ligges  Dortmund University  \n\n\n  Thomas Lumley  University of Auckland   \n\n\n  Martin Mächler  ETH Zurich     \n\n\n  Sebastian Meyer  Friedrich-Alexander-Universität Erlangen-Nürnberg       \n\n\n  Paul Murrell*  The University of Auckland   \n\n\n  Martyn Plummer  \n\n\n  Deepayan Sarkar \n\n\n  Luke Tierney \n\n\n  Simon Urbanek"
-  },
-  {
-    "objectID": "participants/index.html#r-contributors",
-    "href": "participants/index.html#r-contributors",
-    "title": "Participants",
-    "section": "R Contributors",
-    "text": "R Contributors\n\n\n  Abdulrahman Alswaji  King Abdullah International Medical Research Center  \n\n\n  Iman Al-Hasani  Sultan Qaboos University    \n\n\n  Malcolm Barrett  Posit    \n\n\n  Gabe Becker  Independent Consultant   \n\n\n  Meet Bhatnagar*  Amazon  \n\n\n  Philippa Broadbent  University of Southampton   \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Technology Innovation Institute, Abu Dhabi  \n\n\n  Ahmadou Dicko  UNHCR      \n\n\n  Hannah Frick  Posit    \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  Andrea Gilardi  University of Milano - Bicocca    \n\n\n  André Gillibert  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Beryl Kanali  \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Atuhurira Kirabo Kakopo  \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Aidan Lakshman  University of Pittsburgh     \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Jeroen Ooms  rOpenSci   \n\n\n  Ayush Patel  Oxford Poverty and Human Development Initiative    \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn gebeyehu  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool"
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/template/index.html#problem-statement",
-    "href": "projects/template/index.html#problem-statement",
-    "title": "Project Title in Title Case",
-    "section": "Problem statement",
-    "text": "Problem statement"
-  },
-  {
-    "objectID": "projects/template/index.html#proposed-solution",
-    "href": "projects/template/index.html#proposed-solution",
-    "title": "Project Title in Title Case",
-    "section": "Proposed solution",
-    "text": "Proposed solution"
-  },
-  {
-    "objectID": "projects/template/index.html#testing",
-    "href": "projects/template/index.html#testing",
-    "title": "Project Title in Title Case",
-    "section": "Testing",
-    "text": "Testing"
-  },
-  {
-    "objectID": "projects/template/index.html#project-requirements",
-    "href": "projects/template/index.html#project-requirements",
-    "title": "Project Title in Title Case",
-    "section": "Project requirements",
-    "text": "Project requirements"
-  },
-  {
-    "objectID": "projects/template/index.html#project-resources",
-    "href": "projects/template/index.html#project-resources",
-    "title": "Project Title in Title Case",
-    "section": "Project resources",
-    "text": "Project resources"
-  },
-  {
-    "objectID": "projects/template/index.html#project-outcomes",
-    "href": "projects/template/index.html#project-outcomes",
-    "title": "Project Title in Title Case",
-    "section": "Project outcomes",
-    "text": "Project outcomes"
-  },
-  {
-    "objectID": "projects/template/index.html#reactions-and-comments",
-    "href": "projects/template/index.html#reactions-and-comments",
-    "title": "Project Title in Title Case",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
-    "objectID": "projects/ideas-and-proposals.html",
-    "href": "projects/ideas-and-proposals.html",
-    "title": "Ideas and Proposals",
-    "section": "",
-    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
-  },
-  {
-    "objectID": "projects/ideas-and-proposals.html#ideas",
-    "href": "projects/ideas-and-proposals.html#ideas",
-    "title": "Ideas and Proposals",
-    "section": "Ideas",
-    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
-  },
-  {
-    "objectID": "projects/ideas-and-proposals.html#proposals",
-    "href": "projects/ideas-and-proposals.html#proposals",
-    "title": "Ideas and Proposals",
-    "section": "Proposals",
-    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
   }
 ]
