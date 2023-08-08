@@ -151,49 +151,28 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\n\n\nNo matching items"
+    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\nGergely Daroczi\n\n\nWeblate Improvements\n\n\nTranslations,Documentation\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
+    "objectID": "projects/ideas-and-proposals.html",
+    "href": "projects/ideas-and-proposals.html",
+    "title": "Ideas and Proposals",
     "section": "",
-    "text": "Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.\nUnless informed otherwise, participants have been booked into Bluebell central campus accommodation, with breakfast provided at Rootes restaurant. Check-in for Bluebell is at Central Campus Venues reception, Senate House.\nDelegate Joining Instructions - Central Campus Venues Summer 2023 (Word)\nFrequently Asked Questions - Central Campus Venues Summer 2023 (Word)"
+    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
   },
   {
-    "objectID": "schedule.html#checking-in",
-    "href": "schedule.html#checking-in",
-    "title": "Schedule",
-    "section": "",
-    "text": "Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.\nUnless informed otherwise, participants have been booked into Bluebell central campus accommodation, with breakfast provided at Rootes restaurant. Check-in for Bluebell is at Central Campus Venues reception, Senate House.\nDelegate Joining Instructions - Central Campus Venues Summer 2023 (Word)\nFrequently Asked Questions - Central Campus Venues Summer 2023 (Word)"
+    "objectID": "projects/ideas-and-proposals.html#ideas",
+    "href": "projects/ideas-and-proposals.html#ideas",
+    "title": "Ideas and Proposals",
+    "section": "Ideas",
+    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
   },
   {
-    "objectID": "schedule.html#registration",
-    "href": "schedule.html#registration",
-    "title": "Schedule",
-    "section": "Registration",
-    "text": "Registration\nThe registration desk will be open from 15:00 - 19:30 Tuesdy 29 August in the Faculty of Arts Building (FAB) atrium. The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.\nIf you are staying in university accommodation it is not necessary to register before dinner as you can show your room key to gain entry to the restaurant. Instead you can pick up your name badge on the way to the welcome session.\nIf you arrive late, you will be able to pick up your name badge at any session in FAB 5.01."
-  },
-  {
-    "objectID": "schedule.html#programme",
-    "href": "schedule.html#programme",
-    "title": "Schedule",
-    "section": "Programme",
-    "text": "Programme\nAll whole group sessions in FAB 5.01 will be hybrid, with invites sent directly to remote participants.\n\nTue 29 AugWed 30 AugThu 31 AugFri 1 Sep\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n18:00 - 19:00\nSelf-service dinner\nRootes restaurant\n\n\n19:30 - 20:00\nWelcome session\nFAB 5.01\n\n\n20:00 - 22:00\nSocial (drinks + nibbles)  sponsored by Posit\nFAB Atrium\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 10:30\nKick-off day 1\nFAB 5.01\n\n\n10:30 - 11:00\nCoffee\nOutside FAB 5.01\n\n\n11:00 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nSmall groups\nVarious, FAB\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01\n\n\n15:30 - 17:00\nSmall groups\nVarious, FAB\n\n\n17:00 - 17:30\nReport back (part 1)\nFAB 5.01\n\n\n19:00 - 21:00\nSit-down dinner  sponsored by The R Consortium\nRadcliffe Conference Centre\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 09:30\nReport back (part 2)\nFAB 5.01\n\n\n09:30 - 10:00\nKick-off day 2\nFAB 5.01\n\n\n10:00 - 10:30\nCoffee\nOutside FAB 5.01\n\n\n10:30 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nSmall groups\nVarious, FAB\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01\n\n\n15:30 - 16:30\nSmall groups\nVarious, FAB\n\n\n17:00 - 18:00\nWarwick RUG (report back)\nMS.01, Zeeman Building\n\n\n18:00 - 19:00\nRefreshments\nOutside MS.01, Zeeman Building\n\n\n19:00 - 21:00\nBuffet dinner  sponsored by CRiSM\nChancellor’s Suite, Rootes Building\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 09:30\nReport back (ctd)\nFAB 5.01\n\n\n09:30 - 10:00\nKick-off day 3\nFAB 5.01\n\n\n10:00 - 10:30\nCoffee\nOutside FAB 5.01\n\n\n10:30 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nWrap-up\nFAB 5.01\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01"
-  },
-  {
-    "objectID": "schedule.html#venues",
-    "href": "schedule.html#venues",
-    "title": "Schedule",
-    "section": "Venues",
-    "text": "Venues\nKey venues of the sprint:\n\nSenate House - Central Campus Venues Reception\nBluebell residences - main accommodation\nFaculty of Arts Building (FAB) - main sprint venue\nRootes Building - main venue for meals\nRadcliffe conference centre - venue for sit-down dinner\nZeeman Building - venue for Warwick R User Group meeting\n\nLinks above go to the interactive campus map. The main venues are also highlighted on this PDF campus map."
-  },
-  {
-    "objectID": "schedule.html#breakout-space",
-    "href": "schedule.html#breakout-space",
-    "title": "Schedule",
-    "section": "Breakout space",
-    "text": "Breakout space\nWe have use of the following breakout spaces in FAB during the sprint, in addition to the main room (FAB 5.01). The first number is the floor the space is on.\n\n\n\nRoom\nCapacity\nType\nLayout\nFacilities\n\n\n\n\n2.25\n38\nOpen\nCabaret\n\n\n\n2.43\n50\nClosed\nCabaret\n2 x webcam\n\n\n2.47\n13\nOpen\nBoardroom\n\n\n\n2.48\n13\nClosed\nBoardroom\nwebcam\n\n\n2.61\n16\nOpen\nBoardroom\n\n\n\n3.26\n20\nSemi-open\nCabaret\n\n\n\n4.52\n20\nSemi-open\nCabaret\n\n\n\n4.74\n20\nSemi-open\nCabaret\n\n\n\n6.03\n13\nClosed\nBoardroom\nquiet space"
+    "objectID": "projects/ideas-and-proposals.html#proposals",
+    "href": "projects/ideas-and-proposals.html#proposals",
+    "title": "Ideas and Proposals",
+    "section": "Proposals",
+    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
   },
   {
     "objectID": "code-of-conduct.html",
@@ -245,25 +224,102 @@
     "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
   },
   {
-    "objectID": "projects/ideas-and-proposals.html",
-    "href": "projects/ideas-and-proposals.html",
-    "title": "Ideas and Proposals",
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
     "section": "",
-    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
+    "text": "Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.\nUnless informed otherwise, participants have been booked into Bluebell central campus accommodation, with breakfast provided at Rootes restaurant. Check-in for Bluebell is at Central Campus Venues reception, Senate House.\nDelegate Joining Instructions - Central Campus Venues Summer 2023 (Word)\nFrequently Asked Questions - Central Campus Venues Summer 2023 (Word)"
   },
   {
-    "objectID": "projects/ideas-and-proposals.html#ideas",
-    "href": "projects/ideas-and-proposals.html#ideas",
-    "title": "Ideas and Proposals",
-    "section": "Ideas",
-    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
+    "objectID": "schedule.html#checking-in",
+    "href": "schedule.html#checking-in",
+    "title": "Schedule",
+    "section": "",
+    "text": "Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.\nUnless informed otherwise, participants have been booked into Bluebell central campus accommodation, with breakfast provided at Rootes restaurant. Check-in for Bluebell is at Central Campus Venues reception, Senate House.\nDelegate Joining Instructions - Central Campus Venues Summer 2023 (Word)\nFrequently Asked Questions - Central Campus Venues Summer 2023 (Word)"
   },
   {
-    "objectID": "projects/ideas-and-proposals.html#proposals",
-    "href": "projects/ideas-and-proposals.html#proposals",
-    "title": "Ideas and Proposals",
-    "section": "Proposals",
-    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
+    "objectID": "schedule.html#registration",
+    "href": "schedule.html#registration",
+    "title": "Schedule",
+    "section": "Registration",
+    "text": "Registration\nThe registration desk will be open from 15:00 - 19:30 Tuesdy 29 August in the Faculty of Arts Building (FAB) atrium. The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.\nIf you are staying in university accommodation it is not necessary to register before dinner as you can show your room key to gain entry to the restaurant. Instead you can pick up your name badge on the way to the welcome session.\nIf you arrive late, you will be able to pick up your name badge at any session in FAB 5.01."
+  },
+  {
+    "objectID": "schedule.html#programme",
+    "href": "schedule.html#programme",
+    "title": "Schedule",
+    "section": "Programme",
+    "text": "Programme\nAll whole group sessions in FAB 5.01 will be hybrid, with invites sent directly to remote participants.\n\nTue 29 AugWed 30 AugThu 31 AugFri 1 Sep\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n18:00 - 19:00\nSelf-service dinner\nRootes restaurant\n\n\n19:30 - 20:00\nWelcome session\nFAB 5.01\n\n\n20:00 - 22:00\nSocial (drinks + nibbles)  sponsored by Posit\nFAB Atrium\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 10:30\nKick-off day 1\nFAB 5.01\n\n\n10:30 - 11:00\nCoffee\nOutside FAB 5.01\n\n\n11:00 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nSmall groups\nVarious, FAB\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01\n\n\n15:30 - 17:00\nSmall groups\nVarious, FAB\n\n\n17:00 - 17:30\nReport back (part 1)\nFAB 5.01\n\n\n19:00 - 21:00\nSit-down dinner  sponsored by The R Consortium\nRadcliffe Conference Centre\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 09:30\nReport back (part 2)\nFAB 5.01\n\n\n09:30 - 10:00\nKick-off day 2\nFAB 5.01\n\n\n10:00 - 10:30\nCoffee\nOutside FAB 5.01\n\n\n10:30 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nSmall groups\nVarious, FAB\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01\n\n\n15:30 - 16:30\nSmall groups\nVarious, FAB\n\n\n17:00 - 18:00\nWarwick RUG (report back)\nMS.01, Zeeman Building\n\n\n18:00 - 19:00\nRefreshments\nOutside MS.01, Zeeman Building\n\n\n19:00 - 21:00\nBuffet dinner  sponsored by CRiSM\nChancellor’s Suite, Rootes Building\n\n\n\n\n\n\n\n\nTime (BST)\nEvent\nVenue\n\n\n\n\n09:00 - 09:30\nReport back (ctd)\nFAB 5.01\n\n\n09:30 - 10:00\nKick-off day 3\nFAB 5.01\n\n\n10:00 - 10:30\nCoffee\nOutside FAB 5.01\n\n\n10:30 - 12:30\nSmall groups\nVarious, FAB\n\n\n12:30 - 13:30\nLunch\nRootes restaurant\n\n\n13:30 - 15:00\nWrap-up\nFAB 5.01\n\n\n15:00 - 15:30\nCoffee\nOutside FAB 5.01"
+  },
+  {
+    "objectID": "schedule.html#venues",
+    "href": "schedule.html#venues",
+    "title": "Schedule",
+    "section": "Venues",
+    "text": "Venues\nKey venues of the sprint:\n\nSenate House - Central Campus Venues Reception\nBluebell residences - main accommodation\nFaculty of Arts Building (FAB) - main sprint venue\nRootes Building - main venue for meals\nRadcliffe conference centre - venue for sit-down dinner\nZeeman Building - venue for Warwick R User Group meeting\n\nLinks above go to the interactive campus map. The main venues are also highlighted on this PDF campus map."
+  },
+  {
+    "objectID": "schedule.html#breakout-space",
+    "href": "schedule.html#breakout-space",
+    "title": "Schedule",
+    "section": "Breakout space",
+    "text": "Breakout space\nWe have use of the following breakout spaces in FAB during the sprint, in addition to the main room (FAB 5.01). The first number is the floor the space is on.\n\n\n\nRoom\nCapacity\nType\nLayout\nFacilities\n\n\n\n\n2.25\n38\nOpen\nCabaret\n\n\n\n2.43\n50\nClosed\nCabaret\n2 x webcam\n\n\n2.47\n13\nOpen\nBoardroom\n\n\n\n2.48\n13\nClosed\nBoardroom\nwebcam\n\n\n2.61\n16\nOpen\nBoardroom\n\n\n\n3.26\n20\nSemi-open\nCabaret\n\n\n\n4.52\n20\nSemi-open\nCabaret\n\n\n\n4.74\n20\nSemi-open\nCabaret\n\n\n\n6.03\n13\nClosed\nBoardroom\nquiet space"
+  },
+  {
+    "objectID": "projects/weblate-improvements/index.html",
+    "href": "projects/weblate-improvements/index.html",
+    "title": "Weblate Improvements",
+    "section": "",
+    "text": "The R Project has a global and active community with members speaking different languages around the world, in many cases with the need to be able to use R in their native natural language instead of English.\nThis project aims to provide better coverage of translations by making it easier to contribute translations to R – even without technical skills."
+  },
+  {
+    "objectID": "projects/weblate-improvements/index.html#background",
+    "href": "projects/weblate-improvements/index.html#background",
+    "title": "Weblate Improvements",
+    "section": "",
+    "text": "The R Project has a global and active community with members speaking different languages around the world, in many cases with the need to be able to use R in their native natural language instead of English.\nThis project aims to provide better coverage of translations by making it easier to contribute translations to R – even without technical skills."
+  },
+  {
+    "objectID": "projects/weblate-improvements/index.html#problem-statement",
+    "href": "projects/weblate-improvements/index.html#problem-statement",
+    "title": "Weblate Improvements",
+    "section": "Problem statement",
+    "text": "Problem statement\nThe R project has been supporting the translation of user messages, warnings, errors etc since R version 2.1.0 (April 2005) using\n\nthe gettext functions to lookup translations, and\nthe PO files defining the translations, stored in the SVN repository.\n\nAlthough the technology existed, but contributing translations was not straightforward due to\n\nthe technical overhead of dealing with PO files made it difficult for external parties to contribute,\nthe limited write-access to the repository requires a Core R member to sponsor and actually commit the changes.\n\nAround 2010, there was a web-based translation service hosted at http://translation.r-project.org/pootle/, which made the PO file strings available for translation using any web-browser after authentication. Unfortunately, the service was shut down later without a successor."
+  },
+  {
+    "objectID": "projects/weblate-improvements/index.html#proposed-solution",
+    "href": "projects/weblate-improvements/index.html#proposed-solution",
+    "title": "Weblate Improvements",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nA modern alternative of Pootle is Weblate, which is a web-based tool to make it easy to crowd-source translating strings extracted from the source code, written in Python, extensible by using plugins, comes with pre-build Docker images, great docs and community.\nA POC installation has been deployed at https://translate.rx.studio in May 2022, and shared with the R community on the R Contributors Slack channel.\nEarly feedback was positive, and thousands of strings have been already translated in a dozen of languages, but there are ways to improve\n\nUX for translators and translation team (e.g. review workflows),\nreporting on the state of translations (e.g. GSoC dashboard),\nintegration with R Core (e.g. quarterly patch files),\nmaintenance (e.g. git conflicts and forced rebase),\nhosting (e.g. to decide if we keep the current domain or move under r-project.org, who is hosting etc).\n\nActual tasks are listed at the Weblate ideation dashboard."
+  },
+  {
+    "objectID": "projects/weblate-improvements/index.html#project-requirements",
+    "href": "projects/weblate-improvements/index.html#project-requirements",
+    "title": "Weblate Improvements",
+    "section": "Project requirements",
+    "text": "Project requirements\nAny help is highly appreciated, e.g. translations without any technical skills, but to achieve the goal of improving the current Weblate service, the below skills/experiences would be helpful:\n\nUNIX system administration (e.g. SSH, advanced git, Docker, AWS)\nPython (e.g. to write custom Weblate plugins)\nweb services (e.g. to write an API endpoint in R that Weblate can call)\nproject/product management (e.g. to define and document translation workflows)"
+  },
+  {
+    "objectID": "projects/weblate-improvements/index.html#project-resources",
+    "href": "projects/weblate-improvements/index.html#project-resources",
+    "title": "Weblate Improvements",
+    "section": "Project resources",
+    "text": "Project resources\n\nTranslating R workshop (1h30m video)\nLatinR hackathon intro to Weblate (30m video in Spanish)\nInfrastructure and maintenance instructions"
+  },
+  {
+    "objectID": "projects/weblate-improvements/index.html#project-outcomes",
+    "href": "projects/weblate-improvements/index.html#project-outcomes",
+    "title": "Weblate Improvements",
+    "section": "Project outcomes",
+    "text": "Project outcomes\n\nRecommendations and documentation for translation teams (e.g. workflows)\nAutomated checks on translation suggestions\nMore seamless integration with R Core (e.g. better docs and/or automatioin on generating patch files to be committed into SVN)"
+  },
+  {
+    "objectID": "projects/weblate-improvements/index.html#reactions-and-comments",
+    "href": "projects/weblate-improvements/index.html#reactions-and-comments",
+    "title": "Weblate Improvements",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
   },
   {
     "objectID": "projects/template/index.html#problem-statement",
