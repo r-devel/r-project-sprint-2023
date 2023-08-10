@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Elio Campitelli">
+
+<title>R Project Sprint 2023 - Improving documentation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../media/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="R Project Sprint 2023 - Improving documentation">
+<meta property="og:description" content="">
+<meta property="og:site-name" content="R Project Sprint 2023">
+<meta name="twitter:title" content="R Project Sprint 2023 - Improving documentation">
+<meta name="twitter:description" content="A 3-day meeting of R developers to work collaboratively on R core development, hosted at the University of Warwick, August 30 – September 1">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R Project Sprint 2023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../code-of-conduct.html" rel="" target="">
+ <span class="menu-text">Code of Conduct</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../participants/index.html" rel="" target="">
+ <span class="menu-text">Participants</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../../projects/index.html" rel="" target="">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/ideas-and-proposals.html" rel="" target="">
+ <span class="dropdown-text">Ideas and Proposals</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.cloud/tags/RSprint2023" rel="" target=""><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hashtag/RSprint2023?src=hashtag_click" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/r-devel/r-project-sprint-2023" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">Problem statement</a></li>
+  <li><a href="#proposed-workflow" id="toc-proposed-workflow" class="nav-link" data-scroll-target="#proposed-workflow">Proposed workflow</a>
+  <ul class="collapse">
+  <li><a href="#triage-exiting-bugs" id="toc-triage-exiting-bugs" class="nav-link" data-scroll-target="#triage-exiting-bugs">Triage exiting bugs</a></li>
+  <li><a href="#find-new-bugs" id="toc-find-new-bugs" class="nav-link" data-scroll-target="#find-new-bugs">Find new bugs</a></li>
+  </ul></li>
+  <li><a href="#list-of-bugs" id="toc-list-of-bugs" class="nav-link" data-scroll-target="#list-of-bugs">List of bugs</a>
+  <ul class="collapse">
+  <li><a href="#bugs-to-report" id="toc-bugs-to-report" class="nav-link" data-scroll-target="#bugs-to-report">Bugs to report</a></li>
+  </ul></li>
+  <li><a href="#project-requirements" id="toc-project-requirements" class="nav-link" data-scroll-target="#project-requirements">Project requirements</a></li>
+  <li><a href="#reactions-and-comments" id="toc-reactions-and-comments" class="nav-link" data-scroll-target="#reactions-and-comments">Reactions and comments</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Improving documentation</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Documentation</div>
+    <div class="quarto-category">R</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Elio Campitelli </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- 
+This template is based on https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/.
+The sections are provided as a guide and may not be appropriate to your proposal, feel free to skip or change sections.
+
+Please label any R code chunks, especially those producing images.
+-->
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+</section>
+<section id="problem-statement" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statement">Problem statement</h2>
+<p>In general R documentation is very good and thorough, but there’s always room for improvement.</p>
+<p>This is my main motivation for this proposal are examples that are complex or confusing to beginners. Teaching to novices I usually encourage my students to look in the documentation and, in particular, to check the examples for to learn the basic usage of functions. However, I often find example sections that are too complex for them or don’t include an example for the simplest usage of the function.</p>
+<p>For instance, the example section of <code>cut()</code> starts with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">&lt;-</span> stats<span class="sc">::</span><span class="fu">rnorm</span>(<span class="dv">10000</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">cut</span>(Z, <span class="at">breaks =</span> <span class="sc">-</span><span class="dv">6</span><span class="sc">:</span><span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This requires the user to know what the <code>rnorm()</code> and <code>table()</code> functions do before the first usage to <code>cut()</code>. The result also doesn’t directly help understanding the output and behaviour of <code>cut()</code>. A better starting example could be something very simple like</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">breaks =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="proposed-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="proposed-workflow">Proposed workflow</h2>
+<section id="triage-exiting-bugs" class="level3">
+<h3 class="anchored" data-anchor-id="triage-exiting-bugs">Triage exiting bugs</h3>
+<p>A first pass would be to triage <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;list_id=23595&amp;product=R&amp;resolution=---">bugs in the Documentation tag in Bugzilla</a>.</p>
+</section>
+<section id="find-new-bugs" class="level3">
+<h3 class="anchored" data-anchor-id="find-new-bugs">Find new bugs</h3>
+<p>A second pass would be to look for new documentation issues and open bugs on Bugzilla.</p>
+<p>Sources for these issues can be:</p>
+<ol type="1">
+<li>Ask among R Contributors.</li>
+<li>Ask on social media.</li>
+<li>Search the R documentation of functions that beginners might need documentation for, such as <code>mean()</code>, <code>sd()</code>, etc.</li>
+<li>Look for R scripts on GitHub and tally the most used functions and evaluate their documentation.</li>
+</ol>
+</section>
+</section>
+<section id="list-of-bugs" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-bugs">List of bugs</h2>
+<p>This table lists all current open bugs with the Documentation tag sorted from oldest to newest (based on last comment). The “Location” column specifies which documentation is affected. The “Affected users” specifies which type of user I think are most likely affected by the issue (Beginners: people just starting with R, Advanced: people that use R regularly, Experts: people in close contact with R internals and/or package development). The “Action(s)” column lists the required actions to address the bug. And the “Comments” column is for general comments about the issue.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Status</th>
+<th>Title</th>
+<th>Last activity</th>
+<th>Location</th>
+<th>Affected users</th>
+<th>Action(s)</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=14998">14998</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=14998">Suggestion for two internal self-reference in “Writing R Extensions” manual</a></td>
+<td>invalid</td>
+<td>Writing R Extensions</td>
+<td>Expert</td>
+<td>discuss</td>
+<td>Suggests adding a sentence to “Writting R Extensions” linking to other sections. Not very clear on what the issue is.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16963">16963</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16963">In ?on.exit, add note that on.exit expressions are evaluated after return() call.</a></td>
+<td>2016-06-22</td>
+<td>Help docs</td>
+<td>Advanced</td>
+<td>create patch</td>
+<td>A note about a relatively obscure but potentially important quirk of <code>on.exit()</code>.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17136">17136</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17136">Documentation for method=“BY” in p.adjust()</a></td>
+<td>2016-08-28</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td>Clarifies the behaviour of <code>p.adjust()</code>. Patch includes fix. Might need to read up <code>p.adjust()</code>’s source code and the relevant papers to confirm.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17331">17331</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17331">Inappropriate implicit variable setting in ~/.R/Makevars macOS recommendation within R Installation and Administration Manual</a></td>
+<td>2017-08-26</td>
+<td>R Installation and Administration</td>
+<td>Advanced</td>
+<td>check patch</td>
+<td><p>Need a Mac to confirm.</p>
+<p>A possible fix is included in the bug report.</p></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=8528">8528</a></td>
+<td>ASSI</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=8528">pgamma - inadequate algorithm design and poor coding</a></td>
+<td>2018-08-30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=15882">15882</a></td>
+<td>NEW</td>
+<td>[<a href="https://bugs.r-project.org/show_bug.cgi?id=15882">requires a positional argument, not mentioned in docs</a></td>
+<td>2019-12-22</td>
+<td>R Internals</td>
+<td>Advanced</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=7195">7195</a></td>
+<td>NEW</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=7195">additionreal examples for R-intro.texi</a></td>
+<td>2020-01-06</td>
+<td>An Introduction to R</td>
+<td>Beginner</td>
+<td>review patch</td>
+<td>Adds a bunch of text to this guide. Includes a patch. Might need to review what changed since 2004 when this was proposed.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=1011">1011</a></td>
+<td>NEW</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=1011">R-intro suggestions part II</a></td>
+<td>2020-01-06</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=10701">10701</a></td>
+<td>NEW</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=10701">Suggestions for R-intro manual</a></td>
+<td>2020-01-06</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=988">988</a></td>
+<td>NEW</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=988">input for R-intro</a></td>
+<td>2020-01-13</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=15272">15272</a></td>
+<td>NEW</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=15272">?nclass doesn’t find the nclass help page</a></td>
+<td>2020-01-13</td>
+<td>Help docs</td>
+<td></td>
+<td>create patch</td>
+<td>The issue is confirmed and trivial to fix.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17695">17695</a></td>
+<td>ASSI</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17695">stopifnot example does not run all the way through</a></td>
+<td>2020-01-30</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td>This seems to stem from the code in the <code>example()</code> function and thus the core fix needs fixing that. That might be hard. OTOH, a simpler fix would be to add a note in the example section. That’d be trivial.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17716">17716</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17716">Small documentation pass on ?dyn.load</a></td>
+<td>2020-02-18</td>
+<td>Docs</td>
+<td>Expert</td>
+<td>check patch</td>
+<td>This includes a patch to fix small typos and grammar mistakes in the docs. Needs a quick revision to confirm that nothing’s changed and then it could be approved by core.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17753">17753</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17753">ave() documentation misleading</a></td>
+<td>2020-04-14</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>create patch</td>
+<td>The bug is valid and current. The report includes proposed changes but not in patch form.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17786">17786</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17786">?text can clarify the adj argument</a></td>
+<td>2020-05-07</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td>A patch is provided. Needs to be checked for accuracy and it’s good to go.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17791">17791</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17791">?text doesn’t have any vfont examples, and doesn’t link to the Hershey help page the first time it’s mentioned</a></td>
+<td>2020-05-08</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td>A very simple fix with a valid diff.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=7208">7208</a></td>
+<td>NEW</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=7208">Documentation R-intro input</a></td>
+<td>2020-05-16</td>
+<td>An Introduction to R</td>
+<td>Beginner</td>
+<td><p>discuss</p>
+<p>write new documentation</p>
+<p>create patch</p></td>
+<td>This report points out the lack of examples of some potentially useful functions in this document: <code>sweep()</code>, <code>apply()</code>, <code>lapply()</code> and <code>sapply()</code>. It would need a bunch of writing and coming up with good examples.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17805">17805</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17805">args(): document NULL return value for certain special primitives</a></td>
+<td>2020-05-18</td>
+<td>Help docs</td>
+<td>Advanced</td>
+<td>check patch</td>
+<td>Involves a particular edge case for a relatively obscurse function. Has a patch (although it might need revision).</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17821">17821</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17821">Reference possible portability issues for translations in R-Exts</a></td>
+<td>2020-06-04</td>
+<td>Writing R Extensions</td>
+<td>Expert</td>
+<td>check patch</td>
+<td>Patch is there to apply.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17827">17827</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17827">Request to remove Annals of Eugenics citation from iris documentation</a></td>
+<td>2020-06-12</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td><p>discuss (a lot)</p>
+<p>create patch</p></td>
+<td>This is mostly a social thing and I think it requires a lot of discussion with the community.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17896">17896</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17896">Cleaning up Internationalization section in R-exts</a></td>
+<td>2020-08-25</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17933">17933</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17933">‘paste’ doc: wrong: 0-length arg recycling related to ‘collapse’</a></td>
+<td>2020-10-11</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td>There’s a patch with a fix.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16567">16567</a></td>
+<td>ASSI</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16567">Claims about computational complexity of findInterval</a></td>
+<td>2021-01-02</td>
+<td>Help docs</td>
+<td>Advanced</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td>We need to check if this is still relevant after ALTREP.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18026">18026</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18026">Include help page for exportPattern</a></td>
+<td>2021-01-08</td>
+<td>Help docs</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18060">18060</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18060">“Malformed maintainer field.” message could be more helpful</a></td>
+<td>2021-02-18</td>
+<td>Help docs</td>
+<td>Expert</td>
+<td><p>discuss</p>
+<p>write documentation</p>
+<p>create patch</p></td>
+<td>This requires to create whole new documentation pages for the functions used in NAMESPACE.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18094">18094</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18094">Suggestions for help system</a></td>
+<td>2021-05-04</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td>This would involve creating new aliases for a bunch of help pages. Not hard, but debatable.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18061">18061</a></td>
+<td>NEW</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18061">The documentation is not clear that match() does not use the same notion of equality as unique().</a></td>
+<td>2021-05-18</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16003">16003</a></td>
+<td>NEW</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=16003">heatmap scale argument: description not complete</a></td>
+<td>2021-07-26</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>create patch</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18173">18173</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18173">Man page for lm.fit is very brief about the circumstances when to use</a></td>
+<td>2021-08-23</td>
+<td>Help docs</td>
+<td>Advanced</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td>Needs some understanding of the <code>lm.fit</code> function and friends.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17989">17989</a></td>
+<td>CONF</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17989">Documentation of asCall argument to xgettext is unclear</a></td>
+<td>2021-11-19</td>
+<td>Help docs</td>
+<td>Expert</td>
+<td>check patch</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18252">18252</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18252">Document how unicode strings are compared for equality</a></td>
+<td>2021-12-29</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td>Needs some knowledge about encoding.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18282">18282</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18282">Description of var.test for lm objects could be improved.</a></td>
+<td>2022-01-21</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>create patch</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17279">17279</a></td>
+<td>CONF</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17279">parameter “amount” is badly explained for jitter()</a></td>
+<td>2022-02-11</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18330">18330</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18330">type argument documentation in install.packages</a></td>
+<td>2022-04-28</td>
+<td>Help docs</td>
+<td>Advanced</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td>Requires some understanding of packaging. how <code>install.packages()</code> work.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18355">18355</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18355">trace() wipes out attributes</a></td>
+<td>2022-06-16</td>
+<td>Help docs</td>
+<td>Expert</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td>This is actually <a href="https://bugs.r-project.org/show_bug.cgi?id=18354">a bug in the function</a>. It might be better to fix that bug instead of documenting the wrong behaviour.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18350">18350</a></td>
+<td>CONF</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18350">Clarification needed in ?c</a></td>
+<td>2022-07-18</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18182">18182</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18182">generated EPUB documentation files are invalid according to epubcheck</a></td>
+<td>2022-09-08</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18408">18408</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18408">Using CMake section “$(SHLIB): mylibs” did not work for me</a></td>
+<td>2022-09-22</td>
+<td>Writing R Extensions</td>
+<td>Expert</td>
+<td><p>discuss</p>
+<p>create patch</p></td>
+<td>Needs knowledge of cmake.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17770">17770</a></td>
+<td>ASSI</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17770">xtabs does not act as documented for na.action = na.pass</a></td>
+<td>2022-10-03</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td><p>discuss</p>
+<p>close issue</p></td>
+<td>The issue seems to be solved by a previous patch.</td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18402">18402</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18402">Provide a mechanism for adding custom CSS styles to HTML documentation headers.</a></td>
+<td>2022-11-05</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18499">18499</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18499">Examples for functions that involve writing files</a></td>
+<td>2023-04-01</td>
+<td>Writing R Extensions</td>
+<td>Advanced</td>
+<td>check patch</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18524">18524</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18524">DOCS: Make it easier to find help on raw string constants, e.g.&nbsp;help.search(‘r”’)</a></td>
+<td>2023-05-02</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18561">18561</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18561">\item{} labels processed inconsistently in \value{} between Rd2HTML and other converters</a></td>
+<td>2023-07-12</td>
+<td></td>
+<td></td>
+<td>discuss</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18562">18562</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18562">Ambiguous statements in write() help page</a></td>
+<td>2023-07-15</td>
+<td>Help docs</td>
+<td>Beginner</td>
+<td>check patch</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18567">18567</a></td>
+<td>UNCO</td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18567">Consistent style in base package help pages</a></td>
+<td>2023-07-16</td>
+<td>Help docs</td>
+<td></td>
+<td>check patch</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<section id="bugs-to-report" class="level3">
+<h3 class="anchored" data-anchor-id="bugs-to-report">Bugs to report</h3>
+<p>These are possible issues to post on Bugzilla after discussion.</p>
+<ul>
+<li><p>The <code>?iris</code> example section doesn’t seem to be very useful. I don’t understand what its doing.</p></li>
+<li><p><code>?formula</code> should link to <code>?update.formula</code>.</p></li>
+<li><p>The documentation of <code>p.adust()</code> shows that the default value of <code>n</code> is <code>length(p)</code> . However, this is evaluated after <code>NA</code>s are removed from <code>p</code>, so this is not technically correct.</p></li>
+<li><p><code>?match</code> says “<code>%in%</code> is a more intuitive interface”, but <code>match()</code> and <code>%in%</code> return different things.</p></li>
+<li><p>Add examples of the <code>\(x)</code> function interface to the <code>function</code> help page.</p></li>
+<li><p>Add examples of using <code>\(x)</code> in <code>lapply</code>.</p></li>
+<li><p>Simpler examples: add examples of the simplest use-case for functions:</p>
+<ul>
+<li><p><code>cut()</code></p></li>
+<li><p><code>sqrt()</code> and <code>abs()</code></p></li>
+<li><p><code>log()</code></p></li>
+<li><p><code>sin()</code> and the rest of Trig.</p>
+<ul>
+<li>Also add examples of the difference between <code>atan()</code> and <code>atan2()</code></li>
+</ul></li>
+<li><p><code>&lt;-</code> doesn’t have any examples. Might be useful to provide examples to illustrate the difference between <code>&lt;-</code> and <code>&lt;&lt;-</code> and <code>=</code>.</p></li>
+<li><p><code>terms</code> needs examples.</p></li>
+<li><p><code>match()</code>. Simple vector and data.frame examples and examples of using it to recode variables (<a href="https://fosstodon.org/@TimTeaFan/110771036176541131">https://fosstodon.org/@TimTeaFan/110771036176541131</a>).</p></li>
+<li><p><code>cov2cor()</code>: remove “see the function definition {and learn ..}”</p></li>
+<li><p>a simpler example function in <code>function</code>?</p></li>
+<li><p>Examples of <code>while</code>, <code>repeat</code>, <code>break</code>, and <code>next</code> in <code>?Control</code>.</p></li>
+<li><p>Add examples of how lists behave (extraction, names, <code>NULL</code> values, an others) in <code>?list()</code>.</p></li>
+<li><p>In <code>?lm()</code></p>
+<ul>
+<li><p>add examples that use the data argument.</p></li>
+<li><p>add examples of multiple regression</p></li>
+<li><p>add examples that use <code>poly</code></p></li>
+</ul></li>
+<li><p><code>vcov()</code> doesn’t have examples</p></li>
+<li><p><code>xtfrm()</code> doesn’t have examples</p></li>
+<li><p><code>UseMethod()</code> doesn’t have examples</p></li>
+<li><p><code>?MASS::fractions()</code> needs simpler examples and an explanation of the difference between <code>fractions()</code> and <code>as.fractions()</code>(none, from looking at the code).</p></li>
+<li><p><code>?seq</code> needs examples of all the other related functions and better documentation of what they do.</p></li>
+</ul></li>
+<li><p>Can we look programmatically for functions with no example sections?</p></li>
+<li><p>In <code>?residuals</code> make it clear that both functions “are intended to encourage users to access object components through an accessor function rather than by directly referencing an object slot”.</p></li>
+<li><p>Explicitly state that <code>rm()</code> is an alias for <code>remove()</code>.</p></li>
+<li><p>A lot of examples use <code>stopifnot()</code> to show that two things are the same. I think, this might not be great, as the user needs to know what that means.</p></li>
+<li><p>Document the differences between factors and ordered factors in models (<a href="https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336">https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336</a>) .</p></li>
+<li><p>Add a discussion in <code>quantile()</code> for when the quantiles don’t actually contain the correct number of observations (<a href="https://mastodon.social/@eliocamp/110748596295500531">https://mastodon.social/@eliocamp/110748596295500531</a>).</p></li>
+<li><p>Add a comment in <code>?replicate</code> documenting that <code>expr</code> is wrapped in an anonymous function so that assignment doesn’t change the calling environment.</p></li>
+<li></li>
+<li><p>Look for instances of examples using things like <code>if (x z&lt;- cond1 &amp; cond2)</code>. That is, using assignment inside an if statement or inside a function. These are arguably anti-patterns that shouldn’t be in the help files.</p>
+<ul>
+<li><p><code>quantile()</code>.</p></li>
+<li><p><code>var()</code></p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="project-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="project-requirements">Project requirements</h2>
+<p>This project is open to anyone with working knowledge of R.</p>
+</section>
+<section id="reactions-and-comments" class="level2">
+<h2 class="anchored" data-anchor-id="reactions-and-comments">Reactions and comments</h2>
+<!-- 
+Please leave the Reactions and comments section
+- a Giscus comment box will be automatically added here 
+-->
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="r-devel/r-project-sprint-2023" data-repo-id="R_kgDOIhAibA" data-category="Proposals" data-category-id="DIC_kwDOIhAibM4CW3GY" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
