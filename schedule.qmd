@@ -2,18 +2,22 @@
 title: "Schedule"
 ---
 
-## Checking-in
+## Arrival
 
-Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival. Luggage storage is available.
+Participants staying in Warwick University accommodation can check in from 15:00 on the day of arrival (it is not possible to arrange early check-in). Luggage storage is available.
 
 Unless informed otherwise, participants have been booked into [Bluebell](https://warwick.ac.uk/services/conferences/spaces/central-campus-venues/accommodation/bluebell) central campus accommodation, with breakfast provided at [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae). Check-in for Bluebell is at Central Campus Venues reception, [Senate House](https://campus.warwick.ac.uk//search/623c885f421e6f5928c0c7e3).
+
+Participants arriving at Birmingham airport are recommended to take the free Air-Rail Link monorail to Birmingham International train station, then catch a train to Coventry train station (single ticket £3.10, pay by cash/card at the ticket office/machine). If you have a contactless payment card (or Apply Pay/Google Pay/etc) you can catch a bus from Coventry train station to Warwick University Interchange (main bus terminal on campus) for £2 single, then it is a few minutes walk to Senate House. Alternatively you can get a taxi/Uber/Bolt from Coventry rail station to Senate House for £10-£15. A taxi all the way from the airport will be around £30. Receipts are required to claim travel expenses from your travel budget (where applicable).
+
+Note there will be very little open on campus on Monday 28 August as it is a holiday, however the [Warwick Arts Centre](https://campus.warwick.ac.uk//search/623c885e421e6f5928c0c7cd) building should be open all day (comfy, quiet places to sit) with [Benugo Bar and Kitchen](https://warwick.ac.uk/services/retail/openingtimes/) open from mid-day. If arriving at the airport very early, it may be best to while away some time there before travelling on (or get some food and drink to bring on to campus). For other days, the on-campus cafes and the grocery store will be open as per the [vacation opening times](https://warwick.ac.uk/services/retail/openingtimes/).
 
 [Delegate Joining Instructions - Central Campus Venues Summer 2023 (Word)](/downloads/Delegate%20Joining%20Instructions%20-%20Central%20Campus%20Venues%20Summer%202023.docx)\
 [Frequently Asked Questions - Central Campus Venues Summer 2023 (Word)](/downloads/Frequently%20Asked%20Questions%20-%20Central%20Campus%20Venues%20Summer%202023.docx)
 
 ## Registration
 
-The registration desk will be open from 15:00 - 19:30 Tuesdy 29 August in the [Faculty of Arts Building (FAB) atrium](https://campus.warwick.ac.uk//search/623c8960421e6f5928c0fb65). The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.
+The registration desk will be open from 15:00 - 19:30 Tuesday 29 August in the [Faculty of Arts Building (FAB) atrium](https://campus.warwick.ac.uk//search/623c8960421e6f5928c0fb65). The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.
 
 If you are staying in university accommodation it is not necessary to register before dinner as you can show your room key to gain entry to the restaurant. Instead you can pick up your name badge on the way to the welcome session.
 
@@ -27,7 +31,7 @@ All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c
 ### Tue 29 Aug
 
 | Time (BST)    | Event                                                                    | Venue                                                                              |
-|---------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+|---------------|---------------------------|-------------------------------|
 | 18:00 - 19:00 | Self-service dinner                                                      | [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae) |
 | 19:30 - 20:00 | Welcome session                                                          | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)          |
 | 20:00 - 22:00 | Social (drinks + nibbles) <br> *sponsored by [Posit](https://posit.co/)* | [FAB Atrium](https://campus.warwick.ac.uk//search/623c8960421e6f5928c0fb65)        |
@@ -35,7 +39,7 @@ All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c
 ### Wed 30 Aug
 
 | Time (BST)    | Event                                                                                 | Venue                                                                                        |
-|---------------|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+|--------------|----------------------------|------------------------------|
 | 09:00 - 10:30 | Kick-off day 1                                                                        | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
 | 10:30 - 11:00 | Coffee                                                                                | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)            |
 | 11:00 - 12:30 | Small groups                                                                          | Various, FAB                                                                                 |
@@ -49,7 +53,7 @@ All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c
 ### Thu 31 Aug
 
 | Time (BST)    | Event                                                                                      | Venue                                                                                                |
-|---------------|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+|--------------|---------------------------|-------------------------------|
 | 09:00 - 09:30 | Report back (part 2)                                                                       | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                            |
 | 09:30 - 10:00 | Kick-off day 2                                                                             | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                            |
 | 10:00 - 10:30 | Coffee                                                                                     | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
@@ -65,7 +69,7 @@ All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c
 ### Fri 1 Sep
 
 | Time (BST)    | Event             | Venue                                                                              |
-|---------------|-------------------|------------------------------------------------------------------------------------|
+|--------------|--------------|---------------------------------------------|
 | 09:00 - 09:30 | Report back (ctd) | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)          |
 | 09:30 - 10:00 | Kick-off day 3    | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)          |
 | 10:00 - 10:30 | Coffee            | Outside [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)  |
