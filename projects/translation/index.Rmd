@@ -1,0 +1,97 @@
+---
+title: Translating R Messages/Warnings/Errors # Warning: changing the title may create a new Discussions thread!
+description: "" # Optional short description for post on Discussions
+author: María Nanton and Saranjeet Kaur # and co-authors if applicable
+output: html_document
+categories: [Translation] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
+comments:
+  giscus: 
+    repo: "r-devel/r-project-sprint-2023"
+    repo-id: "R_kgDOIhAibA"
+    category: "Proposals"
+    category-id: "DIC_kwDOIhAibM4CW3GY"
+    mapping: "title"
+    reactions-enabled: true
+    loading: lazy
+---
+
+```{=html}
+<!-- 
+This template is based on https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/.
+The sections are provided as a guide and may not be appropriate to your proposal, feel free to skip or change sections.
+
+Please label any R code chunks, especially those producing images.
+-->
+```
+```{r setup}
+
+```
+
+## Background
+
+R supports translation of messages, errors and warnings from English to other languages. This relies on contributed translations for the message strings. This project will gather contributors to work both on translations and guidelines for translation teams.
+
+Contributors to this project will work closely with sprint participants working on other projects related to translation.
+
+## Problem statement
+
+Although the message translations for some languages are well-maintained, others have become out of date, with many incorrect or missing translations. (See the post [R Can Use Your Help: Translating R Messages](https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages/index.html) on the R Blog for more information). There are other widely-spoken languages that are currently not covered at all.
+
+In addition, the process of contributing messages has changed. The new [Weblate server](https://translate.rx.studio/projects/r-project/) provides a user-friendly interface for contributing translations, making it easier for R users to contribute. However there is a need to document the process of contribution and provide guidelines for contributors, to ensure quality and consistency.
+
+## Proposed solution
+
+This project will focus on languages requiring work, especially where there are multiple fluent speakers at the sprint that can benefit from working together. Specific targets include:
+
+-   Hindi: Finish translating R and C messages in the base package, so that Hindi might be added to next minor release of R (\~500 strings). Ensure translations are reviewed and do not fail Weblate checks.
+
+-   Japanese: Add translations for the parallel package (\~50 strings across R and C code) and translations for C messages in the utils package (\~50 strings). Currently these components are completely untranslated.
+
+-   Spanish: Finish translating R messages in the base package (\~400 strings) and review translations marked as "needs editing".
+
+-   Arabic: Add translations for the Windows GUI (\~250 strings).
+
+As time allow, translators can work towards further targets as appropriate, contributing translations, reviewing each other's translators and making sure the strings pass Weblate's checks (e.g. no trailing white space).
+
+In addition, translators will work across languages on the following tasks
+
+-   Updating the R Development Guide to cover contributing translations via Weblate. There is overlap here with the [Weblate Improvements](https://contributor.r-project.org/r-project-sprint-2023/projects/weblate-improvements/) project.
+
+-   Drafting guidelines for translation teams, building on the current [Translations wiki](https://github.com/r-devel/translations/wiki/Conventions-for-translations). These may later be incorporated into the R Dev Guide.
+
+-   Guidelines/tooling to support the use of glossaries, building on past work such as the ["R French Dictionary"](https://github.com/phgrosjean/rfrench/blob/main/RFrenchDictionary.txt).
+
+## Project requirements
+
+For specific translation targets, fluency in the relevant language is required.
+
+Previous knowledge of Weblate is not required, this can be picked up at the sprint.
+
+Experience of translation in any context will be beneficial for working on guidelines.
+
+## Project resources
+
+-   [Translating R workshop (1h30m video)](https://contributor.r-project.org/tutorials/translating-r-to-your-language/)
+
+-   [LatinR hackathon intro to Weblate (30m video in Spanish)](https://contributor.r-project.org/demos/latinr-hackathon/)
+
+-   [Weblate server for R](https://translate.rx.studio/projects/r-project/)
+
+-   [Translations wiki](https://github.com/r-devel/translations/wiki/Conventions-for-translations)
+
+-   [R French Dictionary](https://github.com/phgrosjean/rfrench/blob/main/RFrenchDictionary.txt)
+
+## Project outcomes
+
+Contributions that should be included in the next release of R.
+
+Stronger networks among R contributors that speak a common language.
+
+## Reactions and comments
+
+```{=html}
+<!-- 
+Please leave the Reactions and comments section
+- a Giscus comment box will be automatically added here 
+-->
+```
