@@ -1,7 +1,7 @@
 ---
 title: Facilitate Translation for Mac GUI # Warning: changing the title may create a new Discussions thread!
 description: "" # Optional short description for post on Discussions
-author: Simon Urbanek # and co-authors if applicable
+author: Simon Urbanek and Michael Chirico # and co-authors if applicable
 output: html_document
 categories: [Translation] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
 comments:
