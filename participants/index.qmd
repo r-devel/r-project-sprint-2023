@@ -147,7 +147,13 @@ participant_info(name = "Martyn Plummer",
 
 ```{r, results = "asis"}
 participant_info(name = "Deepayan Sarkar",
-                 alt = "Headshot of Deepayan Sarkar")
+                 affiliation = "Indian Statistical Institute",
+                 pic = "headshot-deepayan_sarkar.jpg",
+                 alt = "Headshot of Deepayan Sarkar",
+                 web = "https://www.isid.ac.in/~deepayan/",
+                 link = "https://www.isid.ac.in/~deepayan/",
+                 github = "https://github.com/deepayan",
+                 mastodon = "https://fosstodon.org/@deepayan")
 ```
 
 </div>
@@ -340,6 +346,19 @@ participant_info(name = "Hannah Frick",
                  link = "https://www.frick.ws/",
                  mastodon = "https://mastodon.social/@hfrick",
                  github = "https://github.com/hfrick")
+```
+
+</div>
+
+<div>
+
+```{r, results = "asis"}
+participant_info(name = "Charlie Gao",
+                 affiliation = "Hibiki AI",
+                 pic = "headshot-charlie_gao.jpg",
+                 alt = "Headshot of Charlie Gao",
+                 web = "https://www.shikokuchuo.net/",
+                 github = "https://github.com/shikokuchuo/")
 ```
 
 </div>
