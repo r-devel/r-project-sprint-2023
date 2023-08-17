@@ -49,6 +49,8 @@ This project will focus on languages requiring work, especially where there are 
 
 -   Spanish: Finish translating R messages in the base package (\~400 strings) and review translations marked as "needs editing".
 
+-   Brazilian Portuguese: Finish translating R messages in the tools package (\~100 strings) and review translations marked as "needs editing".
+
 -   Arabic: Add translations for the Windows GUI (\~250 strings).
 
 As time allow, translators can work towards further targets as appropriate, contributing translations, reviewing each other's translators and making sure the strings pass Weblate's checks (e.g. no trailing white space).
