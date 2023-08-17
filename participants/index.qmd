@@ -2,8 +2,6 @@
 title: "Participants"
 ---
 
-This page is under development - confirmed participants will be added here.
-
 Participants with an asterisk are participating remotely.
 
 ```{r setup, include=FALSE}
