@@ -21,65 +21,128 @@
     "text": "R Contributors\n\n\n  Abdulrahman Alswaji  King Abdullah International Medical Research Center  \n\n\n  Iman Al-Hasani  Sultan Qaboos University    \n\n\n  Malcolm Barrett  Posit    \n\n\n  Gabe Becker  Independent Consultant   \n\n\n  Meet Bhatnagar*  Amazon  \n\n\n  Philippa Broadbent  University of Southampton   \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Technology Innovation Institute, Abu Dhabi  \n\n\n  Ahmadou Dicko  UNHCR      \n\n\n  Hannah Frick  Posit    \n\n\n  Charlie Gao  Hibiki AI  \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  Andrea Gilardi  University of Milano - Bicocca    \n\n\n  André Gillibert  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Beryl Kanali  \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Atuhurira Kirabo Kakopo  \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Aidan Lakshman  University of Pittsburgh     \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Jeroen Ooms  rOpenSci   \n\n\n  Ayush Patel  Oxford Poverty and Human Development Initiative    \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn gebeyehu  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool"
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html",
-    "href": "projects/quartz-alpha-mask/index.html",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Project Sprint 2023",
     "section": "",
-    "text": "R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.\n\nlibrary(grid)\n\nAny shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.\n\nac &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))\namask &lt;- as.mask(ac)\n\n\n\n\n\n\nWe can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.\n\nr1 &lt;- rectGrob(width=.2, gp=gpar(fill=2))\nr2 &lt;- rectGrob(height=.2, gp=gpar(fill=3))\n\n\n\n\n\n\nThe following code defines a simple function with a mask as its argument. It draws the red rectangle, then pushes a viewport that enforces the mask, then draws the green rectangle.\n\nmaskTest &lt;- function(mask) {\n    grid.rect()\n    grid.draw(r1)\n    pushViewport(viewport(mask=mask))\n    grid.draw(r2)\n    popViewport()\n}\n\nThe followind code calls that function, passing the amask defined above. The drawing is done on a pdf() graphics device for reasons that will become clear later. The result is that the red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).\n\npdf(\"alpha-mask.pdf\", width=2, height=2)\nmaskTest(amask)\ndev.off()\n\n\nR version 4.2 added the concept of luminance masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).\nWe will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).\n\nlc &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=\"grey50\"))\nlmask &lt;- as.mask(lc, type=\"luminance\")\n\n\n\n\n\n\nThe following code calls the maskTest() function again, but this time using the lmask. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask. Again, we use the pdf() device for drawing; this will become clear very soon, I promise!\n\npdf(\"lumi-mask.pdf\", width=2, height=2)\nmaskTest(lmask)\ndev.off()"
+    "text": "August 30 - September 1, 2023\nUniversity of Warwick, UK\nCollaborate on contributions to base R!\nWe are pleased to announce an R Project Sprint, to be hosted at the University of Warwick, UK, from Wednesday August 30 to Friday September 1. Novice and experienced contributors are encouraged to apply for a place at the residential event, with funding available for travel (deadline Friday 10 March). Read on for more! #RSprint2023"
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html#background",
-    "href": "projects/quartz-alpha-mask/index.html#background",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
-    "section": "",
-    "text": "R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.\n\nlibrary(grid)\n\nAny shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.\n\nac &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))\namask &lt;- as.mask(ac)\n\n\n\n\n\n\nWe can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.\n\nr1 &lt;- rectGrob(width=.2, gp=gpar(fill=2))\nr2 &lt;- rectGrob(height=.2, gp=gpar(fill=3))\n\n\n\n\n\n\nThe following code defines a simple function with a mask as its argument. It draws the red rectangle, then pushes a viewport that enforces the mask, then draws the green rectangle.\n\nmaskTest &lt;- function(mask) {\n    grid.rect()\n    grid.draw(r1)\n    pushViewport(viewport(mask=mask))\n    grid.draw(r2)\n    popViewport()\n}\n\nThe followind code calls that function, passing the amask defined above. The drawing is done on a pdf() graphics device for reasons that will become clear later. The result is that the red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).\n\npdf(\"alpha-mask.pdf\", width=2, height=2)\nmaskTest(amask)\ndev.off()\n\n\nR version 4.2 added the concept of luminance masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).\nWe will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).\n\nlc &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=\"grey50\"))\nlmask &lt;- as.mask(lc, type=\"luminance\")\n\n\n\n\n\n\nThe following code calls the maskTest() function again, but this time using the lmask. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask. Again, we use the pdf() device for drawing; this will become clear very soon, I promise!\n\npdf(\"lumi-mask.pdf\", width=2, height=2)\nmaskTest(lmask)\ndev.off()"
+    "objectID": "index.html#about-the-sprint",
+    "href": "index.html#about-the-sprint",
+    "title": "R Project Sprint 2023",
+    "section": "About the sprint",
+    "text": "About the sprint\nR is a popular and widely used software for data science. Like any large open source software project, it takes a lot of work to maintain and develop. Much of the work is done by a small number of volunteers and there is a need to grow the contributor community.\nThis sprint will bring together novice and experienced contributors, to work alongside members of the R Core Team. Participants will work collaboratively on contributions to base R. The tasks will be prepared in the run-up to the event, but may include:\n\nReviewing, analysing and fixing bugs reported on R’s Bugzilla.\nContributing to message translations via Weblate.\nWork on new developments such as this short project proposed by core developer Paul Murrell: Adding Alpha Masks to the Quartz Graphics Device."
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html#problem-statement",
-    "href": "projects/quartz-alpha-mask/index.html#problem-statement",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "objectID": "index.html#who-can-take-part",
+    "href": "index.html#who-can-take-part",
+    "title": "R Project Sprint 2023",
+    "section": "Who can take part?",
+    "text": "Who can take part?\nThe sprint will involve a mixture of invited and self-nominated participants, so that we have contributors at all experience levels.\nThe main criteria for participation is a good knowledge of R programming and a keen interest in contributing, as we hope participants continue to contribute after the event. The table below shows the type of knowledge/skills we expect participants to have\n\n\n\n\n\n\n\nSkills most will have\nSkills some will have\n\n\n\n\nWriting R functions\nProgramming in C\n\n\nDebugging R functions\nKnowledge of S3/S4 classes and methods\n\n\nWriting R help files\nExpertise in statistical methods in stats, splines\n\n\nUsing git/Subversion\nAble to build R from source\n\n\n\nOther specialist skills e.g. expertise in building Windows/MacOS GUIs or fluency in language with a low percentage of translated messages on Weblate, would of course be welcome!\nIt will help if you have some experience in contributing to base R, but novice contributors will be mentored in the run-up to the event, so they are prepared.\nWe are also keen to foster a diverse community of contributors. If you are a member of the R-Ladies, MiR, RainbowR, AfricaR, ArabR, AsiaR, or LatinR communities, or otherwise identify as part of an underrepresented group among R contributors, then we especially encourage you to self-nominate! To ensure a welcoming environment, we have a code of conduct in place."
+  },
+  {
+    "objectID": "index.html#apply-for-a-place",
+    "href": "index.html#apply-for-a-place",
+    "title": "R Project Sprint 2023",
+    "section": "Apply for a place",
+    "text": "Apply for a place\nAnyone one interested to attend the sprint is encouraged to self-nominate via the application form by Friday 10 March. You will be asked about your experience, skills and background to help us balance participation overall.\nThanks to our sponsors, all workshop participants will be accommodated free of charge during the sprint, in on-campus housing at the University of Warwick, with meals provided.\nFunding is also available for travel expenses, however if participants are able to get travel funding from other sources this will allow more people to attend - companies or other funding bodies providing such support to participants will be acknowledged as sponsors."
+  },
+  {
+    "objectID": "index.html#practicalities",
+    "href": "index.html#practicalities",
+    "title": "R Project Sprint 2023",
+    "section": "Practicalities",
+    "text": "Practicalities\nThe sprint will be held in the recently completed Faculty of Arts Building at the University of Warwick, which alongside regular seminar rooms has many breakout spaces, some of which we have reserved for our use. We think this will be a great environment for collaborative work.\nThe University of Warwick is in Coventry, in the middle of England. It is reachable by train from nearby European countries, or by plane to Birmingham or other UK airports. See the travel information and visa information for international visitors."
+  },
+  {
+    "objectID": "index.html#whats-on-nearby",
+    "href": "index.html#whats-on-nearby",
+    "title": "R Project Sprint 2023",
+    "section": "What’s on nearby",
+    "text": "What’s on nearby\nParticipants may be interested to know of these events happening close to the sprint:\n\n22-25 August, COMPSTAT 2023, London\n4-8 September, RSECon23, Swansea\n4-7 September, RSS International Conference, Harrogate\n\n28 August is a bank holiday in the UK, there are typically many festivals, fairs and other events over the long weekend at the end of the school summer holidays."
+  },
+  {
+    "objectID": "index.html#local-organizing-team",
+    "href": "index.html#local-organizing-team",
+    "title": "R Project Sprint 2023",
+    "section": "Local organizing team",
+    "text": "Local organizing team\nThis event is being organized by members of the Statistics department at the University of Warwick.\n\n\n  Heather Turner   RSE FellowAssociate Professor       \n\n\n  Ella Kaye   Research Software Engineer       \n\n\n  Martyn Plummer   ProfessorR Core Developer       \n\n\nWe are coordinating with the R Contribution Working Group and the R Core Team."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "R Project Sprint 2023",
+    "section": "Contact",
+    "text": "Contact\nFor queries about this event, please contact r-project-sprint@livewarwickac.onmicrosoft.com."
+  },
+  {
+    "objectID": "index.html#sponsors",
+    "href": "index.html#sponsors",
+    "title": "R Project Sprint 2023",
+    "section": "Sponsors",
+    "text": "Sponsors\n\nCore funding\nProviding sponsorship for general participant travel, accommodation and subsistence, plus general running costs.\n\n\n\n\n\n\n\nPlatinum sponsors\nProviding sponsorship for R Core travel.\n\nThe R Foundation\n\n\n\nGold sponsors\nProviding sponsorship for evening events and specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSilver sponsors\nProviding sponsorship for specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFurther sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors Twitter and Mastodon accounts, and in reports of the sprint. Please contact r-project-sprint@livewarwickac.onmicrosoft.com to discuss!"
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html",
+    "href": "projects/dendrapply-refactor/index.html",
+    "title": "Dendrapply Refactor",
+    "section": "",
+    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#background",
+    "href": "projects/dendrapply-refactor/index.html#background",
+    "title": "Dendrapply Refactor",
+    "section": "",
+    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#problem-statement",
+    "href": "projects/dendrapply-refactor/index.html#problem-statement",
+    "title": "Dendrapply Refactor",
     "section": "Problem statement",
-    "text": "Problem statement\nNot all graphics devices support masks. For those that do, not all devices support both alpha masks and luminance masks. For example, although the pdf() device used above supports both types of masks, Cairo-based graphics devices, e.g., png(type=\"cairo\"), only support alpha masks. If you try maskTest(lmask) on a Cairo graphics device you will get a warning and the mask with have no effect.\nIn R version 4.3, support for luminance masks was added to the Quartz graphics device in R (quartz() on MacOS). Unfortunately, in a reverse of the Cairo graphics device problem, Quartz graphics only supports luminance masks so we have not implemented alpha masks on the quartz() device. If you try maskTest(amask) on a quartz() device, you will get a warning and the mask with have no effect."
+    "text": "Problem statement\nThe current implementation of dendrapply is included at the bottom of this section. This implementation has two main issues.\nThe most notable of these is the recursive application of functions to the dendrogram nodes. This leads to poor performance on deeply nested dendrograms, as well as the potential for stack overflow errors on machines with limited resources. This is detailed in ?dendrapply and in the warning in ?dendrogram.\nAdditionally, tree traversal can be achieved in a number of ways. The current implementation uses a pre-order traversal, which is not always the most intuitive application of functions to a tree structure. This means that, for each triple 2 &lt;- 1 -&gt; 3, the function is applied first to node 1, then to 2, then to 3. Ideally, users would be able to choose between a post-order or a pre-order traversal. Post-order traversals guarantee that the function is applied to all children of a node before applying to the parent, allowing for certain analyses that rely on propagating results up a tree. There is currently no easy way to achieve this in R.\nIn summary, the priorities to rectify are (in order of importance):\n\nRemove recursion in dendrapply\nAdd an optional argument to allow for different tree traversals in function application\n\nThese must be achieved while preserving all the current functionality of dendrapply, and without decreasing the current performance.\nCurrent implementation:\n\ndendrapply &lt;- function(X, FUN, ...)\n{\n    ## Purpose: \"dendrogram\" recursive apply {to each node}\n    ## ----------------------------------------------------------------------\n    ## Author: Martin Maechler, Date: 26 Jun 2004, 22:43\n    FUN &lt;- match.fun(FUN)\n    if( !inherits(X, \"dendrogram\") ) stop(\"'X' is not a dendrogram\")\n\n    ## Node apply recursively:\n    Napply &lt;- function(d) {\n    r &lt;- FUN(d, ...)\n    if(!is.leaf(d)) {\n        if(!is.list(r)) r &lt;- as.list(r) # fixing unsafe FUN()s\n        if(length(r) &lt; (n &lt;- length(d))) r[seq_len(n)] &lt;- vector(\"list\", n)\n        ## and overwrite recursively, possibly keeping \"attr\"\n        r[] &lt;- lapply(d, Napply)\n        }\n    r\n    }\n    Napply(X)\n}"
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html#proposed-solution",
-    "href": "projects/quartz-alpha-mask/index.html#proposed-solution",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "objectID": "projects/dendrapply-refactor/index.html#proposed-solution",
+    "href": "projects/dendrapply-refactor/index.html#proposed-solution",
+    "title": "Dendrapply Refactor",
     "section": "Proposed solution",
-    "text": "Proposed solution\nThe implementation of luminance masks for the quartz() device involves creating a greyscale bitmap image and drawing the mask shapes onto that. This happens in the C function QuartzCreateMask() (in R/src/library/grDevices/src/devQuartz.c). The Quartz function CGContextClipToMask() uses that greyscale image to clip output.\nThe proposal is that an alpha mask could be implemented by creating an RGBA bitmap image (instead of a greyscale image) for drawing the mask shapes onto and then converting that image to a greyscale one based on the alpha channel of the RGBA image. Once we have a greyscale image from the alpha mask, we can proceed as before.\nThe dev-&gt;capabilities() of the quartz() device would also need updating."
+    "text": "Proposed solution\nA full description follows, but people that are interested can read my initial writeup for more details on the problem, attempted solutions, and current status. Feel free to skip that link and just read the following section instead.\nA prototype solution has been implemented and submitted to Bugzilla. This solution moves the R implementation into C. The short description of the proposed method is to create a linked list in C holding the SEXP pointers for each node of the tree. Then, we apply the function given to each node of the linked list, and then merge the SEXP objects back into the original topology. This can be further optimized by merging nodes on the fly to limit linked list space and reduce PROTECT stack usage. This also allows for different tree traversal strategies with minimal effort, as different tree traversals can be achieved by varying how nodes are added to the linked list.\nThe current solution has one key issue resulting in a two problems. This implementation uses VECTOR_ELT rather than the more general [[ and [[&lt;- operations to get/set values. This allows for low PROTECT stack usage and high performance, but it also means that nodes discard their class values when passed to the function. This can be solved naively by just reclassing nodes as dendrogram, but unfortunately this causes issues in the case where nodes have multiple classes (ex. a node where class(node ) == c('dendrogram', 'myOtherClass')). This also runs into problems in the case where a non-standard [[ method is implemented. In the interest of backwards compatibility, these problems should be rectified.\nThere are a few options for fixing this issue. The first is to work entirely in R, removing the C implementation. This would work in theory by using a list structure to hold nodes, but the linked-list structure in C gives a substantial boost in performance over R by using pointers instead of copying each object. This may not be a big deal; I haven’t tested it yet.\nAnother possible option is to use the alternative vector-based dendrogram indexing ( dend[[c(1,1)]] is equivalent to dend[[1]][[1]] ) to build a list of targets first, then apply the function to each. This may solve the potential R-implementation memory issues, but could also require initializing a huge vector. Dealing with the topology of the dendrogram would also be challenging.\nAnother potential fix is to use the [[ method by building an R expression in C and then calling it, similar to how lapply is implemented (see do_lapply() in src/main/apply.c for reference). This implementation was tested and worked successfully, but the result was significantly slower than the R version (roughly half speed, likely due to PROTECT stack issues mentioned below). Maybe a code refactor could solve the slowdowns and produce a better result.\nThe last potential fix I’ve identified is to use precious multi-sets for protection rather than PROTECT. One of the big problems of applying functions in C is that the result of the function application at each node needs to be protected. This isn’t an issue for post-order traversals, since we can always just add the result as a child of the parent node (which auto-protects it if the parent is already protected). However, for the current implementation, a potentially large source of slow-downs is the work-arounds implemented to solve PROTECT stack issues. Using MSets could simplify this and improve runtime, but there isn’t a lot of documentations on how to use them (and their use for this kind of problem is explicitly discouraged in some places)."
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html#testing",
-    "href": "projects/quartz-alpha-mask/index.html#testing",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "objectID": "projects/dendrapply-refactor/index.html#testing",
+    "href": "projects/dendrapply-refactor/index.html#testing",
+    "title": "Dendrapply Refactor",
     "section": "Testing",
-    "text": "Testing\nSome examples of R code and desired output for luminance masks are included in the technical report “Luminance Masks in R Graphics” (faster link).\nThe ‘gdiff’ package can be useful for checking that test output matches control output."
+    "text": "Testing\nBenchmarking the function against stats::dendrapply can be done using the following:\n\ndend &lt;- as.dendrogram(hclust(dist(1:100)))\nf &lt;- function(x) x\n\nmicrobenchmark::microbenchmark(stats::dendrapply(dend, f),\n                               new_dendrapply(dend, f))\n\nDifferent dendrogram objects should be tested to look at performance on balanced vs. deep trees, but usage of \\(x) x is important for accurate testing. This function minimizes the amount of operations within the applied function, meaning that the vast majority of the differences in time will be due to the implementation of dendrapply, not the runtime of f.\nAdditional testing should be done to verify that the following work as expected:\n\nEnsure speed of new application is at least as fast as stats::dendrapply\nEnsure all examples in ?dendrapply work as expected\nEnsure all tests in dendextend work correctly to test a large set of currently used applications of dendrapply\nEnsure that nodes with multiple classes retain their class attribute after running dendrapply\nEnsure that special uses of [[ work as expected\nEnsure that recursive dendrapply calls work as expected (ex. dendrapply(dend, \\(x) dendrapply(x, someOtherFunction)))\nEnsure all examples in the R build testing work as expected, paying special attention to the following weird case:\n\n&gt; D &lt;- as.dendrogram(hclust(dist(cbind(setNames(c(0,1,4), LETTERS[1:3])))))\n&gt; dendrapply(D, labels)\n[[1]]\n[1] \"C\"\n\n[[2]]\n[[2]][[1]]\n[1] \"A\"\n\n[[2]][[2]]\n[1] \"B\"\n\n[[3]]\n[1] \"C\"\nImplementation should also be made to ensure that the default parameters are fully backwards compatible. In the case of post-order traversal, this is currently being achieved by defining the function as dendrapply(X, FUN, ..., how=c('pre.order', 'post.order')) so that the default is always equivalent to stats::dendrapply.\nFinally, testing should be added to the R source tests. The current testing suite for dendrapply is very sparse; edge cases like multi-classed dendrogram objects should be added to ensure code works as expected in the future."
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html#project-requirements",
-    "href": "projects/quartz-alpha-mask/index.html#project-requirements",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "objectID": "projects/dendrapply-refactor/index.html#project-requirements",
+    "href": "projects/dendrapply-refactor/index.html#project-requirements",
+    "title": "Dendrapply Refactor",
     "section": "Project requirements",
-    "text": "Project requirements\nFamiliarity with C. Though there is a strong template of existing code to work from.\nCapability to build R from source (on MacOS).\nAbility to find, read, and comprehend Apple Core Graphics documentation, e.g., documentation for CGContextClipToMask()"
+    "text": "Project requirements\n\nI suspect that the optimal solution will involve working in C, so knowledge of C to develop this will be helpful, even if just to be able to compare performance against an R implementation. Much of the implementation in C depends on knowledge of the PROTECT stack, so familiarity with that is important for C solutions.\nBasic knowledge of tree structures and/or dendrogram objects is helpful but not necessary."
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html#project-resources",
-    "href": "projects/quartz-alpha-mask/index.html#project-resources",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "objectID": "projects/dendrapply-refactor/index.html#project-resources",
+    "href": "projects/dendrapply-refactor/index.html#project-resources",
+    "title": "Dendrapply Refactor",
     "section": "Project resources",
-    "text": "Project resources\n\n“New Features in the R Graphics Engine”\n“Luminance Masks in R Graphics”.\n“Groups and Paths and Masks in R Graphics”\n“Catching up with R Graphics”\n“Writing R Extensions”\n“R internals”\nQuestions can be emailed to Paul Murrell"
+    "text": "Project resources\n\nTree traversal methods\nMy full description of problem and implementation\nCurrent bugzilla ticket (contains most up-to-date code; my blog post may be out of date.)"
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html#project-outcomes",
-    "href": "projects/quartz-alpha-mask/index.html#project-outcomes",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "objectID": "projects/dendrapply-refactor/index.html#project-outcomes",
+    "href": "projects/dendrapply-refactor/index.html#project-outcomes",
+    "title": "Dendrapply Refactor",
     "section": "Project outcomes",
-    "text": "Project outcomes\nContribution to the core R code base (would need to be GPL).\nExperience with building R from source.\nExposure to the design of R graphics devices and the R graphics device API.\nExposure to R graphics C code, especially that involving graphics devices (R/src/include/R_Ext/GraphicsDevice.h), especially the quartz() device (R/src/library/grDevices/src/devQuartz.c)."
+    "text": "Project outcomes\nIf successful, we’d be able to submit a new version of dendrapply with better performance. Removing the recursion in this function would make these analyses also possible on edge computing and limited resource machines (or at least more feasible). Implementation of multiple traversal methods for function application would be a massive resource to the phylogenetics community."
   },
   {
-    "objectID": "projects/quartz-alpha-mask/index.html#reactions-and-comments",
-    "href": "projects/quartz-alpha-mask/index.html#reactions-and-comments",
-    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "objectID": "projects/dendrapply-refactor/index.html#reactions-and-comments",
+    "href": "projects/dendrapply-refactor/index.html#reactions-and-comments",
+    "title": "Dendrapply Refactor",
     "section": "Reactions and comments",
     "text": "Reactions and comments"
   },
@@ -164,6 +227,216 @@
     "objectID": "projects/template/index.html#reactions-and-comments",
     "href": "projects/template/index.html#reactions-and-comments",
     "title": "Project Title in Title Case",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html",
+    "href": "projects/ideas-and-proposals.html",
+    "title": "Ideas and Proposals",
+    "section": "",
+    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#ideas",
+    "href": "projects/ideas-and-proposals.html#ideas",
+    "title": "Ideas and Proposals",
+    "section": "Ideas",
+    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#proposals",
+    "href": "projects/ideas-and-proposals.html#proposals",
+    "title": "Ideas and Proposals",
+    "section": "Proposals",
+    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
+  },
+  {
+    "objectID": "projects/translation/index.html",
+    "href": "projects/translation/index.html",
+    "title": "Translating R Messages/Warnings/Errors",
+    "section": "",
+    "text": "R supports translation of messages, errors and warnings from English to other languages. This relies on contributed translations for the message strings. This project will gather contributors to work both on translations and guidelines for translation teams.\nContributors to this project will work closely with sprint participants working on other projects related to translation."
+  },
+  {
+    "objectID": "projects/translation/index.html#background",
+    "href": "projects/translation/index.html#background",
+    "title": "Translating R Messages/Warnings/Errors",
+    "section": "",
+    "text": "R supports translation of messages, errors and warnings from English to other languages. This relies on contributed translations for the message strings. This project will gather contributors to work both on translations and guidelines for translation teams.\nContributors to this project will work closely with sprint participants working on other projects related to translation."
+  },
+  {
+    "objectID": "projects/translation/index.html#problem-statement",
+    "href": "projects/translation/index.html#problem-statement",
+    "title": "Translating R Messages/Warnings/Errors",
+    "section": "Problem statement",
+    "text": "Problem statement\nAlthough the message translations for some languages are well-maintained, others have become out of date, with many incorrect or missing translations. (See the post R Can Use Your Help: Translating R Messages on the R Blog for more information). There are other widely-spoken languages that are currently not covered at all.\nIn addition, the process of contributing messages has recently been enhanced with a web-based, user-friendly, translation interface. The Weblate server makes it easier for R users to contribute. However there is a need to document the process of contribution and provide guidelines for contributors, to ensure quality and consistency."
+  },
+  {
+    "objectID": "projects/translation/index.html#proposed-solution",
+    "href": "projects/translation/index.html#proposed-solution",
+    "title": "Translating R Messages/Warnings/Errors",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nThis project will focus on languages requiring work, especially where there are multiple fluent speakers at the sprint that can benefit from working together. Specific targets include:\n\nHindi: Finish translating R and C messages in the base package, so that Hindi might be added to next minor release of R (~500 strings). Ensure translations are reviewed and do not fail Weblate checks.\nJapanese: Add translations for the parallel package (~50 strings across R and C code) and translations for C messages in the utils package (~50 strings). Currently these components are completely untranslated.\nSpanish: Finish translating R messages in the base package (~400 strings) and review translations marked as “needs editing”.\nBrazilian Portuguese: Finish translating R messages in the tools package (~100 strings) and review translations marked as “needs editing”.\nArabic: Add translations for the Windows GUI (~250 strings).\n\nAs time allows, translators can work towards further targets as appropriate, contributing translations, reviewing each other’s translations and making sure the strings pass Weblate’s checks (e.g. no trailing white space).\nIn addition, translators will work across languages on the following tasks:\n\nUpdating the R Development Guide to cover contributing translations via Weblate. There is overlap here with the Weblate Improvements project.\nDrafting guidelines for translation teams, building on the current Translations wiki. These may later be incorporated into the R Dev Guide.\nGuidelines/tooling to support the use of glossaries, building on past work such as the “R French Dictionary”."
+  },
+  {
+    "objectID": "projects/translation/index.html#project-requirements",
+    "href": "projects/translation/index.html#project-requirements",
+    "title": "Translating R Messages/Warnings/Errors",
+    "section": "Project requirements",
+    "text": "Project requirements\nFor specific translation targets, fluency in the relevant language is required.\nPrevious knowledge of Weblate is not required, this can be picked up at the sprint.\nExperience of translation in any context will be beneficial for working on guidelines."
+  },
+  {
+    "objectID": "projects/translation/index.html#project-resources",
+    "href": "projects/translation/index.html#project-resources",
+    "title": "Translating R Messages/Warnings/Errors",
+    "section": "Project resources",
+    "text": "Project resources\n\nTranslating R workshop (1h30m video)\nLatinR hackathon intro to Weblate (30m video in Spanish)\nWeblate server for R\nTranslations wiki\nR French Dictionary"
+  },
+  {
+    "objectID": "projects/translation/index.html#project-outcomes",
+    "href": "projects/translation/index.html#project-outcomes",
+    "title": "Translating R Messages/Warnings/Errors",
+    "section": "Project outcomes",
+    "text": "Project outcomes\nContributions that should be included in the next release of R.\nStronger networks among R contributors that speak a common language."
+  },
+  {
+    "objectID": "projects/translation/index.html#reactions-and-comments",
+    "href": "projects/translation/index.html#reactions-and-comments",
+    "title": "Translating R Messages/Warnings/Errors",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html",
+    "href": "projects/quartz-alpha-mask/index.html",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "",
+    "text": "R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.\n\nlibrary(grid)\n\nAny shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.\n\nac &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))\namask &lt;- as.mask(ac)\n\n\n\n\n\n\nWe can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.\n\nr1 &lt;- rectGrob(width=.2, gp=gpar(fill=2))\nr2 &lt;- rectGrob(height=.2, gp=gpar(fill=3))\n\n\n\n\n\n\nThe following code defines a simple function with a mask as its argument. It draws the red rectangle, then pushes a viewport that enforces the mask, then draws the green rectangle.\n\nmaskTest &lt;- function(mask) {\n    grid.rect()\n    grid.draw(r1)\n    pushViewport(viewport(mask=mask))\n    grid.draw(r2)\n    popViewport()\n}\n\nThe followind code calls that function, passing the amask defined above. The drawing is done on a pdf() graphics device for reasons that will become clear later. The result is that the red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).\n\npdf(\"alpha-mask.pdf\", width=2, height=2)\nmaskTest(amask)\ndev.off()\n\n\nR version 4.2 added the concept of luminance masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).\nWe will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).\n\nlc &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=\"grey50\"))\nlmask &lt;- as.mask(lc, type=\"luminance\")\n\n\n\n\n\n\nThe following code calls the maskTest() function again, but this time using the lmask. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask. Again, we use the pdf() device for drawing; this will become clear very soon, I promise!\n\npdf(\"lumi-mask.pdf\", width=2, height=2)\nmaskTest(lmask)\ndev.off()"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#background",
+    "href": "projects/quartz-alpha-mask/index.html#background",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "",
+    "text": "R version 4.1 added the concept of alpha masks to R graphics, with an interface in the ‘grid’ graphics system.\n\nlibrary(grid)\n\nAny shape(s) can be used to create an alpha mask, but the only thing that matters is the opacity of the final result. The mask below is based on a circle, the important part being that it has a semitransparent fill (a line segment is drawn to show that the circle is semitransparent; the line is visible through the circle). Outside the circle, where we have drawn nothing, the mask is fully transparent.\n\nac &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=rgb(0,0,0,.5)))\namask &lt;- as.mask(ac)\n\n\n\n\n\n\nWe can apply a mask to affect what happens when we draw other shapes. For example, we will work with the following rectangles, one tall and thin and red and one short and wide and green.\n\nr1 &lt;- rectGrob(width=.2, gp=gpar(fill=2))\nr2 &lt;- rectGrob(height=.2, gp=gpar(fill=3))\n\n\n\n\n\n\nThe following code defines a simple function with a mask as its argument. It draws the red rectangle, then pushes a viewport that enforces the mask, then draws the green rectangle.\n\nmaskTest &lt;- function(mask) {\n    grid.rect()\n    grid.draw(r1)\n    pushViewport(viewport(mask=mask))\n    grid.draw(r2)\n    popViewport()\n}\n\nThe followind code calls that function, passing the amask defined above. The drawing is done on a pdf() graphics device for reasons that will become clear later. The result is that the red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).\n\npdf(\"alpha-mask.pdf\", width=2, height=2)\nmaskTest(amask)\ndev.off()\n\n\nR version 4.2 added the concept of luminance masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).\nWe will again work with a mask based on a circle, but this time the circle just has an opaque grey fill (we cannot see the line segment through the circle).\n\nlc &lt;- circleGrob(r=.3, gp=gpar(col=NA, fill=\"grey50\"))\nlmask &lt;- as.mask(lc, type=\"luminance\")\n\n\n\n\n\n\nThe following code calls the maskTest() function again, but this time using the lmask. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask. Again, we use the pdf() device for drawing; this will become clear very soon, I promise!\n\npdf(\"lumi-mask.pdf\", width=2, height=2)\nmaskTest(lmask)\ndev.off()"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#problem-statement",
+    "href": "projects/quartz-alpha-mask/index.html#problem-statement",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Problem statement",
+    "text": "Problem statement\nNot all graphics devices support masks. For those that do, not all devices support both alpha masks and luminance masks. For example, although the pdf() device used above supports both types of masks, Cairo-based graphics devices, e.g., png(type=\"cairo\"), only support alpha masks. If you try maskTest(lmask) on a Cairo graphics device you will get a warning and the mask with have no effect.\nIn R version 4.3, support for luminance masks was added to the Quartz graphics device in R (quartz() on MacOS). Unfortunately, in a reverse of the Cairo graphics device problem, Quartz graphics only supports luminance masks so we have not implemented alpha masks on the quartz() device. If you try maskTest(amask) on a quartz() device, you will get a warning and the mask with have no effect."
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#proposed-solution",
+    "href": "projects/quartz-alpha-mask/index.html#proposed-solution",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nThe implementation of luminance masks for the quartz() device involves creating a greyscale bitmap image and drawing the mask shapes onto that. This happens in the C function QuartzCreateMask() (in R/src/library/grDevices/src/devQuartz.c). The Quartz function CGContextClipToMask() uses that greyscale image to clip output.\nThe proposal is that an alpha mask could be implemented by creating an RGBA bitmap image (instead of a greyscale image) for drawing the mask shapes onto and then converting that image to a greyscale one based on the alpha channel of the RGBA image. Once we have a greyscale image from the alpha mask, we can proceed as before.\nThe dev-&gt;capabilities() of the quartz() device would also need updating."
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#testing",
+    "href": "projects/quartz-alpha-mask/index.html#testing",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Testing",
+    "text": "Testing\nSome examples of R code and desired output for luminance masks are included in the technical report “Luminance Masks in R Graphics” (faster link).\nThe ‘gdiff’ package can be useful for checking that test output matches control output."
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#project-requirements",
+    "href": "projects/quartz-alpha-mask/index.html#project-requirements",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Project requirements",
+    "text": "Project requirements\nFamiliarity with C. Though there is a strong template of existing code to work from.\nCapability to build R from source (on MacOS).\nAbility to find, read, and comprehend Apple Core Graphics documentation, e.g., documentation for CGContextClipToMask()"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#project-resources",
+    "href": "projects/quartz-alpha-mask/index.html#project-resources",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Project resources",
+    "text": "Project resources\n\n“New Features in the R Graphics Engine”\n“Luminance Masks in R Graphics”.\n“Groups and Paths and Masks in R Graphics”\n“Catching up with R Graphics”\n“Writing R Extensions”\n“R internals”\nQuestions can be emailed to Paul Murrell"
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#project-outcomes",
+    "href": "projects/quartz-alpha-mask/index.html#project-outcomes",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Project outcomes",
+    "text": "Project outcomes\nContribution to the core R code base (would need to be GPL).\nExperience with building R from source.\nExposure to the design of R graphics devices and the R graphics device API.\nExposure to R graphics C code, especially that involving graphics devices (R/src/include/R_Ext/GraphicsDevice.h), especially the quartz() device (R/src/library/grDevices/src/devQuartz.c)."
+  },
+  {
+    "objectID": "projects/quartz-alpha-mask/index.html#reactions-and-comments",
+    "href": "projects/quartz-alpha-mask/index.html#reactions-and-comments",
+    "title": "Adding Alpha Masks to the Quartz Graphics Device",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\nElio Campitelli\n\n\nImproving documentation\n\n\nDocumentation,R\n\n\n\n\nMaría Nanton and Saranjeet Kaur\n\n\nTranslating R Messages/Warnings/Errors\n\n\nTranslation\n\n\n\n\nGergely Daroczi\n\n\nWeblate Improvements\n\n\nTranslations,Documentation\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html",
+    "href": "projects/nlme-bugs/index.html",
+    "title": "Addressing Bugs in nlme",
+    "section": "",
+    "text": "The nlme package (maintained by R-core) has a medium-sized list of bugs reported, reaching back over 5 years. In some cases there is already a patch or a proposed solution. Other cases require some discussion or further debugging to determine an appropriate solution. Often only the R code is affected and the problem is more about determining the correct behaviour rather than debugging low-level code, though that will be required in the hardest cases.\nThis project would suit a group of people working in twos or threes, with each small group aiming to close one or two bugs during the sprint.\nThe nlme package is version controlled in a Subversion repository, available at https://svn.r-project.org/R-packages/trunk/nlme/."
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html#background",
+    "href": "projects/nlme-bugs/index.html#background",
+    "title": "Addressing Bugs in nlme",
+    "section": "",
+    "text": "The nlme package (maintained by R-core) has a medium-sized list of bugs reported, reaching back over 5 years. In some cases there is already a patch or a proposed solution. Other cases require some discussion or further debugging to determine an appropriate solution. Often only the R code is affected and the problem is more about determining the correct behaviour rather than debugging low-level code, though that will be required in the hardest cases.\nThis project would suit a group of people working in twos or threes, with each small group aiming to close one or two bugs during the sprint.\nThe nlme package is version controlled in a Subversion repository, available at https://svn.r-project.org/R-packages/trunk/nlme/."
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html#problem-statement",
+    "href": "projects/nlme-bugs/index.html#problem-statement",
+    "title": "Addressing Bugs in nlme",
+    "section": "Problem statement",
+    "text": "Problem statement\nThe list of nlme bugs on R’s Bugzilla as of 23 June 2023 is summarised below:\n\n\n\nBug ID\nLevel\nStatus\nTopic\nAction(s)\nProgramming skills\nStatistical knowledge\n\n\n\n\n18505\nNovice\npatch available\nbehaviour changing with order of group variable\ncheck patch\nR\n\n\n\n17884\nNovice\npatch available\nnew confint.lme method for fixed effects only\ncheck patch\nR\nconfidence intervals\n\n\n17988\nNovice\nsuggested solution\nwhat to return for corARMA with p = q = 0\ncheck patch, update doc\nR\n\n\n\n18472\nIntermediate\nneeds reprex\ncorrect behaviour of gls\ncreate reprex, discuss\nR\ngls\n\n\n17712\nIntermediate\nsuggested solution\nconditions when algorithm should use decomposition\ncreate patch, check patch\nR\n\n\n\n18285\nIntermediate\nsuggested solution\nhow to handle rank deficiency\ndiscuss, create reprex, create patch\nR\nrank deficiency\n\n\n17961\nIntermediate\nunclear if bug or not\nappropriate df to use in tests\ndiscuss\nR\nanova tests\n\n\n17866\nIntermediate\nreprex available\nInitializing corStruct outside gls call gives different results\ndebug\nR\n\n\n\n16890\nIntermediate\npatch welcome\nintervals.lmList does not work for with pool = FALSE\ncreate patch\nR\n\n\n\n18192\nIntermediate\nneeds analysis\ncrash in nlme equivalent to lme model\ndebug R/C\nC\n\n\n\n17227\nIntermediate\npartial analysis available\ncrash in nlme\ndebug R/C\nC\n\n\n\n16864\nAdvanced\nneeds analysis\nlme fails to warn when data are near-redundant\ndebug R/C/Fortran\nR, C, Fortran\n\n\n\n16975\nAdvanced\nneeds analysis\nREML estimation incorrect with fixed sigma\ndebug\nR, C\n\n\n\n17236\nAdvanced\nneeds support from R Core\nCorrect df for intercept in lme\ndiscuss, create patch, check patch\nR\n\n\n\n18433\nAdvanced\nneeds reprex\ninfinite loop dependent on random seed\ncreate reprex, debug\nC, Docker\nnlme algorithms\n\n\n16806\nAdvanced\npatch welcome\nmethod fails for individuals with single observations\ncreate patch\nC"
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html#proposed-solution",
+    "href": "projects/nlme-bugs/index.html#proposed-solution",
+    "title": "Addressing Bugs in nlme",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nThe table in the last section summarises the next action(s) required to address the different bugs. In more detail:\n\ncheck patch\n\nCheck the bug is still present in the development version of nlme.\nApply the patch to the nlme sources, build and install the package, and test a reprex to confirm the patch fixes the issue.\nRun R CMD check on the built package to check nothing is broken by the change.\n\nupdate doc\n\nModify the source of the documentation file in the nlme sources.\nReview your changes (e.g. Preview in RStudio or build and install to view).\nCreate a patch to include both code and documentation changes.\n\ncreate reprex\n\nCreate a minimal, reproducible example, using only base R packages plus nlme, that demonstrates the issue. In complex cases, this may require creating a Docker image so that the whole environment is reproducible.\n\ndiscuss\n\nDiscuss what the appropriate behaviour of the code should be, or discuss a proposal to clarify the way forward. Summarize conclusions on Bugzilla or agree a way forward with a member of R Core.\n\ndebug\n\nIdentify the parts of the code that are the root cause of the issue. This may not always be code that triggers an error, but code that does not produce the correct result in particular circumstances.\n\ncreate patch\n\nModify the R and/or C source code to implement a proposed change. This can involve substantial work to determine the appropriate changes to make and may be an iterative process with feedback from others."
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html#testing",
+    "href": "projects/nlme-bugs/index.html#testing",
+    "title": "Addressing Bugs in nlme",
+    "section": "Testing",
+    "text": "Testing\nIn general, we will rely on the tests included in the nlme package. It may be appropriate to propose additions to this test suite to cover the code added/modified when addressing a bug report.\nWe may also run reverse dependency checks to check changes do not break packages that depend on nlme."
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html#project-requirements",
+    "href": "projects/nlme-bugs/index.html#project-requirements",
+    "title": "Addressing Bugs in nlme",
+    "section": "Project requirements",
+    "text": "Project requirements\nFamiliarity with Subversion will be helpful, however note that you can create a RStudio package project from the repository URL: https://svn.r-project.org/R-packages/trunk/nlme/.\nFamiliarity with R package development will be helpful, though again RStudio makes it simple to run R CMD check on the package or to build and install from source. Note that documentation in nlme is written directly in .Rd format.\nOn MacOS you should have the mandatory development tools, Xcode and GNU Fortran installed.\nOn Windows you should have RTools installed."
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html#project-resources",
+    "href": "projects/nlme-bugs/index.html#project-resources",
+    "title": "Addressing Bugs in nlme",
+    "section": "Project resources",
+    "text": "Project resources\n\nWriting R documentation files\nMixed-Effects Models in S and S-PLUS, José C. Pinheiro and Douglas M. Bates - we will have at least one copy of this book available at the sprint."
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html#project-outcomes",
+    "href": "projects/nlme-bugs/index.html#project-outcomes",
+    "title": "Addressing Bugs in nlme",
+    "section": "Project outcomes",
+    "text": "Project outcomes\nContribution to a recommended package (potentially acknowledged in the ChangeLog).\nExperience with the package development process.\nExperience with creating/applying patches with Subversion.\nExperiences working with bug reports on Bugzilla."
+  },
+  {
+    "objectID": "projects/nlme-bugs/index.html#reactions-and-comments",
+    "href": "projects/nlme-bugs/index.html#reactions-and-comments",
+    "title": "Addressing Bugs in nlme",
     "section": "Reactions and comments",
     "text": "Reactions and comments"
   },
@@ -313,222 +586,5 @@
     "title": "Code of Conduct",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
-  },
-  {
-    "objectID": "projects/ideas-and-proposals.html",
-    "href": "projects/ideas-and-proposals.html",
-    "title": "Ideas and Proposals",
-    "section": "",
-    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
-  },
-  {
-    "objectID": "projects/ideas-and-proposals.html#ideas",
-    "href": "projects/ideas-and-proposals.html#ideas",
-    "title": "Ideas and Proposals",
-    "section": "Ideas",
-    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
-  },
-  {
-    "objectID": "projects/ideas-and-proposals.html#proposals",
-    "href": "projects/ideas-and-proposals.html#proposals",
-    "title": "Ideas and Proposals",
-    "section": "Proposals",
-    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\nElio Campitelli\n\n\nImproving documentation\n\n\nDocumentation,R\n\n\n\n\nGergely Daroczi\n\n\nWeblate Improvements\n\n\nTranslations,Documentation\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html",
-    "href": "projects/nlme-bugs/index.html",
-    "title": "Addressing Bugs in nlme",
-    "section": "",
-    "text": "The nlme package (maintained by R-core) has a medium-sized list of bugs reported, reaching back over 5 years. In some cases there is already a patch or a proposed solution. Other cases require some discussion or further debugging to determine an appropriate solution. Often only the R code is affected and the problem is more about determining the correct behaviour rather than debugging low-level code, though that will be required in the hardest cases.\nThis project would suit a group of people working in twos or threes, with each small group aiming to close one or two bugs during the sprint.\nThe nlme package is version controlled in a Subversion repository, available at https://svn.r-project.org/R-packages/trunk/nlme/."
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html#background",
-    "href": "projects/nlme-bugs/index.html#background",
-    "title": "Addressing Bugs in nlme",
-    "section": "",
-    "text": "The nlme package (maintained by R-core) has a medium-sized list of bugs reported, reaching back over 5 years. In some cases there is already a patch or a proposed solution. Other cases require some discussion or further debugging to determine an appropriate solution. Often only the R code is affected and the problem is more about determining the correct behaviour rather than debugging low-level code, though that will be required in the hardest cases.\nThis project would suit a group of people working in twos or threes, with each small group aiming to close one or two bugs during the sprint.\nThe nlme package is version controlled in a Subversion repository, available at https://svn.r-project.org/R-packages/trunk/nlme/."
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html#problem-statement",
-    "href": "projects/nlme-bugs/index.html#problem-statement",
-    "title": "Addressing Bugs in nlme",
-    "section": "Problem statement",
-    "text": "Problem statement\nThe list of nlme bugs on R’s Bugzilla as of 23 June 2023 is summarised below:\n\n\n\nBug ID\nLevel\nStatus\nTopic\nAction(s)\nProgramming skills\nStatistical knowledge\n\n\n\n\n18505\nNovice\npatch available\nbehaviour changing with order of group variable\ncheck patch\nR\n\n\n\n17884\nNovice\npatch available\nnew confint.lme method for fixed effects only\ncheck patch\nR\nconfidence intervals\n\n\n17988\nNovice\nsuggested solution\nwhat to return for corARMA with p = q = 0\ncheck patch, update doc\nR\n\n\n\n18472\nIntermediate\nneeds reprex\ncorrect behaviour of gls\ncreate reprex, discuss\nR\ngls\n\n\n17712\nIntermediate\nsuggested solution\nconditions when algorithm should use decomposition\ncreate patch, check patch\nR\n\n\n\n18285\nIntermediate\nsuggested solution\nhow to handle rank deficiency\ndiscuss, create reprex, create patch\nR\nrank deficiency\n\n\n17961\nIntermediate\nunclear if bug or not\nappropriate df to use in tests\ndiscuss\nR\nanova tests\n\n\n17866\nIntermediate\nreprex available\nInitializing corStruct outside gls call gives different results\ndebug\nR\n\n\n\n16890\nIntermediate\npatch welcome\nintervals.lmList does not work for with pool = FALSE\ncreate patch\nR\n\n\n\n18192\nIntermediate\nneeds analysis\ncrash in nlme equivalent to lme model\ndebug R/C\nC\n\n\n\n17227\nIntermediate\npartial analysis available\ncrash in nlme\ndebug R/C\nC\n\n\n\n16864\nAdvanced\nneeds analysis\nlme fails to warn when data are near-redundant\ndebug R/C/Fortran\nR, C, Fortran\n\n\n\n16975\nAdvanced\nneeds analysis\nREML estimation incorrect with fixed sigma\ndebug\nR, C\n\n\n\n17236\nAdvanced\nneeds support from R Core\nCorrect df for intercept in lme\ndiscuss, create patch, check patch\nR\n\n\n\n18433\nAdvanced\nneeds reprex\ninfinite loop dependent on random seed\ncreate reprex, debug\nC, Docker\nnlme algorithms\n\n\n16806\nAdvanced\npatch welcome\nmethod fails for individuals with single observations\ncreate patch\nC"
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html#proposed-solution",
-    "href": "projects/nlme-bugs/index.html#proposed-solution",
-    "title": "Addressing Bugs in nlme",
-    "section": "Proposed solution",
-    "text": "Proposed solution\nThe table in the last section summarises the next action(s) required to address the different bugs. In more detail:\n\ncheck patch\n\nCheck the bug is still present in the development version of nlme.\nApply the patch to the nlme sources, build and install the package, and test a reprex to confirm the patch fixes the issue.\nRun R CMD check on the built package to check nothing is broken by the change.\n\nupdate doc\n\nModify the source of the documentation file in the nlme sources.\nReview your changes (e.g. Preview in RStudio or build and install to view).\nCreate a patch to include both code and documentation changes.\n\ncreate reprex\n\nCreate a minimal, reproducible example, using only base R packages plus nlme, that demonstrates the issue. In complex cases, this may require creating a Docker image so that the whole environment is reproducible.\n\ndiscuss\n\nDiscuss what the appropriate behaviour of the code should be, or discuss a proposal to clarify the way forward. Summarize conclusions on Bugzilla or agree a way forward with a member of R Core.\n\ndebug\n\nIdentify the parts of the code that are the root cause of the issue. This may not always be code that triggers an error, but code that does not produce the correct result in particular circumstances.\n\ncreate patch\n\nModify the R and/or C source code to implement a proposed change. This can involve substantial work to determine the appropriate changes to make and may be an iterative process with feedback from others."
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html#testing",
-    "href": "projects/nlme-bugs/index.html#testing",
-    "title": "Addressing Bugs in nlme",
-    "section": "Testing",
-    "text": "Testing\nIn general, we will rely on the tests included in the nlme package. It may be appropriate to propose additions to this test suite to cover the code added/modified when addressing a bug report.\nWe may also run reverse dependency checks to check changes do not break packages that depend on nlme."
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html#project-requirements",
-    "href": "projects/nlme-bugs/index.html#project-requirements",
-    "title": "Addressing Bugs in nlme",
-    "section": "Project requirements",
-    "text": "Project requirements\nFamiliarity with Subversion will be helpful, however note that you can create a RStudio package project from the repository URL: https://svn.r-project.org/R-packages/trunk/nlme/.\nFamiliarity with R package development will be helpful, though again RStudio makes it simple to run R CMD check on the package or to build and install from source. Note that documentation in nlme is written directly in .Rd format.\nOn MacOS you should have the mandatory development tools, Xcode and GNU Fortran installed.\nOn Windows you should have RTools installed."
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html#project-resources",
-    "href": "projects/nlme-bugs/index.html#project-resources",
-    "title": "Addressing Bugs in nlme",
-    "section": "Project resources",
-    "text": "Project resources\n\nWriting R documentation files\nMixed-Effects Models in S and S-PLUS, José C. Pinheiro and Douglas M. Bates - we will have at least one copy of this book available at the sprint."
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html#project-outcomes",
-    "href": "projects/nlme-bugs/index.html#project-outcomes",
-    "title": "Addressing Bugs in nlme",
-    "section": "Project outcomes",
-    "text": "Project outcomes\nContribution to a recommended package (potentially acknowledged in the ChangeLog).\nExperience with the package development process.\nExperience with creating/applying patches with Subversion.\nExperiences working with bug reports on Bugzilla."
-  },
-  {
-    "objectID": "projects/nlme-bugs/index.html#reactions-and-comments",
-    "href": "projects/nlme-bugs/index.html#reactions-and-comments",
-    "title": "Addressing Bugs in nlme",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html",
-    "href": "projects/dendrapply-refactor/index.html",
-    "title": "Dendrapply Refactor",
-    "section": "",
-    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#background",
-    "href": "projects/dendrapply-refactor/index.html#background",
-    "title": "Dendrapply Refactor",
-    "section": "",
-    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#problem-statement",
-    "href": "projects/dendrapply-refactor/index.html#problem-statement",
-    "title": "Dendrapply Refactor",
-    "section": "Problem statement",
-    "text": "Problem statement\nThe current implementation of dendrapply is included at the bottom of this section. This implementation has two main issues.\nThe most notable of these is the recursive application of functions to the dendrogram nodes. This leads to poor performance on deeply nested dendrograms, as well as the potential for stack overflow errors on machines with limited resources. This is detailed in ?dendrapply and in the warning in ?dendrogram.\nAdditionally, tree traversal can be achieved in a number of ways. The current implementation uses a pre-order traversal, which is not always the most intuitive application of functions to a tree structure. This means that, for each triple 2 &lt;- 1 -&gt; 3, the function is applied first to node 1, then to 2, then to 3. Ideally, users would be able to choose between a post-order or a pre-order traversal. Post-order traversals guarantee that the function is applied to all children of a node before applying to the parent, allowing for certain analyses that rely on propagating results up a tree. There is currently no easy way to achieve this in R.\nIn summary, the priorities to rectify are (in order of importance):\n\nRemove recursion in dendrapply\nAdd an optional argument to allow for different tree traversals in function application\n\nThese must be achieved while preserving all the current functionality of dendrapply, and without decreasing the current performance.\nCurrent implementation:\n\ndendrapply &lt;- function(X, FUN, ...)\n{\n    ## Purpose: \"dendrogram\" recursive apply {to each node}\n    ## ----------------------------------------------------------------------\n    ## Author: Martin Maechler, Date: 26 Jun 2004, 22:43\n    FUN &lt;- match.fun(FUN)\n    if( !inherits(X, \"dendrogram\") ) stop(\"'X' is not a dendrogram\")\n\n    ## Node apply recursively:\n    Napply &lt;- function(d) {\n    r &lt;- FUN(d, ...)\n    if(!is.leaf(d)) {\n        if(!is.list(r)) r &lt;- as.list(r) # fixing unsafe FUN()s\n        if(length(r) &lt; (n &lt;- length(d))) r[seq_len(n)] &lt;- vector(\"list\", n)\n        ## and overwrite recursively, possibly keeping \"attr\"\n        r[] &lt;- lapply(d, Napply)\n        }\n    r\n    }\n    Napply(X)\n}"
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#proposed-solution",
-    "href": "projects/dendrapply-refactor/index.html#proposed-solution",
-    "title": "Dendrapply Refactor",
-    "section": "Proposed solution",
-    "text": "Proposed solution\nA full description follows, but people that are interested can read my initial writeup for more details on the problem, attempted solutions, and current status. Feel free to skip that link and just read the following section instead.\nA prototype solution has been implemented and submitted to Bugzilla. This solution moves the R implementation into C. The short description of the proposed method is to create a linked list in C holding the SEXP pointers for each node of the tree. Then, we apply the function given to each node of the linked list, and then merge the SEXP objects back into the original topology. This can be further optimized by merging nodes on the fly to limit linked list space and reduce PROTECT stack usage. This also allows for different tree traversal strategies with minimal effort, as different tree traversals can be achieved by varying how nodes are added to the linked list.\nThe current solution has one key issue resulting in a two problems. This implementation uses VECTOR_ELT rather than the more general [[ and [[&lt;- operations to get/set values. This allows for low PROTECT stack usage and high performance, but it also means that nodes discard their class values when passed to the function. This can be solved naively by just reclassing nodes as dendrogram, but unfortunately this causes issues in the case where nodes have multiple classes (ex. a node where class(node ) == c('dendrogram', 'myOtherClass')). This also runs into problems in the case where a non-standard [[ method is implemented. In the interest of backwards compatibility, these problems should be rectified.\nThere are a few options for fixing this issue. The first is to work entirely in R, removing the C implementation. This would work in theory by using a list structure to hold nodes, but the linked-list structure in C gives a substantial boost in performance over R by using pointers instead of copying each object. This may not be a big deal; I haven’t tested it yet.\nAnother possible option is to use the alternative vector-based dendrogram indexing ( dend[[c(1,1)]] is equivalent to dend[[1]][[1]] ) to build a list of targets first, then apply the function to each. This may solve the potential R-implementation memory issues, but could also require initializing a huge vector. Dealing with the topology of the dendrogram would also be challenging.\nAnother potential fix is to use the [[ method by building an R expression in C and then calling it, similar to how lapply is implemented (see do_lapply() in src/main/apply.c for reference). This implementation was tested and worked successfully, but the result was significantly slower than the R version (roughly half speed, likely due to PROTECT stack issues mentioned below). Maybe a code refactor could solve the slowdowns and produce a better result.\nThe last potential fix I’ve identified is to use precious multi-sets for protection rather than PROTECT. One of the big problems of applying functions in C is that the result of the function application at each node needs to be protected. This isn’t an issue for post-order traversals, since we can always just add the result as a child of the parent node (which auto-protects it if the parent is already protected). However, for the current implementation, a potentially large source of slow-downs is the work-arounds implemented to solve PROTECT stack issues. Using MSets could simplify this and improve runtime, but there isn’t a lot of documentations on how to use them (and their use for this kind of problem is explicitly discouraged in some places)."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#testing",
-    "href": "projects/dendrapply-refactor/index.html#testing",
-    "title": "Dendrapply Refactor",
-    "section": "Testing",
-    "text": "Testing\nBenchmarking the function against stats::dendrapply can be done using the following:\n\ndend &lt;- as.dendrogram(hclust(dist(1:100)))\nf &lt;- function(x) x\n\nmicrobenchmark::microbenchmark(stats::dendrapply(dend, f),\n                               new_dendrapply(dend, f))\n\nDifferent dendrogram objects should be tested to look at performance on balanced vs. deep trees, but usage of \\(x) x is important for accurate testing. This function minimizes the amount of operations within the applied function, meaning that the vast majority of the differences in time will be due to the implementation of dendrapply, not the runtime of f.\nAdditional testing should be done to verify that the following work as expected:\n\nEnsure speed of new application is at least as fast as stats::dendrapply\nEnsure all examples in ?dendrapply work as expected\nEnsure all tests in dendextend work correctly to test a large set of currently used applications of dendrapply\nEnsure that nodes with multiple classes retain their class attribute after running dendrapply\nEnsure that special uses of [[ work as expected\nEnsure that recursive dendrapply calls work as expected (ex. dendrapply(dend, \\(x) dendrapply(x, someOtherFunction)))\nEnsure all examples in the R build testing work as expected, paying special attention to the following weird case:\n\n&gt; D &lt;- as.dendrogram(hclust(dist(cbind(setNames(c(0,1,4), LETTERS[1:3])))))\n&gt; dendrapply(D, labels)\n[[1]]\n[1] \"C\"\n\n[[2]]\n[[2]][[1]]\n[1] \"A\"\n\n[[2]][[2]]\n[1] \"B\"\n\n[[3]]\n[1] \"C\"\nImplementation should also be made to ensure that the default parameters are fully backwards compatible. In the case of post-order traversal, this is currently being achieved by defining the function as dendrapply(X, FUN, ..., how=c('pre.order', 'post.order')) so that the default is always equivalent to stats::dendrapply.\nFinally, testing should be added to the R source tests. The current testing suite for dendrapply is very sparse; edge cases like multi-classed dendrogram objects should be added to ensure code works as expected in the future."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#project-requirements",
-    "href": "projects/dendrapply-refactor/index.html#project-requirements",
-    "title": "Dendrapply Refactor",
-    "section": "Project requirements",
-    "text": "Project requirements\n\nI suspect that the optimal solution will involve working in C, so knowledge of C to develop this will be helpful, even if just to be able to compare performance against an R implementation. Much of the implementation in C depends on knowledge of the PROTECT stack, so familiarity with that is important for C solutions.\nBasic knowledge of tree structures and/or dendrogram objects is helpful but not necessary."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#project-resources",
-    "href": "projects/dendrapply-refactor/index.html#project-resources",
-    "title": "Dendrapply Refactor",
-    "section": "Project resources",
-    "text": "Project resources\n\nTree traversal methods\nMy full description of problem and implementation\nCurrent bugzilla ticket (contains most up-to-date code; my blog post may be out of date.)"
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#project-outcomes",
-    "href": "projects/dendrapply-refactor/index.html#project-outcomes",
-    "title": "Dendrapply Refactor",
-    "section": "Project outcomes",
-    "text": "Project outcomes\nIf successful, we’d be able to submit a new version of dendrapply with better performance. Removing the recursion in this function would make these analyses also possible on edge computing and limited resource machines (or at least more feasible). Implementation of multiple traversal methods for function application would be a massive resource to the phylogenetics community."
-  },
-  {
-    "objectID": "projects/dendrapply-refactor/index.html#reactions-and-comments",
-    "href": "projects/dendrapply-refactor/index.html#reactions-and-comments",
-    "title": "Dendrapply Refactor",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "R Project Sprint 2023",
-    "section": "",
-    "text": "August 30 - September 1, 2023\nUniversity of Warwick, UK\nCollaborate on contributions to base R!\nWe are pleased to announce an R Project Sprint, to be hosted at the University of Warwick, UK, from Wednesday August 30 to Friday September 1. Novice and experienced contributors are encouraged to apply for a place at the residential event, with funding available for travel (deadline Friday 10 March). Read on for more! #RSprint2023"
-  },
-  {
-    "objectID": "index.html#about-the-sprint",
-    "href": "index.html#about-the-sprint",
-    "title": "R Project Sprint 2023",
-    "section": "About the sprint",
-    "text": "About the sprint\nR is a popular and widely used software for data science. Like any large open source software project, it takes a lot of work to maintain and develop. Much of the work is done by a small number of volunteers and there is a need to grow the contributor community.\nThis sprint will bring together novice and experienced contributors, to work alongside members of the R Core Team. Participants will work collaboratively on contributions to base R. The tasks will be prepared in the run-up to the event, but may include:\n\nReviewing, analysing and fixing bugs reported on R’s Bugzilla.\nContributing to message translations via Weblate.\nWork on new developments such as this short project proposed by core developer Paul Murrell: Adding Alpha Masks to the Quartz Graphics Device."
-  },
-  {
-    "objectID": "index.html#who-can-take-part",
-    "href": "index.html#who-can-take-part",
-    "title": "R Project Sprint 2023",
-    "section": "Who can take part?",
-    "text": "Who can take part?\nThe sprint will involve a mixture of invited and self-nominated participants, so that we have contributors at all experience levels.\nThe main criteria for participation is a good knowledge of R programming and a keen interest in contributing, as we hope participants continue to contribute after the event. The table below shows the type of knowledge/skills we expect participants to have\n\n\n\n\n\n\n\nSkills most will have\nSkills some will have\n\n\n\n\nWriting R functions\nProgramming in C\n\n\nDebugging R functions\nKnowledge of S3/S4 classes and methods\n\n\nWriting R help files\nExpertise in statistical methods in stats, splines\n\n\nUsing git/Subversion\nAble to build R from source\n\n\n\nOther specialist skills e.g. expertise in building Windows/MacOS GUIs or fluency in language with a low percentage of translated messages on Weblate, would of course be welcome!\nIt will help if you have some experience in contributing to base R, but novice contributors will be mentored in the run-up to the event, so they are prepared.\nWe are also keen to foster a diverse community of contributors. If you are a member of the R-Ladies, MiR, RainbowR, AfricaR, ArabR, AsiaR, or LatinR communities, or otherwise identify as part of an underrepresented group among R contributors, then we especially encourage you to self-nominate! To ensure a welcoming environment, we have a code of conduct in place."
-  },
-  {
-    "objectID": "index.html#apply-for-a-place",
-    "href": "index.html#apply-for-a-place",
-    "title": "R Project Sprint 2023",
-    "section": "Apply for a place",
-    "text": "Apply for a place\nAnyone one interested to attend the sprint is encouraged to self-nominate via the application form by Friday 10 March. You will be asked about your experience, skills and background to help us balance participation overall.\nThanks to our sponsors, all workshop participants will be accommodated free of charge during the sprint, in on-campus housing at the University of Warwick, with meals provided.\nFunding is also available for travel expenses, however if participants are able to get travel funding from other sources this will allow more people to attend - companies or other funding bodies providing such support to participants will be acknowledged as sponsors."
-  },
-  {
-    "objectID": "index.html#practicalities",
-    "href": "index.html#practicalities",
-    "title": "R Project Sprint 2023",
-    "section": "Practicalities",
-    "text": "Practicalities\nThe sprint will be held in the recently completed Faculty of Arts Building at the University of Warwick, which alongside regular seminar rooms has many breakout spaces, some of which we have reserved for our use. We think this will be a great environment for collaborative work.\nThe University of Warwick is in Coventry, in the middle of England. It is reachable by train from nearby European countries, or by plane to Birmingham or other UK airports. See the travel information and visa information for international visitors."
-  },
-  {
-    "objectID": "index.html#whats-on-nearby",
-    "href": "index.html#whats-on-nearby",
-    "title": "R Project Sprint 2023",
-    "section": "What’s on nearby",
-    "text": "What’s on nearby\nParticipants may be interested to know of these events happening close to the sprint:\n\n22-25 August, COMPSTAT 2023, London\n4-8 September, RSECon23, Swansea\n4-7 September, RSS International Conference, Harrogate\n\n28 August is a bank holiday in the UK, there are typically many festivals, fairs and other events over the long weekend at the end of the school summer holidays."
-  },
-  {
-    "objectID": "index.html#local-organizing-team",
-    "href": "index.html#local-organizing-team",
-    "title": "R Project Sprint 2023",
-    "section": "Local organizing team",
-    "text": "Local organizing team\nThis event is being organized by members of the Statistics department at the University of Warwick.\n\n\n  Heather Turner   RSE FellowAssociate Professor       \n\n\n  Ella Kaye   Research Software Engineer       \n\n\n  Martyn Plummer   ProfessorR Core Developer       \n\n\nWe are coordinating with the R Contribution Working Group and the R Core Team."
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "R Project Sprint 2023",
-    "section": "Contact",
-    "text": "Contact\nFor queries about this event, please contact r-project-sprint@livewarwickac.onmicrosoft.com."
-  },
-  {
-    "objectID": "index.html#sponsors",
-    "href": "index.html#sponsors",
-    "title": "R Project Sprint 2023",
-    "section": "Sponsors",
-    "text": "Sponsors\n\nCore funding\nProviding sponsorship for general participant travel, accommodation and subsistence, plus general running costs.\n\n\n\n\n\n\n\nPlatinum sponsors\nProviding sponsorship for R Core travel.\n\nThe R Foundation\n\n\n\nGold sponsors\nProviding sponsorship for evening events and specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSilver sponsors\nProviding sponsorship for specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFurther sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors Twitter and Mastodon accounts, and in reports of the sprint. Please contact r-project-sprint@livewarwickac.onmicrosoft.com to discuss!"
   }
 ]
