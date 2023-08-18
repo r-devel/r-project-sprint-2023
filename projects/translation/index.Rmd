@@ -53,9 +53,9 @@ This project will focus on languages requiring work, especially where there are 
 
 -   Arabic: Add translations for the Windows GUI (\~250 strings).
 
-As time allow, translators can work towards further targets as appropriate, contributing translations, reviewing each other's translators and making sure the strings pass Weblate's checks (e.g. no trailing white space).
+As time allows, translators can work towards further targets as appropriate, contributing translations, reviewing each other's translations and making sure the strings pass Weblate's checks (e.g. no trailing white space).
 
-In addition, translators will work across languages on the following tasks
+In addition, translators will work across languages on the following tasks:
 
 -   Updating the R Development Guide to cover contributing translations via Weblate. There is overlap here with the [Weblate Improvements](https://contributor.r-project.org/r-project-sprint-2023/projects/weblate-improvements/) project.
 
