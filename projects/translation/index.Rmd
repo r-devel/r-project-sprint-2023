@@ -37,7 +37,7 @@ Contributors to this project will work closely with sprint participants working 
 
 Although the message translations for some languages are well-maintained, others have become out of date, with many incorrect or missing translations. (See the post [R Can Use Your Help: Translating R Messages](https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages/index.html) on the R Blog for more information). There are other widely-spoken languages that are currently not covered at all.
 
-In addition, the process of contributing messages has changed. The new [Weblate server](https://translate.rx.studio/projects/r-project/) provides a user-friendly interface for contributing translations, making it easier for R users to contribute. However there is a need to document the process of contribution and provide guidelines for contributors, to ensure quality and consistency.
+In addition, the process of contributing messages has recently been enhanced with a web-based, user-friendly, translation interface. The [Weblate server](https://translate.rx.studio/projects/r-project/) makes it easier for R users to contribute. However there is a need to document the process of contribution and provide guidelines for contributors, to ensure quality and consistency.
 
 ## Proposed solution
 
