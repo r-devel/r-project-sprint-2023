@@ -1,7 +1,7 @@
 ---
 title: Enhancing `sample.int` for unequal probability sampling
 description: "" # Optional short description for post on Discussions thread
-author: Ahmadou Dicko
+author: Ahmadou Dicko and Thomas Lumley
 output: html_document
 categories: [C, R, Wishlist, Models]
 comments:
