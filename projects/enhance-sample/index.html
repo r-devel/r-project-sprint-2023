@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Simon Urbanek and Michael Chirico">
+<meta name="author" content="Ahmadou Dicko and Thomas Lumley">
 
-<title>R Project Sprint 2023 - Facilitate Translation for Mac GUI</title>
+<title>R Project Sprint 2023 - Enhancing sample.int for unequal probability sampling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -62,14 +115,22 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="R Project Sprint 2023 - Facilitate Translation for Mac GUI">
+<meta property="og:title" content="R Project Sprint 2023 - Enhancing sample.int for unequal probability sampling">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://contributor.r-project.org/r-project-sprint-2023/projects/enhance-sample/index_files/figure-html/qqplot-1.png">
 <meta property="og:site-name" content="R Project Sprint 2023">
-<meta name="twitter:title" content="R Project Sprint 2023 - Facilitate Translation for Mac GUI">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
+<meta name="twitter:title" content="R Project Sprint 2023 - Enhancing sample.int for unequal probability sampling">
 <meta name="twitter:description" content="A 3-day meeting of R developers to work collaboratively on R core development, hosted at the University of Warwick, August 30 – September 1">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://contributor.r-project.org/r-project-sprint-2023/projects/enhance-sample/index_files/figure-html/qqplot-1.png">
+<meta name="twitter:image-height" content="960">
+<meta name="twitter:image-width" content="1344">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -149,12 +210,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">Problem statement</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link active" data-scroll-target="#problem-statement">Problem statement</a></li>
   <li><a href="#proposed-solution" id="toc-proposed-solution" class="nav-link" data-scroll-target="#proposed-solution">Proposed solution</a></li>
   <li><a href="#project-requirements" id="toc-project-requirements" class="nav-link" data-scroll-target="#project-requirements">Project requirements</a></li>
-  <li><a href="#project-resources" id="toc-project-resources" class="nav-link" data-scroll-target="#project-resources">Project resources</a></li>
   <li><a href="#project-outcomes" id="toc-project-outcomes" class="nav-link" data-scroll-target="#project-outcomes">Project outcomes</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   <li><a href="#reactions-and-comments" id="toc-reactions-and-comments" class="nav-link" data-scroll-target="#reactions-and-comments">Reactions and comments</a></li>
   </ul>
 </nav>
@@ -164,9 +224,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Facilitate Translation for Mac GUI</h1>
+<h1 class="title">Enhancing <code>sample.int</code> for unequal probability sampling</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Translations</div>
+    <div class="quarto-category">C</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Wishlist</div>
+    <div class="quarto-category">Models</div>
   </div>
   </div>
 
@@ -177,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Simon Urbanek and Michael Chirico </p>
+             <p>Ahmadou Dicko and Thomas Lumley </p>
           </div>
   </div>
     
@@ -188,54 +251,108 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!-- 
-This template is based on https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/.
-The sections are provided as a guide and may not be appropriate to your proposal, feel free to skip or change sections.
-
-Please label any R code chunks, especially those producing images.
--->
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>The R for Mac GUI is the most comprehensive platform-specific R GUI and has been pioneering a lot of features now present in other GUIs and commercial products. Although officially supported by R Core, the Mac GUI is maintained on the <a href="https://github.com/R-macos/Mac-GUI">Mac GUI</a> GitHub repository rather than the R Project Subversion repository.</p>
-<p>One aspect of the Mac GUI that has room for improvement is the translation of GUI text into languages other than English.</p>
-</section>
 <section id="problem-statement" class="level2">
 <h2 class="anchored" data-anchor-id="problem-statement">Problem statement</h2>
-<p>The number of languages currently supported is rather limited (German, Italian, French, Japanese, Dutch) and existing translations may be outdated.</p>
-<p>In addition, contributing translations is not straight-forward. The preferred workflow requires use of Xcode on macOS. An alternative is to collaborate with a maintainer who will send the strings text files to be translated. However, this workflow places extra burden on the maintainers and it is difficult for contributors to identify which strings need updating. Both workflows require contributors to take special care to use UTF-8 encoding to avoid corrupting translation files.</p>
+<p>The method of unequal probability sampling without replacement, as implemented in <code>base::sample</code> (<code>base::sample.int</code>), relies on a sequential algorithm (coded in <code>C</code>). This algorithm does not respect the prescribed inclusion probabilities (as defined by the <code>prob</code> parameter). Consequently, it can produce a biased Horvitz-Thompson estimate.</p>
+<p>The issue can affect other packages as illustrated by this <a href="https://github.com/tidyverse/dplyr/issues/6848">dplyr issue affecting slice_sample</a>.</p>
+<p>To better understand the problem, consider the illustration below, following <span class="citation" data-cites="tille2023remarks">(<a href="#ref-tille2023remarks" role="doc-biblioref">Tillé 2023</a>)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">12</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> (<span class="dv">1</span><span class="sc">:</span>N)<span class="sc">/</span><span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span>N)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>pik <span class="ot">&lt;-</span> n <span class="sc">*</span> p</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>pikest_base <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">mode =</span> <span class="st">"numeric"</span>, <span class="at">length =</span> N)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>nsim <span class="ot">&lt;-</span> <span class="fl">1e4</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nsim) {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">sample.int</span>(<span class="at">n =</span> N, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">FALSE</span>, <span class="at">prob =</span> p)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  pikest_base[s] <span class="ot">&lt;-</span> pikest_base[s] <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>pikest_base <span class="ot">&lt;-</span> pikest_base<span class="sc">/</span>nsim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After estimating the inclusion probabilities with <code>sample.int</code>, we can compare them with algorithms from the <code>sampling</code> package, as highlighted in its documentation.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sampling)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pikest_maxent <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span>nsim, \(i) <span class="fu">UPmaxentropy</span>(pik))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>pikest_maxent <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(pikest_maxent)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>pikest_pivot <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span>nsim, \(i) <span class="fu">UPpivotal</span>(pik))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>pikest_pivot <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(pikest_pivot)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(pik,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      pikest_base,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      pikest_maxent,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      pikest_pivot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             pik pikest_base pikest_maxent pikest_pivot
+ [1,] 0.05128205      0.0587        0.0544       0.0511
+ [2,] 0.10256410      0.1194        0.1050       0.1049
+ [3,] 0.15384615      0.1699        0.1507       0.1486
+ [4,] 0.20512821      0.2279        0.2008       0.2058
+ [5,] 0.25641026      0.2778        0.2553       0.2538
+ [6,] 0.30769231      0.3233        0.3129       0.3149
+ [7,] 0.35897436      0.3627        0.3593       0.3556
+ [8,] 0.41025641      0.4181        0.4110       0.4111
+ [9,] 0.46153846      0.4652        0.4577       0.4607
+[10,] 0.51282051      0.4967        0.5115       0.5205
+[11,] 0.56410256      0.5189        0.5651       0.5579
+[12,] 0.61538462      0.5614        0.6163       0.6151</code></pre>
+</div>
+</div>
+<p>To evaluate the accuracy of the sampling algorithm, we can compute the following test statistic:</p>
+<p><span class="math display">\[
+z_k = \dfrac{(\hat{\pi_k} - \pi_k) \sqrt{M}}{\sqrt{\pi_k (1 - \pi_k)}}
+\]</span></p>
+<p>where <span class="math inline">\(M\)</span> is the number of simulations.</p>
+<p><span class="math inline">\(z_k\)</span> should be asymptotically normal under the null hypothesis that the sampling algorithm is correct. The implementation is as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>test_stat <span class="ot">&lt;-</span> <span class="cf">function</span>(est, pik)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  (est <span class="sc">-</span> pik) <span class="sc">/</span> <span class="fu">sqrt</span>(pik <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> pik)<span class="sc">/</span>nsim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can compute this test statistics for each method and check its normality using a <code>qqplot</code>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/qqplot-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>These charts show how <code>base::sample</code> deviates more from normality compared to the other two competing algorithms available in the <code>sampling</code> package.</p>
 </section>
 <section id="proposed-solution" class="level2">
 <h2 class="anchored" data-anchor-id="proposed-solution">Proposed solution</h2>
-<p>This project will add the Mac GUI strings as a component on the <a href="https://translate.rx.studio/projects/r-project/">Weblate server for R</a>. This would mean that the technical details are taken care of and contributors can focus on translating the text, only requiring access to a browser to contribute.</p>
-<p>The proposed work plan is as follows:</p>
-<ol type="1">
-<li>Set up Weblate to work with the strings files from the Mac GUI (collaborating with those working on <a href="https://contributor.r-project.org/r-project-sprint-2023/projects/weblate-improvements/">Weblate Improvements</a>), see the <a href="https://docs.weblate.org/en/latest/formats/apple.html#apple">Weblate docs</a>.</li>
-<li>Test the workflow of updating a translation with speakers of currently translated languages at the sprint, e.g.&nbsp;German, French or Japanese.</li>
-<li>Add new Left-to-Right languages. Potential additions represented at the sprint: Spanish, Brazilian Portuguese, Nepali.</li>
-<li>Add support for Right-to-Left languages, see the <a href="https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17-SW1">Apple docs</a>.</li>
-<li>Begin to add Arabic translations.</li>
-</ol>
-<p>Tasks 2 and 3 depend on a minimal viable product from task 1 (e.g.&nbsp;an initial set up may rely on some manual steps that could be scripted/automated later). Translators could contribute to other projects until this is ready.</p>
-<p>Task 4 can be worked on independently of tasks 1 to 3, but task 5 is dependent on both task 1 and 4. Arabic translators may wish to work on <a href="https://translate.rx.studio/projects/r-project/base-r-gui/ar/">translations for the Windows GUI</a> in the meantime, which can already be done through Weblate.</p>
+<ul>
+<li><strong>Option 1:</strong>
+<ul>
+<li>Refine the documentation for <code>base::sample</code> and <code>base::sample.int</code>.</li>
+<li>Suggest adding a concise paragraph in the <code>Details</code> section, explaining why the function is not suitable for unequal probability sampling based on inclusion probabilities.</li>
+</ul></li>
+<li><strong>Option 2:</strong>
+<ul>
+<li>Introduce a new <code>C</code> function and an additional argument to <code>sample.int</code> to incorporate the new method.</li>
+<li>Retain the original <a href="https://github.com/wch/r-source/blob/7ad1c5790841572c88955b1da805d28174ff0b56/src/main/random.c#L406"><code>ProbSampleNoReplace</code> <code>C</code> function</a>.</li>
+<li>By default, <code>base::sample.int</code> should utilize <code>ProbSampleNoReplace</code> for unequal probability sampling without replacement. This ensures backward compatibility and prevents disruptions to existing code.</li>
+</ul></li>
+</ul>
+<p>It is hard to pick one algorithm over the multitude of available unequal probability sampling algorithms. In theory, there’s no best algorithm for unequal probability. However, the Maximum Entropy Sampling algorithm (<code>sampling::UPmaxentropy</code>) also known as Conditional Poisson Sampling is an algorithm with good properties (maximizing entropy) that can be used as a reference.</p>
 </section>
 <section id="project-requirements" class="level2">
 <h2 class="anchored" data-anchor-id="project-requirements">Project requirements</h2>
-<!-- Include here prerequisite knowledge and any operating system requirements -->
-<p>Fluent speakers of languages other than English are required for the translation tasks (2, 3 and 5).</p>
-<p>The Weblate set-up will need to be done by a Weblate admin (currently only Gergely Daróczi), but might be supported by a contributor with advanced knowledge of git.</p>
-<p>Support for Right-to-Left languages requires modifying Objective C code with Xcode on macOS. This will likely be done by Simon Urbanek, but might be supported by a macOS user wanting to learn more about development of the Mac GUI.</p>
-</section>
-<section id="project-resources" class="level2">
-<h2 class="anchored" data-anchor-id="project-resources">Project resources</h2>
 <ul>
-<li><p><a href="https://github.com/R-macos/Mac-GUI/">Mac GUI GitHub repository</a></p></li>
-<li><p><a href="https://docs.weblate.org/en/latest/formats/apple.html#apple">Weblate documentation on Apple strings</a></p></li>
-<li><p><a href="https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17-SW1">Apple developer documentation on RTL language support</a></p></li>
+<li>Good understanding of survey sampling algorithms.</li>
+<li>Good C and R coding skills.</li>
 </ul>
 </section>
 <section id="project-outcomes" class="level2">
 <h2 class="anchored" data-anchor-id="project-outcomes">Project outcomes</h2>
-<p>Contributions to the next release of the Mac GUI.</p>
+<p>An enhanced version of <code>sample</code> (<code>sample.int</code>) with a new argument to select the new algorithm for unequal probability sampling.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-tille2023remarks" class="csl-entry" role="listitem">
+Tillé, Yves. 2023. <span>“Remarks on Some Misconceptions about Unequal Probability Sampling Without Replacement.”</span> <em>Computer Science Review</em> 47: 100533. <a href="https://doi.org/10.1016/j.cosrev.2022.100533">https://doi.org/10.1016/j.cosrev.2022.100533</a>.
+</div>
+</div>
 </section>
 <section id="reactions-and-comments" class="level2">
 <h2 class="anchored" data-anchor-id="reactions-and-comments">Reactions and comments</h2>
