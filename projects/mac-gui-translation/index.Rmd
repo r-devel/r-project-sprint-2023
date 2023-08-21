@@ -3,7 +3,7 @@ title: Facilitate Translation for Mac GUI # Warning: changing the title may crea
 description: "" # Optional short description for post on Discussions
 author: Simon Urbanek and Michael Chirico # and co-authors if applicable
 output: html_document
-categories: [Translation] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
+categories: [Translations] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
 comments:
   giscus: 
     repo: "r-devel/r-project-sprint-2023"
@@ -23,10 +23,6 @@ The sections are provided as a guide and may not be appropriate to your proposal
 Please label any R code chunks, especially those producing images.
 -->
 ```
-```{r setup}
-
-```
-
 ## Background
 
 The R for Mac GUI is the most comprehensive platform-specific R GUI and has been pioneering a lot of features now present in other GUIs and commercial products. Although officially supported by R Core, the Mac GUI is maintained on the [Mac GUI](https://github.com/R-macos/Mac-GUI) GitHub repository rather than the R Project Subversion repository.

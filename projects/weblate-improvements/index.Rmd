@@ -17,78 +17,60 @@ comments:
 
 ## Background
 
-The R Project has a global and active community with members speaking different
-languages around the world, in many cases with the need to be able to use R in
-their native natural language instead of English.
+The R Project has a global and active community with members speaking different languages around the world, in many cases with the need to be able to use R in their native natural language instead of English.
 
-This project aims to provide better coverage of translations by making it easier
-to contribute translations to R -- even without technical skills.
+This project aims to provide better coverage of translations by making it easier to contribute translations to R -- even without technical skills.
 
 ## Problem statement
 
-The R project has been supporting the translation of user messages, warnings,
-errors etc since R version 2.1.0 (April 2005) using 
+The R project has been supporting the translation of user messages, warnings, errors etc since R version 2.1.0 (April 2005) using
 
-- the `gettext` functions to lookup translations, and
-- the PO files defining the translations, stored in the SVN repository.
+-   the `gettext` functions to lookup translations, and
+-   the PO files defining the translations, stored in the SVN repository.
 
-Although the technology existed, but contributing translations was not
-straightforward due to
+Although the technology existed, but contributing translations was not straightforward due to
 
-- the technical overhead of dealing with PO files made it difficult for external
-parties to contribute,
-- the limited write-access to the repository requires a Core R member to sponsor
-and actually commit the changes.
+-   the technical overhead of dealing with PO files made it difficult for external parties to contribute,
+-   the limited write-access to the repository requires a Core R member to sponsor and actually commit the changes.
 
-Around 2010, there was a web-based translation service hosted at
-http://translation.r-project.org/pootle/, which made the PO file strings
-available for translation using any web-browser after authentication.
-Unfortunately, the service was shut down later without a successor.
+Around 2010, there was a web-based translation service hosted at <http://translation.r-project.org/pootle/>, which made the PO file strings available for translation using any web-browser after authentication. Unfortunately, the service was shut down later without a successor.
 
 ## Proposed solution
 
-A modern alternative of Pootle is [Weblate](https://weblate.org/en/), which is a
-web-based tool to make it easy to crowd-source translating strings extracted
-from the source code, written in Python, extensible by using plugins, comes with
-pre-build Docker images, great docs and community.
+A modern alternative of Pootle is [Weblate](https://weblate.org/en/), which is a web-based tool to make it easy to crowd-source translating strings extracted from the source code, written in Python, extensible by using plugins, comes with pre-build Docker images, great docs and community.
 
-A POC installation has been deployed at https://translate.rx.studio in May 2022, and shared with the R community on the R Contributors Slack channel.
+A POC installation has been deployed at <https://translate.rx.studio> in May 2022, and shared with the R community on the R Contributors Slack channel.
 
-Early feedback was positive, and thousands of strings have been already
-translated in a dozen of languages, but there are ways to improve 
+Early feedback was positive, and thousands of strings have been already translated in a dozen of languages, but there are ways to improve
 
-- UX for translators and translation team (e.g. review workflows),
-- reporting on the state of translations (e.g. GSoC dashboard),
-- integration with R Core (e.g. quarterly patch files),
-- maintenance (e.g. git conflicts and forced rebase),
-- hosting (e.g. to decide if we keep the current domain or move under
-  r-project.org, who is hosting etc).
+-   UX for translators and translation team (e.g. review workflows),
+-   reporting on the state of translations (e.g. GSoC dashboard),
+-   integration with R Core (e.g. quarterly patch files),
+-   maintenance (e.g. git conflicts and forced rebase),
+-   hosting (e.g. to decide if we keep the current domain or move under r-project.org, who is hosting etc).
 
 Actual tasks are listed at the [Weblate ideation dashboard](https://github.com/orgs/r-devel/projects/2).
 
 ## Project requirements
 
-Any help is highly appreciated, e.g. translations without any technical skills,
-but to achieve the goal of improving the current Weblate service, the below
-skills/experiences would be helpful:
+Any help is highly appreciated, e.g. translations without any technical skills, but to achieve the goal of improving the current Weblate service, the below skills/experiences would be helpful:
 
-- UNIX system administration (e.g. SSH, advanced git, Docker, AWS)
-- Python (e.g. to write custom Weblate plugins)
-- web services (e.g. to write an API endpoint in R that Weblate can call)
-- project/product management (e.g. to define and document translation workflows)
+-   UNIX system administration (e.g. SSH, advanced git, Docker, AWS)
+-   Python (e.g. to write custom Weblate plugins)
+-   web services (e.g. to write an API endpoint in R that Weblate can call)
+-   project/product management (e.g. to define and document translation workflows)
 
 ## Project resources
 
-- [Translating R workshop (1h30m video)](https://contributor.r-project.org/tutorials/translating-r-to-your-language/)
-- [LatinR hackathon intro to Weblate (30m video in Spanish)](https://contributor.r-project.org/demos/latinr-hackathon/)
-- [Infrastructure and maintenance instructions](https://github.com/r-devel/translations/wiki/Weblate-server)
+-   [Translating R workshop (1h30m video)](https://contributor.r-project.org/tutorials/translating-r-to-your-language/)
+-   [LatinR hackathon intro to Weblate (30m video in Spanish)](https://contributor.r-project.org/demos/latinr-hackathon/)
+-   [Infrastructure and maintenance instructions](https://github.com/r-devel/translations/wiki/Weblate-server)
 
 ## Project outcomes
 
-- Recommendations and documentation for translation teams (e.g. workflows)
-- Automated checks on translation suggestions
-- More seamless integration with R Core (e.g. better docs and/or automatioin on
-  generating patch files to be committed into SVN)
+-   Recommendations and documentation for translation teams (e.g. workflows)
+-   Automated checks on translation suggestions
+-   More seamless integration with R Core (e.g. better docs and/or automatioin on generating patch files to be committed into SVN)
 
 ## Reactions and comments
 

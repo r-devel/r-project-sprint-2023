@@ -3,7 +3,7 @@ title: Translating R Messages/Warnings/Errors # Warning: changing the title may 
 description: "" # Optional short description for post on Discussions
 author: María Nanton and Saranjeet Kaur # and co-authors if applicable
 output: html_document
-categories: [Translation] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
+categories: [Translations] # use labels from https://github.com/r-devel/r-project-sprint-2023/labels
 comments:
   giscus: 
     repo: "r-devel/r-project-sprint-2023"
@@ -23,10 +23,6 @@ The sections are provided as a guide and may not be appropriate to your proposal
 Please label any R code chunks, especially those producing images.
 -->
 ```
-```{r setup}
-
-```
-
 ## Background
 
 R supports translation of messages, errors and warnings from English to other languages. This relies on contributed translations for the message strings. This project will gather contributors to work both on translations and guidelines for translation teams.

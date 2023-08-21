@@ -31,7 +31,7 @@ All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c
 ### Tue 29 Aug
 
 | Time (BST)    | Event                                                                    | Venue                                                                              |
-|------------------|--------------------------|-----------------------------|
+|---------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | 18:00 - 19:00 | Self-service dinner                                                      | [Rootes restaurant](https://campus.warwick.ac.uk//search/623c88c9421e6f5928c0dcae) |
 | 19:30 - 20:00 | Welcome session                                                          | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)          |
 | 20:00 - 22:00 | Social (drinks + nibbles) <br> *sponsored by [Posit](https://posit.co/)* | [FAB Atrium](https://campus.warwick.ac.uk//search/623c8960421e6f5928c0fb65)        |
@@ -39,7 +39,7 @@ All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c
 ### Wed 30 Aug
 
 | Time (BST)    | Event                                                                                 | Venue                                                                                        |
-|------------------|--------------------------|----------------------------|
+|---------------|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
 | 08:30 - 09:00 | Coffee                                                                                | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
 | 09:00 - 10:30 | Kick-off day 1                                                                        | [FAB 5.02/5.03](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdce)               |
 | 10:30 - 11:00 | Coffee                                                                                | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                    |
@@ -54,7 +54,7 @@ All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c
 ### Thu 31 Aug
 
 | Time (BST)    | Event                                                                                      | Venue                                                                                                |
-|------------------|--------------------------|-----------------------------|
+|---------------|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | 08:30 - 09:00 | Coffee                                                                                     | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)                            |
 | 09:00 - 09:30 | Report back (part 2)                                                                       | [FAB 5.02/5.03](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdce)                       |
 | 09:30 - 10:00 | Kick-off day 2                                                                             | [FAB 5.02/5.03](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdce)                       |
@@ -71,7 +71,7 @@ All whole group sessions in [FAB 5.01](https://campus.warwick.ac.uk//search/623c
 ### Fri 1 Sep
 
 | Time (BST)    | Event             | Venue                                                                              |
-|-----------------|-----------------|--------------------------------------|
+|---------------|-------------------|------------------------------------------------------------------------------------|
 | 08:30 - 09:00 | Coffee            | [FAB 5.01](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdcd)          |
 | 09:00 - 09:30 | Report back (ctd) | [FAB 5.02/5.03](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdce)     |
 | 09:30 - 10:00 | Kick-off day 3    | [FAB 5.02/5.03](https://campus.warwick.ac.uk//search/623c896c421e6f5928c0fdce)     |

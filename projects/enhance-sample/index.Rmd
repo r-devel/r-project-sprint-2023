@@ -24,7 +24,7 @@ The issue can affect other packages as illustrated by this [dplyr issue affectin
 
 To better understand the problem, consider the illustration below, following [@tille2023remarks].
 
-```{r}
+```{r pikest_base}
 set.seed(123)
 N <- 12
 n <- 4
@@ -41,7 +41,7 @@ pikest_base <- pikest_base/nsim
 
 After estimating the inclusion probabilities with `sample.int`, we can compare them with algorithms from the `sampling` package, as highlighted in its documentation.
 
-```{r}
+```{r pikest_alt}
 library(sampling)
 set.seed(42)
 pikest_maxent <- sapply(1:nsim, \(i) UPmaxentropy(pik))
@@ -58,7 +58,6 @@ cbind(pik,
 
 To evaluate the accuracy of the sampling algorithm, we can compute the following test statistic:
 
-
 $$
 z_k = \dfrac{(\hat{\pi_k} - \pi_k) \sqrt{M}}{\sqrt{\pi_k (1 - \pi_k)}}
 $$
@@ -67,14 +66,14 @@ where $M$ is the number of simulations.
 
 $z_k$ should be asymptotically normal under the null hypothesis that the sampling algorithm is correct. The implementation is as follows:
 
-```{r}
+```{r test_stat}
 test_stat <- function(est, pik)
   (est - pik) / sqrt(pik * (1 - pik)/nsim)
 ```
 
 We can compute this test statistics for each method and check its normality using a `qqplot`.
 
-```{r, echo = FALSE}
+```{r qqplot, echo = FALSE}
 par(mfrow = c(2, 2))
 set.seed(3)
 theo <- rnorm(n = N)
@@ -90,25 +89,22 @@ qqline(theo)
 
 These charts show how `base::sample` deviates more from normality compared to the other two competing algorithms available in the `sampling` package.
 
-
 ## Proposed solution
 
-- **Option 1:**
-  - Refine the documentation for `base::sample` and `base::sample.int`.
-  - Suggest adding a concise paragraph in the `Details` section, explaining why the function is not suitable for unequal probability sampling based on inclusion probabilities.
-
-- **Option 2:**
-  - Introduce a new `C` function and an additional argument to `sample.int` to incorporate the new method.
-  - Retain the original [`ProbSampleNoReplace` `C` function](https://github.com/wch/r-source/blob/7ad1c5790841572c88955b1da805d28174ff0b56/src/main/random.c#L406).
-  - By default, `base::sample.int` should utilize `ProbSampleNoReplace` for unequal probability sampling without replacement. This ensures backward compatibility and prevents disruptions to existing code.
-
+-   **Option 1:**
+    -   Refine the documentation for `base::sample` and `base::sample.int`.
+    -   Suggest adding a concise paragraph in the `Details` section, explaining why the function is not suitable for unequal probability sampling based on inclusion probabilities.
+-   **Option 2:**
+    -   Introduce a new `C` function and an additional argument to `sample.int` to incorporate the new method.
+    -   Retain the original [`ProbSampleNoReplace` `C` function](https://github.com/wch/r-source/blob/7ad1c5790841572c88955b1da805d28174ff0b56/src/main/random.c#L406).
+    -   By default, `base::sample.int` should utilize `ProbSampleNoReplace` for unequal probability sampling without replacement. This ensures backward compatibility and prevents disruptions to existing code.
 
 It is hard to pick one algorithm over the multitude of available unequal probability sampling algorithms. In theory, there's no best algorithm for unequal probability. However, the Maximum Entropy Sampling algorithm (`sampling::UPmaxentropy`) also known as Conditional Poisson Sampling is an algorithm with good properties (maximizing entropy) that can be used as a reference.
 
 ## Project requirements
 
-- Good understanding of survey sampling algorithms.
-- Good C and R coding skills.
+-   Good understanding of survey sampling algorithms.
+-   Good C and R coding skills.
 
 ## Project outcomes
 
@@ -117,3 +113,12 @@ An enhanced version of `sample` (`sample.int`) with a new argument to select the
 ## References
 
 <div id="refs"></div>
+
+## Reactions and comments
+
+```{=html}
+<!-- 
+Please leave the Reactions and comments section
+- a Giscus comment box will be automatically added here 
+-->
+```

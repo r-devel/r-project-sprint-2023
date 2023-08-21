@@ -49,9 +49,7 @@ grid.draw(r1)
 grid.draw(r2)
 ```
 
-The following code defines a simple function with a mask as its argument.
-It draws the red rectangle, then pushes a viewport that enforces the mask,
-then draws the green rectangle.
+The following code defines a simple function with a mask as its argument. It draws the red rectangle, then pushes a viewport that enforces the mask, then draws the green rectangle.
 
 ```{r}
 maskTest <- function(mask) {
@@ -63,19 +61,14 @@ maskTest <- function(mask) {
 }
 ```
 
-The followind code calls that function, passing the `amask` defined above.
-The drawing is done on a `pdf()` graphics device for reasons that will
-become clear later.
-The result is that the red rectangle is drawn normally, but the mask
-means that only part of the green rectangle is drawn (where the
-rectangle and the circlular mask overlap) and that part
-is only drawn semitransparent (because the mask is semitransparent).
+The followind code calls that function, passing the `amask` defined above. The drawing is done on a `pdf()` graphics device for reasons that will become clear later. The result is that the red rectangle is drawn normally, but the mask means that only part of the green rectangle is drawn (where the rectangle and the circlular mask overlap) and that part is only drawn semitransparent (because the mask is semitransparent).
 
 ```{r, rect-circle-mask, fig.keep="none", results="hide"}
 pdf("alpha-mask.pdf", width=2, height=2)
 maskTest(amask)
 dev.off()
 ```
+
 ![](alpha-mask.png)
 
 R version 4.2 added the concept of *luminance* masks. As with alpha masks, we can create a luminance masks with any shape, but what matters is not the opacity of the final result, but the luminance of the final result; whether the mask is black (which corresponds to full transparency), or white (full opacity), or grey (semitransparency).
@@ -93,13 +86,7 @@ grid.segments(gp=gpar(lwd=10, col="grey"))
 grid.draw(lc)
 ```
 
-The following code calls the `maskTest()` function again,
-but this time using the `lmask`.
-The result is the same as for the alpha mask, but this time the result is due
-to the grey values in the luminance mask, where before the result
-was due to the opacity value in the alpha mask.
-Again, we use the `pdf()` device for drawing;  this will become
-clear very soon, I promise!
+The following code calls the `maskTest()` function again, but this time using the `lmask`. The result is the same as for the alpha mask, but this time the result is due to the grey values in the luminance mask, where before the result was due to the opacity value in the alpha mask. Again, we use the `pdf()` device for drawing; this will become clear very soon, I promise!
 
 ```{r lumi-mask-pdf, fig.keep="none", results="hide"}
 pdf("lumi-mask.pdf", width=2, height=2)
@@ -115,21 +102,9 @@ system("convert -density 96 lumi-mask.pdf lumi-mask.png")
 
 ## Problem statement
 
-Not all graphics devices support masks.  For those that do, not all
-devices support both alpha masks and luminance masks.
-For example, although the `pdf()` device used above supports both
-types of masks, Cairo-based graphics devices, e.g., `png(type="cairo")`,
-only support alpha masks.  If you try `maskTest(lmask)` on a Cairo
-graphics device you will get a warning and the mask with have no effect.
+Not all graphics devices support masks. For those that do, not all devices support both alpha masks and luminance masks. For example, although the `pdf()` device used above supports both types of masks, Cairo-based graphics devices, e.g., `png(type="cairo")`, only support alpha masks. If you try `maskTest(lmask)` on a Cairo graphics device you will get a warning and the mask with have no effect.
 
-In R version 4.3,
-support for luminance masks was added to the Quartz graphics device in R
-(`quartz()` on MacOS).
-Unfortunately, in a reverse of the Cairo graphics device problem,
-Quartz graphics only supports luminance masks so we have not implemented
-alpha masks on the `quartz()` device.
-If you try `maskTest(amask)` on a `quartz()` device, you will get
-a warning and the mask with have no effect.
+In R version 4.3, support for luminance masks was added to the Quartz graphics device in R (`quartz()` on MacOS). Unfortunately, in a reverse of the Cairo graphics device problem, Quartz graphics only supports luminance masks so we have not implemented alpha masks on the `quartz()` device. If you try `maskTest(amask)` on a `quartz()` device, you will get a warning and the mask with have no effect.
 
 ## Proposed solution
 
