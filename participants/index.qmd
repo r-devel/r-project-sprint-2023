@@ -829,4 +829,17 @@ participant_info(name = "Roberto Villegas-Diaz",
 ```
 
 </div>
+
+<div>
+
+```{r, results = "asis"}
+participant_info(name = "Carol Willing*",
+                 affiliation = "Project Jupyter",
+                 pic = "headshot-carol_willing.jpg",
+                 alt = "Headshot of Carol Willing",
+                 web = "https://github.com/willingc",
+                 github = "https://github.com/willingc")
+```
+
+</div>
 :::
