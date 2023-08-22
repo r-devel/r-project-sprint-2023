@@ -149,11 +149,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">Problem statement</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link active" data-scroll-target="#problem-statement">Problem statement</a></li>
   <li><a href="#proposed-workflow" id="toc-proposed-workflow" class="nav-link" data-scroll-target="#proposed-workflow">Proposed workflow</a>
   <ul class="collapse">
-  <li><a href="#triage-exiting-bugs" id="toc-triage-exiting-bugs" class="nav-link" data-scroll-target="#triage-exiting-bugs">Triage exiting bugs</a></li>
+  <li><a href="#triage-existing-bugs" id="toc-triage-existing-bugs" class="nav-link" data-scroll-target="#triage-existing-bugs">Triage existing bugs</a></li>
   <li><a href="#find-new-bugs" id="toc-find-new-bugs" class="nav-link" data-scroll-target="#find-new-bugs">Find new bugs</a></li>
   </ul></li>
   <li><a href="#list-of-bugs" id="toc-list-of-bugs" class="nav-link" data-scroll-target="#list-of-bugs">List of bugs</a>
@@ -201,23 +200,20 @@ The sections are provided as a guide and may not be appropriate to your proposal
 
 Please label any R code chunks, especially those producing images.
 -->
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-</section>
 <section id="problem-statement" class="level2">
 <h2 class="anchored" data-anchor-id="problem-statement">Problem statement</h2>
 <p>In general R documentation is very good and thorough, but there’s always room for improvement.</p>
-<p>Right now there are <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;product=R&amp;resolution=---">43 documentation-related bugs</a> open in Bugzilla. Searching online and asking on social media also bring up more documentation issues that could be discussed –and possibly eventually fixed.</p>
+<p>Right now there are <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;product=R&amp;resolution=---">43 documentation-related bugs</a> open in Bugzilla. Searching online and asking on social media also brings up more documentation issues that could be discussed—and possibly eventually fixed.</p>
 </section>
 <section id="proposed-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="proposed-workflow">Proposed workflow</h2>
-<section id="triage-exiting-bugs" class="level3">
-<h3 class="anchored" data-anchor-id="triage-exiting-bugs">Triage exiting bugs</h3>
+<section id="triage-existing-bugs" class="level3">
+<h3 class="anchored" data-anchor-id="triage-existing-bugs">Triage existing bugs</h3>
 <p>A first pass would be to triage <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;list_id=23595&amp;product=R&amp;resolution=---">bugs in the Documentation tag in Bugzilla</a>.</p>
 </section>
 <section id="find-new-bugs" class="level3">
 <h3 class="anchored" data-anchor-id="find-new-bugs">Find new bugs</h3>
-<p>A second pass would be to look for new documentation issues and open bugs on Bugzilla.</p>
+<p>A second pass would be to look for new documentation issues and open bugs on Bugzilla where there is agreement the documentation could be improved.</p>
 <p>Sources for these issues can be:</p>
 <ol type="1">
 <li>Ask among R Contributors.</li>
@@ -276,12 +272,13 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17331">17331</a></td>
-<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17331">Inappropriate implicit variable setting in ~/.R/Makevars macOS recommendation within R Installation and Administration Manual</a></td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17331">Inappropriate implicit variable setting in ~/.R/Makevars macOS recommendation</a></td>
 <td>R Installation and Administration</td>
 <td>Advanced</td>
 <td>check patch</td>
-<td><p>Need a Mac to confirm.</p>
-<p>A possible fix is included in the bug report.</p></td>
+<td>Need a Mac to confirm.<br>
+<br>
+A possible fix is included in the bug report.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=8528">8528</a></td>
@@ -302,7 +299,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=7195">7195</a></td>
-<td><a href="https://bugs.r-project.org/show_bug.cgi?id=7195">additionreal examples for R-intro.texi</a></td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=7195">additional examples for R-intro.texi</a></td>
 <td>An Introduction to R</td>
 <td>Beginner</td>
 <td>review patch</td>
@@ -375,7 +372,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17791">17791</a></td>
-<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17791">?text doesn’t have any vfont examples, and doesn’t link to the Hershey help page the first time it’s mentioned</a></td>
+<td><a href="https://bugs.r-project.org/show_bug.cgi?id=17791">?text doesn’t have any vfont examples, and doesn’t link to the Hershey help page</a></td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -553,14 +550,6 @@ Please label any R code chunks, especially those producing images.
 <td></td>
 </tr>
 <tr class="odd">
-<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18182">18182</a></td>
-<td><a href="https://bugs.r-project.org/show_bug.cgi?id=18182">generated EPUB documentation files are invalid according to epubcheck</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18408">18408</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18408">Using CMake section “$(SHLIB): mylibs” did not work for me</a></td>
 <td>Writing R Extensions</td>
@@ -569,7 +558,7 @@ Please label any R code chunks, especially those producing images.
 <p>create patch</p></td>
 <td>Needs knowledge of cmake.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17770">17770</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17770">xtabs does not act as documented for na.action = na.pass</a></td>
 <td>Help docs</td>
@@ -578,7 +567,7 @@ Please label any R code chunks, especially those producing images.
 <p>close issue</p></td>
 <td>The issue seems to be solved by a previous patch.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18402">18402</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18402">Provide a mechanism for adding custom CSS styles to HTML documentation headers.</a></td>
 <td></td>
@@ -586,7 +575,7 @@ Please label any R code chunks, especially those producing images.
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18499">18499</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18499">Examples for functions that involve writing files</a></td>
 <td>Writing R Extensions</td>
@@ -594,7 +583,7 @@ Please label any R code chunks, especially those producing images.
 <td>check patch</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18524">18524</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18524">DOCS: Make it easier to find help on raw string constants, e.g.&nbsp;help.search(‘r”’)</a></td>
 <td>Help docs</td>
@@ -602,7 +591,7 @@ Please label any R code chunks, especially those producing images.
 <td>check patch</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18561">18561</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18561">\item{} labels processed inconsistently in \value{} between Rd2HTML and other converters</a></td>
 <td></td>
@@ -610,7 +599,7 @@ Please label any R code chunks, especially those producing images.
 <td>discuss</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18562">18562</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18562">Ambiguous statements in write() help page</a></td>
 <td>Help docs</td>
@@ -618,7 +607,7 @@ Please label any R code chunks, especially those producing images.
 <td>check patch</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18567">18567</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18567">Consistent style in base package help pages</a></td>
 <td>Help docs</td>
