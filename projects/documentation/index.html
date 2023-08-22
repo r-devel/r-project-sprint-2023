@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -241,12 +207,7 @@ Please label any R code chunks, especially those producing images.
 <section id="problem-statement" class="level2">
 <h2 class="anchored" data-anchor-id="problem-statement">Problem statement</h2>
 <p>In general R documentation is very good and thorough, but there’s always room for improvement.</p>
-<p>This is my main motivation for this proposal are examples that are complex or confusing to beginners. Teaching to novices I usually encourage my students to look in the documentation and, in particular, to check the examples for to learn the basic usage of functions. However, I often find example sections that are too complex for them or don’t include an example for the simplest usage of the function.</p>
-<p>For instance, the example section of <code>cut()</code> starts with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">&lt;-</span> stats<span class="sc">::</span><span class="fu">rnorm</span>(<span class="dv">10000</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">cut</span>(Z, <span class="at">breaks =</span> <span class="sc">-</span><span class="dv">6</span><span class="sc">:</span><span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This requires the user to know what the <code>rnorm()</code> and <code>table()</code> functions do before the first usage to <code>cut()</code>. The result also doesn’t directly help understanding the output and behaviour of <code>cut()</code>. A better starting example could be something very simple like</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">breaks =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Right now there are <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;product=R&amp;resolution=---">43 documentation-related bugs</a> open in Bugzilla. Searching online and asking on social media also bring up more documentation issues that could be discussed –and possibly eventually fixed.</p>
 </section>
 <section id="proposed-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="proposed-workflow">Proposed workflow</h2>
@@ -268,14 +229,20 @@ Please label any R code chunks, especially those producing images.
 </section>
 <section id="list-of-bugs" class="level2">
 <h2 class="anchored" data-anchor-id="list-of-bugs">List of bugs</h2>
-<p>This table lists all current open bugs with the Documentation tag sorted from oldest to newest (based on last comment). The “Location” column specifies which documentation is affected. The “Affected users” specifies which type of user I think are most likely affected by the issue (Beginners: people just starting with R, Advanced: people that use R regularly, Experts: people in close contact with R internals and/or package development). The “Action(s)” column lists the required actions to address the bug. And the “Comments” column is for general comments about the issue.</p>
+<p>This table lists all currently open bugs with the Documentation tag sorted from oldest to newest (based on last comment). The “Location” column specifies which documentation is affected. The “Affected users” specifies which type of user I think are most likely affected by the issue (Beginners: people just starting with R, Advanced: people that use R regularly, Experts: people in close contact with R internals and/or package development). The “Action(s)” column lists the required actions to address the bug. And the “Comments” column is for general comments about the issue.</p>
 <table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 10%">
+<col style="width: 24%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>ID</th>
-<th>Status</th>
+<th>Bug ID</th>
 <th>Title</th>
-<th>Last activity</th>
 <th>Location</th>
 <th>Affected users</th>
 <th>Action(s)</th>
@@ -285,9 +252,7 @@ Please label any R code chunks, especially those producing images.
 <tbody>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=14998">14998</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=14998">Suggestion for two internal self-reference in “Writing R Extensions” manual</a></td>
-<td>invalid</td>
 <td>Writing R Extensions</td>
 <td>Expert</td>
 <td>discuss</td>
@@ -295,9 +260,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16963">16963</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16963">In ?on.exit, add note that on.exit expressions are evaluated after return() call.</a></td>
-<td>2016-06-22</td>
 <td>Help docs</td>
 <td>Advanced</td>
 <td>create patch</td>
@@ -305,9 +268,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17136">17136</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17136">Documentation for method=“BY” in p.adjust()</a></td>
-<td>2016-08-28</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -315,9 +276,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17331">17331</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17331">Inappropriate implicit variable setting in ~/.R/Makevars macOS recommendation within R Installation and Administration Manual</a></td>
-<td>2017-08-26</td>
 <td>R Installation and Administration</td>
 <td>Advanced</td>
 <td>check patch</td>
@@ -326,9 +285,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=8528">8528</a></td>
-<td>ASSI</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=8528">pgamma - inadequate algorithm design and poor coding</a></td>
-<td>2018-08-30</td>
 <td></td>
 <td></td>
 <td></td>
@@ -336,9 +293,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=15882">15882</a></td>
-<td>NEW</td>
 <td>[<a href="https://bugs.r-project.org/show_bug.cgi?id=15882">requires a positional argument, not mentioned in docs</a></td>
-<td>2019-12-22</td>
 <td>R Internals</td>
 <td>Advanced</td>
 <td><p>discuss</p>
@@ -347,9 +302,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=7195">7195</a></td>
-<td>NEW</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=7195">additionreal examples for R-intro.texi</a></td>
-<td>2020-01-06</td>
 <td>An Introduction to R</td>
 <td>Beginner</td>
 <td>review patch</td>
@@ -357,9 +310,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=1011">1011</a></td>
-<td>NEW</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=1011">R-intro suggestions part II</a></td>
-<td>2020-01-06</td>
 <td></td>
 <td></td>
 <td></td>
@@ -367,9 +318,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=10701">10701</a></td>
-<td>NEW</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=10701">Suggestions for R-intro manual</a></td>
-<td>2020-01-06</td>
 <td></td>
 <td></td>
 <td></td>
@@ -377,9 +326,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=988">988</a></td>
-<td>NEW</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=988">input for R-intro</a></td>
-<td>2020-01-13</td>
 <td></td>
 <td></td>
 <td></td>
@@ -387,9 +334,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=15272">15272</a></td>
-<td>NEW</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=15272">?nclass doesn’t find the nclass help page</a></td>
-<td>2020-01-13</td>
 <td>Help docs</td>
 <td></td>
 <td>create patch</td>
@@ -397,9 +342,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17695">17695</a></td>
-<td>ASSI</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17695">stopifnot example does not run all the way through</a></td>
-<td>2020-01-30</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td><p>discuss</p>
@@ -408,9 +351,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17716">17716</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17716">Small documentation pass on ?dyn.load</a></td>
-<td>2020-02-18</td>
 <td>Docs</td>
 <td>Expert</td>
 <td>check patch</td>
@@ -418,9 +359,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17753">17753</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17753">ave() documentation misleading</a></td>
-<td>2020-04-14</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>create patch</td>
@@ -428,9 +367,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17786">17786</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17786">?text can clarify the adj argument</a></td>
-<td>2020-05-07</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -438,9 +375,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17791">17791</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17791">?text doesn’t have any vfont examples, and doesn’t link to the Hershey help page the first time it’s mentioned</a></td>
-<td>2020-05-08</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -448,9 +383,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=7208">7208</a></td>
-<td>NEW</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=7208">Documentation R-intro input</a></td>
-<td>2020-05-16</td>
 <td>An Introduction to R</td>
 <td>Beginner</td>
 <td><p>discuss</p>
@@ -460,9 +393,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17805">17805</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17805">args(): document NULL return value for certain special primitives</a></td>
-<td>2020-05-18</td>
 <td>Help docs</td>
 <td>Advanced</td>
 <td>check patch</td>
@@ -470,9 +401,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17821">17821</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17821">Reference possible portability issues for translations in R-Exts</a></td>
-<td>2020-06-04</td>
 <td>Writing R Extensions</td>
 <td>Expert</td>
 <td>check patch</td>
@@ -480,9 +409,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17827">17827</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17827">Request to remove Annals of Eugenics citation from iris documentation</a></td>
-<td>2020-06-12</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td><p>discuss (a lot)</p>
@@ -491,9 +418,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17896">17896</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17896">Cleaning up Internationalization section in R-exts</a></td>
-<td>2020-08-25</td>
 <td></td>
 <td></td>
 <td></td>
@@ -501,9 +426,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17933">17933</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17933">‘paste’ doc: wrong: 0-length arg recycling related to ‘collapse’</a></td>
-<td>2020-10-11</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -511,9 +434,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16567">16567</a></td>
-<td>ASSI</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16567">Claims about computational complexity of findInterval</a></td>
-<td>2021-01-02</td>
 <td>Help docs</td>
 <td>Advanced</td>
 <td><p>discuss</p>
@@ -522,9 +443,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18026">18026</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18026">Include help page for exportPattern</a></td>
-<td>2021-01-08</td>
 <td>Help docs</td>
 <td></td>
 <td></td>
@@ -532,9 +451,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18060">18060</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18060">“Malformed maintainer field.” message could be more helpful</a></td>
-<td>2021-02-18</td>
 <td>Help docs</td>
 <td>Expert</td>
 <td><p>discuss</p>
@@ -544,9 +461,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18094">18094</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18094">Suggestions for help system</a></td>
-<td>2021-05-04</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td><p>discuss</p>
@@ -555,9 +470,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18061">18061</a></td>
-<td>NEW</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18061">The documentation is not clear that match() does not use the same notion of equality as unique().</a></td>
-<td>2021-05-18</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td><p>discuss</p>
@@ -566,9 +479,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16003">16003</a></td>
-<td>NEW</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16003">heatmap scale argument: description not complete</a></td>
-<td>2021-07-26</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>create patch</td>
@@ -576,9 +487,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18173">18173</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18173">Man page for lm.fit is very brief about the circumstances when to use</a></td>
-<td>2021-08-23</td>
 <td>Help docs</td>
 <td>Advanced</td>
 <td><p>discuss</p>
@@ -587,9 +496,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17989">17989</a></td>
-<td>CONF</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17989">Documentation of asCall argument to xgettext is unclear</a></td>
-<td>2021-11-19</td>
 <td>Help docs</td>
 <td>Expert</td>
 <td>check patch</td>
@@ -597,9 +504,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18252">18252</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18252">Document how unicode strings are compared for equality</a></td>
-<td>2021-12-29</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -607,9 +512,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18282">18282</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18282">Description of var.test for lm objects could be improved.</a></td>
-<td>2022-01-21</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>create patch</td>
@@ -617,9 +520,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17279">17279</a></td>
-<td>CONF</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17279">parameter “amount” is badly explained for jitter()</a></td>
-<td>2022-02-11</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -627,9 +528,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18330">18330</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18330">type argument documentation in install.packages</a></td>
-<td>2022-04-28</td>
 <td>Help docs</td>
 <td>Advanced</td>
 <td><p>discuss</p>
@@ -638,9 +537,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18355">18355</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18355">trace() wipes out attributes</a></td>
-<td>2022-06-16</td>
 <td>Help docs</td>
 <td>Expert</td>
 <td><p>discuss</p>
@@ -649,9 +546,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18350">18350</a></td>
-<td>CONF</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18350">Clarification needed in ?c</a></td>
-<td>2022-07-18</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -659,9 +554,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18182">18182</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18182">generated EPUB documentation files are invalid according to epubcheck</a></td>
-<td>2022-09-08</td>
 <td></td>
 <td></td>
 <td></td>
@@ -669,9 +562,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18408">18408</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18408">Using CMake section “$(SHLIB): mylibs” did not work for me</a></td>
-<td>2022-09-22</td>
 <td>Writing R Extensions</td>
 <td>Expert</td>
 <td><p>discuss</p>
@@ -680,9 +571,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17770">17770</a></td>
-<td>ASSI</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17770">xtabs does not act as documented for na.action = na.pass</a></td>
-<td>2022-10-03</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td><p>discuss</p>
@@ -691,9 +580,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18402">18402</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18402">Provide a mechanism for adding custom CSS styles to HTML documentation headers.</a></td>
-<td>2022-11-05</td>
 <td></td>
 <td></td>
 <td></td>
@@ -701,9 +588,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18499">18499</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18499">Examples for functions that involve writing files</a></td>
-<td>2023-04-01</td>
 <td>Writing R Extensions</td>
 <td>Advanced</td>
 <td>check patch</td>
@@ -711,9 +596,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18524">18524</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18524">DOCS: Make it easier to find help on raw string constants, e.g.&nbsp;help.search(‘r”’)</a></td>
-<td>2023-05-02</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -721,9 +604,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18561">18561</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18561">\item{} labels processed inconsistently in \value{} between Rd2HTML and other converters</a></td>
-<td>2023-07-12</td>
 <td></td>
 <td></td>
 <td>discuss</td>
@@ -731,9 +612,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18562">18562</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18562">Ambiguous statements in write() help page</a></td>
-<td>2023-07-15</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
@@ -741,9 +620,7 @@ Please label any R code chunks, especially those producing images.
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18567">18567</a></td>
-<td>UNCO</td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18567">Consistent style in base package help pages</a></td>
-<td>2023-07-16</td>
 <td>Help docs</td>
 <td></td>
 <td>check patch</td>
@@ -761,34 +638,6 @@ Please label any R code chunks, especially those producing images.
 <li><p><code>?match</code> says “<code>%in%</code> is a more intuitive interface”, but <code>match()</code> and <code>%in%</code> return different things.</p></li>
 <li><p>Add examples of the <code>\(x)</code> function interface to the <code>function</code> help page.</p></li>
 <li><p>Add examples of using <code>\(x)</code> in <code>lapply</code>.</p></li>
-<li><p>Simpler examples: add examples of the simplest use-case for functions:</p>
-<ul>
-<li><p><code>cut()</code></p></li>
-<li><p><code>sqrt()</code> and <code>abs()</code></p></li>
-<li><p><code>log()</code></p></li>
-<li><p><code>sin()</code> and the rest of Trig.</p>
-<ul>
-<li>Also add examples of the difference between <code>atan()</code> and <code>atan2()</code></li>
-</ul></li>
-<li><p><code>&lt;-</code> doesn’t have any examples. Might be useful to provide examples to illustrate the difference between <code>&lt;-</code> and <code>&lt;&lt;-</code> and <code>=</code>.</p></li>
-<li><p><code>terms</code> needs examples.</p></li>
-<li><p><code>match()</code>. Simple vector and data.frame examples and examples of using it to recode variables (<a href="https://fosstodon.org/@TimTeaFan/110771036176541131">https://fosstodon.org/@TimTeaFan/110771036176541131</a>).</p></li>
-<li><p><code>cov2cor()</code>: remove “see the function definition {and learn ..}”</p></li>
-<li><p>a simpler example function in <code>function</code>?</p></li>
-<li><p>Examples of <code>while</code>, <code>repeat</code>, <code>break</code>, and <code>next</code> in <code>?Control</code>.</p></li>
-<li><p>Add examples of how lists behave (extraction, names, <code>NULL</code> values, an others) in <code>?list()</code>.</p></li>
-<li><p>In <code>?lm()</code></p>
-<ul>
-<li><p>add examples that use the data argument.</p></li>
-<li><p>add examples of multiple regression</p></li>
-<li><p>add examples that use <code>poly</code></p></li>
-</ul></li>
-<li><p><code>vcov()</code> doesn’t have examples</p></li>
-<li><p><code>xtfrm()</code> doesn’t have examples</p></li>
-<li><p><code>UseMethod()</code> doesn’t have examples</p></li>
-<li><p><code>?MASS::fractions()</code> needs simpler examples and an explanation of the difference between <code>fractions()</code> and <code>as.fractions()</code>(none, from looking at the code).</p></li>
-<li><p><code>?seq</code> needs examples of all the other related functions and better documentation of what they do.</p></li>
-</ul></li>
 <li><p>Can we look programmatically for functions with no example sections?</p></li>
 <li><p>In <code>?residuals</code> make it clear that both functions “are intended to encourage users to access object components through an accessor function rather than by directly referencing an object slot”.</p></li>
 <li><p>Explicitly state that <code>rm()</code> is an alias for <code>remove()</code>.</p></li>
@@ -796,7 +645,6 @@ Please label any R code chunks, especially those producing images.
 <li><p>Document the differences between factors and ordered factors in models (<a href="https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336">https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336</a>) .</p></li>
 <li><p>Add a discussion in <code>quantile()</code> for when the quantiles don’t actually contain the correct number of observations (<a href="https://mastodon.social/@eliocamp/110748596295500531">https://mastodon.social/@eliocamp/110748596295500531</a>).</p></li>
 <li><p>Add a comment in <code>?replicate</code> documenting that <code>expr</code> is wrapped in an anonymous function so that assignment doesn’t change the calling environment.</p></li>
-<li></li>
 <li><p>Look for instances of examples using things like <code>if (x z&lt;- cond1 &amp; cond2)</code>. That is, using assignment inside an if statement or inside a function. These are arguably anti-patterns that shouldn’t be in the help files.</p>
 <ul>
 <li><p><code>quantile()</code>.</p></li>
