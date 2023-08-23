@@ -322,6 +322,62 @@
     "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
   },
   {
+    "objectID": "projects/tweak-printCoefmat/index.html",
+    "href": "projects/tweak-printCoefmat/index.html",
+    "title": "Tweak printCoefmat() - better Round()ing / Zapping Zeros",
+    "section": "",
+    "text": "Printing of e.g. lm() results; but also glm(), anova(), etc; not just package {stats} but used by other packages as well, e.g., lme4."
+  },
+  {
+    "objectID": "projects/tweak-printCoefmat/index.html#background",
+    "href": "projects/tweak-printCoefmat/index.html#background",
+    "title": "Tweak printCoefmat() - better Round()ing / Zapping Zeros",
+    "section": "",
+    "text": "Printing of e.g. lm() results; but also glm(), anova(), etc; not just package {stats} but used by other packages as well, e.g., lme4."
+  },
+  {
+    "objectID": "projects/tweak-printCoefmat/index.html#problem-statement",
+    "href": "projects/tweak-printCoefmat/index.html#problem-statement",
+    "title": "Tweak printCoefmat() - better Round()ing / Zapping Zeros",
+    "section": "Problem statement",
+    "text": "Problem statement\nSlightly modified from Shu Fai Cheung’s example on the R-devel mailing list:\n\nset.seed(123)\nn &lt;- 1000\nx1 &lt;- rnorm(n)\nx2 &lt;- rnorm(n)\ny &lt;- 0.000754 + .5 * x1 + .6 * x2 + .036*rnorm(n)\ndat &lt;- data.frame(x1, x2, y)\nfm &lt;- lm(y ~ x1 + x2, dat)\n##    ---\nsfm &lt;- summary(fm)\nprint(sfm)\n\n\nCall:\nlm(formula = y ~ x1 + x2, data = dat)\n\nResiduals:\n      Min        1Q    Median        3Q       Max \n-0.102097 -0.022598 -0.001331  0.023538  0.121632 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 3.761e-07  1.115e-03     0.0        1    \nx1          4.992e-01  1.128e-03   442.4   &lt;2e-16 ***\nx2          6.010e-01  1.108e-03   542.3   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.03524 on 997 degrees of freedom\nMultiple R-squared:  0.9981,    Adjusted R-squared:  0.9981 \nF-statistic: 2.677e+05 on 2 and 997 DF,  p-value: &lt; 2.2e-16\n\n\nThe standard print is fine, but we would like the intercept to be “zapped to zero”. So we try zap.ind = 1 (which is passed to printCoefmat by print.summary.lm):\n\nprint(sfm, zap.ind = 1)\n\n\nCall:\nlm(formula = y ~ x1 + x2, data = dat)\n\nResiduals:\n      Min        1Q    Median        3Q       Max \n-0.102097 -0.022598 -0.001331  0.023538  0.121632 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 0.000000   0.001115     0.0        1    \nx1          0.499200   0.001128   442.4   &lt;2e-16 ***\nx2          0.601000   0.001108   542.3   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.03524 on 997 degrees of freedom\nMultiple R-squared:  0.9981,    Adjusted R-squared:  0.9981 \nF-statistic: 2.677e+05 on 2 and 997 DF,  p-value: &lt; 2.2e-16\n\n\nHere, we’d rather like to see correctly rounded coefficients\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 0.000000   0.001115     0.0        1    \nx1          0.499263   0.001128   442.4   &lt;2e-16 ***\nx2          0.600990   0.001108   542.3   &lt;2e-16 ***"
+  },
+  {
+    "objectID": "projects/tweak-printCoefmat/index.html#proposed-solution",
+    "href": "projects/tweak-printCoefmat/index.html#proposed-solution",
+    "title": "Tweak printCoefmat() - better Round()ing / Zapping Zeros",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nImprove printCoefmat().\nThe use of zapsmall() there, can round too much in these cases.\nOne option is to extend the meaning of the zap.ind argument and allow negative indices to mean that the zapping should not be done with zapsmall() but with an alternative function (to be defined inside printCoefmat()):\n\nzapOnlysmall &lt;- function(x, dig) {\n    x[abs(x) &lt;= 10^-dig] &lt;- 0\n    x\n}\n\nI had tried the following patch\n--- anova.R (revision 84998)\n+++ anova.R (working copy)\n@@ -105,7 +105,13 @@\n \n     ok &lt;- !(ina &lt;- is.na(xm))\n     ## zap before deciding any formats\n-    for (i in zap.ind) xm[, i] &lt;- zapsmall(xm[, i], digits)\n+    zapOnlysmall &lt;- function(x, dig) { x[abs(x) &lt;= 10^-dig] &lt;- 0 ; x }\n+    for (i in zap.ind) { ai &lt;- abs(i) # i &lt; 0 [zapOnly..]  vs  i &gt; 0 [zapsmall]:\n+        xm[, ai] &lt;- (if(i &lt; 0) zapOnlysmall else zapsmall)(xm[, ai], digits)\n+        ## problem: if one of these is a cs.ind (below) and is of larger order of magn., it is\n+        ## -------  rounded too much here --&gt; shows trailing 00 afterwards.\n+   ## ==&gt; TODO: detect and *fix* rather than needing negative zap.ind for zapOnlysmall\n+    }\nwhich “solved” the problem, but actually also changes other examples (not shown here) where a change is not necessary.\nAlso, see my “TODO” above, I think we could try to make this automatic, so the zap.ind = 1 example above would just do “the right thing”."
+  },
+  {
+    "objectID": "projects/tweak-printCoefmat/index.html#testing",
+    "href": "projects/tweak-printCoefmat/index.html#testing",
+    "title": "Tweak printCoefmat() - better Round()ing / Zapping Zeros",
+    "section": "Testing",
+    "text": "Testing\nThis is not yet a strict test, but code you can/should use this code to get a broader picture. Note that this produces a few pages of R console output :\ncf &lt;- coef(sfm)\n\nfor(dig in c(3:5, 7, 10)) {\n    cat(\"\\ndigits = \", dig,\":\\n================\\n\")\n    for(f in 10^c(-6, -3:3, 6, 9)) {\n        cat(\"cf[,1:2] := cf0[,1:2] * f, f=\", formatC(f),\":\\n\")\n        fcf &lt;- cf; fcf[,1:2] &lt;- f*cf[,1:2]\n        printCoefmat(fcf, signif.legend=FALSE, digits=dig) # using e-07 for intercept --&gt; everything in sci.format\n        cat(\" ... and with zap.ind = 1:\\n\")\n        printCoefmat(fcf, signif.legend=FALSE, digits=dig, zap.ind = 1)\n        cat(\"-------------------------\\n\\n\")\n    }\n}"
+  },
+  {
+    "objectID": "projects/tweak-printCoefmat/index.html#project-requirements",
+    "href": "projects/tweak-printCoefmat/index.html#project-requirements",
+    "title": "Tweak printCoefmat() - better Round()ing / Zapping Zeros",
+    "section": "Project requirements",
+    "text": "Project requirements\nAlmost none. Some understanding about floating point arithmetic, notably rounding."
+  },
+  {
+    "objectID": "projects/tweak-printCoefmat/index.html#project-outcomes",
+    "href": "projects/tweak-printCoefmat/index.html#project-outcomes",
+    "title": "Tweak printCoefmat() - better Round()ing / Zapping Zeros",
+    "section": "Project outcomes",
+    "text": "Project outcomes\nA patch to the R source. Code changes only in the first file (anova.R) but a really useful patch also updates the documentation (*.Rd) notably adding an example there.\nAs I have seen (with my own first fix), that it may change output of other examples, and for some of these, the tests/Examples/&lt;pkg&gt;-Ex.Rout.save files also need patching ( tests/Examples/stats-Ex.Rout.save will need an update in any case if we modify/add examples on the help page). Files to change:\ndoc/NEWS.Rd\nsrc/library/stats/R/anova.R\nsrc/library/stats/man/printCoefmat.Rd\ntests/Examples/{stats,graphics,datasets}-Ex.Rout.save"
+  },
+  {
+    "objectID": "projects/tweak-printCoefmat/index.html#reactions-and-comments",
+    "href": "projects/tweak-printCoefmat/index.html#reactions-and-comments",
+    "title": "Tweak printCoefmat() - better Round()ing / Zapping Zeros",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
     "objectID": "projects/translation/index.html",
     "href": "projects/translation/index.html",
     "title": "Translating R Messages/Warnings/Errors",
@@ -445,7 +501,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\nAhmadou Dicko and Thomas Lumley\n\n\nEnhancing sample.int for unequal probability sampling\n\n\nC,R,Wishlist,Models\n\n\n\n\nSimon Urbanek and Michael Chirico\n\n\nFacilitate Translation for Mac GUI\n\n\nTranslations\n\n\n\n\nElio Campitelli\n\n\nImproving documentation\n\n\nDocumentation,R\n\n\n\n\nMaría Nanton and Saranjeet Kaur\n\n\nTranslating R Messages/Warnings/Errors\n\n\nTranslations\n\n\n\n\nGergely Daroczi\n\n\nWeblate Improvements\n\n\nTranslations,Documentation\n\n\n\n\n\n\nNo matching items"
+    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\nAhmadou Dicko and Thomas Lumley\n\n\nEnhancing sample.int for unequal probability sampling\n\n\nC,R,Wishlist,Models\n\n\n\n\nSimon Urbanek and Michael Chirico\n\n\nFacilitate Translation for Mac GUI\n\n\nTranslations\n\n\n\n\nElio Campitelli\n\n\nImproving documentation\n\n\nDocumentation,R\n\n\n\n\nMaría Nanton and Saranjeet Kaur\n\n\nTranslating R Messages/Warnings/Errors\n\n\nTranslations\n\n\n\n\nMartin Maechler\n\n\nTweak printCoefmat() - better Round()ing / Zapping Zeros\n\n\nI/O,Wishlist\n\n\n\n\nGergely Daroczi\n\n\nWeblate Improvements\n\n\nTranslations,Documentation\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/mac-gui-translation/index.html",
