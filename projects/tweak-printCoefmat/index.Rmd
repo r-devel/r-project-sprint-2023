@@ -1,0 +1,173 @@
+---
+title: Tweak printCoefmat() - better Round()ing / Zapping Zeros
+description: "In rare cases, the rounding, e.g. of the std.err. column in
+              printCoefmat() is undesirably rounding too much and then
+			  depicting inaccurate values. This is from the recent R-devel (mailing
+			  list), thread starting at
+			  https://stat.ethz.ch/pipermail/r-help/2023-July/477688.html"
+author: Martin Maechler
+output: html_document
+categories: [I/O, Wishlist] # from https://github.com/r-devel/r-project-sprint-2023/labels
+comments:
+  giscus: 
+    repo: "r-devel/r-project-sprint-2023"
+    repo-id: "R_kgDOIhAibA"
+    category: "Proposals"
+    category-id: "DIC_kwDOIhAibM4CW3GY"
+    mapping: "title"
+    reactions-enabled: true
+    loading: lazy
+---
+
+```{=html}
+<!-- 
+This template is based on https://contributor.r-project.org/r-project-sprint-2023/projects/quartz-alpha-mask/.
+The sections are provided as a guide and may not be appropriate to your proposal, feel free to skip or change sections.
+
+Please label any R code chunks, especially those producing images.
+-->
+```
+```{r setup}
+
+```
+
+## Background
+
+Printing of e.g.  `lm()` results; but also glm(), anova(), etc; not just
+package `{stats}` but used by other packages as well, e.g., `lme4`.
+
+## Problem statement
+
+```{r lm-example}
+## Slightly modified from Shu Fai Cheung's example on R-devel (the mailing list)
+set.seed(123)
+n <- 1000
+x1 <- rnorm(n)
+x2 <- rnorm(n)
+y <- 0.000754 + .5 * x1 + .6 * x2 + .036*rnorm(n)
+dat <- data.frame(x1, x2, y)
+fm <- lm(y ~ x1 + x2, dat)
+##    ---
+sfm <- summary(fm)
+print(sfm)# "fine" - but want intercept "zapped to zero" ==>
+print(sfm, zap.ind=1)# now, get two extra  trailing '00'  for the coefficient column
+## a "bug"
+```
+........
+........
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.000000   0.001115     0.0        1    
+x1          0.499200   0.001128   442.4   <2e-16 ***
+x2          0.601000   0.001108   542.3   <2e-16 ***
+
+........
+.........
+```
+Here, we'd rather like to see correctly rounded coefficients
+```
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.000000   0.001115     0.0        1    
+x1          0.499263   0.001128   442.4   <2e-16 ***
+x2          0.600990   0.001108   542.3   <2e-16 ***
+```
+
+
+## Proposed solution
+
+Improve `printCoefmat()`.
+
+The use of `zapsmall()` there, can round too much in these cases.
+
+One option is to extend the meaning of the `zap.ind` argument and allow
+*negative* indices to mean that the zapping should *not* be done with
+`zapsmall()` but with a (to be defined inside `printCoefmat()`)
+```{r zapOnlysmall-def}
+zapOnlysmall <- function(x, dig) {
+    x[abs(x) <= 10^-dig] <- 0
+    x
+}
+```
+
+I had tried the following patch
+
+```
+--- anova.R	(revision 84998)
++++ anova.R	(working copy)
+@@ -105,7 +105,13 @@
+ 
+     ok <- !(ina <- is.na(xm))
+     ## zap before deciding any formats
+-    for (i in zap.ind) xm[, i] <- zapsmall(xm[, i], digits)
++    zapOnlysmall <- function(x, dig) { x[abs(x) <= 10^-dig] <- 0 ; x }
++    for (i in zap.ind) { ai <- abs(i) # i < 0 [zapOnly..]  vs  i > 0 [zapsmall]:
++        xm[, ai] <- (if(i < 0) zapOnlysmall else zapsmall)(xm[, ai], digits)
++        ## problem: if one of these is a cs.ind (below) and is of larger order of magn., it is
++        ## -------  rounded too much here --> shows trailing 00 afterwards.
++	## ==> TODO: detect and *fix* rather than needing negative zap.ind for zapOnlysmall
++    }
+```
+
+which "solved" the problem, but actually also changes other examples
+(not shown here) where a change is *not* necessary.
+
+Also, see my "TODO" above, I think we could try to make this automatic, so
+the  `zap.ind = 1` example above would just do "the right thing".
+
+
+## Testing
+
+This is not yet a strict test,
+but code you can/should use to get a broader picture.
+Note that this produces a few _pages_ of R console output :
+
+```{r loop-many-digs-scales}
+cf <- coef(sfm)
+
+for(dig in c(3:5, 7, 10)) {
+    cat("\ndigits = ", dig,":\n================\n")
+    for(f in 10^c(-6, -3:3, 6, 9)) {
+        cat("cf[,1:2] := cf0[,1:2] * f, f=", formatC(f),":\n")
+        fcf <- cf; fcf[,1:2] <- f*cf[,1:2]
+        printCoefmat(fcf, signif.legend=FALSE, digits=dig) # using e-07 for intercept --> everything in sci.format
+        cat(" ... and with zap.ind = 1:\n")
+        printCoefmat(fcf, signif.legend=FALSE, digits=dig, zap.ind = 1)
+        cat("-------------------------\n\n")
+    }
+}
+```
+
+## Project requirements
+
+Almost none.  Some understanding about floating point arithmetic, notably rounding.
+
+## Project resources
+
+## Project outcomes
+
+A patch to the R source.  Code changes only in the first file (`anova.R`)
+but a really useful patch also updates the documentation (`*.Rd`) notably
+adding an example there.
+
+As I have seen (with my own first fix), that it may change output of other
+examples, and for some of these, the `tests/Examples/<pkg>-Ex.Rout.save`
+files also need patching ( `tests/Examples/stats-Ex.Rout.save` will need an
+update in any case *if* we modify/add examples on the help page:
+
+```{sh files-to-change}
+doc/NEWS.Rd
+src/library/stats/R/anova.R
+src/library/stats/man/printCoefmat.Rd
+tests/Examples/{stats,graphics,datasets}-Ex.Rout.save
+```
+
+
+## Reactions and comments
+
+```{=html}
+<!-- 
+Please leave the Reactions and comments section
+- a Giscus comment box will be automatically added here 
+-->
+```
