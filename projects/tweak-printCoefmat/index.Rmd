@@ -1,10 +1,10 @@
 ---
 title: Tweak printCoefmat() - better Round()ing / Zapping Zeros
-description: "In rare cases, the rounding, e.g. of the std.err. column in
-              printCoefmat() is undesirably rounding too much and then
-			  depicting inaccurate values. This is from the recent R-devel (mailing
-			  list), thread starting at
-			  https://stat.ethz.ch/pipermail/r-help/2023-July/477688.html"
+description: "In rare cases, the rounding, e.g. of the 'Std. Error'. column in
+              `printCoefmat()` is undesirably rounding too much and then
+			  depicting inaccurate values. This is from the recent R-devel mailing
+			  list thread starting at
+			  <https://stat.ethz.ch/pipermail/r-help/2023-July/477688.html>"
 author: Martin Maechler
 output: html_document
 categories: [I/O, Wishlist] # from https://github.com/r-devel/r-project-sprint-2023/labels
@@ -27,19 +27,17 @@ The sections are provided as a guide and may not be appropriate to your proposal
 Please label any R code chunks, especially those producing images.
 -->
 ```
-```{r setup}
-
-```
 
 ## Background
 
-Printing of e.g.  `lm()` results; but also glm(), anova(), etc; not just
+Printing of e.g.  `lm()` results; but also `glm()`, `anova()`, etc; not just
 package `{stats}` but used by other packages as well, e.g., `lme4`.
 
 ## Problem statement
 
+Slightly modified from Shu Fai Cheung's example on the R-devel mailing list:
+
 ```{r lm-example}
-## Slightly modified from Shu Fai Cheung's example on R-devel (the mailing list)
 set.seed(123)
 n <- 1000
 x1 <- rnorm(n)
@@ -49,21 +47,12 @@ dat <- data.frame(x1, x2, y)
 fm <- lm(y ~ x1 + x2, dat)
 ##    ---
 sfm <- summary(fm)
-print(sfm)# "fine" - but want intercept "zapped to zero" ==>
-print(sfm, zap.ind=1)# now, get two extra  trailing '00'  for the coefficient column
-## a "bug"
+print(sfm)
 ```
-........
-........
+The standard print is fine, but we would like the intercept to be "zapped to zero". So we try `zap.ind = 1` (which is passed to `printCoefmat` by `print.summary.lm`):
 
-Coefficients:
-            Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 0.000000   0.001115     0.0        1    
-x1          0.499200   0.001128   442.4   <2e-16 ***
-x2          0.601000   0.001108   542.3   <2e-16 ***
-
-........
-.........
+```{r zap.ind}
+print(sfm, zap.ind = 1)
 ```
 Here, we'd rather like to see correctly rounded coefficients
 ```
@@ -82,7 +71,7 @@ The use of `zapsmall()` there, can round too much in these cases.
 
 One option is to extend the meaning of the `zap.ind` argument and allow
 *negative* indices to mean that the zapping should *not* be done with
-`zapsmall()` but with a (to be defined inside `printCoefmat()`)
+`zapsmall()` but with an alternative function (to be defined inside `printCoefmat()`):
 ```{r zapOnlysmall-def}
 zapOnlysmall <- function(x, dig) {
     x[abs(x) <= 10^-dig] <- 0
@@ -92,7 +81,7 @@ zapOnlysmall <- function(x, dig) {
 
 I had tried the following patch
 
-```
+```r
 --- anova.R	(revision 84998)
 +++ anova.R	(working copy)
 @@ -105,7 +105,13 @@
@@ -119,10 +108,10 @@ the  `zap.ind = 1` example above would just do "the right thing".
 ## Testing
 
 This is not yet a strict test,
-but code you can/should use to get a broader picture.
+but code you can/should use this code to get a broader picture.
 Note that this produces a few _pages_ of R console output :
 
-```{r loop-many-digs-scales}
+```r
 cf <- coef(sfm)
 
 for(dig in c(3:5, 7, 10)) {
@@ -142,8 +131,6 @@ for(dig in c(3:5, 7, 10)) {
 
 Almost none.  Some understanding about floating point arithmetic, notably rounding.
 
-## Project resources
-
 ## Project outcomes
 
 A patch to the R source.  Code changes only in the first file (`anova.R`)
@@ -153,9 +140,9 @@ adding an example there.
 As I have seen (with my own first fix), that it may change output of other
 examples, and for some of these, the `tests/Examples/<pkg>-Ex.Rout.save`
 files also need patching ( `tests/Examples/stats-Ex.Rout.save` will need an
-update in any case *if* we modify/add examples on the help page:
+update in any case *if* we modify/add examples on the help page). Files to change:
 
-```{sh files-to-change}
+```sh
 doc/NEWS.Rd
 src/library/stats/R/anova.R
 src/library/stats/man/printCoefmat.Rd
