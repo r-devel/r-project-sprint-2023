@@ -203,6 +203,11 @@ Please label any R code chunks, especially those producing images.
 <h2 class="anchored" data-anchor-id="problem-statement">Problem statement</h2>
 <p>Although the message translations for some languages are well-maintained, others have become out of date, with many incorrect or missing translations. (See the post <a href="https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages/index.html">R Can Use Your Help: Translating R Messages</a> on the R Blog for more information). There are other widely-spoken languages that are currently not covered at all.</p>
 <p>In addition, the process of contributing messages has recently been enhanced with a web-based, user-friendly, translation interface. The <a href="https://translate.rx.studio/projects/r-project/">Weblate server</a> makes it easier for R users to contribute. However there is a need to document the process of contribution and provide guidelines for contributors, to ensure quality and consistency.</p>
+<p>Some details of the translation process are probably known by translation teams, but are not explicitly spelled out in the <a href="https://developer.r-project.org/Translations30.html">Translating R Messages</a> documentation on the R Developer site:</p>
+<ul>
+<li><p>Since the <code>*.pot</code> files are not continuously updated, when in the version cycle is it best to submit translation updates?</p></li>
+<li><p>For some languages, the <code>*.po</code> translation files are stored in legacy 8-bit encodings. Since most R users are expected to be running a UTF-8 locale, is it worth converting the <code>*.po</code> files to UTF-8? Potential advantages include having to load one less shared library on systems with GNU iconv and being able to use Unicode features to disambiguate homographs with a syllable emphasis mark. The disadvantages may include giant <code>diff</code>s not fully readable in either encoding and decreased compatibility with non-Unicode encodings. (What does <code>gettext()</code> do when running with a locale encoding which cannot fully represent the translation?)</p></li>
+</ul>
 </section>
 <section id="proposed-solution" class="level2">
 <h2 class="anchored" data-anchor-id="proposed-solution">Proposed solution</h2>
