@@ -35,6 +35,12 @@ Although the message translations for some languages are well-maintained, others
 
 In addition, the process of contributing messages has recently been enhanced with a web-based, user-friendly, translation interface. The [Weblate server](https://translate.rx.studio/projects/r-project/) makes it easier for R users to contribute. However there is a need to document the process of contribution and provide guidelines for contributors, to ensure quality and consistency.
 
+Some details of the translation process are probably known by translation teams, but are not explicitly spelled out in the [Translating R Messages](https://developer.r-project.org/Translations30.html) documentation on the R Developer site:
+
+- Since the `*.pot` files are not continuously updated, when in the version cycle is it best to submit translation updates?
+
+- For some languages, the `*.po` translation files are stored in legacy 8-bit encodings. Since most R users are expected to be running a UTF-8 locale, is it worth converting the `*.po` files to UTF-8? Potential advantages include having to load one less shared library on systems with GNU iconv and being able to use Unicode features to disambiguate homographs with a syllable emphasis mark. The disadvantages may include giant `diff`s not fully readable in either encoding and decreased compatibility with non-Unicode encodings. (What does `gettext()` do when running with a locale encoding which cannot fully represent the translation?)
+
 ## Proposed solution
 
 This project will focus on languages requiring work, especially where there are multiple fluent speakers at the sprint that can benefit from working together. Specific targets include:
