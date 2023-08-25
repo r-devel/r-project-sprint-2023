@@ -15,6 +15,12 @@ Note there will be very little open on campus on Monday 28 August as it is a hol
 [Delegate Joining Instructions - Central Campus Venues Summer 2023 (Word)](/downloads/Delegate%20Joining%20Instructions%20-%20Central%20Campus%20Venues%20Summer%202023.docx)\
 [Frequently Asked Questions - Central Campus Venues Summer 2023 (Word)](/downloads/Frequently%20Asked%20Questions%20-%20Central%20Campus%20Venues%20Summer%202023.docx)
 
+## Email
+
+Eduroam is available, participants should check their home institution for connection instructions, though Warwick IT Services link to some [tools for automated setup](https://warwick.ac.uk/services/its/servicessupport/networkservices/wifi/eduroam/) on computers/mobile devices.
+
+Participants without access to eduroam may use [Warwick Guest WiFi](https://warwick.ac.uk/services/its/servicessupport/networkservices/wifi/warwick-guest/) (mobile phone required to register). Accounts are valid for 7 days on up to 3 devices.
+
 ## Registration
 
 The registration desk will be open from 15:00 - 19:30 Tuesday 29 August in the [Faculty of Arts Building (FAB) atrium](https://campus.warwick.ac.uk//search/623c8960421e6f5928c0fb65). The atrium will provide a place to meet other participants as they arrive and will be a good place to hang out before dinner if you arrive early.
