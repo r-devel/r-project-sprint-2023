@@ -677,24 +677,38 @@ A possible fix is included in the bug report.</td>
 <h3 class="anchored" data-anchor-id="bugs-to-report">Bugs to report</h3>
 <p>These are possible issues to post on Bugzilla after discussion.</p>
 <ul>
-<li><p>The <code>?iris</code> example section doesn’t seem to be very useful. I don’t understand what its doing.</p></li>
-<li><p><code>?formula</code> should link to <code>?update.formula</code>.</p></li>
-<li><p>The documentation of <code>p.adjust()</code> shows that the default value of <code>n</code> is <code>length(p)</code> . However, this is evaluated after <code>NA</code>s are removed from <code>p</code>, so this is not technically correct.</p></li>
-<li><p><code>?match</code> says “<code>%in%</code> is a more intuitive interface”, but <code>match()</code> and <code>%in%</code> return different things.</p></li>
-<li><p>Add examples of the <code>\(x)</code> function interface to the <code>function</code> help page.</p></li>
-<li><p>Add examples of using <code>\(x)</code> in <code>lapply</code>.</p></li>
-<li><p>Can we look programmatically for functions with no example sections?</p></li>
-<li><p>In <code>?residuals</code> make it clear that both functions “are intended to encourage users to access object components through an accessor function rather than by directly referencing an object slot”.</p></li>
-<li><p>Explicitly state that <code>rm()</code> is an alias for <code>remove()</code>.</p></li>
-<li><p>A lot of examples use <code>stopifnot()</code> to show that two things are the same. I think, this might not be great, as the user needs to know what that means.</p></li>
-<li><p>Document the differences between factors and ordered factors in models (<a href="https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336">https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336</a>) .</p></li>
-<li><p>Add a discussion in <code>quantile()</code> for when the quantiles don’t actually contain the correct number of observations (<a href="https://mastodon.social/@eliocamp/110748596295500531">https://mastodon.social/@eliocamp/110748596295500531</a>).</p></li>
-<li><p>Add a comment in <code>?replicate</code> documenting that <code>expr</code> is wrapped in an anonymous function so that assignment doesn’t change the calling environment.</p></li>
-<li><p>Look for instances of examples using things like <code>if (x z&lt;- cond1 &amp; cond2)</code>. That is, using assignment inside an if statement or inside a function. These are arguably anti-patterns that shouldn’t be in the help files.</p>
+<li>The documentation of <code>p.adjust()</code> shows that the default value of <code>n</code> is <code>length(p)</code> . However, this is evaluated after <code>NA</code>s are removed from <code>p</code>, so this is not technically correct.</li>
+</ul>
+<!-- -->
 <ul>
-<li><p><code>quantile()</code>.</p></li>
-<li><p><code>var()</code></p></li>
+<li><p>In <code>?residuals</code> make it clear that both functions “are intended to encourage users to access object components through an accessor function rather than by directly referencing an object slot”.</p>
+<ul>
+<li>“It is intended…” to the end of the paragraph? Maybe not, resid should be mentioned before the paragraph about method registration. I am no longer sure if a change is needed. The help page for ?f itted is very similar btw, it just doesn’t talk about accessor functions. Maybe just replace “It is intended to encourage users” by “User are encouraged”? (A formal patch is not needed, we can discuss)</li>
 </ul></li>
+</ul>
+<!-- -->
+<ul>
+<li><p><code>?match</code> says “<code>%in%</code> is a more intuitive interface”, but <code>match()</code> and <code>%in%</code> return different things.</p>
+<ul>
+<li>TODO come up with a succinct description of %in% <em>that is correct</em></li>
+</ul></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Add examples of the <code>\(x)</code> function interface to the <code>function</code> help page.</p>
+<ul>
+<li>TODO add a short example</li>
+</ul></li>
+<li><p>Explicitly state that <code>remove()</code> is an alias for <code>rm()</code>.</p></li>
+<li><p>Document the differences between factors and ordered factors in models (<a href="https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336">https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336</a>) .</p>
+<ul>
+<li>bigger discussion to have: we have some support from Thomas Lumley; BUT: this is just a note in factor’s documentation, not on the model side. <a href="https://github.com/r-devel/r-svn/blob/5ec122aee4f616d6cc6bcd6479d1edcc45a7c5ea/src/library/base/man/factor.Rd#L116C3-L117" class="uri">https://github.com/r-devel/r-svn/blob/5ec122aee4f616d6cc6bcd6479d1edcc45a7c5ea/src/library/base/man/factor.Rd#L116C3-L117</a>. add a link to related functions: contrasts, model.matrix; could link to contrasts options but not feeling very strongly about this</li>
+</ul></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>The <code>?iris</code> example section doesn’t seem to be very useful. I don’t understand what its doing. (Not discussed!)</p></li>
+<li><p><code>?formula</code> should link to <code>?update.formula</code>. (Not discussed!)</p></li>
 </ul>
 </section>
 </section>
