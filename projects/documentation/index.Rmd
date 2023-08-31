@@ -200,42 +200,55 @@ And the "Comments" column is for general comments about the issue.
 
 These are possible issues to post on Bugzilla after discussion.
 
--   The `?iris` example section doesn't seem to be very useful.
-    I don't understand what its doing.
-
--   `?formula` should link to `?update.formula`.
-
 -   The documentation of `p.adjust()` shows that the default value of `n` is `length(p)` .
     However, this is evaluated after `NA`s are removed from `p`, so this is not technically correct.
 
--   `?match` says "`%in%` is a more intuitive interface", but `match()` and `%in%` return different things.
-
--   Add examples of the `\(x)` function interface to the `function` help page.
-
--   Add examples of using `\(x)` in `lapply`.
-
--   Can we look programmatically for functions with no example sections?
-
+```{=html}
+<!-- -->
+```
 -   In `?residuals` make it clear that both functions "are intended to encourage users to access object components through an accessor function rather than by directly referencing an object slot".
 
--   Explicitly state that `rm()` is an alias for `remove()`.
+    -   "It is intended..." to the end of the paragraph?
+        Maybe not, resid should be mentioned before the paragraph about method registration.
+        I am no longer sure if a change is needed.
+        The help page for ?f
+        itted is very similar btw, it just doesn't talk about accessor functions.
+        Maybe just replace "It is intended to encourage users" by "User are encouraged"?
+        (A formal patch is not needed, we can discuss)
 
--   A lot of examples use `stopifnot()` to show that two things are the same.
-    I think, this might not be great, as the user needs to know what that means.
+```{=html}
+<!-- -->
+```
+-   `?match` says "`%in%` is a more intuitive interface", but `match()` and `%in%` return different things.
+
+    -   TODO come up with a succinct description of %in% *that is correct*
+
+```{=html}
+<!-- -->
+```
+-   Add examples of the `\(x)` function interface to the `function` help page.
+
+    -   TODO add a short example
+
+-   Explicitly state that `remove()` is an alias for `rm()`.
 
 -   Document the differences between factors and ordered factors in models ([https://mastodon.social/\@mccarthymg\@fosstodon.org/110685274281599336](https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336)) .
 
--   Add a discussion in `quantile()` for when the quantiles don't actually contain the correct number of observations ([https://mastodon.social/\@eliocamp/110748596295500531](https://mastodon.social/@eliocamp/110748596295500531)).
+    -   bigger discussion to have: we have some support from Thomas Lumley; BUT: this
+        is just a note in factor's documentation, not on the model side.
+        <https://github.com/r-devel/r-svn/blob/5ec122aee4f616d6cc6bcd6479d1edcc45a7c5ea/src/library/base/man/factor.Rd#L116C3-L117>.
+        add a link to related functions: contrasts, model.matrix; could link to
+        contrasts options but not feeling very strongly about this
 
--   Add a comment in `?replicate` documenting that `expr` is wrapped in an anonymous function so that assignment doesn't change the calling environment.
+```{=html}
+<!-- -->
+```
+-   The `?iris` example section doesn't seem to be very useful.
+    I don't understand what its doing.
+    (Not discussed!)
 
--   Look for instances of examples using things like `if (x z<- cond1 & cond2)`.
-    That is, using assignment inside an if statement or inside a function.
-    These are arguably anti-patterns that shouldn't be in the help files.
-
-    -   `quantile()`.
-
-    -   `var()`
+-   `?formula` should link to `?update.formula`.
+    (Not discussed!)
 
 ## Project requirements
 
