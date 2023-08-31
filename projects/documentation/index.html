@@ -228,12 +228,13 @@ Please label any R code chunks, especially those producing images.
 <p>This table lists all currently open bugs with the Documentation tag sorted from oldest to newest (based on last comment). The “Location” column specifies which documentation is affected. The “Affected users” specifies which type of user I think are most likely affected by the issue (Beginners: people just starting with R, Advanced: people that use R regularly, Experts: people in close contact with R internals and/or package development). The “Action(s)” column lists the required actions to address the bug. And the “Comments” column is for general comments about the issue.</p>
 <table class="table">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 20%">
+<col style="width: 14%">
+<col style="width: 22%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 14%">
 <col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 10%">
-<col style="width: 24%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -243,6 +244,7 @@ Please label any R code chunks, especially those producing images.
 <th>Affected users</th>
 <th>Action(s)</th>
 <th>Comments</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -253,6 +255,7 @@ Please label any R code chunks, especially those producing images.
 <td>Expert</td>
 <td>discuss</td>
 <td>Suggests adding a sentence to “Writting R Extensions” linking to other sections. Not very clear on what the issue is.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16963">16963</a></td>
@@ -261,6 +264,7 @@ Please label any R code chunks, especially those producing images.
 <td>Advanced</td>
 <td>create patch</td>
 <td>A note about a relatively obscure but potentially important quirk of <code>on.exit()</code>.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17136">17136</a></td>
@@ -269,6 +273,8 @@ Please label any R code chunks, especially those producing images.
 <td>Beginner</td>
 <td>check patch</td>
 <td>Clarifies the behaviour of <code>p.adjust()</code>. Patch includes fix. Might need to read up <code>p.adjust()</code>’s source code and the relevant papers to confirm.</td>
+<td><p>New patch submited</p>
+<p><span class="citation" data-cites="trangdata">@trangdata</span></p></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17331">17331</a></td>
@@ -279,10 +285,12 @@ Please label any R code chunks, especially those producing images.
 <td>Need a Mac to confirm.<br>
 <br>
 A possible fix is included in the bug report.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=8528">8528</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=8528">pgamma - inadequate algorithm design and poor coding</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -296,6 +304,7 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=7195">7195</a></td>
@@ -304,10 +313,12 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>review patch</td>
 <td>Adds a bunch of text to this guide. Includes a patch. Might need to review what changed since 2004 when this was proposed.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=1011">1011</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=1011">R-intro suggestions part II</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -320,10 +331,12 @@ A possible fix is included in the bug report.</td>
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=988">988</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=988">input for R-intro</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -336,6 +349,7 @@ A possible fix is included in the bug report.</td>
 <td></td>
 <td>create patch</td>
 <td>The issue is confirmed and trivial to fix.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17695">17695</a></td>
@@ -345,6 +359,7 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td>This seems to stem from the code in the <code>example()</code> function and thus the core fix needs fixing that. That might be hard. OTOH, a simpler fix would be to add a note in the example section. That’d be trivial.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17716">17716</a></td>
@@ -353,6 +368,8 @@ A possible fix is included in the bug report.</td>
 <td>Expert</td>
 <td>check patch</td>
 <td>This includes a patch to fix small typos and grammar mistakes in the docs. Needs a quick revision to confirm that nothing’s changed and then it could be approved by core.</td>
+<td><p>patch checked</p>
+<p><span class="citation" data-cites="hfrick">@hfrick</span></p></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17753">17753</a></td>
@@ -361,6 +378,7 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>create patch</td>
 <td>The bug is valid and current. The report includes proposed changes but not in patch form.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17786">17786</a></td>
@@ -369,6 +387,8 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>check patch</td>
 <td>A patch is provided. Needs to be checked for accuracy and it’s good to go.</td>
+<td><p>bug closed</p>
+<p><span class="citation" data-cites="paocorrales">@paocorrales</span></p></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17791">17791</a></td>
@@ -377,6 +397,7 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>check patch</td>
 <td>A very simple fix with a valid diff.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=7208">7208</a></td>
@@ -387,6 +408,7 @@ A possible fix is included in the bug report.</td>
 <p>write new documentation</p>
 <p>create patch</p></td>
 <td>This report points out the lack of examples of some potentially useful functions in this document: <code>sweep()</code>, <code>apply()</code>, <code>lapply()</code> and <code>sapply()</code>. It would need a bunch of writing and coming up with good examples.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17805">17805</a></td>
@@ -395,6 +417,7 @@ A possible fix is included in the bug report.</td>
 <td>Advanced</td>
 <td>check patch</td>
 <td>Involves a particular edge case for a relatively obscurse function. Has a patch (although it might need revision).</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17821">17821</a></td>
@@ -403,6 +426,7 @@ A possible fix is included in the bug report.</td>
 <td>Expert</td>
 <td>check patch</td>
 <td>Patch is there to apply.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17827">17827</a></td>
@@ -412,10 +436,12 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss (a lot)</p>
 <p>create patch</p></td>
 <td>This is mostly a social thing and I think it requires a lot of discussion with the community.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17896">17896</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17896">Cleaning up Internationalization section in R-exts</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -428,6 +454,7 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>check patch</td>
 <td>There’s a patch with a fix.</td>
+<td>in progress <span class="citation" data-cites="shannonpileggi">@shannonpileggi</span></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16567">16567</a></td>
@@ -437,11 +464,13 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td>We need to check if this is still relevant after ALTREP.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18026">18026</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18026">Include help page for exportPattern</a></td>
 <td>Help docs</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -455,6 +484,7 @@ A possible fix is included in the bug report.</td>
 <p>write documentation</p>
 <p>create patch</p></td>
 <td>This requires to create whole new documentation pages for the functions used in NAMESPACE.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18094">18094</a></td>
@@ -464,6 +494,7 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td>This would involve creating new aliases for a bunch of help pages. Not hard, but debatable.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18061">18061</a></td>
@@ -473,6 +504,7 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=16003">16003</a></td>
@@ -480,6 +512,7 @@ A possible fix is included in the bug report.</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>create patch</td>
+<td></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -490,6 +523,7 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td>Needs some understanding of the <code>lm.fit</code> function and friends.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17989">17989</a></td>
@@ -497,6 +531,7 @@ A possible fix is included in the bug report.</td>
 <td>Help docs</td>
 <td>Expert</td>
 <td>check patch</td>
+<td></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -506,6 +541,7 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>check patch</td>
 <td>Needs some knowledge about encoding.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18282">18282</a></td>
@@ -514,6 +550,7 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>create patch</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17279">17279</a></td>
@@ -521,6 +558,7 @@ A possible fix is included in the bug report.</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
+<td></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -531,6 +569,7 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td>Requires some understanding of packaging. how <code>install.packages()</code> work.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18355">18355</a></td>
@@ -540,6 +579,7 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td>This is actually <a href="https://bugs.r-project.org/show_bug.cgi?id=18354">a bug in the function</a>. It might be better to fix that bug instead of documenting the wrong behaviour.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18350">18350</a></td>
@@ -548,6 +588,8 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>check patch</td>
 <td></td>
+<td><p>patch is accurate, needs further comment in bugzilla</p>
+<p><span class="citation" data-cites="phillybroadbent">@phillybroadbent</span></p></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18408">18408</a></td>
@@ -557,6 +599,7 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>create patch</p></td>
 <td>Needs knowledge of cmake.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=17770">17770</a></td>
@@ -566,10 +609,14 @@ A possible fix is included in the bug report.</td>
 <td><p>discuss</p>
 <p>close issue</p></td>
 <td>The issue seems to be solved by a previous patch.</td>
+<td><p>original issue was solve.</p>
+<p>patch for new issue in progress</p>
+<p><span class="citation" data-cites="paocorrales">@paocorrales</span></p></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18402">18402</a></td>
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18402">Provide a mechanism for adding custom CSS styles to HTML documentation headers.</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -582,6 +629,7 @@ A possible fix is included in the bug report.</td>
 <td>Advanced</td>
 <td>check patch</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18524">18524</a></td>
@@ -589,6 +637,7 @@ A possible fix is included in the bug report.</td>
 <td>Help docs</td>
 <td>Beginner</td>
 <td>check patch</td>
+<td></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -598,6 +647,7 @@ A possible fix is included in the bug report.</td>
 <td></td>
 <td>discuss</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18562">18562</a></td>
@@ -606,6 +656,7 @@ A possible fix is included in the bug report.</td>
 <td>Beginner</td>
 <td>check patch</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><a href="https://bugs.r-project.org/show_bug.cgi?id=18567">18567</a></td>
@@ -613,6 +664,7 @@ A possible fix is included in the bug report.</td>
 <td>Help docs</td>
 <td></td>
 <td>check patch</td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
