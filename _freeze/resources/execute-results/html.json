@@ -1,0 +1,14 @@
+{
+  "hash": "8fccfdf37135a8a102ff9c832a6fce27",
+  "result": {
+    "markdown": "---\ntitle: \"Resources\"\n---\n\n  \n[Google Sheet](https://docs.google.com/spreadsheets/d/1utS51SvGU_HAYKlULoWa5NUUYM7k2nEO2nhQ-qDdeGE/edit?usp=sharing) with work group allocation.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
