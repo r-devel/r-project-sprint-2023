@@ -2,7 +2,7 @@
 title: "Participants"
 ---
 
-Participants with an asterisk are participating remotely.
+Participants with an asterisk (\*) participated remotely, while participants with a caret (\^) were ultimately unable to participate due to travel disruption or other circumstances.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -27,7 +27,7 @@ participant_info(name = "Robert Gentleman*",
 <div>
 
 ```{r, results = "asis"}
-participant_info(name = "Tomas Kalibera",
+participant_info(name = "Tomas Kalibera^",
                  alt = "Headshot of Tomas Kalibera",
                  link = NULL, # main website
                  github = NULL,
@@ -416,7 +416,7 @@ participant_info(name = "Andrea Gilardi",
 <div>
 
 ```{r, results = "asis"}
-participant_info(name = "André Gillibert",
+participant_info(name = "André Gillibert^",
                  affiliation = "CHU Rouen",
                  pic = "headshot-andre_gillibert.jpg",
                  alt = "Headshot of André Gillibert",
@@ -487,7 +487,7 @@ participant_info(name = "Binod Jung Bogati",
 <div>
 
 ```{r, results = "asis"}
-participant_info(name = "Asma Kacem",
+participant_info(name = "Asma Kacem^",
                  affiliation = "Software Engineer Intern",
                  pic = "headshot-asma_kacem.jpg",
                  alt = "Headshot of Asma Kacem",
