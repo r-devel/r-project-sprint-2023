@@ -1,61 +1,5 @@
 [
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Google Sheet with work group allocation."
-  },
-  {
-    "objectID": "code-of-conduct.html",
-    "href": "code-of-conduct.html",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "The organizers of R Project Sprint 2023 are dedicated to providing a harassment-free conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof).\nAll participants at R Project Sprint 2023 are required to agree to the following code of conduct.\nThe code of conduct applies to all sprint activities including\nsocial events. It extends to event-specific exchanges on social media, for instance posts tagged with the identifier of the sprint (#RSprint2023) and replies to such posts.\nOrganizers will enforce this code throughout and expect cooperation in ensuring a safe environment for all."
-  },
-  {
-    "objectID": "code-of-conduct.html#expected-behaviour",
-    "href": "code-of-conduct.html#expected-behaviour",
-    "title": "Code of Conduct",
-    "section": "Expected Behaviour",
-    "text": "Expected Behaviour\nAll conference participants agree to:\n\nBe considerate in language and actions, and respect the boundaries of fellow participants.\nRefrain from demeaning, discriminatory, or harassing behaviour and language. Please refer to Unacceptable Behaviour for more details.\nAlert a member of the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential. Please refer to the section titled What To Do If You Witness or Are Subject To Unacceptable Behaviour for more details."
-  },
-  {
-    "objectID": "code-of-conduct.html#unacceptable-behaviour",
-    "href": "code-of-conduct.html#unacceptable-behaviour",
-    "title": "Code of Conduct",
-    "section": "Unacceptable Behaviour",
-    "text": "Unacceptable Behaviour\nBehaviour that is unacceptable includes, but is not limited to:\n\nStalking\nDeliberate intimidation\nUnwanted photography or recording\nSustained or willful disruption of talks or other events\nUse of sexual or discriminatory imagery, comments, or jokes\nOffensive comments related to age, gender, sexual orientation, disability, race or religion\nInappropriate physical contact, which can include grabbing, or massaging or hugging without consent.\nUnwelcome sexual attention, which can include inappropriate questions of a sexual nature, asking for sexual favours or repeatedly asking for dates or contact information.\n\nIf you are asked to stop harassing behaviour you should stop immediately, even if your behaviour was meant to be friendly or a joke, it was clearly not taken that way and for the comfort of all conference attendees you should stop.\nAttendees who behave in a manner deemed inappropriate are subject to actions listed under Procedure for Code of Conduct Violations."
-  },
-  {
-    "objectID": "code-of-conduct.html#additional-requirements-for-sprint-material",
-    "href": "code-of-conduct.html#additional-requirements-for-sprint-material",
-    "title": "Code of Conduct",
-    "section": "Additional Requirements for Sprint Material",
-    "text": "Additional Requirements for Sprint Material\nPresentation slides and documents created for, or during, the sprint should not contain offensive or sexualised material."
-  },
-  {
-    "objectID": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
-    "href": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
-    "title": "Code of Conduct",
-    "section": "Procedure for Code of Conduct Violations",
-    "text": "Procedure for Code of Conduct Violations\nThe organizing team reserves the right to determine the appropriate response for all code of conduct violations. Potential responses include:\n\na formal warning to stop harassing behaviour\ncancellation or early termination of presentations or other contributions to the programme\nexpulsion from the sprint\nremoval/rejection of sprint contributions\nremoval of sponsorship acknowledgement, without return of sponsorship contribution"
-  },
-  {
-    "objectID": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
-    "href": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
-    "title": "Code of Conduct",
-    "section": "What To Do If You Witness or Are Subject To Unacceptable Behaviour",
-    "text": "What To Do If You Witness or Are Subject To Unacceptable Behaviour\nAlert the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential.\nReports should be addressed to r-project-sprint@livewarwickac.onmicrosoft.com. If the report concerns someone on the local organizing team, please contact other members of the team directly. If you still have concerns about a conflict of interest, you are welcome to contact the University of Warwick Report + Support service.\nWe will take all reports by R Project Sprint 2023 participants seriously. This includes incidents outside our spaces and at any point in time. The organizing team reserve the right to exclude people from the sprint based on their past behaviour, including behaviour outside R Project Sprint 2023 spaces and behaviour towards people who are not part of the sprint.\nWe will respect confidentiality requests for the purpose of protecting targets of harassing behaviour. We will not name victims without their affirmative consent. Correspondence is handled confidentially and deleted after the case is resolved. All data is stored securely, access will be limited to the members of the organizing team who receive the report.\nThe organizing team will also provide support to victims, which may include:\n\nproviding an escort,\ncontacting the on-campus Community Safety Team or off campus Emergency Services,\n\nor otherwise assisting those experiencing harassment to ensure that they feel safe for the duration of the conference. Assistance will only be provided with affirmative consent of the victim."
-  },
-  {
-    "objectID": "code-of-conduct.html#acknowledgements",
-    "href": "code-of-conduct.html#acknowledgements",
-    "title": "Code of Conduct",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
-  },
-  {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
@@ -105,172 +49,67 @@
     "text": "Breakout space\nWe have use of the following breakout spaces in FAB during the sprint, in addition to the main room (FAB 5.01). The first number is the floor the space is on.\n\n\n\nRoom\nCapacity\nType\nLayout\nFacilities\n\n\n\n\n2.25\n38\nOpen\nCabaret\n\n\n\n2.43\n50\nClosed\nCabaret\n2 x webcam\n\n\n2.47\n13\nOpen\nBoardroom\n\n\n\n2.48\n13\nClosed\nBoardroom\nwebcam\n\n\n2.61\n16\nOpen\nBoardroom\n\n\n\n3.26\n20\nSemi-open\nCabaret\n\n\n\n4.52\n20\nSemi-open\nCabaret\n\n\n\n4.74\n20\nSemi-open\nCabaret\n\n\n\n6.03\n13\nClosed\nBoardroom\nquiet space"
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html",
-    "href": "projects/dendrapply-refactor/index.html",
-    "title": "Dendrapply Refactor",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Project Sprint 2023",
     "section": "",
-    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
+    "text": "August 30 - September 1, 2023\nUniversity of Warwick, UK\nCollaborate on contributions to base R!\nWe are pleased to announce an R Project Sprint, to be hosted at the University of Warwick, UK, from Wednesday August 30 to Friday September 1. Novice and experienced contributors are encouraged to apply for a place at the residential event, with funding available for travel (deadline Friday 10 March). Read on for more! #RSprint2023"
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html#background",
-    "href": "projects/dendrapply-refactor/index.html#background",
-    "title": "Dendrapply Refactor",
-    "section": "",
-    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
+    "objectID": "index.html#about-the-sprint",
+    "href": "index.html#about-the-sprint",
+    "title": "R Project Sprint 2023",
+    "section": "About the sprint",
+    "text": "About the sprint\nR is a popular and widely used software for data science. Like any large open source software project, it takes a lot of work to maintain and develop. Much of the work is done by a small number of volunteers and there is a need to grow the contributor community.\nThis sprint will bring together novice and experienced contributors, to work alongside members of the R Core Team. Participants will work collaboratively on contributions to base R. The tasks will be prepared in the run-up to the event, but may include:\n\nReviewing, analysing and fixing bugs reported on R’s Bugzilla.\nContributing to message translations via Weblate.\nWork on new developments such as this short project proposed by core developer Paul Murrell: Adding Alpha Masks to the Quartz Graphics Device."
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html#problem-statement",
-    "href": "projects/dendrapply-refactor/index.html#problem-statement",
-    "title": "Dendrapply Refactor",
-    "section": "Problem statement",
-    "text": "Problem statement\nThe current implementation of dendrapply is included at the bottom of this section. This implementation has two main issues.\nThe most notable of these is the recursive application of functions to the dendrogram nodes. This leads to poor performance on deeply nested dendrograms, as well as the potential for stack overflow errors on machines with limited resources. This is detailed in ?dendrapply and in the warning in ?dendrogram.\nAdditionally, tree traversal can be achieved in a number of ways. The current implementation uses a pre-order traversal, which is not always the most intuitive application of functions to a tree structure. This means that, for each triple 2 &lt;- 1 -&gt; 3, the function is applied first to node 1, then to 2, then to 3. Ideally, users would be able to choose between a post-order or a pre-order traversal. Post-order traversals guarantee that the function is applied to all children of a node before applying to the parent, allowing for certain analyses that rely on propagating results up a tree. There is currently no easy way to achieve this in R.\nIn summary, the priorities to rectify are (in order of importance):\n\nRemove recursion in dendrapply\nAdd an optional argument to allow for different tree traversals in function application\n\nThese must be achieved while preserving all the current functionality of dendrapply, and without decreasing the current performance.\nCurrent implementation:\n\ndendrapply &lt;- function(X, FUN, ...)\n{\n    ## Purpose: \"dendrogram\" recursive apply {to each node}\n    ## ----------------------------------------------------------------------\n    ## Author: Martin Maechler, Date: 26 Jun 2004, 22:43\n    FUN &lt;- match.fun(FUN)\n    if( !inherits(X, \"dendrogram\") ) stop(\"'X' is not a dendrogram\")\n\n    ## Node apply recursively:\n    Napply &lt;- function(d) {\n    r &lt;- FUN(d, ...)\n    if(!is.leaf(d)) {\n        if(!is.list(r)) r &lt;- as.list(r) # fixing unsafe FUN()s\n        if(length(r) &lt; (n &lt;- length(d))) r[seq_len(n)] &lt;- vector(\"list\", n)\n        ## and overwrite recursively, possibly keeping \"attr\"\n        r[] &lt;- lapply(d, Napply)\n        }\n    r\n    }\n    Napply(X)\n}"
+    "objectID": "index.html#who-can-take-part",
+    "href": "index.html#who-can-take-part",
+    "title": "R Project Sprint 2023",
+    "section": "Who can take part?",
+    "text": "Who can take part?\nThe sprint will involve a mixture of invited and self-nominated participants, so that we have contributors at all experience levels.\nThe main criteria for participation is a good knowledge of R programming and a keen interest in contributing, as we hope participants continue to contribute after the event. The table below shows the type of knowledge/skills we expect participants to have\n\n\n\n\n\n\n\nSkills most will have\nSkills some will have\n\n\n\n\nWriting R functions\nProgramming in C\n\n\nDebugging R functions\nKnowledge of S3/S4 classes and methods\n\n\nWriting R help files\nExpertise in statistical methods in stats, splines\n\n\nUsing git/Subversion\nAble to build R from source\n\n\n\nOther specialist skills e.g. expertise in building Windows/MacOS GUIs or fluency in language with a low percentage of translated messages on Weblate, would of course be welcome!\nIt will help if you have some experience in contributing to base R, but novice contributors will be mentored in the run-up to the event, so they are prepared.\nWe are also keen to foster a diverse community of contributors. If you are a member of the R-Ladies, MiR, RainbowR, AfricaR, ArabR, AsiaR, or LatinR communities, or otherwise identify as part of an underrepresented group among R contributors, then we especially encourage you to self-nominate! To ensure a welcoming environment, we have a code of conduct in place."
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html#proposed-solution",
-    "href": "projects/dendrapply-refactor/index.html#proposed-solution",
-    "title": "Dendrapply Refactor",
-    "section": "Proposed solution",
-    "text": "Proposed solution\nA full description follows, but people that are interested can read my initial writeup for more details on the problem, attempted solutions, and current status. Feel free to skip that link and just read the following section instead.\nA prototype solution has been implemented and submitted to Bugzilla. This solution moves the R implementation into C. The short description of the proposed method is to create a linked list in C holding the SEXP pointers for each node of the tree. Then, we apply the function given to each node of the linked list, and then merge the SEXP objects back into the original topology. This can be further optimized by merging nodes on the fly to limit linked list space and reduce PROTECT stack usage. This also allows for different tree traversal strategies with minimal effort, as different tree traversals can be achieved by varying how nodes are added to the linked list.\nThe current solution has one key issue resulting in a two problems. This implementation uses VECTOR_ELT rather than the more general [[ and [[&lt;- operations to get/set values. This allows for low PROTECT stack usage and high performance, but it also means that nodes discard their class values when passed to the function. This can be solved naively by just reclassing nodes as dendrogram, but unfortunately this causes issues in the case where nodes have multiple classes (ex. a node where class(node ) == c('dendrogram', 'myOtherClass')). This also runs into problems in the case where a non-standard [[ method is implemented. In the interest of backwards compatibility, these problems should be rectified.\nThere are a few options for fixing this issue. The first is to work entirely in R, removing the C implementation. This would work in theory by using a list structure to hold nodes, but the linked-list structure in C gives a substantial boost in performance over R by using pointers instead of copying each object. This may not be a big deal; I haven’t tested it yet.\nAnother possible option is to use the alternative vector-based dendrogram indexing ( dend[[c(1,1)]] is equivalent to dend[[1]][[1]] ) to build a list of targets first, then apply the function to each. This may solve the potential R-implementation memory issues, but could also require initializing a huge vector. Dealing with the topology of the dendrogram would also be challenging.\nAnother potential fix is to use the [[ method by building an R expression in C and then calling it, similar to how lapply is implemented (see do_lapply() in src/main/apply.c for reference). This implementation was tested and worked successfully, but the result was significantly slower than the R version (roughly half speed, likely due to PROTECT stack issues mentioned below). Maybe a code refactor could solve the slowdowns and produce a better result.\nThe last potential fix I’ve identified is to use precious multi-sets for protection rather than PROTECT. One of the big problems of applying functions in C is that the result of the function application at each node needs to be protected. This isn’t an issue for post-order traversals, since we can always just add the result as a child of the parent node (which auto-protects it if the parent is already protected). However, for the current implementation, a potentially large source of slow-downs is the work-arounds implemented to solve PROTECT stack issues. Using MSets could simplify this and improve runtime, but there isn’t a lot of documentations on how to use them (and their use for this kind of problem is explicitly discouraged in some places)."
+    "objectID": "index.html#apply-for-a-place",
+    "href": "index.html#apply-for-a-place",
+    "title": "R Project Sprint 2023",
+    "section": "Apply for a place",
+    "text": "Apply for a place\nAnyone one interested to attend the sprint is encouraged to self-nominate via the application form by Friday 10 March. You will be asked about your experience, skills and background to help us balance participation overall.\nThanks to our sponsors, all workshop participants will be accommodated free of charge during the sprint, in on-campus housing at the University of Warwick, with meals provided.\nFunding is also available for travel expenses, however if participants are able to get travel funding from other sources this will allow more people to attend - companies or other funding bodies providing such support to participants will be acknowledged as sponsors."
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html#testing",
-    "href": "projects/dendrapply-refactor/index.html#testing",
-    "title": "Dendrapply Refactor",
-    "section": "Testing",
-    "text": "Testing\nBenchmarking the function against stats::dendrapply can be done using the following:\n\ndend &lt;- as.dendrogram(hclust(dist(1:100)))\nf &lt;- function(x) x\n\nmicrobenchmark::microbenchmark(stats::dendrapply(dend, f),\n                               new_dendrapply(dend, f))\n\nDifferent dendrogram objects should be tested to look at performance on balanced vs. deep trees, but usage of \\(x) x is important for accurate testing. This function minimizes the amount of operations within the applied function, meaning that the vast majority of the differences in time will be due to the implementation of dendrapply, not the runtime of f.\nAdditional testing should be done to verify that the following work as expected:\n\nEnsure speed of new application is at least as fast as stats::dendrapply\nEnsure all examples in ?dendrapply work as expected\nEnsure all tests in dendextend work correctly to test a large set of currently used applications of dendrapply\nEnsure that nodes with multiple classes retain their class attribute after running dendrapply\nEnsure that special uses of [[ work as expected\nEnsure that recursive dendrapply calls work as expected (ex. dendrapply(dend, \\(x) dendrapply(x, someOtherFunction)))\nEnsure all examples in the R build testing work as expected, paying special attention to the following weird case:\n\n&gt; D &lt;- as.dendrogram(hclust(dist(cbind(setNames(c(0,1,4), LETTERS[1:3])))))\n&gt; dendrapply(D, labels)\n[[1]]\n[1] \"C\"\n\n[[2]]\n[[2]][[1]]\n[1] \"A\"\n\n[[2]][[2]]\n[1] \"B\"\n\n[[3]]\n[1] \"C\"\nImplementation should also be made to ensure that the default parameters are fully backwards compatible. In the case of post-order traversal, this is currently being achieved by defining the function as dendrapply(X, FUN, ..., how=c('pre.order', 'post.order')) so that the default is always equivalent to stats::dendrapply.\nFinally, testing should be added to the R source tests. The current testing suite for dendrapply is very sparse; edge cases like multi-classed dendrogram objects should be added to ensure code works as expected in the future."
+    "objectID": "index.html#practicalities",
+    "href": "index.html#practicalities",
+    "title": "R Project Sprint 2023",
+    "section": "Practicalities",
+    "text": "Practicalities\nThe sprint will be held in the recently completed Faculty of Arts Building at the University of Warwick, which alongside regular seminar rooms has many breakout spaces, some of which we have reserved for our use. We think this will be a great environment for collaborative work.\nThe University of Warwick is in Coventry, in the middle of England. It is reachable by train from nearby European countries, or by plane to Birmingham or other UK airports. See the travel information and visa information for international visitors."
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html#project-requirements",
-    "href": "projects/dendrapply-refactor/index.html#project-requirements",
-    "title": "Dendrapply Refactor",
-    "section": "Project requirements",
-    "text": "Project requirements\n\nI suspect that the optimal solution will involve working in C, so knowledge of C to develop this will be helpful, even if just to be able to compare performance against an R implementation. Much of the implementation in C depends on knowledge of the PROTECT stack, so familiarity with that is important for C solutions.\nBasic knowledge of tree structures and/or dendrogram objects is helpful but not necessary."
+    "objectID": "index.html#whats-on-nearby",
+    "href": "index.html#whats-on-nearby",
+    "title": "R Project Sprint 2023",
+    "section": "What’s on nearby",
+    "text": "What’s on nearby\nParticipants may be interested to know of these events happening close to the sprint:\n\n22-25 August, COMPSTAT 2023, London\n4-8 September, RSECon23, Swansea\n4-7 September, RSS International Conference, Harrogate\n\n28 August is a bank holiday in the UK, there are typically many festivals, fairs and other events over the long weekend at the end of the school summer holidays."
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html#project-resources",
-    "href": "projects/dendrapply-refactor/index.html#project-resources",
-    "title": "Dendrapply Refactor",
-    "section": "Project resources",
-    "text": "Project resources\n\nTree traversal methods\nMy full description of problem and implementation\nCurrent bugzilla ticket (contains most up-to-date code; my blog post may be out of date.)"
+    "objectID": "index.html#local-organizing-team",
+    "href": "index.html#local-organizing-team",
+    "title": "R Project Sprint 2023",
+    "section": "Local organizing team",
+    "text": "Local organizing team\nThis event is being organized by members of the Statistics department at the University of Warwick.\n\n\n  Heather Turner   RSE FellowAssociate Professor       \n\n\n  Ella Kaye   Research Software Engineer       \n\n\n  Martyn Plummer   ProfessorR Core Developer       \n\n\nWe are coordinating with the R Contribution Working Group and the R Core Team."
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html#project-outcomes",
-    "href": "projects/dendrapply-refactor/index.html#project-outcomes",
-    "title": "Dendrapply Refactor",
-    "section": "Project outcomes",
-    "text": "Project outcomes\nIf successful, we’d be able to submit a new version of dendrapply with better performance. Removing the recursion in this function would make these analyses also possible on edge computing and limited resource machines (or at least more feasible). Implementation of multiple traversal methods for function application would be a massive resource to the phylogenetics community."
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "R Project Sprint 2023",
+    "section": "Contact",
+    "text": "Contact\nFor queries about this event, please contact r-project-sprint@livewarwickac.onmicrosoft.com."
   },
   {
-    "objectID": "projects/dendrapply-refactor/index.html#reactions-and-comments",
-    "href": "projects/dendrapply-refactor/index.html#reactions-and-comments",
-    "title": "Dendrapply Refactor",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
-    "objectID": "projects/documentation/index.html",
-    "href": "projects/documentation/index.html",
-    "title": "Improving documentation",
-    "section": "",
-    "text": "In general R documentation is very good and thorough, but there’s always room for improvement.\nRight now there are 43 documentation-related bugs open in Bugzilla. Searching online and asking on social media also brings up more documentation issues that could be discussed—and possibly eventually fixed."
-  },
-  {
-    "objectID": "projects/documentation/index.html#problem-statement",
-    "href": "projects/documentation/index.html#problem-statement",
-    "title": "Improving documentation",
-    "section": "",
-    "text": "In general R documentation is very good and thorough, but there’s always room for improvement.\nRight now there are 43 documentation-related bugs open in Bugzilla. Searching online and asking on social media also brings up more documentation issues that could be discussed—and possibly eventually fixed."
-  },
-  {
-    "objectID": "projects/documentation/index.html#proposed-workflow",
-    "href": "projects/documentation/index.html#proposed-workflow",
-    "title": "Improving documentation",
-    "section": "Proposed workflow",
-    "text": "Proposed workflow\n\nTriage existing bugs\nA first pass would be to triage bugs in the Documentation tag in Bugzilla.\n\n\nFind new bugs\nA second pass would be to look for new documentation issues and open bugs on Bugzilla where there is agreement the documentation could be improved.\nSources for these issues can be:\n\nAsk among R Contributors.\nAsk on social media.\nSearch the R documentation of functions that beginners might need documentation for, such as mean(), sd(), etc.\nLook for R scripts on GitHub and tally the most used functions and evaluate their documentation."
-  },
-  {
-    "objectID": "projects/documentation/index.html#list-of-bugs",
-    "href": "projects/documentation/index.html#list-of-bugs",
-    "title": "Improving documentation",
-    "section": "List of bugs",
-    "text": "List of bugs\nThis table lists all currently open bugs with the Documentation tag sorted from oldest to newest (based on last comment). The “Location” column specifies which documentation is affected. The “Affected users” specifies which type of user I think are most likely affected by the issue (Beginners: people just starting with R, Advanced: people that use R regularly, Experts: people in close contact with R internals and/or package development). The “Action(s)” column lists the required actions to address the bug. And the “Comments” column is for general comments about the issue.\n\n\n\n\n\n\n\n\n\n\n\n\n\nBug ID\n14998\nTitle\nSuggestion for two internal self-reference in “Writing R Extensions” manual\nLocation\nWriting R Extensions\nAffected users\nExpert\nAction(s)\ndiscuss\nComments\nSuggests adding a sentence to “Writting R Extensions” linking to other sections. Not very clear on what the issue is.\nStatus\n\n\n\n\n\n\n\n\n\n\n\n\n\n16963\nIn ?on.exit, add note that on.exit expressions are evaluated after return() call.\nHelp docs\nAdvanced\ncreate patch\nA note about a relatively obscure but potentially important quirk of on.exit().\n\n\n\n\n17136\nDocumentation for method=“BY” in p.adjust()\nHelp docs\nBeginner\ncheck patch\nClarifies the behaviour of p.adjust(). Patch includes fix. Might need to read up p.adjust()’s source code and the relevant papers to confirm.\nNew patch submitted\n@trangdata\n\n\n\n17331\nInappropriate implicit variable setting in ~/.R/Makevars macOS recommendation\nR Installation and Administration\nAdvanced\ncheck patch\nNeed a Mac to confirm.\n\nA possible fix is included in the bug report.\n\n\n\n\n8528\npgamma - inadequate algorithm design and poor coding\n\n\n\n\n\n\n\n\n15882\n[requires a positional argument, not mentioned in docs\nR Internals\nAdvanced\ndiscuss\ncreate patch\n\n\n\n\n\n7195\nadditional examples for R-intro.texi\nAn Introduction to R\nBeginner\nreview patch\nAdds a bunch of text to this guide. Includes a patch. Might need to review what changed since 2004 when this was proposed.\n\n\n\n\n1011\nR-intro suggestions part II\n\n\n\n\n\n\n\n\n10701\nSuggestions for R-intro manual\n\n\n\n\n\n\n\n\n988\ninput for R-intro\n\n\n\n\n\n\n\n\n15272\n?nclass doesn’t find the nclass help page\nHelp docs\n\ncreate patch\nThe issue is confirmed and trivial to fix.\n@eliocamp\nSubmitted patch to fix the trivial issue but more deep issue found.\n\n\n\n17695\nstopifnot example does not run all the way through\nHelp docs\nBeginner\ndiscuss\ncreate patch\nThis seems to stem from the code in the example() function and thus the core fix needs fixing that. That might be hard. OTOH, a simpler fix would be to add a note in the example section. That’d be trivial.\n@eliocamp\nSubmitted patch to solve the immediate issue.\nNew issues found.\n\n\n\n17716\nSmall documentation pass on ?dyn.load\nDocs\nExpert\ncheck patch\nThis includes a patch to fix small typos and grammar mistakes in the docs. Needs a quick revision to confirm that nothing’s changed and then it could be approved by core.\npatch checked\n@hfrick\n\n\n\n17753\nave() documentation misleading\nHelp docs\nBeginner\ncreate patch\nThe bug is valid and current. The report includes proposed changes but not in patch form.\npatch created @paocorrales @phillybroadbent\n\n\n\n17786\n?text can clarify the adj argument\nHelp docs\nBeginner\ncheck patch\nA patch is provided. Needs to be checked for accuracy and it’s good to go.\nbug closed\n@paocorrales\n\n\n\n17791\n?text doesn’t have any vfont examples, and doesn’t link to the Hershey help page\nHelp docs\nBeginner\ncheck patch\nA very simple fix with a valid diff.\n\n\n\n\n7208\nDocumentation R-intro input\nAn Introduction to R\nBeginner\ndiscuss\nwrite new documentation\ncreate patch\nThis report points out the lack of examples of some potentially useful functions in this document: sweep(), apply(), lapply() and sapply(). It would need a bunch of writing and coming up with good examples.\n\n\n\n\n17805\nargs(): document NULL return value for certain special primitives\nHelp docs\nAdvanced\ncheck patch\nInvolves a particular edge case for a relatively obscurse function. Has a patch (although it might need revision).\n\n\n\n\n17821\nReference possible portability issues for translations in R-Exts\nWriting R Extensions\nExpert\ncheck patch\nPatch is there to apply.\n\n\n\n\n17827\nRequest to remove Annals of Eugenics citation from iris documentation\nHelp docs\nBeginner\ndiscuss (a lot)\ncreate patch\nThis is mostly a social thing and I think it requires a lot of discussion with the community.\n@shannonpileggi reviewed and suggested to close. | |\n\n\n\n17896\nCleaning up Internationalization section in R-exts\n\n\n\n\n\n\n\n\n17933\n‘paste’ doc: wrong: 0-length arg recycling related to ‘collapse’\nHelp docs\nBeginner\ncheck patch\nThere’s a patch with a fix.\npatch submitted @shannonpileggi |\n\n\n\n16567\nClaims about computational complexity of findInterval\nHelp docs\nAdvanced\ndiscuss\ncreate patch\nWe need to check if this is still relevant after ALTREP.\n\n\n\n\n18026\nInclude help page for exportPattern\nHelp docs\n\n\n\n\n\n\n\n18060\n“Malformed maintainer field.” message could be more helpful\nHelp docs\nExpert\ndiscuss\nwrite documentation\ncreate patch\nThis requires to create whole new documentation pages for the functions used in NAMESPACE.\n\n\n\n\n18094\nSuggestions for help system\nHelp docs\nBeginner\ndiscuss\ncreate patch\nThis would involve creating new aliases for a bunch of help pages. Not hard, but debatable.\n\n\n\n\n18061\nThe documentation is not clear that match() does not use the same notion of equality as unique().\nHelp docs\nBeginner\ndiscuss\ncreate patch\n\n\n\n\n\n16003\nheatmap scale argument: description not complete\nHelp docs\nBeginner\ncreate patch\n\n\n\n\n\n18173\nMan page for lm.fit is very brief about the circumstances when to use\nHelp docs\nAdvanced\ndiscuss\ncreate patch\nNeeds some understanding of the lm.fit function and friends.\n\n\n\n\n17989\nDocumentation of asCall argument to xgettext is unclear\nHelp docs\nExpert\ncheck patch\n\n\n\n\n\n18252\nDocument how unicode strings are compared for equality\nHelp docs\nBeginner\ncheck patch\nNeeds some knowledge about encoding.\n\n\n\n\n18282\nDescription of var.test for lm objects could be improved.\nHelp docs\nBeginner\ncreate patch\n\n\n\n\n\n17279\nparameter “amount” is badly explained for jitter()\nHelp docs\nBeginner\ncheck patch\n\n\n\n\n\n18330\ntype argument documentation in install.packages\nHelp docs\nAdvanced\ndiscuss\ncreate patch\nRequires some understanding of packaging. how install.packages() work.\n\n\n\n\n18355\ntrace() wipes out attributes\nHelp docs\nExpert\ndiscuss\ncreate patch\nThis is actually a bug in the function. It might be better to fix that bug instead of documenting the wrong behaviour.\n\n\n\n\n18350\nClarification needed in ?c\nHelp docs\nBeginner\ncheck patch\n\npatch is accurate, comment submitted to bugzilla |\n@phillybroadbent\n\n\n\n18408\nUsing CMake section “$(SHLIB): mylibs” did not work for me\nWriting R Extensions\nExpert\ndiscuss\ncreate patch\nNeeds knowledge of cmake.\n\n\n\n\n17770\nxtabs does not act as documented for na.action = na.pass\nHelp docs\nBeginner\ndiscuss\nclose issue\nThe issue seems to be solved by a previous patch.\noriginal issue was solve.\npatch for new issue in progress\n@paocorrales\n\n\n\n18402\nProvide a mechanism for adding custom CSS styles to HTML documentation headers.\n\n\n\n\n\n\n\n\n18499\nExamples for functions that involve writing files\nWriting R Extensions\nAdvanced\ncheck patch\n\n\n\n\n\n18524\nDOCS: Make it easier to find help on raw string constants, e.g. help.search(‘r”’)\nHelp docs\nBeginner\ncheck patch\n\n\n\n\n\n18561\n\\item{} labels processed inconsistently in \\value{} between Rd2HTML and other converters\n\n\ndiscuss\n\n\n\n\n\n18562\nAmbiguous statements in write() help page\nHelp docs\nBeginner\ncheck patch\n\nDone?\n@mmaechler committed an improved version of write.Rd on 2023-07-31\n\n\n\n18567\nConsistent style in base package help pages\nHelp docs\n\ncheck patch\n\n\n\n\n\n\n\nBugs to report\nThese are possible issues to post on Bugzilla after discussion.\n\nThe documentation of p.adjust() shows that the default value of n is length(p) . However, this is evaluated after NAs are removed from p, so this is not technically correct.\n\n\n\nIn ?residuals make it clear that both functions “are intended to encourage users to access object components through an accessor function rather than by directly referencing an object slot”.\n\n“It is intended…” to the end of the paragraph? Maybe not, resid should be mentioned before the paragraph about method registration. I am no longer sure if a change is needed. The help page for ?f itted is very similar btw, it just doesn’t talk about accessor functions. Maybe just replace “It is intended to encourage users” by “User are encouraged”? (A formal patch is not needed, we can discuss)\n\n\n\n\n?match says “%in% is a more intuitive interface”, but match() and %in% return different things.\n\nTODO come up with a succinct description of %in% that is correct\n\n\n\n\nAdd examples of the \\(x) function interface to the function help page.\n\nTODO add a short example\n\nExplicitly state that remove() is an alias for rm().\nDocument the differences between factors and ordered factors in models (https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336) .\n\nbigger discussion to have: we have some support from Thomas Lumley; BUT: this is just a note in factor’s documentation, not on the model side. https://github.com/r-devel/r-svn/blob/5ec122aee4f616d6cc6bcd6479d1edcc45a7c5ea/src/library/base/man/factor.Rd#L116C3-L117. add a link to related functions: contrasts, model.matrix; could link to contrasts options but not feeling very strongly about this\n\n\n\n\nThe ?iris example section doesn’t seem to be very useful. I don’t understand what its doing. (Not discussed!)\n?formula should link to ?update.formula. (Not discussed!)"
-  },
-  {
-    "objectID": "projects/documentation/index.html#project-requirements",
-    "href": "projects/documentation/index.html#project-requirements",
-    "title": "Improving documentation",
-    "section": "Project requirements",
-    "text": "Project requirements\nThis project is open to anyone with working knowledge of R."
-  },
-  {
-    "objectID": "projects/documentation/index.html#reactions-and-comments",
-    "href": "projects/documentation/index.html#reactions-and-comments",
-    "title": "Improving documentation",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
-    "objectID": "projects/mac-gui-translation/index.html",
-    "href": "projects/mac-gui-translation/index.html",
-    "title": "Facilitate Translation for Mac GUI",
-    "section": "",
-    "text": "The R for Mac GUI is the most comprehensive platform-specific R GUI and has been pioneering a lot of features now present in other GUIs and commercial products. Although officially supported by R Core, the Mac GUI is maintained on the Mac GUI GitHub repository rather than the R Project Subversion repository.\nOne aspect of the Mac GUI that has room for improvement is the translation of GUI text into languages other than English."
-  },
-  {
-    "objectID": "projects/mac-gui-translation/index.html#background",
-    "href": "projects/mac-gui-translation/index.html#background",
-    "title": "Facilitate Translation for Mac GUI",
-    "section": "",
-    "text": "The R for Mac GUI is the most comprehensive platform-specific R GUI and has been pioneering a lot of features now present in other GUIs and commercial products. Although officially supported by R Core, the Mac GUI is maintained on the Mac GUI GitHub repository rather than the R Project Subversion repository.\nOne aspect of the Mac GUI that has room for improvement is the translation of GUI text into languages other than English."
-  },
-  {
-    "objectID": "projects/mac-gui-translation/index.html#problem-statement",
-    "href": "projects/mac-gui-translation/index.html#problem-statement",
-    "title": "Facilitate Translation for Mac GUI",
-    "section": "Problem statement",
-    "text": "Problem statement\nThe number of languages currently supported is rather limited (German, Italian, French, Japanese, Dutch) and existing translations may be outdated.\nIn addition, contributing translations is not straight-forward. The preferred workflow requires use of Xcode on macOS. An alternative is to collaborate with a maintainer who will send the strings text files to be translated. However, this workflow places extra burden on the maintainers and it is difficult for contributors to identify which strings need updating. Both workflows require contributors to take special care to use UTF-8 encoding to avoid corrupting translation files."
-  },
-  {
-    "objectID": "projects/mac-gui-translation/index.html#proposed-solution",
-    "href": "projects/mac-gui-translation/index.html#proposed-solution",
-    "title": "Facilitate Translation for Mac GUI",
-    "section": "Proposed solution",
-    "text": "Proposed solution\nThis project will add the Mac GUI strings as a component on the Weblate server for R. This would mean that the technical details are taken care of and contributors can focus on translating the text, only requiring access to a browser to contribute.\nThe proposed work plan is as follows:\n\nSet up Weblate to work with the strings files from the Mac GUI (collaborating with those working on Weblate Improvements), see the Weblate docs.\nTest the workflow of updating a translation with speakers of currently translated languages at the sprint, e.g. German, French or Japanese.\nAdd new Left-to-Right languages. Potential additions represented at the sprint: Spanish, Brazilian Portuguese, Nepali.\nAdd support for Right-to-Left languages, see the Apple docs.\nBegin to add Arabic translations.\n\nTasks 2 and 3 depend on a minimal viable product from task 1 (e.g. an initial set up may rely on some manual steps that could be scripted/automated later). Translators could contribute to other projects until this is ready.\nTask 4 can be worked on independently of tasks 1 to 3, but task 5 is dependent on both task 1 and 4. Arabic translators may wish to work on translations for the Windows GUI in the meantime, which can already be done through Weblate."
-  },
-  {
-    "objectID": "projects/mac-gui-translation/index.html#project-requirements",
-    "href": "projects/mac-gui-translation/index.html#project-requirements",
-    "title": "Facilitate Translation for Mac GUI",
-    "section": "Project requirements",
-    "text": "Project requirements\n\nFluent speakers of languages other than English are required for the translation tasks (2, 3 and 5).\nThe Weblate set-up will need to be done by a Weblate admin (currently only Gergely Daróczi), but might be supported by a contributor with advanced knowledge of git.\nSupport for Right-to-Left languages requires modifying Objective C code with Xcode on macOS. This will likely be done by Simon Urbanek, but might be supported by a macOS user wanting to learn more about development of the Mac GUI."
-  },
-  {
-    "objectID": "projects/mac-gui-translation/index.html#project-resources",
-    "href": "projects/mac-gui-translation/index.html#project-resources",
-    "title": "Facilitate Translation for Mac GUI",
-    "section": "Project resources",
-    "text": "Project resources\n\nMac GUI GitHub repository\nWeblate documentation on Apple strings\nApple developer documentation on RTL language support"
-  },
-  {
-    "objectID": "projects/mac-gui-translation/index.html#project-outcomes",
-    "href": "projects/mac-gui-translation/index.html#project-outcomes",
-    "title": "Facilitate Translation for Mac GUI",
-    "section": "Project outcomes",
-    "text": "Project outcomes\nContributions to the next release of the Mac GUI."
-  },
-  {
-    "objectID": "projects/mac-gui-translation/index.html#reactions-and-comments",
-    "href": "projects/mac-gui-translation/index.html#reactions-and-comments",
-    "title": "Facilitate Translation for Mac GUI",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\nAhmadou Dicko and Thomas Lumley\n\n\nEnhancing sample.int for unequal probability sampling\n\n\nC,R,Wishlist,Models\n\n\n\n\nSimon Urbanek and Michael Chirico\n\n\nFacilitate Translation for Mac GUI\n\n\nTranslations\n\n\n\n\nElio Campitelli\n\n\nImproving documentation\n\n\nDocumentation,R\n\n\n\n\nMaría Nanton and Saranjeet Kaur\n\n\nTranslating R Messages/Warnings/Errors\n\n\nTranslations\n\n\n\n\nMartin Maechler\n\n\nTweak printCoefmat() - better Round()ing / Zapping Zeros\n\n\nI/O,Wishlist\n\n\n\n\nGergely Daroczi\n\n\nWeblate Improvements\n\n\nTranslations,Documentation\n\n\n\n\n\n\nNo matching items"
+    "objectID": "index.html#sponsors",
+    "href": "index.html#sponsors",
+    "title": "R Project Sprint 2023",
+    "section": "Sponsors",
+    "text": "Sponsors\n\nCore funding\nProviding sponsorship for general participant travel, accommodation and subsistence, plus general running costs.\n\n\n\n\n\n\n\nPlatinum sponsors\nProviding sponsorship for R Core travel.\n\nThe R Foundation\n\n\n\nGold sponsors\nProviding sponsorship for evening events and specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSilver sponsors\nProviding sponsorship for specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFurther sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors Twitter and Mastodon accounts, and in reports of the sprint. Please contact r-project-sprint@livewarwickac.onmicrosoft.com to discuss!"
   },
   {
     "objectID": "projects/quartz-alpha-mask/index.html",
@@ -336,6 +175,48 @@
     "text": "Reactions and comments"
   },
   {
+    "objectID": "projects/documentation/index.html",
+    "href": "projects/documentation/index.html",
+    "title": "Improving documentation",
+    "section": "",
+    "text": "In general R documentation is very good and thorough, but there’s always room for improvement.\nRight now there are 43 documentation-related bugs open in Bugzilla. Searching online and asking on social media also brings up more documentation issues that could be discussed—and possibly eventually fixed."
+  },
+  {
+    "objectID": "projects/documentation/index.html#problem-statement",
+    "href": "projects/documentation/index.html#problem-statement",
+    "title": "Improving documentation",
+    "section": "",
+    "text": "In general R documentation is very good and thorough, but there’s always room for improvement.\nRight now there are 43 documentation-related bugs open in Bugzilla. Searching online and asking on social media also brings up more documentation issues that could be discussed—and possibly eventually fixed."
+  },
+  {
+    "objectID": "projects/documentation/index.html#proposed-workflow",
+    "href": "projects/documentation/index.html#proposed-workflow",
+    "title": "Improving documentation",
+    "section": "Proposed workflow",
+    "text": "Proposed workflow\n\nTriage existing bugs\nA first pass would be to triage bugs in the Documentation tag in Bugzilla.\n\n\nFind new bugs\nA second pass would be to look for new documentation issues and open bugs on Bugzilla where there is agreement the documentation could be improved.\nSources for these issues can be:\n\nAsk among R Contributors.\nAsk on social media.\nSearch the R documentation of functions that beginners might need documentation for, such as mean(), sd(), etc.\nLook for R scripts on GitHub and tally the most used functions and evaluate their documentation."
+  },
+  {
+    "objectID": "projects/documentation/index.html#list-of-bugs",
+    "href": "projects/documentation/index.html#list-of-bugs",
+    "title": "Improving documentation",
+    "section": "List of bugs",
+    "text": "List of bugs\nThis table lists all currently open bugs with the Documentation tag sorted from oldest to newest (based on last comment). The “Location” column specifies which documentation is affected. The “Affected users” specifies which type of user I think are most likely affected by the issue (Beginners: people just starting with R, Advanced: people that use R regularly, Experts: people in close contact with R internals and/or package development). The “Action(s)” column lists the required actions to address the bug. And the “Comments” column is for general comments about the issue.\n\n\n\n\n\n\n\n\n\n\n\n\n\nBug ID\n14998\nTitle\nSuggestion for two internal self-reference in “Writing R Extensions” manual\nLocation\nWriting R Extensions\nAffected users\nExpert\nAction(s)\ndiscuss\nComments\nSuggests adding a sentence to “Writting R Extensions” linking to other sections. Not very clear on what the issue is.\nStatus\n\n\n\n\n\n\n\n\n\n\n\n\n\n16963\nIn ?on.exit, add note that on.exit expressions are evaluated after return() call.\nHelp docs\nAdvanced\ncreate patch\nA note about a relatively obscure but potentially important quirk of on.exit().\n\n\n\n\n17136\nDocumentation for method=“BY” in p.adjust()\nHelp docs\nBeginner\ncheck patch\nClarifies the behaviour of p.adjust(). Patch includes fix. Might need to read up p.adjust()’s source code and the relevant papers to confirm.\nNew patch submitted\n@trangdata\n\n\n\n17331\nInappropriate implicit variable setting in ~/.R/Makevars macOS recommendation\nR Installation and Administration\nAdvanced\ncheck patch\nNeed a Mac to confirm.\n\nA possible fix is included in the bug report.\n\n\n\n\n8528\npgamma - inadequate algorithm design and poor coding\n\n\n\n\n\n\n\n\n15882\n[requires a positional argument, not mentioned in docs\nR Internals\nAdvanced\ndiscuss\ncreate patch\n\n\n\n\n\n7195\nadditional examples for R-intro.texi\nAn Introduction to R\nBeginner\nreview patch\nAdds a bunch of text to this guide. Includes a patch. Might need to review what changed since 2004 when this was proposed.\n\n\n\n\n1011\nR-intro suggestions part II\n\n\n\n\n\n\n\n\n10701\nSuggestions for R-intro manual\n\n\n\n\n\n\n\n\n988\ninput for R-intro\n\n\n\n\n\n\n\n\n15272\n?nclass doesn’t find the nclass help page\nHelp docs\n\ncreate patch\nThe issue is confirmed and trivial to fix.\n@eliocamp\nSubmitted patch to fix the trivial issue but more deep issue found.\n\n\n\n17695\nstopifnot example does not run all the way through\nHelp docs\nBeginner\ndiscuss\ncreate patch\nThis seems to stem from the code in the example() function and thus the core fix needs fixing that. That might be hard. OTOH, a simpler fix would be to add a note in the example section. That’d be trivial.\n@eliocamp\nSubmitted patch to solve the immediate issue.\nNew issues found.\n\n\n\n17716\nSmall documentation pass on ?dyn.load\nDocs\nExpert\ncheck patch\nThis includes a patch to fix small typos and grammar mistakes in the docs. Needs a quick revision to confirm that nothing’s changed and then it could be approved by core.\npatch checked\n@hfrick\n\n\n\n17753\nave() documentation misleading\nHelp docs\nBeginner\ncreate patch\nThe bug is valid and current. The report includes proposed changes but not in patch form.\npatch created @paocorrales @phillybroadbent\n\n\n\n17786\n?text can clarify the adj argument\nHelp docs\nBeginner\ncheck patch\nA patch is provided. Needs to be checked for accuracy and it’s good to go.\nbug closed\n@paocorrales\n\n\n\n17791\n?text doesn’t have any vfont examples, and doesn’t link to the Hershey help page\nHelp docs\nBeginner\ncheck patch\nA very simple fix with a valid diff.\n\n\n\n\n7208\nDocumentation R-intro input\nAn Introduction to R\nBeginner\ndiscuss\nwrite new documentation\ncreate patch\nThis report points out the lack of examples of some potentially useful functions in this document: sweep(), apply(), lapply() and sapply(). It would need a bunch of writing and coming up with good examples.\n\n\n\n\n17805\nargs(): document NULL return value for certain special primitives\nHelp docs\nAdvanced\ncheck patch\nInvolves a particular edge case for a relatively obscurse function. Has a patch (although it might need revision).\n\n\n\n\n17821\nReference possible portability issues for translations in R-Exts\nWriting R Extensions\nExpert\ncheck patch\nPatch is there to apply.\n\n\n\n\n17827\nRequest to remove Annals of Eugenics citation from iris documentation\nHelp docs\nBeginner\ndiscuss (a lot)\ncreate patch\nThis is mostly a social thing and I think it requires a lot of discussion with the community.\n@shannonpileggi reviewed and suggested to close. | |\n\n\n\n17896\nCleaning up Internationalization section in R-exts\n\n\n\n\n\n\n\n\n17933\n‘paste’ doc: wrong: 0-length arg recycling related to ‘collapse’\nHelp docs\nBeginner\ncheck patch\nThere’s a patch with a fix.\npatch submitted @shannonpileggi |\n\n\n\n16567\nClaims about computational complexity of findInterval\nHelp docs\nAdvanced\ndiscuss\ncreate patch\nWe need to check if this is still relevant after ALTREP.\n\n\n\n\n18026\nInclude help page for exportPattern\nHelp docs\n\n\n\n\n\n\n\n18060\n“Malformed maintainer field.” message could be more helpful\nHelp docs\nExpert\ndiscuss\nwrite documentation\ncreate patch\nThis requires to create whole new documentation pages for the functions used in NAMESPACE.\n\n\n\n\n18094\nSuggestions for help system\nHelp docs\nBeginner\ndiscuss\ncreate patch\nThis would involve creating new aliases for a bunch of help pages. Not hard, but debatable.\n\n\n\n\n18061\nThe documentation is not clear that match() does not use the same notion of equality as unique().\nHelp docs\nBeginner\ndiscuss\ncreate patch\n\n\n\n\n\n16003\nheatmap scale argument: description not complete\nHelp docs\nBeginner\ncreate patch\n\n\n\n\n\n18173\nMan page for lm.fit is very brief about the circumstances when to use\nHelp docs\nAdvanced\ndiscuss\ncreate patch\nNeeds some understanding of the lm.fit function and friends.\n\n\n\n\n17989\nDocumentation of asCall argument to xgettext is unclear\nHelp docs\nExpert\ncheck patch\n\n\n\n\n\n18252\nDocument how unicode strings are compared for equality\nHelp docs\nBeginner\ncheck patch\nNeeds some knowledge about encoding.\n\n\n\n\n18282\nDescription of var.test for lm objects could be improved.\nHelp docs\nBeginner\ncreate patch\n\n\n\n\n\n17279\nparameter “amount” is badly explained for jitter()\nHelp docs\nBeginner\ncheck patch\n\n\n\n\n\n18330\ntype argument documentation in install.packages\nHelp docs\nAdvanced\ndiscuss\ncreate patch\nRequires some understanding of packaging. how install.packages() work.\n\n\n\n\n18355\ntrace() wipes out attributes\nHelp docs\nExpert\ndiscuss\ncreate patch\nThis is actually a bug in the function. It might be better to fix that bug instead of documenting the wrong behaviour.\n\n\n\n\n18350\nClarification needed in ?c\nHelp docs\nBeginner\ncheck patch\n\npatch is accurate, comment submitted to bugzilla |\n@phillybroadbent\n\n\n\n18408\nUsing CMake section “$(SHLIB): mylibs” did not work for me\nWriting R Extensions\nExpert\ndiscuss\ncreate patch\nNeeds knowledge of cmake.\n\n\n\n\n17770\nxtabs does not act as documented for na.action = na.pass\nHelp docs\nBeginner\ndiscuss\nclose issue\nThe issue seems to be solved by a previous patch.\noriginal issue was solve.\npatch for new issue in progress\n@paocorrales\n\n\n\n18402\nProvide a mechanism for adding custom CSS styles to HTML documentation headers.\n\n\n\n\n\n\n\n\n18499\nExamples for functions that involve writing files\nWriting R Extensions\nAdvanced\ncheck patch\n\n\n\n\n\n18524\nDOCS: Make it easier to find help on raw string constants, e.g. help.search(‘r”’)\nHelp docs\nBeginner\ncheck patch\n\n\n\n\n\n18561\n\\item{} labels processed inconsistently in \\value{} between Rd2HTML and other converters\n\n\ndiscuss\n\n\n\n\n\n18562\nAmbiguous statements in write() help page\nHelp docs\nBeginner\ncheck patch\n\nDone?\n@mmaechler committed an improved version of write.Rd on 2023-07-31\n\n\n\n18567\nConsistent style in base package help pages\nHelp docs\n\ncheck patch\n\n\n\n\n\n\n\nBugs to report\nThese are possible issues to post on Bugzilla after discussion.\n\nThe documentation of p.adjust() shows that the default value of n is length(p) . However, this is evaluated after NAs are removed from p, so this is not technically correct.\n\n\n\nIn ?residuals make it clear that both functions “are intended to encourage users to access object components through an accessor function rather than by directly referencing an object slot”.\n\n“It is intended…” to the end of the paragraph? Maybe not, resid should be mentioned before the paragraph about method registration. I am no longer sure if a change is needed. The help page for ?f itted is very similar btw, it just doesn’t talk about accessor functions. Maybe just replace “It is intended to encourage users” by “User are encouraged”? (A formal patch is not needed, we can discuss)\n\n\n\n\n?match says “%in% is a more intuitive interface”, but match() and %in% return different things.\n\nTODO come up with a succinct description of %in% that is correct\n\n\n\n\nAdd examples of the \\(x) function interface to the function help page.\n\nTODO add a short example\n\nExplicitly state that remove() is an alias for rm().\nDocument the differences between factors and ordered factors in models (https://mastodon.social/@mccarthymg@fosstodon.org/110685274281599336) .\n\nbigger discussion to have: we have some support from Thomas Lumley; BUT: this is just a note in factor’s documentation, not on the model side. https://github.com/r-devel/r-svn/blob/5ec122aee4f616d6cc6bcd6479d1edcc45a7c5ea/src/library/base/man/factor.Rd#L116C3-L117. add a link to related functions: contrasts, model.matrix; could link to contrasts options but not feeling very strongly about this\n\n\n\n\nThe ?iris example section doesn’t seem to be very useful. I don’t understand what its doing. (Not discussed!)\n?formula should link to ?update.formula. (Not discussed!)"
+  },
+  {
+    "objectID": "projects/documentation/index.html#project-requirements",
+    "href": "projects/documentation/index.html#project-requirements",
+    "title": "Improving documentation",
+    "section": "Project requirements",
+    "text": "Project requirements\nThis project is open to anyone with working knowledge of R."
+  },
+  {
+    "objectID": "projects/documentation/index.html#reactions-and-comments",
+    "href": "projects/documentation/index.html#reactions-and-comments",
+    "title": "Improving documentation",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
     "objectID": "projects/translation/index.html",
     "href": "projects/translation/index.html",
     "title": "Translating R Messages/Warnings/Errors",
@@ -390,6 +271,195 @@
     "title": "Translating R Messages/Warnings/Errors",
     "section": "Reactions and comments",
     "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/template/index.html#problem-statement",
+    "href": "projects/template/index.html#problem-statement",
+    "title": "Project Title in Title Case",
+    "section": "Problem statement",
+    "text": "Problem statement"
+  },
+  {
+    "objectID": "projects/template/index.html#proposed-solution",
+    "href": "projects/template/index.html#proposed-solution",
+    "title": "Project Title in Title Case",
+    "section": "Proposed solution",
+    "text": "Proposed solution"
+  },
+  {
+    "objectID": "projects/template/index.html#testing",
+    "href": "projects/template/index.html#testing",
+    "title": "Project Title in Title Case",
+    "section": "Testing",
+    "text": "Testing"
+  },
+  {
+    "objectID": "projects/template/index.html#project-requirements",
+    "href": "projects/template/index.html#project-requirements",
+    "title": "Project Title in Title Case",
+    "section": "Project requirements",
+    "text": "Project requirements"
+  },
+  {
+    "objectID": "projects/template/index.html#project-resources",
+    "href": "projects/template/index.html#project-resources",
+    "title": "Project Title in Title Case",
+    "section": "Project resources",
+    "text": "Project resources"
+  },
+  {
+    "objectID": "projects/template/index.html#project-outcomes",
+    "href": "projects/template/index.html#project-outcomes",
+    "title": "Project Title in Title Case",
+    "section": "Project outcomes",
+    "text": "Project outcomes"
+  },
+  {
+    "objectID": "projects/template/index.html#reactions-and-comments",
+    "href": "projects/template/index.html#reactions-and-comments",
+    "title": "Project Title in Title Case",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html",
+    "href": "projects/ideas-and-proposals.html",
+    "title": "Ideas and Proposals",
+    "section": "",
+    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#ideas",
+    "href": "projects/ideas-and-proposals.html#ideas",
+    "title": "Ideas and Proposals",
+    "section": "Ideas",
+    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
+  },
+  {
+    "objectID": "projects/ideas-and-proposals.html#proposals",
+    "href": "projects/ideas-and-proposals.html#proposals",
+    "title": "Ideas and Proposals",
+    "section": "Proposals",
+    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html",
+    "href": "projects/dendrapply-refactor/index.html",
+    "title": "Dendrapply Refactor",
+    "section": "",
+    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#background",
+    "href": "projects/dendrapply-refactor/index.html#background",
+    "title": "Dendrapply Refactor",
+    "section": "",
+    "text": "dendrogram objects are frequently used in a variety of analyses in R, especially in hierarchical clustering and phylogenetics. A given dendrogram object defines a tree-like structure, with internal nodes (nodes with more nested child nodes) and leaf nodes (nodes with no children).\nThe structure of this object in R is a nested list, with each element of class dendrogram and containing at least the members and height attribute. members defines the number of leaf nodes below that particular node, and height defines the height of the node for plotting. Leaf nodes contain an additional attribute leaf, which is set to TRUE.\nWorking with dendrogram objects is difficult due to their deep nested structure. To this end, the dendrapply function was created in 2004 by Dr. Maechler to apply a function to all nodes of a dendrogram. dendrapply is used frequently in many packages and analyses, notably dendextend, and its implementation is defined in src/library/stats/R/dendrogram.R."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#problem-statement",
+    "href": "projects/dendrapply-refactor/index.html#problem-statement",
+    "title": "Dendrapply Refactor",
+    "section": "Problem statement",
+    "text": "Problem statement\nThe current implementation of dendrapply is included at the bottom of this section. This implementation has two main issues.\nThe most notable of these is the recursive application of functions to the dendrogram nodes. This leads to poor performance on deeply nested dendrograms, as well as the potential for stack overflow errors on machines with limited resources. This is detailed in ?dendrapply and in the warning in ?dendrogram.\nAdditionally, tree traversal can be achieved in a number of ways. The current implementation uses a pre-order traversal, which is not always the most intuitive application of functions to a tree structure. This means that, for each triple 2 &lt;- 1 -&gt; 3, the function is applied first to node 1, then to 2, then to 3. Ideally, users would be able to choose between a post-order or a pre-order traversal. Post-order traversals guarantee that the function is applied to all children of a node before applying to the parent, allowing for certain analyses that rely on propagating results up a tree. There is currently no easy way to achieve this in R.\nIn summary, the priorities to rectify are (in order of importance):\n\nRemove recursion in dendrapply\nAdd an optional argument to allow for different tree traversals in function application\n\nThese must be achieved while preserving all the current functionality of dendrapply, and without decreasing the current performance.\nCurrent implementation:\n\ndendrapply &lt;- function(X, FUN, ...)\n{\n    ## Purpose: \"dendrogram\" recursive apply {to each node}\n    ## ----------------------------------------------------------------------\n    ## Author: Martin Maechler, Date: 26 Jun 2004, 22:43\n    FUN &lt;- match.fun(FUN)\n    if( !inherits(X, \"dendrogram\") ) stop(\"'X' is not a dendrogram\")\n\n    ## Node apply recursively:\n    Napply &lt;- function(d) {\n    r &lt;- FUN(d, ...)\n    if(!is.leaf(d)) {\n        if(!is.list(r)) r &lt;- as.list(r) # fixing unsafe FUN()s\n        if(length(r) &lt; (n &lt;- length(d))) r[seq_len(n)] &lt;- vector(\"list\", n)\n        ## and overwrite recursively, possibly keeping \"attr\"\n        r[] &lt;- lapply(d, Napply)\n        }\n    r\n    }\n    Napply(X)\n}"
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#proposed-solution",
+    "href": "projects/dendrapply-refactor/index.html#proposed-solution",
+    "title": "Dendrapply Refactor",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nA full description follows, but people that are interested can read my initial writeup for more details on the problem, attempted solutions, and current status. Feel free to skip that link and just read the following section instead.\nA prototype solution has been implemented and submitted to Bugzilla. This solution moves the R implementation into C. The short description of the proposed method is to create a linked list in C holding the SEXP pointers for each node of the tree. Then, we apply the function given to each node of the linked list, and then merge the SEXP objects back into the original topology. This can be further optimized by merging nodes on the fly to limit linked list space and reduce PROTECT stack usage. This also allows for different tree traversal strategies with minimal effort, as different tree traversals can be achieved by varying how nodes are added to the linked list.\nThe current solution has one key issue resulting in a two problems. This implementation uses VECTOR_ELT rather than the more general [[ and [[&lt;- operations to get/set values. This allows for low PROTECT stack usage and high performance, but it also means that nodes discard their class values when passed to the function. This can be solved naively by just reclassing nodes as dendrogram, but unfortunately this causes issues in the case where nodes have multiple classes (ex. a node where class(node ) == c('dendrogram', 'myOtherClass')). This also runs into problems in the case where a non-standard [[ method is implemented. In the interest of backwards compatibility, these problems should be rectified.\nThere are a few options for fixing this issue. The first is to work entirely in R, removing the C implementation. This would work in theory by using a list structure to hold nodes, but the linked-list structure in C gives a substantial boost in performance over R by using pointers instead of copying each object. This may not be a big deal; I haven’t tested it yet.\nAnother possible option is to use the alternative vector-based dendrogram indexing ( dend[[c(1,1)]] is equivalent to dend[[1]][[1]] ) to build a list of targets first, then apply the function to each. This may solve the potential R-implementation memory issues, but could also require initializing a huge vector. Dealing with the topology of the dendrogram would also be challenging.\nAnother potential fix is to use the [[ method by building an R expression in C and then calling it, similar to how lapply is implemented (see do_lapply() in src/main/apply.c for reference). This implementation was tested and worked successfully, but the result was significantly slower than the R version (roughly half speed, likely due to PROTECT stack issues mentioned below). Maybe a code refactor could solve the slowdowns and produce a better result.\nThe last potential fix I’ve identified is to use precious multi-sets for protection rather than PROTECT. One of the big problems of applying functions in C is that the result of the function application at each node needs to be protected. This isn’t an issue for post-order traversals, since we can always just add the result as a child of the parent node (which auto-protects it if the parent is already protected). However, for the current implementation, a potentially large source of slow-downs is the work-arounds implemented to solve PROTECT stack issues. Using MSets could simplify this and improve runtime, but there isn’t a lot of documentations on how to use them (and their use for this kind of problem is explicitly discouraged in some places)."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#testing",
+    "href": "projects/dendrapply-refactor/index.html#testing",
+    "title": "Dendrapply Refactor",
+    "section": "Testing",
+    "text": "Testing\nBenchmarking the function against stats::dendrapply can be done using the following:\n\ndend &lt;- as.dendrogram(hclust(dist(1:100)))\nf &lt;- function(x) x\n\nmicrobenchmark::microbenchmark(stats::dendrapply(dend, f),\n                               new_dendrapply(dend, f))\n\nDifferent dendrogram objects should be tested to look at performance on balanced vs. deep trees, but usage of \\(x) x is important for accurate testing. This function minimizes the amount of operations within the applied function, meaning that the vast majority of the differences in time will be due to the implementation of dendrapply, not the runtime of f.\nAdditional testing should be done to verify that the following work as expected:\n\nEnsure speed of new application is at least as fast as stats::dendrapply\nEnsure all examples in ?dendrapply work as expected\nEnsure all tests in dendextend work correctly to test a large set of currently used applications of dendrapply\nEnsure that nodes with multiple classes retain their class attribute after running dendrapply\nEnsure that special uses of [[ work as expected\nEnsure that recursive dendrapply calls work as expected (ex. dendrapply(dend, \\(x) dendrapply(x, someOtherFunction)))\nEnsure all examples in the R build testing work as expected, paying special attention to the following weird case:\n\n&gt; D &lt;- as.dendrogram(hclust(dist(cbind(setNames(c(0,1,4), LETTERS[1:3])))))\n&gt; dendrapply(D, labels)\n[[1]]\n[1] \"C\"\n\n[[2]]\n[[2]][[1]]\n[1] \"A\"\n\n[[2]][[2]]\n[1] \"B\"\n\n[[3]]\n[1] \"C\"\nImplementation should also be made to ensure that the default parameters are fully backwards compatible. In the case of post-order traversal, this is currently being achieved by defining the function as dendrapply(X, FUN, ..., how=c('pre.order', 'post.order')) so that the default is always equivalent to stats::dendrapply.\nFinally, testing should be added to the R source tests. The current testing suite for dendrapply is very sparse; edge cases like multi-classed dendrogram objects should be added to ensure code works as expected in the future."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#project-requirements",
+    "href": "projects/dendrapply-refactor/index.html#project-requirements",
+    "title": "Dendrapply Refactor",
+    "section": "Project requirements",
+    "text": "Project requirements\n\nI suspect that the optimal solution will involve working in C, so knowledge of C to develop this will be helpful, even if just to be able to compare performance against an R implementation. Much of the implementation in C depends on knowledge of the PROTECT stack, so familiarity with that is important for C solutions.\nBasic knowledge of tree structures and/or dendrogram objects is helpful but not necessary."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#project-resources",
+    "href": "projects/dendrapply-refactor/index.html#project-resources",
+    "title": "Dendrapply Refactor",
+    "section": "Project resources",
+    "text": "Project resources\n\nTree traversal methods\nMy full description of problem and implementation\nCurrent bugzilla ticket (contains most up-to-date code; my blog post may be out of date.)"
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#project-outcomes",
+    "href": "projects/dendrapply-refactor/index.html#project-outcomes",
+    "title": "Dendrapply Refactor",
+    "section": "Project outcomes",
+    "text": "Project outcomes\nIf successful, we’d be able to submit a new version of dendrapply with better performance. Removing the recursion in this function would make these analyses also possible on edge computing and limited resource machines (or at least more feasible). Implementation of multiple traversal methods for function application would be a massive resource to the phylogenetics community."
+  },
+  {
+    "objectID": "projects/dendrapply-refactor/index.html#reactions-and-comments",
+    "href": "projects/dendrapply-refactor/index.html#reactions-and-comments",
+    "title": "Dendrapply Refactor",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
+  },
+  {
+    "objectID": "code-of-conduct.html",
+    "href": "code-of-conduct.html",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "The organizers of R Project Sprint 2023 are dedicated to providing a harassment-free conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof).\nAll participants at R Project Sprint 2023 are required to agree to the following code of conduct.\nThe code of conduct applies to all sprint activities including\nsocial events. It extends to event-specific exchanges on social media, for instance posts tagged with the identifier of the sprint (#RSprint2023) and replies to such posts.\nOrganizers will enforce this code throughout and expect cooperation in ensuring a safe environment for all."
+  },
+  {
+    "objectID": "code-of-conduct.html#expected-behaviour",
+    "href": "code-of-conduct.html#expected-behaviour",
+    "title": "Code of Conduct",
+    "section": "Expected Behaviour",
+    "text": "Expected Behaviour\nAll conference participants agree to:\n\nBe considerate in language and actions, and respect the boundaries of fellow participants.\nRefrain from demeaning, discriminatory, or harassing behaviour and language. Please refer to Unacceptable Behaviour for more details.\nAlert a member of the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential. Please refer to the section titled What To Do If You Witness or Are Subject To Unacceptable Behaviour for more details."
+  },
+  {
+    "objectID": "code-of-conduct.html#unacceptable-behaviour",
+    "href": "code-of-conduct.html#unacceptable-behaviour",
+    "title": "Code of Conduct",
+    "section": "Unacceptable Behaviour",
+    "text": "Unacceptable Behaviour\nBehaviour that is unacceptable includes, but is not limited to:\n\nStalking\nDeliberate intimidation\nUnwanted photography or recording\nSustained or willful disruption of talks or other events\nUse of sexual or discriminatory imagery, comments, or jokes\nOffensive comments related to age, gender, sexual orientation, disability, race or religion\nInappropriate physical contact, which can include grabbing, or massaging or hugging without consent.\nUnwelcome sexual attention, which can include inappropriate questions of a sexual nature, asking for sexual favours or repeatedly asking for dates or contact information.\n\nIf you are asked to stop harassing behaviour you should stop immediately, even if your behaviour was meant to be friendly or a joke, it was clearly not taken that way and for the comfort of all conference attendees you should stop.\nAttendees who behave in a manner deemed inappropriate are subject to actions listed under Procedure for Code of Conduct Violations."
+  },
+  {
+    "objectID": "code-of-conduct.html#additional-requirements-for-sprint-material",
+    "href": "code-of-conduct.html#additional-requirements-for-sprint-material",
+    "title": "Code of Conduct",
+    "section": "Additional Requirements for Sprint Material",
+    "text": "Additional Requirements for Sprint Material\nPresentation slides and documents created for, or during, the sprint should not contain offensive or sexualised material."
+  },
+  {
+    "objectID": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
+    "href": "code-of-conduct.html#procedure-for-code-of-conduct-violations",
+    "title": "Code of Conduct",
+    "section": "Procedure for Code of Conduct Violations",
+    "text": "Procedure for Code of Conduct Violations\nThe organizing team reserves the right to determine the appropriate response for all code of conduct violations. Potential responses include:\n\na formal warning to stop harassing behaviour\ncancellation or early termination of presentations or other contributions to the programme\nexpulsion from the sprint\nremoval/rejection of sprint contributions\nremoval of sponsorship acknowledgement, without return of sponsorship contribution"
+  },
+  {
+    "objectID": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
+    "href": "code-of-conduct.html#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour",
+    "title": "Code of Conduct",
+    "section": "What To Do If You Witness or Are Subject To Unacceptable Behaviour",
+    "text": "What To Do If You Witness or Are Subject To Unacceptable Behaviour\nAlert the organizing team if you notice someone in distress, or observe violations of this code of conduct, even if they seem inconsequential.\nReports should be addressed to r-project-sprint@livewarwickac.onmicrosoft.com. If the report concerns someone on the local organizing team, please contact other members of the team directly. If you still have concerns about a conflict of interest, you are welcome to contact the University of Warwick Report + Support service.\nWe will take all reports by R Project Sprint 2023 participants seriously. This includes incidents outside our spaces and at any point in time. The organizing team reserve the right to exclude people from the sprint based on their past behaviour, including behaviour outside R Project Sprint 2023 spaces and behaviour towards people who are not part of the sprint.\nWe will respect confidentiality requests for the purpose of protecting targets of harassing behaviour. We will not name victims without their affirmative consent. Correspondence is handled confidentially and deleted after the case is resolved. All data is stored securely, access will be limited to the members of the organizing team who receive the report.\nThe organizing team will also provide support to victims, which may include:\n\nproviding an escort,\ncontacting the on-campus Community Safety Team or off campus Emergency Services,\n\nor otherwise assisting those experiencing harassment to ensure that they feel safe for the duration of the conference. Assistance will only be provided with affirmative consent of the victim."
+  },
+  {
+    "objectID": "code-of-conduct.html#acknowledgements",
+    "href": "code-of-conduct.html#acknowledgements",
+    "title": "Code of Conduct",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nParts of the above text are licensed CC BY-SA 4.0. Credit to SRCCON. This code of conduct was based on that developed for useR! 2018 which was a revision of the code of conduct used at previous useR!s and also drew from rOpenSci’s code of conduct."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Google Sheet with work group allocation."
   },
   {
     "objectID": "projects/tweak-printCoefmat/index.html",
@@ -448,74 +518,11 @@
     "text": "Reactions and comments"
   },
   {
-    "objectID": "projects/ideas-and-proposals.html",
-    "href": "projects/ideas-and-proposals.html",
-    "title": "Ideas and Proposals",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "We are currently gathering ideas and proposals for R Project Sprint 2023.\nProjects should be related to code or documentation maintained by the R Core Team. Priority will be given to projects that have the support of R Core either directly (an R Core member has authored a proposal or commented in favour) or indirectly (the project follows established pathways of contributing to R bugs or translations)."
-  },
-  {
-    "objectID": "projects/ideas-and-proposals.html#ideas",
-    "href": "projects/ideas-and-proposals.html#ideas",
-    "title": "Ideas and Proposals",
-    "section": "Ideas",
-    "text": "Ideas\nProject ideas may be suggested by anyone with an interest in R development.\nAn idea may be\n\nA concept that could be turned into a project proposal.\nA small task that could be\n\ncombined with other ideas to form a project proposal, or\npicked up by a sprint participant if they have spare time alongside a larger project.\n\n\nSuggest an idea by opening a thread in the ideas category of Discussions in the r-project-sprint-2023 GitHub repository."
-  },
-  {
-    "objectID": "projects/ideas-and-proposals.html#proposals",
-    "href": "projects/ideas-and-proposals.html#proposals",
-    "title": "Ideas and Proposals",
-    "section": "Proposals",
-    "text": "Proposals\nProject proposals must be created by a sprint participant, potentially in collaboration with external contributors.\nA project proposal should outline a specific package of work where good progress could be made by 2-6 people in ½ to 3 days.\nFor example:\n\nAddressing a set of related bugs reported on R’s Bugzilla.\nImplementing a given solution to address “TODO” or “FIXME” comments in the R sources.\nMaking specific improvements to contributor infrastructure, such the Weblate server.\n\nSprint participants can add a project proposal as follows:\n\nClone the r-project-sprint-2023 repository.\nWithin /projects, copy the template directory and name the copy in kebab case with a suitable short name (e.g. short-project-name).\nIn the new directory, edit the index.Rmd file. Preview locally by rendering the Quarto website or knitting the R markdown file.\nCommit the .Rmd. The website is updated automatically by GitHub actions.\nWhen your project page page is live, add a reaction above the comment box at the bottom - this will open a thread in the proposals category of r-project-sprint-2023 Discussions.\n[Optional] Add labels to the discussion thread with the categories you added to your proposal.\n\nNote this assumes you accepted your invitation to the R-devel GitHub organization - please contact r-project-sprint@livewarwickac.onmicrosoft.com if you have any issues."
-  },
-  {
-    "objectID": "projects/template/index.html#problem-statement",
-    "href": "projects/template/index.html#problem-statement",
-    "title": "Project Title in Title Case",
-    "section": "Problem statement",
-    "text": "Problem statement"
-  },
-  {
-    "objectID": "projects/template/index.html#proposed-solution",
-    "href": "projects/template/index.html#proposed-solution",
-    "title": "Project Title in Title Case",
-    "section": "Proposed solution",
-    "text": "Proposed solution"
-  },
-  {
-    "objectID": "projects/template/index.html#testing",
-    "href": "projects/template/index.html#testing",
-    "title": "Project Title in Title Case",
-    "section": "Testing",
-    "text": "Testing"
-  },
-  {
-    "objectID": "projects/template/index.html#project-requirements",
-    "href": "projects/template/index.html#project-requirements",
-    "title": "Project Title in Title Case",
-    "section": "Project requirements",
-    "text": "Project requirements"
-  },
-  {
-    "objectID": "projects/template/index.html#project-resources",
-    "href": "projects/template/index.html#project-resources",
-    "title": "Project Title in Title Case",
-    "section": "Project resources",
-    "text": "Project resources"
-  },
-  {
-    "objectID": "projects/template/index.html#project-outcomes",
-    "href": "projects/template/index.html#project-outcomes",
-    "title": "Project Title in Title Case",
-    "section": "Project outcomes",
-    "text": "Project outcomes"
-  },
-  {
-    "objectID": "projects/template/index.html#reactions-and-comments",
-    "href": "projects/template/index.html#reactions-and-comments",
-    "title": "Project Title in Title Case",
-    "section": "Reactions and comments",
-    "text": "Reactions and comments"
+    "text": "This page lists potential projects for the sprint.\nSee Ideas and Proposals for how to discuss ideas for projects or add a project proposal.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nAuthor\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\nPaul Murrell\n\n\nAdding Alpha Masks to the Quartz Graphics Device\n\n\nC,MacOS,Graphics\n\n\n\n\nHeather Turner and Ben Bolker\n\n\nAddressing Bugs in nlme\n\n\nR,C,Models\n\n\n\n\nAidan Lakshman\n\n\nDendrapply Refactor\n\n\nC,Wishlist,Low-level\n\n\n\n\nAhmadou Dicko and Thomas Lumley\n\n\nEnhancing sample.int for unequal probability sampling\n\n\nC,R,Wishlist,Models\n\n\n\n\nSimon Urbanek and Michael Chirico\n\n\nFacilitate Translation for Mac GUI\n\n\nTranslations\n\n\n\n\nElio Campitelli\n\n\nImproving documentation\n\n\nDocumentation,R\n\n\n\n\nMaría Nanton and Saranjeet Kaur\n\n\nTranslating R Messages/Warnings/Errors\n\n\nTranslations\n\n\n\n\nMartin Maechler\n\n\nTweak printCoefmat() - better Round()ing / Zapping Zeros\n\n\nI/O,Wishlist\n\n\n\n\nGergely Daroczi\n\n\nWeblate Improvements\n\n\nTranslations,Documentation\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/nlme-bugs/index.html",
@@ -686,87 +693,80 @@
     "text": "Reactions and comments"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "R Project Sprint 2023",
+    "objectID": "projects/mac-gui-translation/index.html",
+    "href": "projects/mac-gui-translation/index.html",
+    "title": "Facilitate Translation for Mac GUI",
     "section": "",
-    "text": "August 30 - September 1, 2023\nUniversity of Warwick, UK\nCollaborate on contributions to base R!\nWe are pleased to announce an R Project Sprint, to be hosted at the University of Warwick, UK, from Wednesday August 30 to Friday September 1. Novice and experienced contributors are encouraged to apply for a place at the residential event, with funding available for travel (deadline Friday 10 March). Read on for more! #RSprint2023"
+    "text": "The R for Mac GUI is the most comprehensive platform-specific R GUI and has been pioneering a lot of features now present in other GUIs and commercial products. Although officially supported by R Core, the Mac GUI is maintained on the Mac GUI GitHub repository rather than the R Project Subversion repository.\nOne aspect of the Mac GUI that has room for improvement is the translation of GUI text into languages other than English."
   },
   {
-    "objectID": "index.html#about-the-sprint",
-    "href": "index.html#about-the-sprint",
-    "title": "R Project Sprint 2023",
-    "section": "About the sprint",
-    "text": "About the sprint\nR is a popular and widely used software for data science. Like any large open source software project, it takes a lot of work to maintain and develop. Much of the work is done by a small number of volunteers and there is a need to grow the contributor community.\nThis sprint will bring together novice and experienced contributors, to work alongside members of the R Core Team. Participants will work collaboratively on contributions to base R. The tasks will be prepared in the run-up to the event, but may include:\n\nReviewing, analysing and fixing bugs reported on R’s Bugzilla.\nContributing to message translations via Weblate.\nWork on new developments such as this short project proposed by core developer Paul Murrell: Adding Alpha Masks to the Quartz Graphics Device."
+    "objectID": "projects/mac-gui-translation/index.html#background",
+    "href": "projects/mac-gui-translation/index.html#background",
+    "title": "Facilitate Translation for Mac GUI",
+    "section": "",
+    "text": "The R for Mac GUI is the most comprehensive platform-specific R GUI and has been pioneering a lot of features now present in other GUIs and commercial products. Although officially supported by R Core, the Mac GUI is maintained on the Mac GUI GitHub repository rather than the R Project Subversion repository.\nOne aspect of the Mac GUI that has room for improvement is the translation of GUI text into languages other than English."
   },
   {
-    "objectID": "index.html#who-can-take-part",
-    "href": "index.html#who-can-take-part",
-    "title": "R Project Sprint 2023",
-    "section": "Who can take part?",
-    "text": "Who can take part?\nThe sprint will involve a mixture of invited and self-nominated participants, so that we have contributors at all experience levels.\nThe main criteria for participation is a good knowledge of R programming and a keen interest in contributing, as we hope participants continue to contribute after the event. The table below shows the type of knowledge/skills we expect participants to have\n\n\n\n\n\n\n\nSkills most will have\nSkills some will have\n\n\n\n\nWriting R functions\nProgramming in C\n\n\nDebugging R functions\nKnowledge of S3/S4 classes and methods\n\n\nWriting R help files\nExpertise in statistical methods in stats, splines\n\n\nUsing git/Subversion\nAble to build R from source\n\n\n\nOther specialist skills e.g. expertise in building Windows/MacOS GUIs or fluency in language with a low percentage of translated messages on Weblate, would of course be welcome!\nIt will help if you have some experience in contributing to base R, but novice contributors will be mentored in the run-up to the event, so they are prepared.\nWe are also keen to foster a diverse community of contributors. If you are a member of the R-Ladies, MiR, RainbowR, AfricaR, ArabR, AsiaR, or LatinR communities, or otherwise identify as part of an underrepresented group among R contributors, then we especially encourage you to self-nominate! To ensure a welcoming environment, we have a code of conduct in place."
+    "objectID": "projects/mac-gui-translation/index.html#problem-statement",
+    "href": "projects/mac-gui-translation/index.html#problem-statement",
+    "title": "Facilitate Translation for Mac GUI",
+    "section": "Problem statement",
+    "text": "Problem statement\nThe number of languages currently supported is rather limited (German, Italian, French, Japanese, Dutch) and existing translations may be outdated.\nIn addition, contributing translations is not straight-forward. The preferred workflow requires use of Xcode on macOS. An alternative is to collaborate with a maintainer who will send the strings text files to be translated. However, this workflow places extra burden on the maintainers and it is difficult for contributors to identify which strings need updating. Both workflows require contributors to take special care to use UTF-8 encoding to avoid corrupting translation files."
   },
   {
-    "objectID": "index.html#apply-for-a-place",
-    "href": "index.html#apply-for-a-place",
-    "title": "R Project Sprint 2023",
-    "section": "Apply for a place",
-    "text": "Apply for a place\nAnyone one interested to attend the sprint is encouraged to self-nominate via the application form by Friday 10 March. You will be asked about your experience, skills and background to help us balance participation overall.\nThanks to our sponsors, all workshop participants will be accommodated free of charge during the sprint, in on-campus housing at the University of Warwick, with meals provided.\nFunding is also available for travel expenses, however if participants are able to get travel funding from other sources this will allow more people to attend - companies or other funding bodies providing such support to participants will be acknowledged as sponsors."
+    "objectID": "projects/mac-gui-translation/index.html#proposed-solution",
+    "href": "projects/mac-gui-translation/index.html#proposed-solution",
+    "title": "Facilitate Translation for Mac GUI",
+    "section": "Proposed solution",
+    "text": "Proposed solution\nThis project will add the Mac GUI strings as a component on the Weblate server for R. This would mean that the technical details are taken care of and contributors can focus on translating the text, only requiring access to a browser to contribute.\nThe proposed work plan is as follows:\n\nSet up Weblate to work with the strings files from the Mac GUI (collaborating with those working on Weblate Improvements), see the Weblate docs.\nTest the workflow of updating a translation with speakers of currently translated languages at the sprint, e.g. German, French or Japanese.\nAdd new Left-to-Right languages. Potential additions represented at the sprint: Spanish, Brazilian Portuguese, Nepali.\nAdd support for Right-to-Left languages, see the Apple docs.\nBegin to add Arabic translations.\n\nTasks 2 and 3 depend on a minimal viable product from task 1 (e.g. an initial set up may rely on some manual steps that could be scripted/automated later). Translators could contribute to other projects until this is ready.\nTask 4 can be worked on independently of tasks 1 to 3, but task 5 is dependent on both task 1 and 4. Arabic translators may wish to work on translations for the Windows GUI in the meantime, which can already be done through Weblate."
   },
   {
-    "objectID": "index.html#practicalities",
-    "href": "index.html#practicalities",
-    "title": "R Project Sprint 2023",
-    "section": "Practicalities",
-    "text": "Practicalities\nThe sprint will be held in the recently completed Faculty of Arts Building at the University of Warwick, which alongside regular seminar rooms has many breakout spaces, some of which we have reserved for our use. We think this will be a great environment for collaborative work.\nThe University of Warwick is in Coventry, in the middle of England. It is reachable by train from nearby European countries, or by plane to Birmingham or other UK airports. See the travel information and visa information for international visitors."
+    "objectID": "projects/mac-gui-translation/index.html#project-requirements",
+    "href": "projects/mac-gui-translation/index.html#project-requirements",
+    "title": "Facilitate Translation for Mac GUI",
+    "section": "Project requirements",
+    "text": "Project requirements\n\nFluent speakers of languages other than English are required for the translation tasks (2, 3 and 5).\nThe Weblate set-up will need to be done by a Weblate admin (currently only Gergely Daróczi), but might be supported by a contributor with advanced knowledge of git.\nSupport for Right-to-Left languages requires modifying Objective C code with Xcode on macOS. This will likely be done by Simon Urbanek, but might be supported by a macOS user wanting to learn more about development of the Mac GUI."
   },
   {
-    "objectID": "index.html#whats-on-nearby",
-    "href": "index.html#whats-on-nearby",
-    "title": "R Project Sprint 2023",
-    "section": "What’s on nearby",
-    "text": "What’s on nearby\nParticipants may be interested to know of these events happening close to the sprint:\n\n22-25 August, COMPSTAT 2023, London\n4-8 September, RSECon23, Swansea\n4-7 September, RSS International Conference, Harrogate\n\n28 August is a bank holiday in the UK, there are typically many festivals, fairs and other events over the long weekend at the end of the school summer holidays."
+    "objectID": "projects/mac-gui-translation/index.html#project-resources",
+    "href": "projects/mac-gui-translation/index.html#project-resources",
+    "title": "Facilitate Translation for Mac GUI",
+    "section": "Project resources",
+    "text": "Project resources\n\nMac GUI GitHub repository\nWeblate documentation on Apple strings\nApple developer documentation on RTL language support"
   },
   {
-    "objectID": "index.html#local-organizing-team",
-    "href": "index.html#local-organizing-team",
-    "title": "R Project Sprint 2023",
-    "section": "Local organizing team",
-    "text": "Local organizing team\nThis event is being organized by members of the Statistics department at the University of Warwick.\n\n\n  Heather Turner   RSE FellowAssociate Professor       \n\n\n  Ella Kaye   Research Software Engineer       \n\n\n  Martyn Plummer   ProfessorR Core Developer       \n\n\nWe are coordinating with the R Contribution Working Group and the R Core Team."
+    "objectID": "projects/mac-gui-translation/index.html#project-outcomes",
+    "href": "projects/mac-gui-translation/index.html#project-outcomes",
+    "title": "Facilitate Translation for Mac GUI",
+    "section": "Project outcomes",
+    "text": "Project outcomes\nContributions to the next release of the Mac GUI."
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "R Project Sprint 2023",
-    "section": "Contact",
-    "text": "Contact\nFor queries about this event, please contact r-project-sprint@livewarwickac.onmicrosoft.com."
-  },
-  {
-    "objectID": "index.html#sponsors",
-    "href": "index.html#sponsors",
-    "title": "R Project Sprint 2023",
-    "section": "Sponsors",
-    "text": "Sponsors\n\nCore funding\nProviding sponsorship for general participant travel, accommodation and subsistence, plus general running costs.\n\n\n\n\n\n\n\nPlatinum sponsors\nProviding sponsorship for R Core travel.\n\nThe R Foundation\n\n\n\nGold sponsors\nProviding sponsorship for evening events and specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSilver sponsors\nProviding sponsorship for specific participants.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFurther sponsors welcome to support participant travel, accommodation and/or social events. Sponsors will be acknowledged on this website, on the R Contributors Twitter and Mastodon accounts, and in reports of the sprint. Please contact r-project-sprint@livewarwickac.onmicrosoft.com to discuss!"
+    "objectID": "projects/mac-gui-translation/index.html#reactions-and-comments",
+    "href": "projects/mac-gui-translation/index.html#reactions-and-comments",
+    "title": "Facilitate Translation for Mac GUI",
+    "section": "Reactions and comments",
+    "text": "Reactions and comments"
   },
   {
     "objectID": "participants/index.html",
     "href": "participants/index.html",
     "title": "Participants",
     "section": "",
-    "text": "Participants with an asterisk are participating remotely."
+    "text": "Participants with an asterisk (*) participated remotely, while participants with a caret (^) were ultimately unable to participate due to travel disruption or other circumstances."
   },
   {
     "objectID": "participants/index.html#r-core-team",
     "href": "participants/index.html#r-core-team",
     "title": "Participants",
     "section": "R Core Team",
-    "text": "R Core Team\n\n\n  Robert Gentleman* \n\n\n  Tomas Kalibera \n\n\n  Michael Lawrence \n\n\n  Uwe Ligges  Dortmund University  \n\n\n  Thomas Lumley  University of Auckland   \n\n\n  Martin Mächler  ETH Zurich     \n\n\n  Sebastian Meyer  Friedrich-Alexander-Universität Erlangen-Nürnberg       \n\n\n  Paul Murrell*  The University of Auckland   \n\n\n  Martyn Plummer  \n\n\n  Deepayan Sarkar  Indian Statistical Institute    \n\n\n  Luke Tierney \n\n\n  Simon Urbanek"
+    "text": "R Core Team\n\n\n  Robert Gentleman* \n\n\n  Tomas Kalibera^ \n\n\n  Michael Lawrence \n\n\n  Uwe Ligges  Dortmund University  \n\n\n  Thomas Lumley  University of Auckland   \n\n\n  Martin Mächler  ETH Zurich     \n\n\n  Sebastian Meyer  Friedrich-Alexander-Universität Erlangen-Nürnberg       \n\n\n  Paul Murrell*  The University of Auckland   \n\n\n  Martyn Plummer  \n\n\n  Deepayan Sarkar  Indian Statistical Institute    \n\n\n  Luke Tierney \n\n\n  Simon Urbanek"
   },
   {
     "objectID": "participants/index.html#r-contributors",
     "href": "participants/index.html#r-contributors",
     "title": "Participants",
     "section": "R Contributors",
-    "text": "R Contributors\n\n\n  Abdulrahman Alswaji  King Abdullah International Medical Research Center  \n\n\n  Iman Al-Hasani  Sultan Qaboos University    \n\n\n  Malcolm Barrett  Posit    \n\n\n  Gabe Becker  Independent Consultant   \n\n\n  Meet Bhatnagar*  Amazon  \n\n\n  Philippa Broadbent  University of Southampton   \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Technology Innovation Institute, Abu Dhabi  \n\n\n  Ahmadou Dicko  UNHCR      \n\n\n  Hannah Frick  Posit    \n\n\n  Charlie Gao  Hibiki AI  \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  Andrea Gilardi  University of Milano - Bicocca    \n\n\n  André Gillibert  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Beryl Kanali  \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Atuhurira Kirabo Kakopo  \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Aidan Lakshman  University of Pittsburgh     \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Jeroen Ooms  rOpenSci   \n\n\n  Ayush Patel  Oxford Poverty and Human Development Initiative    \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn gebeyehu  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool   \n\n\n  Carol Willing*  Project Jupyter"
+    "text": "R Contributors\n\n\n  Abdulrahman Alswaji  King Abdullah International Medical Research Center  \n\n\n  Iman Al-Hasani  Sultan Qaboos University    \n\n\n  Malcolm Barrett  Posit    \n\n\n  Gabe Becker  Independent Consultant   \n\n\n  Meet Bhatnagar*  Amazon  \n\n\n  Philippa Broadbent  University of Southampton   \n\n\n  Elio Campitelli  University of Buenos Aires   \n\n\n  Michael Chirico  Google  \n\n\n  Gergely Daroczi  Rx Studio      \n\n\n  Neeraj Dhanraj Bokde  Technology Innovation Institute, Abu Dhabi  \n\n\n  Ahmadou Dicko  UNHCR      \n\n\n  Hannah Frick  Posit    \n\n\n  Charlie Gao  Hibiki AI  \n\n\n  Jonathan Godfrey  Massey University  \n\n\n  Geraldine Gomez  Pontificia Universidad Javeriana  \n\n\n  Paola Corrales  UBA-CIMA-CONICET   \n\n\n  Andrea Gilardi  University of Milano - Bicocca    \n\n\n  André Gillibert^  CHU Rouen  \n\n\n  Siyao (Jane) He*  University of California, Irvine  \n\n\n  Lionel Henry  Posit  \n\n\n  Renata Hirota  Brazilian Jurimetrics Association     \n\n\n  Binod Jung Bogati  R User Group Nepal     \n\n\n  Asma Kacem^  Software Engineer Intern    \n\n\n  Saranjeet Kaur Bhogal  Research Software Alliance, Software Sustainability Institute      \n\n\n  Beryl Kanali  \n\n\n  Ella Kaye  University of Warwick     \n\n\n  Atuhurira Kirabo Kakopo  \n\n\n  Ivan Krylov*  Lomonosov Moscow State University \n\n\n  Aidan Lakshman  University of Pittsburgh     \n\n\n  Trang Le  Bristol Myers Squibb      \n\n\n  Caio Lente  Curso-R      \n\n\n  Balasubramanian Narasimhan  Stanford University    \n\n\n  María Cristina Nanton  University of Buenos Aires    \n\n\n  Hanne Oberman  Utrecht University         \n\n\n  Ezekiel Adebayo Ogundepo  54gene Limited     \n\n\n  Reiko Okamoto  National Research Council Canada  \n\n\n  Jeroen Ooms  rOpenSci   \n\n\n  Ayush Patel  Oxford Poverty and Human Development Initiative    \n\n\n  Debartha Paul*     \n\n\n  Shannon Pileggi  The Prostate Cancer Clinical Trials Consortium      \n\n\n  George Stagg  Posit      \n\n\n  gwynn gebeyehu  \n\n\n  Heather Turner  University of Warwick        \n\n\n  Ben Ubah  cynkra  \n\n\n  Roberto Villegas-Diaz  University of Liverpool   \n\n\n  Carol Willing*  Project Jupyter"
   }
 ]
