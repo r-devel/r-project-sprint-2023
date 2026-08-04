@@ -58,9 +58,9 @@ participant_info <- function(name = "A Person",
   for (x in links) {
     if (!is.null(get(x))){
       check_url(get(x))
-      hyperlink <- a(paste('{{< bi', x, ' size=1.3em color=#000000 >}}'),
-                     href = get(x), target = "_blank", 
-                     style = "text-decoration:none")
+      hyperlink <- paste0('<a href="', get(x), '" target="_blank" ',
+                         'style="text-decoration:none">{{< bi ', x,
+                         ' size=1.3em color=#000000 >}}</a>')
       res <- c(res, list(hyperlink))
     }
   }
